@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_l_g84I9yEeWR6_H1O30qIA" name="RootElement">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_mNH7EI9yEeWR6_H1O30qIA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_4NphQI9yEeWR6_H1O30qIA" name="Accounts">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ASLYYI9zEeWR6_H1O30qIA" name="Create Account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9xpQI9zEeWR6_H1O30qIA" name="Modify Account">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_C2cjcJEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Dt6-AJEJEeWR46mIHJjugQ" name="ExtensionPoint2"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EUsqIJEJEeWR46mIHJjugQ" name="ExtensionPoint3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QUQU4I9zEeWR6_H1O30qIA" name="Add pet">
+      <extend xmi:type="uml:Extend" xmi:id="_C2auQJEJEeWR46mIHJjugQ" extendedCase="_F9xpQI9zEeWR6_H1O30qIA" extensionLocation="_C2cjcJEJEeWR46mIHJjugQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Tu9hMI9zEeWR6_H1O30qIA" name="Add owner">
+      <extend xmi:type="uml:Extend" xmi:id="_Dt5v4JEJEeWR46mIHJjugQ" extendedCase="_F9xpQI9zEeWR6_H1O30qIA" extensionLocation="_Dt6-AJEJEeWR46mIHJjugQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Vj63sI9zEeWR6_H1O30qIA" name="Deactivate account">
+      <extend xmi:type="uml:Extend" xmi:id="_EUsDEJEJEeWR46mIHJjugQ" extendedCase="_F9xpQI9zEeWR6_H1O30qIA" extensionLocation="_EUsqIJEJEeWR46mIHJjugQ"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_6kfc0I9yEeWR6_H1O30qIA" name="Reception"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_8fyE0I9yEeWR6_H1O30qIA" name="External website"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DO9SkI9zEeWR6_H1O30qIA" memberEnd="_DPCLEI9zEeWR6_H1O30qIA _DPCyII9zEeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DO_u0I9zEeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DO_u0Y9zEeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DPCLEI9zEeWR6_H1O30qIA" name="create account" type="_ASLYYI9zEeWR6_H1O30qIA" association="_DO9SkI9zEeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DPCyII9zEeWR6_H1O30qIA" name="reception" type="_6kfc0I9yEeWR6_H1O30qIA" association="_DO9SkI9zEeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NMujQI9zEeWR6_H1O30qIA" memberEnd="_NMvxYY9zEeWR6_H1O30qIA _NMwYcI9zEeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NMvKUI9zEeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NMvxYI9zEeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NMvxYY9zEeWR6_H1O30qIA" name="create account" type="_ASLYYI9zEeWR6_H1O30qIA" association="_NMujQI9zEeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NMwYcI9zEeWR6_H1O30qIA" name="petowner through website" type="_8fyE0I9yEeWR6_H1O30qIA" association="_NMujQI9zEeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_g2O5cI9zEeWR6_H1O30qIA" memberEnd="_g2PggY9zEeWR6_H1O30qIA _g2QHkI9zEeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g2O5cY9zEeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_g2PggI9zEeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_g2PggY9zEeWR6_H1O30qIA" name="modify account" type="_F9xpQI9zEeWR6_H1O30qIA" association="_g2O5cI9zEeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_g2QHkI9zEeWR6_H1O30qIA" name="reception" type="_6kfc0I9yEeWR6_H1O30qIA" association="_g2O5cI9zEeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_h3mP0I9zEeWR6_H1O30qIA" memberEnd="_h3m24Y9zEeWR6_H1O30qIA _h3nd8I9zEeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h3mP0Y9zEeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h3m24I9zEeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_h3m24Y9zEeWR6_H1O30qIA" name="modify account" type="_F9xpQI9zEeWR6_H1O30qIA" association="_h3mP0I9zEeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_h3nd8I9zEeWR6_H1O30qIA" name="petowner through website" type="_8fyE0I9yEeWR6_H1O30qIA" association="_h3mP0I9zEeWR6_H1O30qIA"/>
+  </packagedElement>
+</uml:Model>

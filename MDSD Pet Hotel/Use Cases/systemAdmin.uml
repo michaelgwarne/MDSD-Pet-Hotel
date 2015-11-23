@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1LfRUJDyEeWKttp4ZZX-MA" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_2INYQJDyEeWKttp4ZZX-MA" name="System admin">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ny_JsJDzEeWKttp4ZZX-MA" name="Add/remove rooms">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_41kRkJFOEeWfpZmPf1igag" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tYcWUJDzEeWKttp4ZZX-MA" name="Add/remove room types">
+      <extend xmi:type="uml:Extend" xmi:id="_41jqgJFOEeWfpZmPf1igag" extendedCase="_ny_JsJDzEeWKttp4ZZX-MA" extensionLocation="_41kRkJFOEeWfpZmPf1igag"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_0lDuAJDzEeWKttp4ZZX-MA" name="Add/remove staff"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__U1qcJDzEeWKttp4ZZX-MA" name="Add/remove rank">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_1sDi8JFOEeWfpZmPf1igag" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__DwHkJFNEeWfpZmPf1igag" name="change permissions">
+      <extend xmi:type="uml:Extend" xmi:id="_1sCU0JFOEeWfpZmPf1igag" extendedCase="__U1qcJDzEeWKttp4ZZX-MA" extensionLocation="_1sDi8JFOEeWfpZmPf1igag"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_93ibcJDyEeWKttp4ZZX-MA" name="system admin"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JuH_kJFOEeWfpZmPf1igag" memberEnd="_JuJ0wZFOEeWfpZmPf1igag _JuKb0JFOEeWfpZmPf1igag">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JuJNsJFOEeWfpZmPf1igag" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JuJ0wJFOEeWfpZmPf1igag" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JuJ0wZFOEeWfpZmPf1igag" name="add/remove staff" type="_0lDuAJDzEeWKttp4ZZX-MA" association="_JuH_kJFOEeWfpZmPf1igag"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JuKb0JFOEeWfpZmPf1igag" name="system admin" type="_93ibcJDyEeWKttp4ZZX-MA" association="_JuH_kJFOEeWfpZmPf1igag"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2dF-UJFOEeWfpZmPf1igag" memberEnd="_2dHzgJFOEeWfpZmPf1igag _2dHzgZFOEeWfpZmPf1igag">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2dGlYJFOEeWfpZmPf1igag" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2dHMcJFOEeWfpZmPf1igag" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2dHzgJFOEeWfpZmPf1igag" name="add/remove rank" type="_93ibcJDyEeWKttp4ZZX-MA" association="_2dF-UJFOEeWfpZmPf1igag"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2dHzgZFOEeWfpZmPf1igag" type="_JuH_kJFOEeWfpZmPf1igag" association="_2dF-UJFOEeWfpZmPf1igag"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3uhxAJFOEeWfpZmPf1igag" memberEnd="_3ui_IZFOEeWfpZmPf1igag _3ujmMJFOEeWfpZmPf1igag">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3uiYEJFOEeWfpZmPf1igag" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3ui_IJFOEeWfpZmPf1igag" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3ui_IZFOEeWfpZmPf1igag" name="add/remove rooms" type="_ny_JsJDzEeWKttp4ZZX-MA" association="_3uhxAJFOEeWfpZmPf1igag"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3ujmMJFOEeWfpZmPf1igag" name="system admin" type="_93ibcJDyEeWKttp4ZZX-MA" association="_3uhxAJFOEeWfpZmPf1igag"/>
+  </packagedElement>
+</uml:Model>

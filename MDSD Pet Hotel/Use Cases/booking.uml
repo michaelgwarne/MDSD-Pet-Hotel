@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_wcT2cI9zEeWR6_H1O30qIA" name="RootElement">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_wjJeQI9zEeWR6_H1O30qIA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5Z-VAI9zEeWR6_H1O30qIA" name="Booking">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NRiDYI92EeWR6_H1O30qIA" name="Check in pet"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OyXkAI92EeWR6_H1O30qIA" name="Check out pet"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RQArII92EeWR6_H1O30qIA" name="Create booking">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_HuM8kJEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_SohWMI92EeWR6_H1O30qIA" name="Modify booking">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_IXfKIZEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_JHiuEJEJEeWR46mIHJjugQ" name="ExtensionPoint2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_V1PJ0I92EeWR6_H1O30qIA" name="Cancel booking">
+      <extend xmi:type="uml:Extend" xmi:id="_JHhf8JEJEeWR46mIHJjugQ" extendedCase="_SohWMI92EeWR6_H1O30qIA" extensionLocation="_JHiuEJEJEeWR46mIHJjugQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_iBjVsI92EeWR6_H1O30qIA" name="Add/remove service">
+      <extend xmi:type="uml:Extend" xmi:id="_HuLucJEJEeWR46mIHJjugQ" extendedCase="_RQArII92EeWR6_H1O30qIA" extensionLocation="_HuM8kJEJEeWR46mIHJjugQ"/>
+      <extend xmi:type="uml:Extend" xmi:id="_IXfKIJEJEeWR46mIHJjugQ" extendedCase="_SohWMI92EeWR6_H1O30qIA" extensionLocation="_IXfKIZEJEeWR46mIHJjugQ"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_8gLmEI91EeWR6_H1O30qIA" name="Reception"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_G6C84I92EeWR6_H1O30qIA" name="website"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_JJ_mQI92EeWR6_H1O30qIA" name="PetOwner"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wR4nwI92EeWR6_H1O30qIA" memberEnd="_wR5O0o92EeWR6_H1O30qIA _wR514I92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wR5O0I92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wR5O0Y92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wR5O0o92EeWR6_H1O30qIA" name="check out pet" type="_OyXkAI92EeWR6_H1O30qIA" association="_wR4nwI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wR514I92EeWR6_H1O30qIA" name="reception" type="_8gLmEI91EeWR6_H1O30qIA" association="_wR4nwI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xKjVII92EeWR6_H1O30qIA" memberEnd="_xKj8MY92EeWR6_H1O30qIA _xKj8Mo92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xKjVIY92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xKj8MI92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xKj8MY92EeWR6_H1O30qIA" name="check in pet" type="_NRiDYI92EeWR6_H1O30qIA" association="_xKjVII92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xKj8Mo92EeWR6_H1O30qIA" name="reception" type="_8gLmEI91EeWR6_H1O30qIA" association="_xKjVII92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_x-cQMI92EeWR6_H1O30qIA" memberEnd="_x-c3Qo92EeWR6_H1O30qIA _x-deUI92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x-c3QI92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_x-c3QY92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_x-c3Qo92EeWR6_H1O30qIA" name="check in pet" type="_NRiDYI92EeWR6_H1O30qIA" association="_x-cQMI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_x-deUI92EeWR6_H1O30qIA" name="petowner" type="_JJ_mQI92EeWR6_H1O30qIA" association="_x-cQMI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zembYI92EeWR6_H1O30qIA" memberEnd="_zenCco92EeWR6_H1O30qIA _zenpgI92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zenCcI92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zenCcY92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zenCco92EeWR6_H1O30qIA" name="check out pet" type="_OyXkAI92EeWR6_H1O30qIA" association="_zembYI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zenpgI92EeWR6_H1O30qIA" name="petowner" type="_JJ_mQI92EeWR6_H1O30qIA" association="_zembYI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0YURoI92EeWR6_H1O30qIA" memberEnd="_0YVfwI92EeWR6_H1O30qIA _0YVfwY92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0YU4sI92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0YU4sY92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0YVfwI92EeWR6_H1O30qIA" name="create booking" type="_RQArII92EeWR6_H1O30qIA" association="_0YURoI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0YVfwY92EeWR6_H1O30qIA" name="website" type="_G6C84I92EeWR6_H1O30qIA" association="_0YURoI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1Ndw8I92EeWR6_H1O30qIA" memberEnd="_1Ne_EI92EeWR6_H1O30qIA _1Ne_EY92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1NeYAI92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1NeYAY92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1Ne_EI92EeWR6_H1O30qIA" name="create booking" type="_RQArII92EeWR6_H1O30qIA" association="_1Ndw8I92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1Ne_EY92EeWR6_H1O30qIA" name="reception" type="_8gLmEI91EeWR6_H1O30qIA" association="_1Ndw8I92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2JsIoI92EeWR6_H1O30qIA" memberEnd="_2Jsvso92EeWR6_H1O30qIA _2JtWwI92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2JsvsI92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2JsvsY92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2Jsvso92EeWR6_H1O30qIA" name="modify booking" type="_SohWMI92EeWR6_H1O30qIA" association="_2JsIoI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2JtWwI92EeWR6_H1O30qIA" name="website" type="_G6C84I92EeWR6_H1O30qIA" association="_2JsIoI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3SVLsI92EeWR6_H1O30qIA" memberEnd="_3SVywY92EeWR6_H1O30qIA _3SWZ0I92EeWR6_H1O30qIA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3SVLsY92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3SVywI92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3SVywY92EeWR6_H1O30qIA" name="modify booking" type="_SohWMI92EeWR6_H1O30qIA" association="_3SVLsI92EeWR6_H1O30qIA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3SWZ0I92EeWR6_H1O30qIA" name="reception" type="_8gLmEI91EeWR6_H1O30qIA" association="_3SVLsI92EeWR6_H1O30qIA"/>
+  </packagedElement>
+</uml:Model>
