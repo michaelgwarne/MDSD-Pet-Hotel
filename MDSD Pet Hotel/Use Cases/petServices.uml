@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_7q_toJUfEeWdAO_zf5cSog" name="PetServices">
+  <packagedElement xmi:type="uml:Package" xmi:id="_Fex74JUgEeWdAO_zf5cSog" name="Pet Services">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_JweakJUgEeWdAO_zf5cSog" name="Add service"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_LfXlUJUgEeWdAO_zf5cSog" name="Remove Service"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NahqcJUgEeWdAO_zf5cSog" name="Add Meal info"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_IIM1MJUgEeWdAO_zf5cSog" name="Receptionist"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RL2nAJUgEeWdAO_zf5cSog" memberEnd="_RL31IJUgEeWdAO_zf5cSog _RL31IZUgEeWdAO_zf5cSog">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RL3OEJUgEeWdAO_zf5cSog" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RL3OEZUgEeWdAO_zf5cSog" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RL31IJUgEeWdAO_zf5cSog" name="add service" type="_JweakJUgEeWdAO_zf5cSog" association="_RL2nAJUgEeWdAO_zf5cSog"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RL31IZUgEeWdAO_zf5cSog" name="receptionist" type="_IIM1MJUgEeWdAO_zf5cSog" association="_RL2nAJUgEeWdAO_zf5cSog"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_R-4mcJUgEeWdAO_zf5cSog" memberEnd="_R-5NgpUgEeWdAO_zf5cSog _R-5Ng5UgEeWdAO_zf5cSog">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R-5NgJUgEeWdAO_zf5cSog" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R-5NgZUgEeWdAO_zf5cSog" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_R-5NgpUgEeWdAO_zf5cSog" name="remove service" type="_LfXlUJUgEeWdAO_zf5cSog" association="_R-4mcJUgEeWdAO_zf5cSog"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_R-5Ng5UgEeWdAO_zf5cSog" name="receptionist" type="_IIM1MJUgEeWdAO_zf5cSog" association="_R-4mcJUgEeWdAO_zf5cSog"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_S5emcJUgEeWdAO_zf5cSog" memberEnd="_S5f0kZUgEeWdAO_zf5cSog _S5f0kpUgEeWdAO_zf5cSog">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S5fNgJUgEeWdAO_zf5cSog" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S5f0kJUgEeWdAO_zf5cSog" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_S5f0kZUgEeWdAO_zf5cSog" name="add meal info" type="_NahqcJUgEeWdAO_zf5cSog" association="_S5emcJUgEeWdAO_zf5cSog"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_S5f0kpUgEeWdAO_zf5cSog" name="receptionist" type="_IIM1MJUgEeWdAO_zf5cSog" association="_S5emcJUgEeWdAO_zf5cSog"/>
+  </packagedElement>
+</uml:Model>
