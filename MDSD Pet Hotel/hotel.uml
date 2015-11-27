@@ -22,7 +22,6 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_B2psEI4kEeWjWMyf9vaeZA" name="staffId"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_EbpYYI4kEeWjWMyf9vaeZA" name="rank"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_GJMfUI4kEeWjWMyf9vaeZA" name="SSN"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_pfrTYJFTEeWfpZmPf1igag" name="hotel" type="_O0UDcJDkEeWyg9J1uqISaA" association="_pfpeMJFTEeWfpZmPf1igag"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_EmbXkI3NEeWAUrpqFCDYAA" name="Service">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_MMjTcI4lEeWjWMyf9vaeZA" name="name"/>
@@ -200,16 +199,6 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s-I9wJDkEeWyg9J1uqISaA" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Cs6XUJDlEeWyg9J1uqISaA" name="is run by" memberEnd="_Cs7lcZDlEeWyg9J1uqISaA _Cs8MgJDlEeWyg9J1uqISaA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Cs6-YJDlEeWyg9J1uqISaA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Cs7lcJDlEeWyg9J1uqISaA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Cs8MgJDlEeWyg9J1uqISaA" name="hotel" type="_O0UDcJDkEeWyg9J1uqISaA" association="_Cs6XUJDlEeWyg9J1uqISaA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Cs7lcZDlEeWyg9J1uqISaA" name="staff" type="_c8vQkI3MEeWAUrpqFCDYAA" association="_Cs6XUJDlEeWyg9J1uqISaA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GRpCUJDlEeWyg9J1uqISaA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GRqQcJDlEeWyg9J1uqISaA" value="*"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_pfpeMJFTEeWfpZmPf1igag" name="can modify" memberEnd="_pfrTYJFTEeWfpZmPf1igag _pfr6cJFTEeWfpZmPf1igag">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pfqsUJFTEeWfpZmPf1igag" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pfqsUZFTEeWfpZmPf1igag" key="nature" value="UML_Nature"/>
@@ -218,6 +207,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wgSPYJFTEeWfpZmPf1igag" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wgUEkJFTEeWfpZmPf1igag" value="*"/>
     </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pfrTYJFTEeWfpZmPf1igag" name="hotel" type="_O0UDcJDkEeWyg9J1uqISaA" association="_pfpeMJFTEeWfpZmPf1igag"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_N0dBoJUFEeWdAO_zf5cSog" name="can stay in" memberEnd="_N0h6IJUFEeWdAO_zf5cSog _N0jIQJUFEeWdAO_zf5cSog">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N0e20JUFEeWdAO_zf5cSog" source="org.eclipse.papyrus">
