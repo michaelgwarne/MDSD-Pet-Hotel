@@ -4,17 +4,19 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_XOUVMI3MEeWAUrpqFCDYAA" name="Account">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_z7YsEI4YEeWJAfmx2oO5Ew" name="accountId"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_z7YsEI4YEeWJAfmx2oO5Ew" name="accountId">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7LVToJZzEeWzT9sOAszpZQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7LYW8JZzEeWzT9sOAszpZQ" value="1"/>
+    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_13fzcI4YEeWJAfmx2oO5Ew" name="primaryOwnerId"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_5GI5sI4YEeWJAfmx2oO5Ew" name="isActive"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_Y4JZwI3MEeWAUrpqFCDYAA" name="PetOwner">
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y4JZwI3MEeWAUrpqFCDYAA" name="Owner">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ZB3r8I4YEeWJAfmx2oO5Ew" name="name" visibility="public" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_P5lRwI4YEeWJAfmx2oO5Ew" name="address"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_SEsecI4YEeWJAfmx2oO5Ew" name="Telephone"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_aut50I3MEeWAUrpqFCDYAA" name="Pet">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_rEVL0I4YEeWJAfmx2oO5Ew" name="EmergencyContact"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_tAUXYI4YEeWJAfmx2oO5Ew" name="species"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_uPlm4I4YEeWJAfmx2oO5Ew" name="name"/>
   </packagedElement>
@@ -29,6 +31,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_XdfOQI37EeW0yOZyFg0B4Q" name="Booking">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_diAZ0I4ZEeWJAfmx2oO5Ew" name="isCheckedIn"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k6CmYJZ0EeWzT9sOAszpZQ" name="emergencyContact"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_3oNCQI37EeW0yOZyFg0B4Q" name="Bill">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_-mdHoI4YEeWJAfmx2oO5Ew" name="bill_name"/>
