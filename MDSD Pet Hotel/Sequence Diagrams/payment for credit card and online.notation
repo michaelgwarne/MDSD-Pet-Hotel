@@ -5,7 +5,7 @@
     <children xmi:type="notation:DecorationNode" xmi:id="_n40-I5elEeWSidyG-ijZzw" type="7001">
       <children xmi:type="notation:Shape" xmi:id="_p5vtAJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_p5vtApelEeWSidyG-ijZzw" type="5002"/>
-        <element xmi:type="uml:Lifeline" href="model2.uml#_p5t30JelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_p5t30JelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p5vtAZelEeWSidyG-ijZzw" x="48" y="10" width="100" height="867"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_rVcO8JelEeWSidyG-ijZzw" type="3001">
@@ -14,12 +14,12 @@
           <styles xmi:type="notation:TitleStyle" xmi:id="_rVf5UZelEeWSidyG-ijZzw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rVf5UpelEeWSidyG-ijZzw"/>
         </children>
-        <element xmi:type="uml:Lifeline" href="model2.uml#_rVaZwJelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_rVaZwJelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rVcO8ZelEeWSidyG-ijZzw" x="235" y="12" width="100" height="865"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_sCilgJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_sCilgpelEeWSidyG-ijZzw" type="5002"/>
-        <element xmi:type="uml:Lifeline" href="model2.uml#_sCgJQJelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_sCgJQJelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sCilgZelEeWSidyG-ijZzw" x="424" y="14" width="100" height="863"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_tf8XoJelEeWSidyG-ijZzw" type="3001">
@@ -29,10 +29,10 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tgACApelEeWSidyG-ijZzw"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_oOjroJenEeWSidyG-ijZzw" type="3006">
-          <element xmi:type="uml:ActionExecutionSpecification" href="model2.uml#_oOeMEJenEeWSidyG-ijZzw"/>
+          <element xmi:type="uml:ActionExecutionSpecification" href="payment%20for%20credit%20card%20and%20online.uml#_oOeMEJenEeWSidyG-ijZzw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oOjroZenEeWSidyG-ijZzw" x="42" y="103" width="16" height="39"/>
         </children>
-        <element xmi:type="uml:Lifeline" href="model2.uml#_tf5UUJelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_tf5UUJelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tf8XoZelEeWSidyG-ijZzw" x="597" y="16" width="100" height="861"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_uefDgJelEeWSidyG-ijZzw" type="3001">
@@ -42,60 +42,60 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uejU8pelEeWSidyG-ijZzw"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_LSTFwJepEeWSidyG-ijZzw" type="3006">
-          <element xmi:type="uml:ActionExecutionSpecification" href="model2.uml#_LSCAAJepEeWSidyG-ijZzw"/>
+          <element xmi:type="uml:ActionExecutionSpecification" href="payment%20for%20credit%20card%20and%20online.uml#_LSCAAJepEeWSidyG-ijZzw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LSTFwZepEeWSidyG-ijZzw" x="42" y="224" width="16" height="42"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_Mg6N8JepEeWSidyG-ijZzw" type="3006">
-          <element xmi:type="uml:ActionExecutionSpecification" href="model2.uml#_MgunwJepEeWSidyG-ijZzw"/>
+          <element xmi:type="uml:ActionExecutionSpecification" href="payment%20for%20credit%20card%20and%20online.uml#_MgunwJepEeWSidyG-ijZzw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mg6N8ZepEeWSidyG-ijZzw" x="42" y="477" width="16" height="46"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_eKxM4JgzEeWEd-fUms36oA" type="3006">
-          <element xmi:type="uml:ActionExecutionSpecification" href="model2.uml#_eKdD0JgzEeWEd-fUms36oA"/>
+          <element xmi:type="uml:ActionExecutionSpecification" href="payment%20for%20credit%20card%20and%20online.uml#_eKdD0JgzEeWEd-fUms36oA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eKxM4ZgzEeWEd-fUms36oA" x="42" y="300" width="16" height="50"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_P4PF8Jg0EeWEd-fUms36oA" type="3006">
-          <element xmi:type="uml:ActionExecutionSpecification" href="model2.uml#_P4C4sJg0EeWEd-fUms36oA"/>
+          <element xmi:type="uml:ActionExecutionSpecification" href="payment%20for%20credit%20card%20and%20online.uml#_P4C4sJg0EeWEd-fUms36oA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4PF8Zg0EeWEd-fUms36oA" x="42" y="576" width="16" height="58"/>
         </children>
-        <element xmi:type="uml:Lifeline" href="model2.uml#_uecAMJelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_uecAMJelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uefDgZelEeWSidyG-ijZzw" x="776" y="18" width="100" height="859"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_1LP2cJelEeWSidyG-ijZzw" type="3004">
         <children xmi:type="notation:DecorationNode" xmi:id="_1LUH4JelEeWSidyG-ijZzw" type="7004">
           <children xmi:type="notation:Shape" xmi:id="_1LUH5JelEeWSidyG-ijZzw" type="3005">
             <children xmi:type="notation:DecorationNode" xmi:id="_1LUH5pelEeWSidyG-ijZzw" type="InteractionOperand_Guard">
-              <element xmi:type="uml:InteractionConstraint" href="model2.uml#_1LEQQJelEeWSidyG-ijZzw"/>
+              <element xmi:type="uml:InteractionConstraint" href="payment%20for%20credit%20card%20and%20online.uml#_1LEQQJelEeWSidyG-ijZzw"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1LUH55elEeWSidyG-ijZzw" x="33" y="5"/>
             </children>
-            <element xmi:type="uml:InteractionOperand" href="model2.uml#_1K_-0JelEeWSidyG-ijZzw"/>
+            <element xmi:type="uml:InteractionOperand" href="payment%20for%20credit%20card%20and%20online.uml#_1K_-0JelEeWSidyG-ijZzw"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1LUH5ZelEeWSidyG-ijZzw" width="802" height="346"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_T4qUEJeoEeWSidyG-ijZzw" type="3005">
             <children xmi:type="notation:DecorationNode" xmi:id="_T4qUEpeoEeWSidyG-ijZzw" type="InteractionOperand_Guard">
-              <element xmi:type="uml:InteractionConstraint" href="model2.uml#_T4i_UJeoEeWSidyG-ijZzw"/>
+              <element xmi:type="uml:InteractionConstraint" href="payment%20for%20credit%20card%20and%20online.uml#_T4i_UJeoEeWSidyG-ijZzw"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4qUE5eoEeWSidyG-ijZzw" x="5" y="5"/>
             </children>
-            <element xmi:type="uml:InteractionOperand" href="model2.uml#_T4hxMJeoEeWSidyG-ijZzw"/>
+            <element xmi:type="uml:InteractionOperand" href="payment%20for%20credit%20card%20and%20online.uml#_T4hxMJeoEeWSidyG-ijZzw"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4qUEZeoEeWSidyG-ijZzw" y="346" width="802" height="276"/>
           </children>
           <styles xmi:type="notation:SortingStyle" xmi:id="_1LUH4ZelEeWSidyG-ijZzw"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_1LUH4pelEeWSidyG-ijZzw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1LUH45elEeWSidyG-ijZzw"/>
         </children>
-        <element xmi:type="uml:CombinedFragment" href="model2.uml#_1K7tYJelEeWSidyG-ijZzw"/>
+        <element xmi:type="uml:CombinedFragment" href="payment%20for%20credit%20card%20and%20online.uml#_1K7tYJelEeWSidyG-ijZzw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1LP2cZelEeWSidyG-ijZzw" x="48" y="87" width="804" height="646"/>
       </children>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n40-JJelEeWSidyG-ijZzw"/>
     </children>
-    <element xmi:type="uml:Interaction" href="model2.uml#_n4x60JelEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Interaction" href="payment%20for%20credit%20card%20and%20online.uml#_n4x60JelEeWSidyG-ijZzw"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n40-JZelEeWSidyG-ijZzw" height="927"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_n40-JpelEeWSidyG-ijZzw" name="diagram_compatibility_version" stringValue="1.1.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_n40-J5elEeWSidyG-ijZzw"/>
   <styles xmi:type="style:PapyrusViewStyle" xmi:id="_n40-KJelEeWSidyG-ijZzw">
-    <owner xmi:type="uml:Model" href="model2.uml#_n4rNIJelEeWSidyG-ijZzw"/>
+    <owner xmi:type="uml:Model" href="payment%20for%20credit%20card%20and%20online.uml#_n4rNIJelEeWSidyG-ijZzw"/>
   </styles>
-  <element xmi:type="uml:Interaction" href="model2.uml#_n4x60JelEeWSidyG-ijZzw"/>
+  <element xmi:type="uml:Interaction" href="payment%20for%20credit%20card%20and%20online.uml#_n4x60JelEeWSidyG-ijZzw"/>
   <edges xmi:type="notation:Edge" xmi:id="_w9KscJelEeWSidyG-ijZzw" type="4003" source="_rVcO8JelEeWSidyG-ijZzw" target="_sCilgJelEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_w9LTgJelEeWSidyG-ijZzw" type="6001">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_w9LTgZelEeWSidyG-ijZzw" x="1" y="-13"/>
@@ -106,7 +106,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_w9KscZelEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_w9KscpelEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_w9LThJelEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_w9Fz8JelEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_w9Fz8JelEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_w9Ksc5elEeWSidyG-ijZzw" points="[1, 0, -189, 0]$[190, 243, 0, 243]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gJelEeWSidyG-ijZzw" id="(0.0,0.033532934131736525)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gZelEeWSidyG-ijZzw" id="(1.0,0.031212484993997598){R}"/>
@@ -121,7 +121,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_1UtpkZenEeWSidyG-ijZzw" routing="Tree"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_1UtpkpenEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_1UtpmJenEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_1UeZAJenEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_1UeZAJenEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1Utpk5enEeWSidyG-ijZzw" points="[1, 0, -540, 16]$[557, -16, 16, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1U0XQJenEeWSidyG-ijZzw" id="(0.0,0.13620071684587814)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1U0XQZenEeWSidyG-ijZzw" id="(0.0,0.0){8}"/>
@@ -136,7 +136,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_9vig0ZenEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_9vig0penEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_9vjH4penEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_9vbMEJenEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_9vbMEJenEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9vig05enEeWSidyG-ijZzw" points="[0, 0, 541, -7]$[-541, 126, 0, 119]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9v67UJenEeWSidyG-ijZzw" id="(0.0,1.0){32}"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9v67UZenEeWSidyG-ijZzw" id="(0.0,0.18518518518518517){R}"/>
@@ -151,7 +151,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_IAfzQZeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_IAfzQpeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_IAgaUZeoEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_IAX3cJeoEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_IAX3cJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IAfzQ5eoEeWSidyG-ijZzw" points="[1, 8, -548, 0]$[549, 92, 0, 84]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1KcJeoEeWSidyG-ijZzw" id="(0.0,0.24253285543608125)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1xgJeoEeWSidyG-ijZzw" id="(0.0,0.246690734055355){L}"/>
@@ -166,7 +166,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_Pq3d8ZeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_Pq3d8peoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_Pq4FBJeoEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_Pqm_QJeoEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Pqm_QJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Pq3d85eoEeWSidyG-ijZzw" points="[0, 0, -178, 0]$[178, 86, 0, 86]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PrhlQJeoEeWSidyG-ijZzw" id="(1.0,0.2779783393501805)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PrhlQZeoEeWSidyG-ijZzw" id="(0.0,0.0){8}"/>
@@ -181,7 +181,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_epeLQZeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_epeLQpeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_epeLSJeoEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_epTMIJeoEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_epTMIJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_epeLQ5eoEeWSidyG-ijZzw" points="[1, -1, -186, 0]$[187, -1, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep5pEJeoEeWSidyG-ijZzw" id="(1.0,0.5376344086021505)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep6QIJeoEeWSidyG-ijZzw" id="(0.0,0.5389221556886228){R}"/>
@@ -196,7 +196,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_isetsZeoEeWSidyG-ijZzw" routing="Tree"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_isetspeoEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_isfUwpeoEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_isU8sJeoEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_isU8sJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_isets5eoEeWSidyG-ijZzw" points="[1, -1, -540, 0]$[541, -87, 0, -86]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is4WUJeoEeWSidyG-ijZzw" id="(0.0,0.5767386091127098)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is4WUZeoEeWSidyG-ijZzw" id="(0.0,0.17391304347826086){8}"/>
@@ -211,7 +211,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_UOnggZepEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_UOnggpepEeWSidyG-ijZzw"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_UOngiJepEeWSidyG-ijZzw"/>
-    <element xmi:type="uml:Message" href="model2.uml#_UOb6UJepEeWSidyG-ijZzw"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_UOb6UJepEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UOngg5epEeWSidyG-ijZzw" points="[0, 0, 533, -7]$[-533, 4, 0, -3]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UPEMcJepEeWSidyG-ijZzw" id="(0.0,1.0){32}"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UPEMcZepEeWSidyG-ijZzw" id="(1.0,0.3281437125748503){R}"/>
@@ -226,7 +226,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_ZxeRYZgzEeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_ZxeRYpgzEeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_ZxgGkJgzEeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_Zs23IJgzEeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Zs23IJgzEeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZxeRY5gzEeWEd-fUms36oA" points="[1, 6, -728, 0]$[729, 83, 0, 77]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zy2xcJgzEeWEd-fUms36oA" id="(0.0,0.35961768219832735)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zy2xcZgzEeWEd-fUms36oA" id="(0.0,0.0){8}"/>
@@ -241,7 +241,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_f5LPcZgzEeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_f5LPcpgzEeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_f5L2g5gzEeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_f4pD8JgzEeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_f4pD8JgzEeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_f5LPc5gzEeWEd-fUms36oA" points="[0, 0, 533, -21]$[-533, 69, 0, 48]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f6KG4JgzEeWEd-fUms36oA" id="(0.0,1.0){32}"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f6KG4ZgzEeWEd-fUms36oA" id="(0.0,0.4239520958083832){L}"/>
@@ -256,7 +256,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_N02R4Zg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_N02R4pg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_N0249Jg0EeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_N0oPcJg0EeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_N0oPcJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N02R45g0EeWEd-fUms36oA" points="[1, 9, -728, 0]$[729, -96, 0, -105]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N1fyIJg0EeWEd-fUms36oA" id="(0.0,0.6989247311827957)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N1fyIZg0EeWEd-fUms36oA" id="(0.0,0.0){8}"/>
@@ -271,7 +271,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_ZwsY0Zg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_ZwsY0pg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_Zws_4Zg0EeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_ZwMCgJg0EeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_ZwMCgJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZwsY05g0EeWEd-fUms36oA" points="[0, 0, 541, -3]$[-525, 3, 16, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zw3X8Jg0EeWEd-fUms36oA" id="(0.0,1.0){32}"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zw3X8Zg0EeWEd-fUms36oA" id="(1.0,0.6378896882494005){R}"/>
@@ -286,7 +286,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_eu5_QZg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_eu5_Qpg0EeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_eu6mVJg0EeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_eudTUJg0EeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_eudTUJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eu5_Q5g0EeWEd-fUms36oA" points="[0, 0, 541, 5]$[-525, -5, 16, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_evDJMJg0EeWEd-fUms36oA" id="(0.0,0.39655172413793105){32}"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_evDJMZg0EeWEd-fUms36oA" id="(0.0,0.7769784172661871){L}"/>
@@ -301,7 +301,7 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_DhD4cZg1EeWEd-fUms36oA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_DhD4cpg1EeWEd-fUms36oA"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_DhEfhJg1EeWEd-fUms36oA"/>
-    <element xmi:type="uml:Message" href="model2.uml#_Dg12AJg1EeWEd-fUms36oA"/>
+    <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Dg12AJg1EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DhD4c5g1EeWEd-fUms36oA" points="[0, 4, 187, 0]$[-187, -271, 0, -275]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhpuUJg1EeWEd-fUms36oA" id="(0.0,0.8776978417266187)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhqVYJg1EeWEd-fUms36oA" id="(0.0,0.8827751196172249){L}"/>
