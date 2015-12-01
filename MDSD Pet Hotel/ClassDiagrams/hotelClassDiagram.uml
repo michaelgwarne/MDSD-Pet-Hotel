@@ -28,7 +28,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pq_M4JZ0EeWzT9sOAszpZQ" name="typeOfPet" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_DYAbsJbYEeWe54hqC8EIDA" name="addMeal"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_PBfOEJOoEeW5n8W_Zf5SmA" name="Account">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_I_hZEJZwEeWzT9sOAszpZQ" name="accountID" visibility="private">
@@ -46,6 +45,9 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pkJMIJbDEeWe54hqC8EIDA" name="listOfOwners" visibility="private" type="_6yd28JaPEeWzT9sOAszpZQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2mBHAJbDEeWe54hqC8EIDA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2mCVIJbDEeWe54hqC8EIDA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JB8F4JgbEeW-Q9JC5jZGPw" name="password" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_RB1FMJbJEeWe54hqC8EIDA" name="addBooking"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Ln6ZMJbUEeWe54hqC8EIDA" name="addPet"/>
@@ -85,6 +87,17 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_zvz8oJbIEeWe54hqC8EIDA" name="addAccount"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__ZTIQJbIEeWe54hqC8EIDA" name="addRoom"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NgkZYJbTEeWe54hqC8EIDA" name="deactivateAccount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5h0zwJdmEeWxBLJN-RlOcQ" name="removeRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_cjnGEJdoEeWxBLJN-RlOcQ" name="petTypeExists">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pbbGAJdoEeWxBLJN-RlOcQ" name="exists" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dZeXEJdoEeWxBLJN-RlOcQ" name="accountExists">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zYRJoJdoEeWxBLJN-RlOcQ" name="exists" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_mSvmEJZxEeWzT9sOAszpZQ" name="Booking">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_1YIwgJZ0EeWzT9sOAszpZQ" name="bookingId" visibility="private">
@@ -111,6 +124,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_RufjcJa0EeWe54hqC8EIDA" type="_ksKfQJZwEeWzT9sOAszpZQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_vhpcoJbUEeWe54hqC8EIDA" name="addBill"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oPwz0JgbEeW-Q9JC5jZGPw" name="addMeal"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_NTTwMJZ1EeWzT9sOAszpZQ" memberEnd="_NTUXQpZ1EeWzT9sOAszpZQ _NTUXQ5Z1EeWzT9sOAszpZQ" navigableOwnedEnd="_NTUXQpZ1EeWzT9sOAszpZQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NTUXQJZ1EeWzT9sOAszpZQ" source="org.eclipse.papyrus">
@@ -199,7 +213,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qXxfwJaHEeWzT9sOAszpZQ" name="Staff">
       <generalization xmi:type="uml:Generalization" xmi:id="_2mTYgJaPEeWzT9sOAszpZQ" general="_KsXn8JOoEeW5n8W_Zf5SmA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_pCVFQJbTEeWe54hqC8EIDA" name="SSN">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pCVFQJbTEeWe54hqC8EIDA" name="SSN" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
@@ -210,9 +224,9 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_y2t6opaKEeWzT9sOAszpZQ" name="hotel" type="_d9hnkJZxEeWzT9sOAszpZQ" association="_y2ssgJaKEeWzT9sOAszpZQ"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_y2t6oZaKEeWzT9sOAszpZQ" name="staff" type="_qXxfwJaHEeWzT9sOAszpZQ" association="_y2ssgJaKEeWzT9sOAszpZQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_6yd28JaPEeWzT9sOAszpZQ" name="Owner" visibility="public">
+    <packagedElement xmi:type="uml:Class" xmi:id="_6yd28JaPEeWzT9sOAszpZQ" name="Customer" visibility="public">
       <generalization xmi:type="uml:Generalization" xmi:id="_-aREEJaPEeWzT9sOAszpZQ" general="_KsXn8JOoEeW5n8W_Zf5SmA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_atJS8JbUEeWe54hqC8EIDA" name="isPrimary">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_atJS8JbUEeWe54hqC8EIDA" name="isPrimary" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
       </ownedAttribute>
     </packagedElement>
@@ -316,6 +330,10 @@
   <java:JavaMethod xmi:id="_xmykMJbUEeWe54hqC8EIDA" base_Operation="_vhpcoJbUEeWe54hqC8EIDA"/>
   <java:JavaProperty xmi:id="_QGFtUJbXEeWe54hqC8EIDA" base_Property="_MwuUAJbXEeWe54hqC8EIDA"/>
   <java:JavaMethod xmi:id="_wN7zgJbXEeWe54hqC8EIDA" base_Operation="_t6ETcJbXEeWe54hqC8EIDA"/>
-  <java:JavaMethod xmi:id="_E_Bc0JbYEeWe54hqC8EIDA" base_Operation="_DYAbsJbYEeWe54hqC8EIDA"/>
   <java:JavaProperty xmi:id="_n2A-8JbaEeWe54hqC8EIDA" base_Property="_jAhPoJbaEeWe54hqC8EIDA"/>
+  <java:JavaMethod xmi:id="_80HD4JdmEeWxBLJN-RlOcQ" base_Operation="_5h0zwJdmEeWxBLJN-RlOcQ"/>
+  <java:JavaMethod xmi:id="_ejX-YJdoEeWxBLJN-RlOcQ" base_Operation="_cjnGEJdoEeWxBLJN-RlOcQ"/>
+  <java:JavaMethod xmi:id="_tlf5wJdoEeWxBLJN-RlOcQ" base_Operation="_dZeXEJdoEeWxBLJN-RlOcQ"/>
+  <java:JavaProperty xmi:id="_L74HcJgbEeW-Q9JC5jZGPw" base_Property="_JB8F4JgbEeW-Q9JC5jZGPw"/>
+  <java:JavaMethod xmi:id="_qlsJYJgbEeW-Q9JC5jZGPw" base_Operation="_oPwz0JgbEeW-Q9JC5jZGPw"/>
 </xmi:XMI>
