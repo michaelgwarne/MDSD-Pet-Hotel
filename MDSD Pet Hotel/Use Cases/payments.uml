@@ -8,8 +8,8 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="Pay with credit card"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_y6l58I93EeWR6_H1O30qIA" name="Give refund"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_nTZNUI93EeWR6_H1O30qIA" name="Owner"/>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_ou4T4I93EeWR6_H1O30qIA" name="Receptionist"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_nTZNUI93EeWR6_H1O30qIA" name="Customer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ou4T4I93EeWR6_H1O30qIA" name="Reception"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_Vwq_YJUHEeWdAO_zf5cSog" name="&lt;&lt;system>> bank authorisation service"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_ycTA4JUIEeWdAO_zf5cSog" memberEnd="_ycTn8ZUIEeWdAO_zf5cSog _ycUPAJUIEeWdAO_zf5cSog">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ycTA4ZUIEeWdAO_zf5cSog" source="org.eclipse.papyrus">

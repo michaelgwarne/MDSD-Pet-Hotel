@@ -14,7 +14,7 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Tu9hMI9zEeWR6_H1O30qIA" name="Add owner"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Vj63sI9zEeWR6_H1O30qIA" name="Deactivate account"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_6kfc0I9yEeWR6_H1O30qIA" name="Receptionist or Owner"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_6kfc0I9yEeWR6_H1O30qIA" name="Receptionist or Customer"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_DO9SkI9zEeWR6_H1O30qIA" memberEnd="_DPCLEI9zEeWR6_H1O30qIA _DPCyII9zEeWR6_H1O30qIA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DO_u0I9zEeWR6_H1O30qIA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DO_u0Y9zEeWR6_H1O30qIA" key="nature" value="UML_Nature"/>

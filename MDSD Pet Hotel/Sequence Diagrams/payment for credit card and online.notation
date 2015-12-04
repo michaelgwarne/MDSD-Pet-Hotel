@@ -6,7 +6,7 @@
       <children xmi:type="notation:Shape" xmi:id="_p5vtAJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_p5vtApelEeWSidyG-ijZzw" type="5002"/>
         <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_p5t30JelEeWSidyG-ijZzw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p5vtAZelEeWSidyG-ijZzw" x="48" y="10" width="100" height="867"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p5vtAZelEeWSidyG-ijZzw" x="48" y="10" width="100" height="866"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_rVcO8JelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_rVc2AJelEeWSidyG-ijZzw" type="5002"/>
@@ -15,12 +15,12 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rVf5UpelEeWSidyG-ijZzw"/>
         </children>
         <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_rVaZwJelEeWSidyG-ijZzw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rVcO8ZelEeWSidyG-ijZzw" x="235" y="12" width="100" height="865"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rVcO8ZelEeWSidyG-ijZzw" x="235" y="12" width="100" height="864"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_sCilgJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_sCilgpelEeWSidyG-ijZzw" type="5002"/>
         <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_sCgJQJelEeWSidyG-ijZzw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sCilgZelEeWSidyG-ijZzw" x="424" y="14" width="100" height="863"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sCilgZelEeWSidyG-ijZzw" x="424" y="14" width="100" height="862"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_tf8XoJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_tf8XopelEeWSidyG-ijZzw" type="5002"/>
@@ -33,7 +33,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oOjroZenEeWSidyG-ijZzw" x="42" y="103" width="16" height="39"/>
         </children>
         <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_tf5UUJelEeWSidyG-ijZzw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tf8XoZelEeWSidyG-ijZzw" x="597" y="16" width="100" height="861"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tf8XoZelEeWSidyG-ijZzw" x="597" y="16" width="100" height="860"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_uefDgJelEeWSidyG-ijZzw" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_uefqkJelEeWSidyG-ijZzw" type="5002"/>
@@ -58,7 +58,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P4PF8Zg0EeWEd-fUms36oA" x="42" y="576" width="16" height="58"/>
         </children>
         <element xmi:type="uml:Lifeline" href="payment%20for%20credit%20card%20and%20online.uml#_uecAMJelEeWSidyG-ijZzw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uefDgZelEeWSidyG-ijZzw" x="776" y="18" width="100" height="859"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uefDgZelEeWSidyG-ijZzw" x="776" y="18" width="100" height="858"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_1LP2cJelEeWSidyG-ijZzw" type="3004">
         <children xmi:type="notation:DecorationNode" xmi:id="_1LUH4JelEeWSidyG-ijZzw" type="7004">
@@ -108,8 +108,8 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_w9LThJelEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_w9Fz8JelEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_w9Ksc5elEeWSidyG-ijZzw" points="[1, 0, -189, 0]$[190, 243, 0, 243]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gJelEeWSidyG-ijZzw" id="(0.0,0.033532934131736525)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gZelEeWSidyG-ijZzw" id="(1.0,0.031212484993997598){R}"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gJelEeWSidyG-ijZzw" id="(0.0,0.03357314148681055)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w9e1gZelEeWSidyG-ijZzw" id="(1.0,0.03125){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_1UtpkJenEeWSidyG-ijZzw" type="4003" source="_p5vtAJelEeWSidyG-ijZzw" target="_oOjroJenEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_1UtplJenEeWSidyG-ijZzw" type="6001">
@@ -123,7 +123,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_1UtpmJenEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_1UeZAJenEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1Utpk5enEeWSidyG-ijZzw" points="[1, 0, -540, 16]$[557, -16, 16, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1U0XQJenEeWSidyG-ijZzw" id="(0.0,0.13620071684587814)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1U0XQJenEeWSidyG-ijZzw" id="(0.0,0.13636363636363635)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1U0XQZenEeWSidyG-ijZzw" id="(0.0,0.0){8}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_9vig0JenEeWSidyG-ijZzw" type="4005" source="_oOjroJenEeWSidyG-ijZzw" target="_p5vtAJelEeWSidyG-ijZzw">
@@ -139,7 +139,7 @@
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_9vbMEJenEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9vig05enEeWSidyG-ijZzw" points="[0, 0, 541, -7]$[-541, 126, 0, 119]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9v67UJenEeWSidyG-ijZzw" id="(0.0,1.0){32}"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9v67UZenEeWSidyG-ijZzw" id="(0.0,0.18518518518518517){R}"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9v67UZenEeWSidyG-ijZzw" id="(0.0,0.1854066985645933){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_IAfzQJeoEeWSidyG-ijZzw" type="4003" source="_p5vtAJelEeWSidyG-ijZzw" target="_tf8XoJelEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_IAfzRJeoEeWSidyG-ijZzw" type="6001">
@@ -153,8 +153,8 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_IAgaUZeoEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_IAX3cJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IAfzQ5eoEeWSidyG-ijZzw" points="[1, 8, -548, 0]$[549, 92, 0, 84]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1KcJeoEeWSidyG-ijZzw" id="(0.0,0.24253285543608125)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1xgJeoEeWSidyG-ijZzw" id="(0.0,0.246690734055355){L}"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1KcJeoEeWSidyG-ijZzw" id="(0.0,0.24282296650717702)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA1xgJeoEeWSidyG-ijZzw" id="(0.0,0.2469879518072289){L}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_Pq3d8JeoEeWSidyG-ijZzw" type="4003" source="_tf8XoJelEeWSidyG-ijZzw" target="_LSTFwJepEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_Pq4FAJeoEeWSidyG-ijZzw" type="6001">
@@ -168,7 +168,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_Pq4FBJeoEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Pqm_QJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Pq3d85eoEeWSidyG-ijZzw" points="[0, 0, -178, 0]$[178, 86, 0, 86]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PrhlQJeoEeWSidyG-ijZzw" id="(1.0,0.2779783393501805)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PrhlQJeoEeWSidyG-ijZzw" id="(1.0,0.2783132530120482)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PrhlQZeoEeWSidyG-ijZzw" id="(0.0,0.0){8}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_epeLQJeoEeWSidyG-ijZzw" type="4004" source="_p5vtAJelEeWSidyG-ijZzw" target="_rVcO8JelEeWSidyG-ijZzw">
@@ -183,8 +183,8 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_epeLSJeoEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_epTMIJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_epeLQ5eoEeWSidyG-ijZzw" points="[1, -1, -186, 0]$[187, -1, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep5pEJeoEeWSidyG-ijZzw" id="(1.0,0.5376344086021505)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep6QIJeoEeWSidyG-ijZzw" id="(0.0,0.5389221556886228){R}"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep5pEJeoEeWSidyG-ijZzw" id="(1.0,0.5382775119617225)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ep6QIJeoEeWSidyG-ijZzw" id="(0.0,0.539568345323741){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_isetsJeoEeWSidyG-ijZzw" type="4003" source="_rVcO8JelEeWSidyG-ijZzw" target="_Mg6N8JepEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_isettJeoEeWSidyG-ijZzw" type="6001">
@@ -198,7 +198,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_isfUwpeoEeWSidyG-ijZzw"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_isU8sJeoEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_isets5eoEeWSidyG-ijZzw" points="[1, -1, -540, 0]$[541, -87, 0, -86]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is4WUJeoEeWSidyG-ijZzw" id="(0.0,0.5767386091127098)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is4WUJeoEeWSidyG-ijZzw" id="(0.0,0.5779376498800959)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_is4WUZeoEeWSidyG-ijZzw" id="(0.0,0.17391304347826086){8}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_UOnggJepEeWSidyG-ijZzw" type="4005" source="_LSTFwJepEeWSidyG-ijZzw" target="_rVcO8JelEeWSidyG-ijZzw">
@@ -214,7 +214,7 @@
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_UOb6UJepEeWSidyG-ijZzw"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UOngg5epEeWSidyG-ijZzw" points="[0, 0, 533, -7]$[-533, 4, 0, -3]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UPEMcJepEeWSidyG-ijZzw" id="(0.0,1.0){32}"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UPEMcZepEeWSidyG-ijZzw" id="(1.0,0.3281437125748503){R}"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UPEMcZepEeWSidyG-ijZzw" id="(1.0,0.328537170263789){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ZxeRYJgzEeWEd-fUms36oA" type="4003" source="_p5vtAJelEeWSidyG-ijZzw" target="_eKxM4JgzEeWEd-fUms36oA">
     <children xmi:type="notation:DecorationNode" xmi:id="_Zxe4cJgzEeWEd-fUms36oA" type="6001">
@@ -228,7 +228,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_ZxgGkJgzEeWEd-fUms36oA"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Zs23IJgzEeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZxeRY5gzEeWEd-fUms36oA" points="[1, 6, -728, 0]$[729, 83, 0, 77]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zy2xcJgzEeWEd-fUms36oA" id="(0.0,0.35961768219832735)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zy2xcJgzEeWEd-fUms36oA" id="(0.0,0.36004784688995217)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zy2xcZgzEeWEd-fUms36oA" id="(0.0,0.0){8}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_f5LPcJgzEeWEd-fUms36oA" type="4005" source="_eKxM4JgzEeWEd-fUms36oA" target="_rVcO8JelEeWSidyG-ijZzw">
@@ -244,7 +244,7 @@
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_f4pD8JgzEeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_f5LPc5gzEeWEd-fUms36oA" points="[0, 0, 533, -21]$[-533, 69, 0, 48]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f6KG4JgzEeWEd-fUms36oA" id="(0.0,1.0){32}"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f6KG4ZgzEeWEd-fUms36oA" id="(0.0,0.4239520958083832){L}"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f6KG4ZgzEeWEd-fUms36oA" id="(0.0,0.4244604316546763){L}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_N02R4Jg0EeWEd-fUms36oA" type="4003" source="_p5vtAJelEeWSidyG-ijZzw" target="_P4PF8Jg0EeWEd-fUms36oA">
     <children xmi:type="notation:DecorationNode" xmi:id="_N0248Jg0EeWEd-fUms36oA" type="6001">
@@ -258,7 +258,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_N0249Jg0EeWEd-fUms36oA"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_N0oPcJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_N02R45g0EeWEd-fUms36oA" points="[1, 9, -728, 0]$[729, -96, 0, -105]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N1fyIJg0EeWEd-fUms36oA" id="(0.0,0.6989247311827957)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N1fyIJg0EeWEd-fUms36oA" id="(0.0,0.6997607655502392)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_N1fyIZg0EeWEd-fUms36oA" id="(0.0,0.0){8}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ZwsY0Jg0EeWEd-fUms36oA" type="4005" source="_Mg6N8JepEeWSidyG-ijZzw" target="_rVcO8JelEeWSidyG-ijZzw">
@@ -274,7 +274,7 @@
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_ZwMCgJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZwsY05g0EeWEd-fUms36oA" points="[0, 0, 541, -3]$[-525, 3, 16, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zw3X8Jg0EeWEd-fUms36oA" id="(0.0,1.0){32}"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zw3X8Zg0EeWEd-fUms36oA" id="(1.0,0.6378896882494005){R}"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zw3X8Zg0EeWEd-fUms36oA" id="(1.0,0.6390887290167866){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_eu5_QJg0EeWEd-fUms36oA" type="4005" source="_P4PF8Jg0EeWEd-fUms36oA" target="_rVcO8JelEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_eu6mUJg0EeWEd-fUms36oA" type="6003">
@@ -289,7 +289,7 @@
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_eudTUJg0EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eu5_Q5g0EeWEd-fUms36oA" points="[0, 0, 541, 5]$[-525, -5, 16, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_evDJMJg0EeWEd-fUms36oA" id="(0.0,0.39655172413793105){32}"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_evDJMZg0EeWEd-fUms36oA" id="(0.0,0.7769784172661871){L}"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_evDJMZg0EeWEd-fUms36oA" id="(0.0,0.7781774580335732){L}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_DhD4cJg1EeWEd-fUms36oA" type="4003" source="_rVcO8JelEeWSidyG-ijZzw" target="_p5vtAJelEeWSidyG-ijZzw">
     <children xmi:type="notation:DecorationNode" xmi:id="_DhEfgJg1EeWEd-fUms36oA" type="6001">
@@ -303,7 +303,7 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_DhEfhJg1EeWEd-fUms36oA"/>
     <element xmi:type="uml:Message" href="payment%20for%20credit%20card%20and%20online.uml#_Dg12AJg1EeWEd-fUms36oA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DhD4c5g1EeWEd-fUms36oA" points="[0, 4, 187, 0]$[-187, -271, 0, -275]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhpuUJg1EeWEd-fUms36oA" id="(0.0,0.8776978417266187)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhqVYJg1EeWEd-fUms36oA" id="(0.0,0.8827751196172249){L}"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhpuUJg1EeWEd-fUms36oA" id="(0.0,0.8788968824940048)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DhqVYJg1EeWEd-fUms36oA" id="(0.0,0.8839712918660287){L}"/>
   </edges>
 </notation:Diagram>

@@ -11,7 +11,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_13fzcI4YEeWJAfmx2oO5Ew" name="primaryOwnerId"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_5GI5sI4YEeWJAfmx2oO5Ew" name="isActive"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_Y4JZwI3MEeWAUrpqFCDYAA" name="Owner">
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y4JZwI3MEeWAUrpqFCDYAA" name="Customer">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ZB3r8I4YEeWJAfmx2oO5Ew" name="name" visibility="public" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_P5lRwI4YEeWJAfmx2oO5Ew" name="address"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_SEsecI4YEeWJAfmx2oO5Ew" name="Telephone"/>
