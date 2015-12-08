@@ -4,19 +4,14 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_6bP4UJjVEeWGV8DpM4-Nfw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_NHeG4JjWEeWGV8DpM4-Nfw" name="StaffInterface">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_QhqV0JjWEeWGV8DpM4-Nfw" name="Add"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_RNaBgJjWEeWGV8DpM4-Nfw" name="modify"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Rov5sJjWEeWGV8DpM4-Nfw" name="delete"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_5TyPEJjXEeWGV8DpM4-Nfw" name="display"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_hFdX8JjZEeWGV8DpM4-Nfw" name="Billing">
       <packagedElement xmi:type="uml:Class" xmi:id="_UwPZoJjXEeWGV8DpM4-Nfw" name="BillingController">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_JCIFMZpiEeWkoqFeX50x0w" name="bill" type="_DwB2kJj7EeW-3PPNesfa8A" aggregation="composite" association="_JCGQAJpiEeWkoqFeX50x0w">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDb1oJpiEeWkoqFeX50x0w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDdDwJpiEeWkoqFeX50x0w" value="*"/>
         </ownedAttribute>
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_X-vV8JjXEeWGV8DpM4-Nfw" client="_UwPZoJjXEeWGV8DpM4-Nfw" supplier="_NHeG4JjWEeWGV8DpM4-Nfw" contract="_NHeG4JjWEeWGV8DpM4-Nfw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_aDd2gJ2oEeWtsfDCVXewgw" client="_UwPZoJjXEeWGV8DpM4-Nfw" supplier="_X1x28J2oEeWtsfDCVXewgw" contract="_X1x28J2oEeWtsfDCVXewgw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cNlvQJ2pEeWtsfDCVXewgw" client="_UwPZoJjXEeWGV8DpM4-Nfw" supplier="__QnpoJ2oEeWtsfDCVXewgw" contract="__QnpoJ2oEeWtsfDCVXewgw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_DwB2kJj7EeW-3PPNesfa8A" name="Bill" visibility="private">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gBWPwJj-EeW-3PPNesfa8A" name="isPaid" visibility="private">
@@ -28,6 +23,15 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_n_GwgJj-EeW-3PPNesfa8A" name="Transaction" visibility="private"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_X1x28J2oEeWtsfDCVXewgw" name="StaffBilling">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_2vGUgJ2oEeWtsfDCVXewgw" name="addBill"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_20YdIJ2oEeWtsfDCVXewgw" name="modifyBill"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="__QnpoJ2oEeWtsfDCVXewgw" name="BookingToBill">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CBq08J2pEeWtsfDCVXewgw" name="addTransaction"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GiqT4J2pEeWtsfDCVXewgw" name="createBil"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_0e4UoJjiEeWGV8DpM4-Nfw" name="Booking">
       <packagedElement xmi:type="uml:Class" xmi:id="_DrfUoJjWEeWGV8DpM4-Nfw" name="BookingController">
@@ -40,7 +44,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yzBA8JwdEeWi2qAbhE6tPg" value="*"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_syj_oJjWEeWGV8DpM4-Nfw" client="_DrfUoJjWEeWGV8DpM4-Nfw" supplier="_hxDaAJjWEeWGV8DpM4-Nfw" contract="_hxDaAJjWEeWGV8DpM4-Nfw"/>
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uTFXMJjWEeWGV8DpM4-Nfw" client="_DrfUoJjWEeWGV8DpM4-Nfw" supplier="_NHeG4JjWEeWGV8DpM4-Nfw" contract="_NHeG4JjWEeWGV8DpM4-Nfw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j71cEJ2jEeWtsfDCVXewgw" client="_DrfUoJjWEeWGV8DpM4-Nfw" supplier="_SVR1EJ2jEeWtsfDCVXewgw" contract="_SVR1EJ2jEeWtsfDCVXewgw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_kqUJgJj_EeW-3PPNesfa8A" name="getCustomerInfo" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_1viA4JpmEeWkoqFeX50x0w" name="customer" type="_rm5Q4JpOEeWLCKBfwJdwbg" effect="read"/>
         </ownedOperation>
@@ -85,9 +89,12 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Q3EAMJwaEeWi2qAbhE6tPg" name="dateTo" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MYsTIJ2pEeWtsfDCVXewgw" name="bill_Id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_MXAv8Jj6EeW-3PPNesfa8A" name="Service"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_hxDaAJjWEeWGV8DpM4-Nfw" name="CustomerBooking">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_hxDaAJjWEeWGV8DpM4-Nfw" name="UserBooking">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_k1EkoJjWEeWGV8DpM4-Nfw" name="addBooking"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_llNBEJjWEeWGV8DpM4-Nfw" name="modifyBooking">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_LhlR4Jj8EeW-3PPNesfa8A" name="email" effect="update">
@@ -131,14 +138,24 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_SVR1EJ2jEeWtsfDCVXewgw" name="StaffBooking">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_VM7XoJ2jEeWtsfDCVXewgw" name="addRoom"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ZcJKEJ2jEeWtsfDCVXewgw" name="removeRoom"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_aV1LIJ2jEeWtsfDCVXewgw" name="displayRooms"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dhhEAJ2jEeWtsfDCVXewgw" name="checkIn"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eg6rgJ2jEeWtsfDCVXewgw" name="checkOut"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_m6cv4JpOEeWLCKBfwJdwbg" name="Account">
-      <packagedElement xmi:type="uml:Interface" xmi:id="_6xpj0JpOEeWLCKBfwJdwbg" name="CustomerAccount">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6xpj0JpOEeWLCKBfwJdwbg" name="UserAccount">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Dg1hgJpPEeWLCKBfwJdwbg" name="createAccount"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_UPugsJpPEeWLCKBfwJdwbg" name="deactivateAccount"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_JINMMJwcEeWi2qAbhE6tPg" name="BookingToAccoutn"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_JINMMJwcEeWi2qAbhE6tPg" name="BookingToAccount">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wwLJ4J2mEeWtsfDCVXewgw" name="getCustomer"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_QzgHAJ2oEeWtsfDCVXewgw" name="getAccount"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qVfTYJpOEeWLCKBfwJdwbg" name="Account" visibility="private"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_rm5Q4JpOEeWLCKBfwJdwbg" name="Customer" visibility="private"/>
@@ -156,9 +173,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ym7l8JpZEeWLCKBfwJdwbg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ym80EJpZEeWLCKBfwJdwbg" value="*"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_23rooJpOEeWLCKBfwJdwbg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_NHeG4JjWEeWGV8DpM4-Nfw" contract="_NHeG4JjWEeWGV8DpM4-Nfw"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__caCwJpOEeWLCKBfwJdwbg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_6xpj0JpOEeWLCKBfwJdwbg" contract="_6xpj0JpOEeWLCKBfwJdwbg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_P_1LUJwcEeWi2qAbhE6tPg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_JINMMJwcEeWi2qAbhE6tPg" contract="_JINMMJwcEeWi2qAbhE6tPg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NgmBQJ2nEeWtsfDCVXewgw" name="addCustomer" visibility="private"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_N5Wo8JpZEeWLCKBfwJdwbg" memberEnd="_N5X3EJpZEeWLCKBfwJdwbg _N5YeIJpZEeWLCKBfwJdwbg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N5XQAJpZEeWLCKBfwJdwbg" source="org.eclipse.papyrus">
