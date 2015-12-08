@@ -14,6 +14,7 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="__DwHkJFNEeWfpZmPf1igag" name="change permissions">
       <extend xmi:type="uml:Extend" xmi:id="_1sCU0JFOEeWfpZmPf1igag" extendedCase="__U1qcJDzEeWKttp4ZZX-MA" extensionLocation="_1sDi8JFOEeWfpZmPf1igag"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_gm_L4J2-EeW7q8Dd3Eln1Q" name="Change room status"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_93ibcJDyEeWKttp4ZZX-MA" name="system admin"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_JuH_kJFOEeWfpZmPf1igag" memberEnd="_JuJ0wZFOEeWfpZmPf1igag _JuKb0JFOEeWfpZmPf1igag">
@@ -36,5 +37,12 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3ui_IZFOEeWfpZmPf1igag" name="add/remove rooms" type="_ny_JsJDzEeWKttp4ZZX-MA" association="_3uhxAJFOEeWfpZmPf1igag"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3ujmMJFOEeWfpZmPf1igag" name="system admin" type="_93ibcJDyEeWKttp4ZZX-MA" association="_3uhxAJFOEeWfpZmPf1igag"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jrrr8J2-EeW7q8Dd3Eln1Q" memberEnd="_jrv9YJ2-EeW7q8Dd3Eln1Q _jrwkcJ2-EeW7q8Dd3Eln1Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jruIMJ2-EeW7q8Dd3Eln1Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jruvQJ2-EeW7q8Dd3Eln1Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jrv9YJ2-EeW7q8Dd3Eln1Q" name="change room status" type="_gm_L4J2-EeW7q8Dd3Eln1Q" association="_jrrr8J2-EeW7q8Dd3Eln1Q"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jrwkcJ2-EeW7q8Dd3Eln1Q" name="system admin" type="_93ibcJDyEeWKttp4ZZX-MA" association="_jrrr8J2-EeW7q8Dd3Eln1Q"/>
   </packagedElement>
 </uml:Model>
