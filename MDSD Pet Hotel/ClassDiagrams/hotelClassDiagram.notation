@@ -45,6 +45,10 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DwKZeZj7EeW-3PPNesfa8A"/>
         </children>
         <children xmi:type="notation:BasicCompartment" xmi:id="_DwKZepj7EeW-3PPNesfa8A" type="7012">
+          <children xmi:type="notation:Shape" xmi:id="_DvlCoJ41EeWEqvoHglzVwA" type="3013">
+            <element xmi:type="uml:Operation" href="hotelClassDiagram.uml#_DvIWsJ41EeWEqvoHglzVwA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_DvlCoZ41EeWEqvoHglzVwA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_DwKZe5j7EeW-3PPNesfa8A"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_DwKZfJj7EeW-3PPNesfa8A"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_DwKZfZj7EeW-3PPNesfa8A"/>
@@ -392,6 +396,10 @@
             <element xmi:type="uml:Property" href="hotelClassDiagram.uml#_z00hoJj7EeW-3PPNesfa8A"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_z1Au4Zj7EeW-3PPNesfa8A"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_C2OgIJ4yEeWEqvoHglzVwA" type="3012">
+            <element xmi:type="uml:Property" href="hotelClassDiagram.uml#_Czbq0J4yEeWEqvoHglzVwA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_C2OgIZ4yEeWEqvoHglzVwA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_ULIE8pjYEeWGV8DpM4-Nfw"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_ULIE85jYEeWGV8DpM4-Nfw"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_ULIE9JjYEeWGV8DpM4-Nfw"/>
@@ -446,6 +454,10 @@
           <children xmi:type="notation:Shape" xmi:id="_ehQCsJ2jEeWtsfDCVXewgw" type="3007">
             <element xmi:type="uml:Operation" href="hotelClassDiagram.uml#_eg6rgJ2jEeWtsfDCVXewgw"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_ehQCsZ2jEeWtsfDCVXewgw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_8Le_EJ40EeWEqvoHglzVwA" type="3007">
+            <element xmi:type="uml:Operation" href="hotelClassDiagram.uml#_8K7lcJ40EeWEqvoHglzVwA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_8Le_EZ40EeWEqvoHglzVwA"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_SVyLaZ2jEeWtsfDCVXewgw"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_SVyLap2jEeWtsfDCVXewgw"/>
