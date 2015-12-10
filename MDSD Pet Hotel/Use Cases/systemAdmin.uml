@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1LfRUJDyEeWKttp4ZZX-MA" name="RootElement">
   <packagedElement xmi:type="uml:Package" xmi:id="_2INYQJDyEeWKttp4ZZX-MA" name="System admin">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_ny_JsJDzEeWKttp4ZZX-MA" name="Add/remove rooms">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ny_JsJDzEeWKttp4ZZX-MA" name="UC16:Add/remove rooms">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_41kRkJFOEeWfpZmPf1igag" name="ExtensionPoint1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_tYcWUJDzEeWKttp4ZZX-MA" name="Add/remove room types">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tYcWUJDzEeWKttp4ZZX-MA" name="UC17:Add/remove room types">
       <extend xmi:type="uml:Extend" xmi:id="_41jqgJFOEeWfpZmPf1igag" extendedCase="_ny_JsJDzEeWKttp4ZZX-MA" extensionLocation="_41kRkJFOEeWfpZmPf1igag"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_0lDuAJDzEeWKttp4ZZX-MA" name="Add/remove staff"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="__U1qcJDzEeWKttp4ZZX-MA" name="Add/remove rank">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_0lDuAJDzEeWKttp4ZZX-MA" name="UC:19Add/remove staff"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__U1qcJDzEeWKttp4ZZX-MA" name="UC20:Add/remove rank">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_1sDi8JFOEeWfpZmPf1igag" name="ExtensionPoint1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="__DwHkJFNEeWfpZmPf1igag" name="change permissions">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__DwHkJFNEeWfpZmPf1igag" name="UC21:change permissions">
       <extend xmi:type="uml:Extend" xmi:id="_1sCU0JFOEeWfpZmPf1igag" extendedCase="__U1qcJDzEeWKttp4ZZX-MA" extensionLocation="_1sDi8JFOEeWfpZmPf1igag"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_gm_L4J2-EeW7q8Dd3Eln1Q" name="Change room status"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_gm_L4J2-EeW7q8Dd3Eln1Q" name="UC18:Change room status"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_93ibcJDyEeWKttp4ZZX-MA" name="system admin"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_93ibcJDyEeWKttp4ZZX-MA" name="Admin"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_JuH_kJFOEeWfpZmPf1igag" memberEnd="_JuJ0wZFOEeWfpZmPf1igag _JuKb0JFOEeWfpZmPf1igag">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JuJNsJFOEeWfpZmPf1igag" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JuJ0wJFOEeWfpZmPf1igag" key="nature" value="UML_Nature"/>

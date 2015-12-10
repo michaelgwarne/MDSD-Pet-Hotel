@@ -4,19 +4,19 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_5Z-VAI9zEeWR6_H1O30qIA" name="Booking">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_NRiDYI92EeWR6_H1O30qIA" name="Check in pet"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_OyXkAI92EeWR6_H1O30qIA" name="Check out pet"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_RQArII92EeWR6_H1O30qIA" name="Create booking through reception">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NRiDYI92EeWR6_H1O30qIA" name="UC4:Check in pet"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OyXkAI92EeWR6_H1O30qIA" name="UC5:Check out pet"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RQArII92EeWR6_H1O30qIA" name="UC2:Create booking ">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_HuM8kJEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_SohWMI92EeWR6_H1O30qIA" name="Modify booking">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_SohWMI92EeWR6_H1O30qIA" name="UC3:Modify booking">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_IXfKIZEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_JHiuEJEJEeWR46mIHJjugQ" name="ExtensionPoint2"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_s1i8UJUfEeWdAO_zf5cSog" name="Create booking through website"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_s1i8UJUfEeWdAO_zf5cSog" name="UC1:Create booking through website"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_8gLmEI91EeWR6_H1O30qIA" name="Reception"/>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_G6C84I92EeWR6_H1O30qIA" name="website"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_8gLmEI91EeWR6_H1O30qIA" name="Receptionist"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_G6C84I92EeWR6_H1O30qIA" name="Customer"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_wR4nwI92EeWR6_H1O30qIA" memberEnd="_wR5O0o92EeWR6_H1O30qIA _wR514I92EeWR6_H1O30qIA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wR5O0I92EeWR6_H1O30qIA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wR5O0Y92EeWR6_H1O30qIA" key="nature" value="UML_Nature"/>
