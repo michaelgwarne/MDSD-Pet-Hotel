@@ -32,7 +32,7 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_X1x28J2oEeWtsfDCVXewgw" name="StaffBilling">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_2vGUgJ2oEeWtsfDCVXewgw" name="addBill"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_2vGUgJ2oEeWtsfDCVXewgw" name="createBill" concurrency="concurrent"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_20YdIJ2oEeWtsfDCVXewgw" name="modifyBill"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill"/>
       </packagedElement>
@@ -43,6 +43,9 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_OO1O4J8pEeWpe80voGitgg" name="amount">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nNJQIJ81EeWL64ohW47Y2g" name="BookingID">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_GiqT4J2pEeWtsfDCVXewgw" name="createBill" visibility="public"/>
@@ -88,10 +91,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pCRagJj6EeW-3PPNesfa8A"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pCTPsJj6EeW-3PPNesfa8A" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_-JwtUJqJEeWAj426CsueFg" name="serviceList" type="_MXAv8Jj6EeW-3PPNesfa8A" aggregation="composite" association="_-JdyYJqJEeWAj426CsueFg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__HlAcJqJEeWAj426CsueFg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__HuxcJqJEeWAj426CsueFg" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_8uxSsJwNEeWi2qAbhE6tPg" name="mealList" type="_MvgAwJpgEeWkoqFeX50x0w" aggregation="composite" association="_8uqlAJwNEeWi2qAbhE6tPg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ISmr0JwaEeWi2qAbhE6tPg" name="room" visibility="private" type="_ULFosJjYEeWGV8DpM4-Nfw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_QcqjMJwaEeWi2qAbhE6tPg" name="dateFrom" visibility="private">
@@ -103,13 +102,10 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MYsTIJ2pEeWtsfDCVXewgw" name="bill_Id" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_MXAv8Jj6EeW-3PPNesfa8A" name="Service">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_VKPacJ8sEeWpe80voGitgg" name="description" visibility="private">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qHnyUJ83EeWL64ohW47Y2g" name="OrderedServices" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Yzmt0J8sEeWpe80voGitgg" name="price" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yBRPIJ83EeWL64ohW47Y2g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yBU5gJ83EeWL64ohW47Y2g" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_hxDaAJjWEeWGV8DpM4-Nfw" name="UserBooking">
@@ -190,8 +186,8 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qVfTYJpOEeWLCKBfwJdwbg" name="Account" visibility="private">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_tEM5MJ8sEeWpe80voGitgg" name="Attribute1"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_GVU_MJ8tEeWpe80voGitgg" name="pet" type="_s1ubgJpOEeWLCKBfwJdwbg" association="_GVPfoJ8tEeWpe80voGitgg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tEM5MJ8sEeWpe80voGitgg" name="accountID"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KQ6ioJ87EeWL64ohW47Y2g" name="discount"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_rm5Q4JpOEeWLCKBfwJdwbg" name="Customer" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XSPUoJ8fEeWpe80voGitgg" name="name" visibility="private">
@@ -199,6 +195,11 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_uoUQ8J8kEeWpe80voGitgg" name="email" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_itVDoJ86EeWL64ohW47Y2g" name="account" type="_qVfTYJpOEeWLCKBfwJdwbg" association="_itUckJ86EeWL64ohW47Y2g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_71IOgJ86EeWL64ohW47Y2g" name="pet" type="_s1ubgJpOEeWLCKBfwJdwbg" association="_71HAYJ86EeWL64ohW47Y2g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VI71EJ87EeWL64ohW47Y2g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VJAtkJ87EeWL64ohW47Y2g" value="*"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_s1ubgJpOEeWLCKBfwJdwbg" name="Pet" visibility="private">
@@ -210,10 +211,6 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_vNs_gJpOEeWLCKBfwJdwbg" name="AccountController">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_N5X3EJpZEeWLCKBfwJdwbg" name="accountList" type="_qVfTYJpOEeWLCKBfwJdwbg" aggregation="composite" association="_N5Wo8JpZEeWLCKBfwJdwbg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RqD6cJpZEeWLCKBfwJdwbg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RqFIkJpZEeWLCKBfwJdwbg" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_X4z7sZpZEeWLCKBfwJdwbg" name="customerList" type="_rm5Q4JpOEeWLCKBfwJdwbg" aggregation="composite" association="_X4ytkJpZEeWLCKBfwJdwbg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ym7l8JpZEeWLCKBfwJdwbg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ym80EJpZEeWLCKBfwJdwbg" value="*"/>
@@ -224,15 +221,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NgmBQJ2nEeWtsfDCVXewgw" name="addCustomer" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_4UN7UJ5wEeWeFMYy3D4EwQ" name="addPet" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_5Va5oJ5wEeWeFMYy3D4EwQ" name="removePet" visibility="private"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_N5Wo8JpZEeWLCKBfwJdwbg" memberEnd="_N5X3EJpZEeWLCKBfwJdwbg _N5YeIJpZEeWLCKBfwJdwbg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N5XQAJpZEeWLCKBfwJdwbg" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N5XQAZpZEeWLCKBfwJdwbg" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_N5YeIJpZEeWLCKBfwJdwbg" type="_vNs_gJpOEeWLCKBfwJdwbg" association="_N5Wo8JpZEeWLCKBfwJdwbg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qpi4oJpZEeWLCKBfwJdwbg" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QpkGwJpZEeWLCKBfwJdwbg" value="1"/>
-      </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_X4ytkJpZEeWLCKBfwJdwbg" memberEnd="_X4z7sZpZEeWLCKBfwJdwbg _X40iwJpZEeWLCKBfwJdwbg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X4zUoJpZEeWLCKBfwJdwbg" source="org.eclipse.papyrus">
@@ -258,12 +246,6 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fSuZcJpiEeWkoqFeX50x0w" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_fSvAgJpiEeWkoqFeX50x0w" type="_DrfUoJjWEeWGV8DpM4-Nfw" association="_fStLUJpiEeWkoqFeX50x0w"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_-JdyYJqJEeWAj426CsueFg" memberEnd="_-JwtUJqJEeWAj426CsueFg _-JwtUZqJEeWAj426CsueFg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-Jm8UJqJEeWAj426CsueFg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Jm8UZqJEeWAj426CsueFg" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_-JwtUZqJEeWAj426CsueFg" type="_7Uik4JjiEeWGV8DpM4-Nfw" association="_-JdyYJqJEeWAj426CsueFg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_8uqlAJwNEeWi2qAbhE6tPg" memberEnd="_8uxSsJwNEeWi2qAbhE6tPg _8ux5wJwNEeWi2qAbhE6tPg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8uuPYJwNEeWi2qAbhE6tPg" source="org.eclipse.papyrus">
@@ -291,6 +273,10 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ie4dMZ5kEeWeFMYy3D4EwQ" name="staffList" type="_fzUO0J5kEeWeFMYy3D4EwQ" aggregation="composite" association="_ie32IJ5kEeWeFMYy3D4EwQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfPG8J5kEeWeFMYy3D4EwQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfQVEJ5kEeWeFMYy3D4EwQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5XrcAJ83EeWL64ohW47Y2g" name="servicesList" type="_MXAv8Jj6EeW-3PPNesfa8A" aggregation="composite" association="_5XnxoJ83EeWL64ohW47Y2g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-3KjgJ83EeWL64ohW47Y2g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-3M_wJ83EeWL64ohW47Y2g" value="*"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iQtwQJ5iEeWeFMYy3D4EwQ" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_e0gvIJ5iEeWeFMYy3D4EwQ" contract="_e0gvIJ5iEeWeFMYy3D4EwQ"/>
     </packagedElement>
@@ -336,14 +322,22 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_OFdpwJ8kEeWpe80voGitgg" name="displayStaff"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_fzUO0J5kEeWeFMYy3D4EwQ" name="Staff" visibility="public">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_PhphsJ5lEeWeFMYy3D4EwQ" name="Name">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PhphsJ5lEeWeFMYy3D4EwQ" name="Name" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_R2B_IJ5lEeWeFMYy3D4EwQ" name="rank">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_R2B_IJ5lEeWeFMYy3D4EwQ" name="rank" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_mo-4UJ8jEeWpe80voGitgg" name="SSN">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mo-4UJ8jEeWpe80voGitgg" name="SSN" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MXAv8Jj6EeW-3PPNesfa8A" name="Service">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VKPacJ8sEeWpe80voGitgg" name="description" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Yzmt0J8sEeWpe80voGitgg" name="price" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
       </ownedAttribute>
     </packagedElement>
   </packagedElement>
@@ -359,11 +353,23 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ie5rUJ5kEeWeFMYy3D4EwQ" type="_UmajcJ5iEeWeFMYy3D4EwQ" association="_ie32IJ5kEeWeFMYy3D4EwQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_GVPfoJ8tEeWpe80voGitgg" memberEnd="_GVU_MJ8tEeWpe80voGitgg _GVVmQJ8tEeWpe80voGitgg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GVRU0J8tEeWpe80voGitgg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GVR74J8tEeWpe80voGitgg" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5XnxoJ83EeWL64ohW47Y2g" visibility="public" memberEnd="_5XrcAJ83EeWL64ohW47Y2g _5XrcAZ83EeWL64ohW47Y2g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5Xpm0J83EeWL64ohW47Y2g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5XqN4J83EeWL64ohW47Y2g" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_GVVmQJ8tEeWpe80voGitgg" name="account" type="_qVfTYJpOEeWLCKBfwJdwbg" association="_GVPfoJ8tEeWpe80voGitgg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5XrcAZ83EeWL64ohW47Y2g" name="admincontroller" type="_UmajcJ5iEeWeFMYy3D4EwQ" association="_5XnxoJ83EeWL64ohW47Y2g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_itUckJ86EeWL64ohW47Y2g" memberEnd="_itVDoJ86EeWL64ohW47Y2g _itVDoZ86EeWL64ohW47Y2g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_itUckZ86EeWL64ohW47Y2g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_itUckp86EeWL64ohW47Y2g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_itVDoZ86EeWL64ohW47Y2g" name="customer" type="_rm5Q4JpOEeWLCKBfwJdwbg" association="_itUckJ86EeWL64ohW47Y2g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_71HAYJ86EeWL64ohW47Y2g" memberEnd="_71IOgJ86EeWL64ohW47Y2g _71I1kJ86EeWL64ohW47Y2g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_71HncJ86EeWL64ohW47Y2g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_71HncZ86EeWL64ohW47Y2g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_71I1kJ86EeWL64ohW47Y2g" name="customer" type="_rm5Q4JpOEeWLCKBfwJdwbg" association="_71HAYJ86EeWL64ohW47Y2g"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CfhOcJpPEeWLCKBfwJdwbg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CfickJpPEeWLCKBfwJdwbg" source="http://www.eclipse.org/uml2/2.0.0/UML">
