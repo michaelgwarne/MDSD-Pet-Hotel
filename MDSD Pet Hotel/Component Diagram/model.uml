@@ -7,7 +7,7 @@
         <packagedElement xmi:type="uml:Usage" xmi:id="_fFVPUJhBEeWN58PmMjE-1g" client="_pyIs8JdUEeWrhotgh15juA" supplier="_1ZET8Jg9EeWN58PmMjE-1g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_5A4V4JhCEeWN58PmMjE-1g" client="_pyIs8JdUEeWrhotgh15juA" supplier="_HxfSMJg9EeWN58PmMjE-1g"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_1ZET8Jg9EeWN58PmMjE-1g" name="HotelController Interface">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_1ZET8Jg9EeWN58PmMjE-1g" name="Admin Controller Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_6WUpYJhDEeWN58PmMjE-1g" name="petTypeExists(string type)"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_HYUgEJhEEeWN58PmMjE-1g" name="addRoom"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_KetCMJhEEeWN58PmMjE-1g" name="removeRoom"/>
@@ -19,17 +19,17 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_RLBTwJhFEeWN58PmMjE-1g" name="findNextAvailableDates"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_WD3SAJhFEeWN58PmMjE-1g" name="deleteService"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_rKeY4JdUEeWrhotgh15juA" name="Payment Controller">
+      <packagedElement xmi:type="uml:Component" xmi:id="_rKeY4JdUEeWrhotgh15juA" name="Billing Controller">
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lt-UEJg9EeWN58PmMjE-1g" client="_rKeY4JdUEeWrhotgh15juA" supplier="_HxfSMJg9EeWN58PmMjE-1g" contract="_HxfSMJg9EeWN58PmMjE-1g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_7Fd8EJ9OEeWRe4xQOlNr2g" client="_rKeY4JdUEeWrhotgh15juA" supplier="_fVr8UJg9EeWN58PmMjE-1g"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_tnlUgJdUEeWrhotgh15juA" name="Hotel Controller">
+      <packagedElement xmi:type="uml:Component" xmi:id="_tnlUgJdUEeWrhotgh15juA" name="Admin Controller">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GZmEspeZEeWN58PmMjE-1g" name="account"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_g9rYYJg-EeWN58PmMjE-1g" client="_tnlUgJdUEeWrhotgh15juA" supplier="_1ZET8Jg9EeWN58PmMjE-1g" contract="_1ZET8Jg9EeWN58PmMjE-1g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_XZh5gJ9NEeWRe4xQOlNr2g" client="_tnlUgJdUEeWrhotgh15juA" supplier="_7fMVkJ9MEeWRe4xQOlNr2g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_ZGRvMJ9NEeWRe4xQOlNr2g" client="_tnlUgJdUEeWrhotgh15juA" supplier="_fVr8UJg9EeWN58PmMjE-1g"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_HxfSMJg9EeWN58PmMjE-1g" name="Payment Controller Interface">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_HxfSMJg9EeWN58PmMjE-1g" name="Billing Controller Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_FE-vAJhFEeWN58PmMjE-1g" name="addBill"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_HE1G4JhFEeWN58PmMjE-1g" name="getTotalAmount"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_xbgYkJhFEeWN58PmMjE-1g" name="isPaid"/>
