@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_68Cu0JdBEeWrhotgh15juA" name="RootElement">
   <packagedElement xmi:type="uml:Package" xmi:id="_A97t4JdEEeWrhotgh15juA" name="Application Tier">
-    <packagedElement xmi:type="uml:Package" xmi:id="_YgMYIJ60EeWFWcyu24MGKw" name="Hotel system">
+    <packagedElement xmi:type="uml:Package" xmi:id="_YgMYIJ60EeWFWcyu24MGKw" name="Hotel System">
       <packagedElement xmi:type="uml:Component" xmi:id="_pyIs8JdUEeWrhotgh15juA" name="Booking Controller">
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mdpdgJg9EeWN58PmMjE-1g" client="_pyIs8JdUEeWrhotgh15juA" supplier="_fVr8UJg9EeWN58PmMjE-1g" contract="_fVr8UJg9EeWN58PmMjE-1g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_fFVPUJhBEeWN58PmMjE-1g" client="_pyIs8JdUEeWrhotgh15juA" supplier="_1ZET8Jg9EeWN58PmMjE-1g"/>
@@ -58,7 +58,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_6aQRUJ9NEeWRe4xQOlNr2g" name="checkIn"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_76fVAJ9NEeWRe4xQOlNr2g" name="checkOut"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_5TgzEJ9KEeWRe4xQOlNr2g" name="Recptionist user interface">
+    <packagedElement xmi:type="uml:Component" xmi:id="_5TgzEJ9KEeWRe4xQOlNr2g" name="Receptionist User Interface">
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TEonwJ9LEeWRe4xQOlNr2g" client="_5TgzEJ9KEeWRe4xQOlNr2g" supplier="_QbPdoJg6EeWN58PmMjE-1g" contract="_QbPdoJg6EeWN58PmMjE-1g"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_SyR3AJ9MEeWRe4xQOlNr2g" client="_5TgzEJ9KEeWRe4xQOlNr2g" supplier="_fVr8UJg9EeWN58PmMjE-1g"/>
     </packagedElement>
@@ -72,7 +72,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_kEg-YJ9NEeWRe4xQOlNr2g" name="callData"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_-M_nkJdUEeWrhotgh15juA" name="Owner User Interface">
+  <packagedElement xmi:type="uml:Component" xmi:id="_-M_nkJdUEeWrhotgh15juA" name="Customer User Interface">
     <packagedElement xmi:type="uml:Usage" xmi:id="_L1DDYJmfEeWN58PmMjE-1g" client="_-M_nkJdUEeWrhotgh15juA" supplier="_fVr8UJg9EeWN58PmMjE-1g"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_HvUYgJ9PEeWRe4xQOlNr2g" client="_-M_nkJdUEeWrhotgh15juA" supplier="_fX628J9OEeWRe4xQOlNr2g"/>
   </packagedElement>
@@ -81,7 +81,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_kq88oZeUEeWN58PmMjE-1g" name="staff user interface"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_Rz0DoJ9MEeWRe4xQOlNr2g" client="_BwUbMJeTEeWN58PmMjE-1g" supplier="_QbPdoJg6EeWN58PmMjE-1g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_W3GAoJeTEeWN58PmMjE-1g" name="Owner">
+  <packagedElement xmi:type="uml:Component" xmi:id="_W3GAoJeTEeWN58PmMjE-1g" name="Customer">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dg9QkJeTEeWN58PmMjE-1g" name="website" type="_-M_nkJdUEeWrhotgh15juA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_DwIVkJg9EeWN58PmMjE-1g" client="_W3GAoJeTEeWN58PmMjE-1g" supplier="_-M_nkJdUEeWrhotgh15juA"/>
   </packagedElement>
