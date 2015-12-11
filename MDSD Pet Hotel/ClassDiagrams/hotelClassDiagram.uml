@@ -462,6 +462,20 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_UOcrS6AWEeWICP6m2t7aBg" name="website" type="_UOcEPqAWEeWICP6m2t7aBg"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_UOcrTKAWEeWICP6m2t7aBg" client="_UOcrSqAWEeWICP6m2t7aBg" supplier="_UOcEPqAWEeWICP6m2t7aBg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_X04mcKAWEeWICP6m2t7aBg" name="Interaction1">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nIAyQKAWEeWICP6m2t7aBg" name="" type="_UOcrSqAWEeWICP6m2t7aBg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9D9FIKAWEeWICP6m2t7aBg" name="" type="_UOcEPqAWEeWICP6m2t7aBg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-rbZQaAWEeWICP6m2t7aBg" name="" type="_UOcrRqAWEeWICP6m2t7aBg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_D00U8KAXEeWICP6m2t7aBg" name="" type="_UOXywKAWEeWICP6m2t7aBg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_06aVsaAXEeWICP6m2t7aBg" name="" type="_UOcEWaAWEeWICP6m2t7aBg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_nIALMKAWEeWICP6m2t7aBg" name="" represents="_nIAyQKAWEeWICP6m2t7aBg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_-rbZQKAWEeWICP6m2t7aBg" name="" represents="_-rbZQaAWEeWICP6m2t7aBg" coveredBy="_VpyV8KAYEeWICP6m2t7aBg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_D0zt4KAXEeWICP6m2t7aBg" name="" represents="_D00U8KAXEeWICP6m2t7aBg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_06aVsKAXEeWICP6m2t7aBg" name="" represents="_06aVsaAXEeWICP6m2t7aBg" coveredBy="_VpyV8aAYEeWICP6m2t7aBg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VpyV8aAYEeWICP6m2t7aBg" name="addBill_MessageRecv" covered="_06aVsKAXEeWICP6m2t7aBg" message="_Vpxu4KAYEeWICP6m2t7aBg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VpyV8KAYEeWICP6m2t7aBg" name="addBill_MessageSend" covered="_-rbZQKAWEeWICP6m2t7aBg" message="_Vpxu4KAYEeWICP6m2t7aBg"/>
+    <message xmi:type="uml:Message" xmi:id="_Vpxu4KAYEeWICP6m2t7aBg" name="addBill_Message" receiveEvent="_VpyV8aAYEeWICP6m2t7aBg" sendEvent="_VpyV8KAYEeWICP6m2t7aBg" signature="_UOcEWqAWEeWICP6m2t7aBg"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CfhOcJpPEeWLCKBfwJdwbg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CfickJpPEeWLCKBfwJdwbg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>

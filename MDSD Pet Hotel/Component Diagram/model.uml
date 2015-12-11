@@ -91,4 +91,13 @@
   <packagedElement xmi:type="uml:Component" xmi:id="_QmxT8J3nEeWFWcyu24MGKw" name="Webcam">
     <packagedElement xmi:type="uml:Usage" xmi:id="_byQU8J3nEeWFWcyu24MGKw" client="_QmxT8J3nEeWFWcyu24MGKw" supplier="_-M_nkJdUEeWrhotgh15juA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_myoisKAXEeWICP6m2t7aBg" name="Interaction1">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nxbtQaAXEeWICP6m2t7aBg" name="" type="_W3GAoJeTEeWN58PmMjE-1g"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oM0BsaAXEeWICP6m2t7aBg" name="" type="_BwUbMJeTEeWN58PmMjE-1g"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_nxbtQKAXEeWICP6m2t7aBg" name="" represents="_nxbtQaAXEeWICP6m2t7aBg" coveredBy="_rEpKcKAXEeWICP6m2t7aBg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_oM0BsKAXEeWICP6m2t7aBg" name="" represents="_oM0BsaAXEeWICP6m2t7aBg" coveredBy="_rEpxgKAXEeWICP6m2t7aBg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rEpxgKAXEeWICP6m2t7aBg" name="MessageRecv" covered="_oM0BsKAXEeWICP6m2t7aBg" message="_rEjq4KAXEeWICP6m2t7aBg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rEpKcKAXEeWICP6m2t7aBg" name="MessageSend" covered="_nxbtQKAXEeWICP6m2t7aBg" message="_rEjq4KAXEeWICP6m2t7aBg"/>
+    <message xmi:type="uml:Message" xmi:id="_rEjq4KAXEeWICP6m2t7aBg" name="Me22age" receiveEvent="_rEpxgKAXEeWICP6m2t7aBg" sendEvent="_rEpKcKAXEeWICP6m2t7aBg"/>
+  </packagedElement>
 </uml:Model>
