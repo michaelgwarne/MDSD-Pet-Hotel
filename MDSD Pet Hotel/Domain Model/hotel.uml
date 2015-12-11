@@ -24,10 +24,6 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_B2psEI4kEeWjWMyf9vaeZA" name="staffID"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_EbpYYI4kEeWjWMyf9vaeZA" name="rank"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_GJMfUI4kEeWjWMyf9vaeZA" name="SSN"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_7TeQwp8rEeWu67n2heykjA" name="staff" type="_c8vQkI3MEeWAUrpqFCDYAA" association="_7TdpsJ8rEeWu67n2heykjA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QYN14J8sEeWu67n2heykjA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QYPEAJ8sEeWu67n2heykjA" value="*"/>
-    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_EmbXkI3NEeWAUrpqFCDYAA" name="Service">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_MMjTcI4lEeWjWMyf9vaeZA" name="name"/>
@@ -189,7 +185,9 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_uOvL9J8nEeWu67n2heykjA" type="_Y4JZwI3MEeWAUrpqFCDYAA" association="_uOvL8J8nEeWu67n2heykjA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_uOvL858nEeWu67n2heykjA" type="_XOUVMI3MEeWAUrpqFCDYAA" association="_uOvL8J8nEeWu67n2heykjA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_eCxBsJ8pEeWu67n2heykjA" name="Camera"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eCxBsJ8pEeWu67n2heykjA" name="Camera">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QaGsMJ_wEeW1sILzhDRiFQ" name="roomID"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_qmBt8J8pEeWu67n2heykjA" name="Provides Access to" memberEnd="_qmCVAJ8pEeWu67n2heykjA _qmCVAZ8pEeWu67n2heykjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qmBt8Z8pEeWu67n2heykjA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmBt8p8pEeWu67n2heykjA" key="nature" value="UML_Nature"/>
@@ -210,11 +208,15 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_J_mY4Z8qEeWu67n2heykjA" type="_eCxBsJ8pEeWu67n2heykjA" association="_J_lx0J8qEeWu67n2heykjA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_J_mY4J8qEeWu67n2heykjA" type="_IXC-II38EeW0yOZyFg0B4Q" association="_J_lx0J8qEeWu67n2heykjA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_7TdpsJ8rEeWu67n2heykjA" name="Manges Ranks and Records" memberEnd="_7TeQwp8rEeWu67n2heykjA _7Te30J8rEeWu67n2heykjA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_7TdpsJ8rEeWu67n2heykjA" name="Manages" memberEnd="_7TeQwp8rEeWu67n2heykjA _7Te30J8rEeWu67n2heykjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7TeQwJ8rEeWu67n2heykjA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7TeQwZ8rEeWu67n2heykjA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_7Te30J8rEeWu67n2heykjA" name="Admin" type="_c8vQkI3MEeWAUrpqFCDYAA" association="_7TdpsJ8rEeWu67n2heykjA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7TeQwp8rEeWu67n2heykjA" name="staff" type="_c8vQkI3MEeWAUrpqFCDYAA" association="_7TdpsJ8rEeWu67n2heykjA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QYN14J8sEeWu67n2heykjA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QYPEAJ8sEeWu67n2heykjA" value="*"/>
+    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_hY1MUJ8uEeWu67n2heykjA" name="Modify" memberEnd="_hY1zYZ8uEeWu67n2heykjA _hY1zYp8uEeWu67n2heykjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hY1MUZ8uEeWu67n2heykjA" source="org.eclipse.papyrus">
