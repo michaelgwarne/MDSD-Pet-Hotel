@@ -4,14 +4,13 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_4NphQI9yEeWR6_H1O30qIA" name="Accounts">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_ASLYYI9zEeWR6_H1O30qIA" name="UC12:Create Account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9xpQI9zEeWR6_H1O30qIA" name="UC13:Modify Account">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ASLYYI9zEeWR6_H1O30qIA" name="UC11:Create Account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9xpQI9zEeWR6_H1O30qIA" name="UC12:Modify Account">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_C2cjcJEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Dt6-AJEJEeWR46mIHJjugQ" name="ExtensionPoint2"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EUsqIJEJEeWR46mIHJjugQ" name="ExtensionPoint3"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_QUQU4I9zEeWR6_H1O30qIA" name="UC:15Add pet"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Tu9hMI9zEeWR6_H1O30qIA" name="UC14:Add customer"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QUQU4I9zEeWR6_H1O30qIA" name="UC:14Add pet"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_6kfc0I9yEeWR6_H1O30qIA" name="Customer"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_g2O5cI9zEeWR6_H1O30qIA" memberEnd="_g2PggY9zEeWR6_H1O30qIA _g2QHkI9zEeWR6_H1O30qIA">
@@ -20,13 +19,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_g2PggY9zEeWR6_H1O30qIA" name="modify account" type="_F9xpQI9zEeWR6_H1O30qIA" association="_g2O5cI9zEeWR6_H1O30qIA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_g2QHkI9zEeWR6_H1O30qIA" name="reception" type="_6kfc0I9yEeWR6_H1O30qIA" association="_g2O5cI9zEeWR6_H1O30qIA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_GkHU0JU3EeWcl4XDJeqWbQ" memberEnd="_GkIi8JU3EeWcl4XDJeqWbQ _GkIi8ZU3EeWcl4XDJeqWbQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GkH74JU3EeWcl4XDJeqWbQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GkH74ZU3EeWcl4XDJeqWbQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_GkIi8JU3EeWcl4XDJeqWbQ" name="add owner" type="_Tu9hMI9zEeWR6_H1O30qIA" association="_GkHU0JU3EeWcl4XDJeqWbQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_GkIi8ZU3EeWcl4XDJeqWbQ" name="reception" type="_6kfc0I9yEeWR6_H1O30qIA" association="_GkHU0JU3EeWcl4XDJeqWbQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_HQjkEJU3EeWcl4XDJeqWbQ" memberEnd="_HQkLIpU3EeWcl4XDJeqWbQ _HQkyMJU3EeWcl4XDJeqWbQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HQkLIJU3EeWcl4XDJeqWbQ" source="org.eclipse.papyrus">
