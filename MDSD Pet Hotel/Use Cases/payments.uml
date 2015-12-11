@@ -4,12 +4,10 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_lkQK8I93EeWR6_H1O30qIA" name="Bill and Payments">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_v6vdoI93EeWR6_H1O30qIA" name="UC9:Pay with cash"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="UC10:Pay with credit card"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_EkVgkJ5aEeW7q8Dd3Eln1Q" name="UC7:Updates bill"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Rk07YJ5aEeW7q8Dd3Eln1Q" name="UC6:Creates bill"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub8KAJ8sEeWF0tZtmItrUw" name="UC11:Get refund"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_BciNwJ_9EeWICP6m2t7aBg" name="UC8:Issue refund"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_v6vdoI93EeWR6_H1O30qIA" name="UC7:Pay with cash"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="UC8:Pay with credit card"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub8KAJ8sEeWF0tZtmItrUw" name="UC9:Get refund"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_BciNwJ_9EeWICP6m2t7aBg" name="UC6:Issue refund"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_nTZNUI93EeWR6_H1O30qIA" name="Customer"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_ou4T4I93EeWR6_H1O30qIA" name="Receptionist"/>
@@ -26,20 +24,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Gg5eAJUREeWdAO_zf5cSog" name="pay with cash" type="_v6vdoI93EeWR6_H1O30qIA" association="_Gg4P4JUREeWdAO_zf5cSog"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Gg5eAZUREeWdAO_zf5cSog" name="receptionist" type="_ou4T4I93EeWR6_H1O30qIA" association="_Gg4P4JUREeWdAO_zf5cSog"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_WuwCkJ5aEeW7q8Dd3Eln1Q" memberEnd="_Wuwpop5aEeW7q8Dd3Eln1Q _WuxQsJ5aEeW7q8Dd3Eln1Q">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WuwpoJ5aEeW7q8Dd3Eln1Q" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WuwpoZ5aEeW7q8Dd3Eln1Q" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_Wuwpop5aEeW7q8Dd3Eln1Q" name="creates bill" type="_Rk07YJ5aEeW7q8Dd3Eln1Q" association="_WuwCkJ5aEeW7q8Dd3Eln1Q"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_WuxQsJ5aEeW7q8Dd3Eln1Q" name="reception" type="_ou4T4I93EeWR6_H1O30qIA" association="_WuwCkJ5aEeW7q8Dd3Eln1Q"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_YdKsMJ5aEeW7q8Dd3Eln1Q" memberEnd="_YdLTQp5aEeW7q8Dd3Eln1Q _YdLTQ55aEeW7q8Dd3Eln1Q">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YdLTQJ5aEeW7q8Dd3Eln1Q" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YdLTQZ5aEeW7q8Dd3Eln1Q" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_YdLTQp5aEeW7q8Dd3Eln1Q" name="updates bill" type="_EkVgkJ5aEeW7q8Dd3Eln1Q" association="_YdKsMJ5aEeW7q8Dd3Eln1Q"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_YdLTQ55aEeW7q8Dd3Eln1Q" name="reception" type="_ou4T4I93EeWR6_H1O30qIA" association="_YdKsMJ5aEeW7q8Dd3Eln1Q"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_LfXQkJ8sEeWF0tZtmItrUw" memberEnd="_LfX3op8sEeWF0tZtmItrUw _LfX3o58sEeWF0tZtmItrUw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LfX3oJ8sEeWF0tZtmItrUw" source="org.eclipse.papyrus">
