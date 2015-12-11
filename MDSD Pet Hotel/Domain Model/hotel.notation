@@ -613,7 +613,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_ZsSblJ8nEeWu67n2heykjA" y="-20"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_ZsSblZ8nEeWu67n2heykjA" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZsSblp8nEeWu67n2heykjA" y="34"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZsSblp8nEeWu67n2heykjA" x="-1" y="56"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_ZsTCoJ8nEeWu67n2heykjA" type="6003">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_ZsTCoZ8nEeWu67n2heykjA" x="-15"/>

@@ -128,7 +128,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8zNskI4REeWJAfmx2oO5Ew" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_5H640I4MEeWJAfmx2oO5Ew" name="Delivered" memberEnd="_5IFQ4I4MEeWJAfmx2oO5Ew _5ILXgI4MEeWJAfmx2oO5Ew">
+  <packagedElement xmi:type="uml:Association" xmi:id="_5H640I4MEeWJAfmx2oO5Ew" name="Recieves Deleivery Of" memberEnd="_5IFQ4I4MEeWJAfmx2oO5Ew _5ILXgI4MEeWJAfmx2oO5Ew">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5IC0oI4MEeWJAfmx2oO5Ew" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5IDbsI4MEeWJAfmx2oO5Ew" key="nature" value="UML_Nature"/>
     </eAnnotations>
@@ -161,7 +161,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rsa1oJ8mEeWu67n2heykjA" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Zr8dUJ8nEeWu67n2heykjA" name="Owned By" memberEnd="_Zr9EYJ8nEeWu67n2heykjA _Zr9EYZ8nEeWu67n2heykjA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_Zr8dUJ8nEeWu67n2heykjA" name="Checked In/Out By" memberEnd="_Zr9EYJ8nEeWu67n2heykjA _Zr9EYZ8nEeWu67n2heykjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Zr8dUZ8nEeWu67n2heykjA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Zr8dUp8nEeWu67n2heykjA" key="nature" value="UML_Nature"/>
     </eAnnotations>
@@ -184,7 +184,7 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_eCxBsJ8pEeWu67n2heykjA" name="Camera">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QaGsMJ_wEeW1sILzhDRiFQ" name="roomID"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_qmBt8J8pEeWu67n2heykjA" name="Provides Access to" memberEnd="_qmCVAJ8pEeWu67n2heykjA _qmCVAZ8pEeWu67n2heykjA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_qmBt8J8pEeWu67n2heykjA" name="Accessed Through" memberEnd="_qmCVAJ8pEeWu67n2heykjA _qmCVAZ8pEeWu67n2heykjA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qmBt8Z8pEeWu67n2heykjA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qmBt8p8pEeWu67n2heykjA" key="nature" value="UML_Nature"/>
     </eAnnotations>
