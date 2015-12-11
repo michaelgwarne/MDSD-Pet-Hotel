@@ -385,8 +385,29 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcEOKAWEeWICP6m2t7aBg" name="checkOut"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_UOcEOaAWEeWICP6m2t7aBg" name="Receptionist User Interface">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEOqAWEeWICP6m2t7aBg" client="_UOcEOaAWEeWICP6m2t7aBg _UOcEOaAWEeWICP6m2t7aBg _UOcEOaAWEeWICP6m2t7aBg" supplier="_UOcEMaAWEeWICP6m2t7aBg" contract="_UOcEMaAWEeWICP6m2t7aBg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEOqAWEeWICP6m2t7aBg" client="_UOcEOaAWEeWICP6m2t7aBg" supplier="_UOcEMaAWEeWICP6m2t7aBg" contract="_UOcEMaAWEeWICP6m2t7aBg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_UOcEO6AWEeWICP6m2t7aBg" client="_UOcEOaAWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_jM3RsKAeEeWHMJcENrG5zw" name="Admin Controller Interface">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3RsaAeEeWHMJcENrG5zw" name="addRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3RsqAeEeWHMJcENrG5zw" name="displayRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3Rs6AeEeWHMJcENrG5zw" name="removeRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3RtKAeEeWHMJcENrG5zw" name="createStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3RtaAeEeWHMJcENrG5zw" name="removeStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3RtqAeEeWHMJcENrG5zw" name="modifyStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jM3Rt6AeEeWHMJcENrG5zw" name="displayStaff"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_tWGykKAeEeWHMJcENrG5zw" name="Admin">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESKAWEeWICP6m2t7aBg" name="addRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESaAWEeWICP6m2t7aBg" name="displayRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESqAWEeWICP6m2t7aBg" name="removeRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZC7pwKAdEeWHMJcENrG5zw" name="createStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bNQMQKAdEeWHMJcENrG5zw" name="removeStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ckNYIKAdEeWHMJcENrG5zw" name="modifyStaff"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fGZBAKAdEeWHMJcENrG5zw" name="displayStaff"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_Zk11QKAjEeWHMJcENrG5zw" name="Admin Interface">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gR_pwKAjEeWHMJcENrG5zw" client="_Zk11QKAjEeWHMJcENrG5zw" supplier="_tWGykKAeEeWHMJcENrG5zw" contract="_tWGykKAeEeWHMJcENrG5zw"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_UOcEPKAWEeWICP6m2t7aBg" name="Webcam">
@@ -399,14 +420,13 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_UOcEQaAWEeWICP6m2t7aBg" name="Application Tier">
     <packagedElement xmi:type="uml:Package" xmi:id="_UOcEQqAWEeWICP6m2t7aBg" name="Hotel System">
       <packagedElement xmi:type="uml:Component" xmi:id="_UOcEQ6AWEeWICP6m2t7aBg" name="Booking Controller">
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcERKAWEeWICP6m2t7aBg" client="_UOcEQ6AWEeWICP6m2t7aBg _UOcEQ6AWEeWICP6m2t7aBg _UOcEQ6AWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg" contract="_UOcES6AWEeWICP6m2t7aBg"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcERKAWEeWICP6m2t7aBg" client="_UOcEQ6AWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg" contract="_UOcES6AWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcERaAWEeWICP6m2t7aBg" client="_UOcEQ6AWEeWICP6m2t7aBg" supplier="_UOcER6AWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcERqAWEeWICP6m2t7aBg" client="_UOcEQ6AWEeWICP6m2t7aBg" supplier="_UOcEWaAWEeWICP6m2t7aBg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_UOcER6AWEeWICP6m2t7aBg" name="Admin Controller Interface">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESKAWEeWICP6m2t7aBg" name="petTypeExists(string type)"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESaAWEeWICP6m2t7aBg" name="addRoom"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESqAWEeWICP6m2t7aBg" name="removeRoom"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_UOcER6AWEeWICP6m2t7aBg" name="BookingToAdmin">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_08ulsKAeEeWHMJcENrG5zw" name="getPetTypes"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3GzQkKAeEeWHMJcENrG5zw" name="getAvailableRooms"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_UOcES6AWEeWICP6m2t7aBg" name="Booking Controller Interface">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcETKAWEeWICP6m2t7aBg" name="addBooking"/>
@@ -416,12 +436,12 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcEUKAWEeWICP6m2t7aBg" name="deleteService"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_UOcEUaAWEeWICP6m2t7aBg" name="Billing Controller">
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEUqAWEeWICP6m2t7aBg" client="_UOcEUaAWEeWICP6m2t7aBg _UOcEUaAWEeWICP6m2t7aBg _UOcEUaAWEeWICP6m2t7aBg" supplier="_UOcEWaAWEeWICP6m2t7aBg" contract="_UOcEWaAWEeWICP6m2t7aBg"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEUqAWEeWICP6m2t7aBg" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_UOcEWaAWEeWICP6m2t7aBg" contract="_UOcEWaAWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcEU6AWEeWICP6m2t7aBg" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_UOcEVKAWEeWICP6m2t7aBg" name="Admin Controller">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_UOcEVaAWEeWICP6m2t7aBg" name="account"/>
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEVqAWEeWICP6m2t7aBg" client="_UOcEVKAWEeWICP6m2t7aBg _UOcEVKAWEeWICP6m2t7aBg _UOcEVKAWEeWICP6m2t7aBg" supplier="_UOcER6AWEeWICP6m2t7aBg" contract="_UOcER6AWEeWICP6m2t7aBg"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zhF74KAjEeWHMJcENrG5zw" client="_UOcEVKAWEeWICP6m2t7aBg" supplier="_UOcER6AWEeWICP6m2t7aBg" contract="_UOcER6AWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcEV6AWEeWICP6m2t7aBg" client="_UOcEVKAWEeWICP6m2t7aBg" supplier="_UOcrQ6AWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcEWKAWEeWICP6m2t7aBg" client="_UOcEVKAWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg"/>
       </packagedElement>
@@ -432,7 +452,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcEXaAWEeWICP6m2t7aBg" name="giveRefund"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_UOcEXqAWEeWICP6m2t7aBg" name="Account Controller">
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEX6AWEeWICP6m2t7aBg" client="_UOcEXqAWEeWICP6m2t7aBg _UOcEXqAWEeWICP6m2t7aBg _UOcEXqAWEeWICP6m2t7aBg" supplier="_UOcEYaAWEeWICP6m2t7aBg" contract="_UOcEYaAWEeWICP6m2t7aBg"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEX6AWEeWICP6m2t7aBg" client="_UOcEXqAWEeWICP6m2t7aBg" supplier="_UOcEYaAWEeWICP6m2t7aBg" contract="_UOcEYaAWEeWICP6m2t7aBg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_UOcEYKAWEeWICP6m2t7aBg" client="_UOcEXqAWEeWICP6m2t7aBg" supplier="_UOcES6AWEeWICP6m2t7aBg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_UOcEYaAWEeWICP6m2t7aBg" name="Account Controller Interface">
@@ -446,7 +466,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_UOcrQKAWEeWICP6m2t7aBg" name="Data Tier">
     <packagedElement xmi:type="uml:Component" xmi:id="_UOcrQaAWEeWICP6m2t7aBg" name="Database">
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcrQqAWEeWICP6m2t7aBg" client="_UOcrQaAWEeWICP6m2t7aBg _UOcrQaAWEeWICP6m2t7aBg _UOcrQaAWEeWICP6m2t7aBg" supplier="_UOcrQ6AWEeWICP6m2t7aBg" contract="_UOcrQ6AWEeWICP6m2t7aBg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcrQqAWEeWICP6m2t7aBg" client="_UOcrQaAWEeWICP6m2t7aBg" supplier="_UOcrQ6AWEeWICP6m2t7aBg" contract="_UOcrQ6AWEeWICP6m2t7aBg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_UOcrQ6AWEeWICP6m2t7aBg" name="database interface">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcrRKAWEeWICP6m2t7aBg" name="storeData"/>
@@ -475,6 +495,9 @@
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VpyV8aAYEeWICP6m2t7aBg" name="addBill_MessageRecv" covered="_06aVsKAXEeWICP6m2t7aBg" message="_Vpxu4KAYEeWICP6m2t7aBg"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VpyV8KAYEeWICP6m2t7aBg" name="addBill_MessageSend" covered="_-rbZQKAWEeWICP6m2t7aBg" message="_Vpxu4KAYEeWICP6m2t7aBg"/>
     <message xmi:type="uml:Message" xmi:id="_Vpxu4KAYEeWICP6m2t7aBg" name="addBill_Message" receiveEvent="_VpyV8aAYEeWICP6m2t7aBg" sendEvent="_VpyV8KAYEeWICP6m2t7aBg" signature="_UOcEWqAWEeWICP6m2t7aBg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_HDG_cKAjEeWHMJcENrG5zw" name="Administrator">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_XvT3AKAjEeWHMJcENrG5zw" client="_HDG_cKAjEeWHMJcENrG5zw" supplier="_tWGykKAeEeWHMJcENrG5zw"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CfhOcJpPEeWLCKBfwJdwbg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CfickJpPEeWLCKBfwJdwbg" source="http://www.eclipse.org/uml2/2.0.0/UML">
