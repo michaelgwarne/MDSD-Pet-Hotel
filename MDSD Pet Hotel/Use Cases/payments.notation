@@ -68,6 +68,19 @@
         <element xmi:type="uml:UseCase" href="payments.uml#_Ub8KAJ8sEeWF0tZtmItrUw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UcI-UZ8sEeWF0tZtmItrUw" x="121" y="359"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_Bc8dcJ_9EeWICP6m2t7aBg" type="3012">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bc9EgJ_9EeWICP6m2t7aBg" type="5022"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bc9EgZ_9EeWICP6m2t7aBg" type="6046">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Bc9Egp_9EeWICP6m2t7aBg" y="5"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bc9rkJ_9EeWICP6m2t7aBg" type="7014">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_Bc9rkZ_9EeWICP6m2t7aBg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_Bc9rkp_9EeWICP6m2t7aBg"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bc9rk5_9EeWICP6m2t7aBg"/>
+        </children>
+        <element xmi:type="uml:UseCase" href="payments.uml#_BciNwJ_9EeWICP6m2t7aBg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bc8dcZ_9EeWICP6m2t7aBg" x="124" y="146"/>
+      </children>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lkSAJY93EeWR6_H1O30qIA"/>
     </children>
     <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_lkSAIY93EeWR6_H1O30qIA"/>
@@ -176,5 +189,18 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZFaPgp8sEeWF0tZtmItrUw" points="[15, 6, -171, -77]$[184, 90, -2, 7]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGGzEJ8sEeWF0tZtmItrUw" id="(1.0,0.78)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZGGzEZ8sEeWF0tZtmItrUw" id="(0.0,0.36666666666666664)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_EaArgJ_9EeWICP6m2t7aBg" type="4011" source="_ou5iAI93EeWR6_H1O30qIA" target="_Bc8dcJ_9EeWICP6m2t7aBg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_EaBSkp_9EeWICP6m2t7aBg" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EaBSk5_9EeWICP6m2t7aBg" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_EaBSlJ_9EeWICP6m2t7aBg" type="6033">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EaBSlZ_9EeWICP6m2t7aBg" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EaBSkJ_9EeWICP6m2t7aBg"/>
+    <element xmi:type="uml:Association" href="payments.uml#_EZ-PQJ_9EeWICP6m2t7aBg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EaBSkZ_9EeWICP6m2t7aBg" points="[6, 2, -197, -63]$[187, 74, -16, 9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EbDNUJ_9EeWICP6m2t7aBg" id="(0.5666666666666667,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EbDNUZ_9EeWICP6m2t7aBg" id="(0.0,0.25)"/>
   </edges>
 </notation:Diagram>

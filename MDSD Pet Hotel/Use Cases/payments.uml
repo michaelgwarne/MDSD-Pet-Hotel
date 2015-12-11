@@ -4,11 +4,12 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_lkQK8I93EeWR6_H1O30qIA" name="Bill and Payments">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_v6vdoI93EeWR6_H1O30qIA" name="Pay with cash"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="Pay with credit card"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_EkVgkJ5aEeW7q8Dd3Eln1Q" name="Updates bill"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Rk07YJ5aEeW7q8Dd3Eln1Q" name="Creates bill"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub8KAJ8sEeWF0tZtmItrUw" name="Get refund"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_v6vdoI93EeWR6_H1O30qIA" name="UC9:Pay with cash"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="UC10:Pay with credit card"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_EkVgkJ5aEeW7q8Dd3Eln1Q" name="UC7:Updates bill"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Rk07YJ5aEeW7q8Dd3Eln1Q" name="UC6:Creates bill"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub8KAJ8sEeWF0tZtmItrUw" name="UC11:Get refund"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_BciNwJ_9EeWICP6m2t7aBg" name="UC8:Issue refund"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_nTZNUI93EeWR6_H1O30qIA" name="Customer"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_ou4T4I93EeWR6_H1O30qIA" name="Receptionist"/>
@@ -53,5 +54,12 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZFYaUp8sEeWF0tZtmItrUw" name="get refund" type="_Ub8KAJ8sEeWF0tZtmItrUw" association="_ZFXzQJ8sEeWF0tZtmItrUw"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZFYaU58sEeWF0tZtmItrUw" name="customer" type="_nTZNUI93EeWR6_H1O30qIA" association="_ZFXzQJ8sEeWF0tZtmItrUw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EZ-PQJ_9EeWICP6m2t7aBg" memberEnd="_EZ-2Up_9EeWICP6m2t7aBg _EZ-2U5_9EeWICP6m2t7aBg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EZ-2UJ_9EeWICP6m2t7aBg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EZ-2UZ_9EeWICP6m2t7aBg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_EZ-2Up_9EeWICP6m2t7aBg" name="issue refund" type="_BciNwJ_9EeWICP6m2t7aBg" association="_EZ-PQJ_9EeWICP6m2t7aBg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_EZ-2U5_9EeWICP6m2t7aBg" name="receptionist" type="_ou4T4I93EeWR6_H1O30qIA" association="_EZ-PQJ_9EeWICP6m2t7aBg"/>
   </packagedElement>
 </uml:Model>

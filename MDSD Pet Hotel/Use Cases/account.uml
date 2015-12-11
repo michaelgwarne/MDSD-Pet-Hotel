@@ -4,13 +4,13 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_4NphQI9yEeWR6_H1O30qIA" name="Accounts">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_ASLYYI9zEeWR6_H1O30qIA" name="UC11:Create Account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9xpQI9zEeWR6_H1O30qIA" name="UC12:Modify Account">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ASLYYI9zEeWR6_H1O30qIA" name="UC12:Create Account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9xpQI9zEeWR6_H1O30qIA" name="UC13:Modify Account">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_C2cjcJEJEeWR46mIHJjugQ" name="ExtensionPoint1"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Dt6-AJEJEeWR46mIHJjugQ" name="ExtensionPoint2"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EUsqIJEJEeWR46mIHJjugQ" name="ExtensionPoint3"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_QUQU4I9zEeWR6_H1O30qIA" name="UC:14Add pet"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QUQU4I9zEeWR6_H1O30qIA" name="UC14:Add pet"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_6kfc0I9yEeWR6_H1O30qIA" name="Customer"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_g2O5cI9zEeWR6_H1O30qIA" memberEnd="_g2PggY9zEeWR6_H1O30qIA _g2QHkI9zEeWR6_H1O30qIA">
