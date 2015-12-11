@@ -14,6 +14,10 @@
         <element xmi:type="uml:Property" href="hotel.uml#_5GI5sI4YEeWJAfmx2oO5Ew"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_5GoB4Y4YEeWJAfmx2oO5Ew"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_1yfmgKASEeWu67n2heykjA" type="3012">
+        <element xmi:type="uml:Property" href="hotel.uml#_1yPH0KASEeWu67n2heykjA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1yfmgaASEeWu67n2heykjA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_XOWKYY3MEeWAUrpqFCDYAA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_XOWKYo3MEeWAUrpqFCDYAA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_XOWKY43MEeWAUrpqFCDYAA"/>
@@ -302,6 +306,10 @@
         <element xmi:type="uml:Property" href="hotel.uml#_lO0eEI4lEeWjWMyf9vaeZA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_lPX3sY4lEeWjWMyf9vaeZA"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_f2S_gKATEeWu67n2heykjA" type="3012">
+        <element xmi:type="uml:Property" href="hotel.uml#_f2AroKATEeWu67n2heykjA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_f2S_gaATEeWu67n2heykjA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_6CF1VI38EeW0yOZyFg0B4Q"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_6CF1VY38EeW0yOZyFg0B4Q"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_6CF1Vo38EeW0yOZyFg0B4Q"/>
@@ -479,7 +487,7 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_0Hx9kY39EeW0yOZyFg0B4Q"/>
     <element xmi:type="uml:Association" href="hotel.uml#_0HUDgI39EeW0yOZyFg0B4Q"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Hx9ko39EeW0yOZyFg0B4Q" points="[-12, 0, 56, -136]$[-11, 124, 57, -12]$[-70, 124, -2, -12]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Hx9ko39EeW0yOZyFg0B4Q" points="[-12, 0, 56, -140]$[-11, 133, 57, -7]$[-70, 132, -2, -8]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0IxcEI39EeW0yOZyFg0B4Q" id="(0.27419354838709675,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0IxcEY39EeW0yOZyFg0B4Q" id="(1.0,0.4)"/>
   </edges>
