@@ -32,7 +32,6 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_X1x28J2oEeWtsfDCVXewgw" name="StaffBilling">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_2vGUgJ2oEeWtsfDCVXewgw" name="createBill" concurrency="concurrent"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_20YdIJ2oEeWtsfDCVXewgw" name="modifyBill"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill"/>
       </packagedElement>
@@ -170,7 +169,6 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_m6cv4JpOEeWLCKBfwJdwbg" name="Account">
       <packagedElement xmi:type="uml:Interface" xmi:id="_6xpj0JpOEeWLCKBfwJdwbg" name="UserAccount">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_UPugsJpPEeWLCKBfwJdwbg" name="deactivateAccount"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_JINMMJwcEeWi2qAbhE6tPg" name="BookingToAccount">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_wwLJ4J2mEeWtsfDCVXewgw" name="getCustomer" concurrency="concurrent">
@@ -278,6 +276,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-3M_wJ83EeWL64ohW47Y2g" value="*"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iQtwQJ5iEeWeFMYy3D4EwQ" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_e0gvIJ5iEeWeFMYy3D4EwQ" contract="_e0gvIJ5iEeWeFMYy3D4EwQ"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__S2C4KD4EeWC-ufIrQerYg" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_u2HKsKD4EeWC-ufIrQerYg" contract="_u2HKsKD4EeWC-ufIrQerYg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_e0gvIJ5iEeWeFMYy3D4EwQ" name="Admin">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_VM7XoJ2jEeWtsfDCVXewgw" name="addRoom" concurrency="concurrent">
@@ -338,6 +337,10 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Yzmt0J8sEeWpe80voGitgg" name="price" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
         </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_u2HKsKD4EeWC-ufIrQerYg" name="BookingToAdmin">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wvd5AKD4EeWC-ufIrQerYg" name="getPetTypes"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_2unYAKD4EeWC-ufIrQerYg" name="getAvailableRooms"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_jlzT4J5iEeWeFMYy3D4EwQ" memberEnd="_jl4zcJ5iEeWeFMYy3D4EwQ _jl5agJ5iEeWeFMYy3D4EwQ">
@@ -475,7 +478,6 @@
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zxGQ4KCeEeWaI6KzS8ImYA" client="_UOcEXqAWEeWICP6m2t7aBg" supplier="_0K1cAKCdEeWaI6KzS8ImYA" contract="_0K1cAKCdEeWaI6KzS8ImYA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_UOcEYaAWEeWICP6m2t7aBg" name="UserAccount">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcEYqAWEeWICP6m2t7aBg" name="deactivateAccount"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcEY6AWEeWICP6m2t7aBg" name="modifyAccount"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_tWGykKAeEeWHMJcENrG5zw" name="Admin">
