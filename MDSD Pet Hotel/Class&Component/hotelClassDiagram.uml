@@ -12,6 +12,7 @@
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_aDd2gJ2oEeWtsfDCVXewgw" client="_UwPZoJjXEeWGV8DpM4-Nfw" supplier="_X1x28J2oEeWtsfDCVXewgw" contract="_X1x28J2oEeWtsfDCVXewgw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cNlvQJ2pEeWtsfDCVXewgw" client="_UwPZoJjXEeWGV8DpM4-Nfw" supplier="__QnpoJ2oEeWtsfDCVXewgw" contract="__QnpoJ2oEeWtsfDCVXewgw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_w87QgKGYEeWMT-K7AbhLcA" name="createBill"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_DwB2kJj7EeW-3PPNesfa8A" name="Bill" visibility="private">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gBWPwJj-EeW-3PPNesfa8A" name="isPaid" visibility="private">
@@ -36,18 +37,15 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="__QnpoJ2oEeWtsfDCVXewgw" name="BookingToBill">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_CBq08J2pEeWtsfDCVXewgw" name="addTransaction" visibility="public">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CBq08J2pEeWtsfDCVXewgw" name="addTransaction" visibility="public" concurrency="guarded">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9WmtgJ8oEeWpe80voGitgg" name="description">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_OO1O4J8pEeWpe80voGitgg" name="amount">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nNJQIJ81EeWL64ohW47Y2g" name="BookingID">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nNJQIJ81EeWL64ohW47Y2g" name="Booking" type="_7Uik4JjiEeWGV8DpM4-Nfw"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_GiqT4J2pEeWtsfDCVXewgw" name="createBill" visibility="public"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_0e4UoJjiEeWGV8DpM4-Nfw" name="Booking">
@@ -147,6 +145,9 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_01RxYJphEeWkoqFeX50x0w" name="amountOfFood" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L0cpYKGVEeWMT-K7AbhLcA" name="price" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_SVR1EJ2jEeWtsfDCVXewgw" name="StaffBooking">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_dhhEAJ2jEeWtsfDCVXewgw" name="checkIn">
@@ -167,20 +168,19 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_m6cv4JpOEeWLCKBfwJdwbg" name="Account">
-      <packagedElement xmi:type="uml:Interface" xmi:id="_6xpj0JpOEeWLCKBfwJdwbg" name="UserAccount">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_JINMMJwcEeWi2qAbhE6tPg" name="BookingToAccount">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_wwLJ4J2mEeWtsfDCVXewgw" name="getCustomer" concurrency="concurrent">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wwLJ4J2mEeWtsfDCVXewgw" name="getAccount" concurrency="concurrent">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_TrV3sJ8lEeWpe80voGitgg" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_hQZYIJ8lEeWpe80voGitgg" type="_rm5Q4JpOEeWLCKBfwJdwbg" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_QzgHAJ2oEeWtsfDCVXewgw" name="getAccount"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_qc93oJ5wEeWeFMYy3D4EwQ" name="CustomerAccount">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_uUsXIJ5wEeWeFMYy3D4EwQ" name="createAccount"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_mUWsIKGUEeWMT-K7AbhLcA" name="login"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oJrPAKGUEeWMT-K7AbhLcA" name="logout"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qVfTYJpOEeWLCKBfwJdwbg" name="Account" visibility="private">
@@ -213,7 +213,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ym7l8JpZEeWLCKBfwJdwbg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ym80EJpZEeWLCKBfwJdwbg" value="*"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__caCwJpOEeWLCKBfwJdwbg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_6xpj0JpOEeWLCKBfwJdwbg" contract="_6xpj0JpOEeWLCKBfwJdwbg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_P_1LUJwcEeWi2qAbhE6tPg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_JINMMJwcEeWi2qAbhE6tPg" contract="_JINMMJwcEeWi2qAbhE6tPg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zHqW4J5wEeWeFMYy3D4EwQ" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_qc93oJ5wEeWeFMYy3D4EwQ" contract="_qc93oJ5wEeWeFMYy3D4EwQ"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NgmBQJ2nEeWtsfDCVXewgw" name="addCustomer" visibility="private"/>
@@ -295,7 +294,6 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_aV1LIJ2jEeWtsfDCVXewgw" name="displayRooms"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_KuyPoJ5lEeWeFMYy3D4EwQ" name="createStaff">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_EmdYsJ8kEeWpe80voGitgg" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -341,6 +339,12 @@
       <packagedElement xmi:type="uml:Interface" xmi:id="_u2HKsKD4EeWC-ufIrQerYg" name="BookingToAdmin">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_wvd5AKD4EeWC-ufIrQerYg" name="getPetTypes"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_2unYAKD4EeWC-ufIrQerYg" name="getAvailableRooms"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Gs9yMKGVEeWMT-K7AbhLcA" name="getServiceList"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_EsaaQKGWEeWMT-K7AbhLcA" name="Staff">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_k0_8wKGVEeWMT-K7AbhLcA" name="staffLogin"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sYPEsKGVEeWMT-K7AbhLcA" name="staffLogout"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_aV1LIJ2jEeWtsfDCVXewgw" name="displayRooms"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_jlzT4J5iEeWeFMYy3D4EwQ" memberEnd="_jl4zcJ5iEeWeFMYy3D4EwQ _jl5agJ5iEeWeFMYy3D4EwQ">
