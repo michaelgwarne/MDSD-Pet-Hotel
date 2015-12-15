@@ -444,6 +444,7 @@
         <packagedElement xmi:type="uml:Interface" xmi:id="_UOcER6AWEeWICP6m2t7aBg" name="BookingToAdmin">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_08ulsKAeEeWHMJcENrG5zw" name="getPetTypes"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_3GzQkKAeEeWHMJcENrG5zw" name="getAvailableRooms"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_WpGKgKMQEeWoN7pNx_xfXA" name="getServicesList"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_UOcES6AWEeWICP6m2t7aBg" name="UserBooking">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcETKAWEeWICP6m2t7aBg" name="createBooking"/>
@@ -493,6 +494,8 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_zFcMIKCbEeWaI6KzS8ImYA" name="BookingToBill">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_NvglkKCdEeWaI6KzS8ImYA" name="addTransaction"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_35m-YKMPEeWoN7pNx_xfXA" name="createBill"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_CDAQQKMQEeWoN7pNx_xfXA" name="getTotalAmount"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_0K1cAKCdEeWaI6KzS8ImYA" name="CustomerAccount">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_lyTawKCeEeWaI6KzS8ImYA" name="createAccount"/>
@@ -500,12 +503,19 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_IoKPYKGcEeWMT-K7AbhLcA" name="login"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_JoPzYKGcEeWMT-K7AbhLcA" name="logout"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_MY4H8KGcEeWMT-K7AbhLcA" name="viewRoom"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_n0_10KMQEeWoN7pNx_xfXA" name="addCustomer"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_2vIdYKMREeWoN7pNx_xfXA" name="addPet"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_4psFkKMREeWoN7pNx_xfXA" name="removePet"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_h9RdgKGcEeWMT-K7AbhLcA" name="Staff">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESaAWEeWICP6m2t7aBg" name="displayRoom"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_l7jQ8KGcEeWMT-K7AbhLcA" name="login"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_m-q60KGcEeWMT-K7AbhLcA" name="logout"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESaAWEeWICP6m2t7aBg" name="displayRooms"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_l7jQ8KGcEeWMT-K7AbhLcA" name="staffLogin"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_m-q60KGcEeWMT-K7AbhLcA" name="staffLogout"/>
         </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_rxJ7oKMLEeWoN7pNx_xfXA" name="User Testing">
+        <packagedElement xmi:type="uml:Usage" xmi:id="_L1EkEKMMEeWoN7pNx_xfXA" client="_rxJ7oKMLEeWoN7pNx_xfXA" supplier="_UOcES6AWEeWICP6m2t7aBg"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TLtacKMMEeWoN7pNx_xfXA" client="_rxJ7oKMLEeWoN7pNx_xfXA" supplier="_0K1cAKCdEeWaI6KzS8ImYA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UOcrQKAWEeWICP6m2t7aBg" name="Data Tier">
