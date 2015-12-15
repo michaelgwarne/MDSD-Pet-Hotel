@@ -432,7 +432,9 @@
     <message xmi:type="uml:Message" xmi:id="_Vpxu4KAYEeWICP6m2t7aBg" name="addBill_Message" receiveEvent="_VpyV8aAYEeWICP6m2t7aBg" sendEvent="_VpyV8KAYEeWICP6m2t7aBg" signature="_UOcEWqAWEeWICP6m2t7aBg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_T99kgKCgEeWaI6KzS8ImYA" name="Components">
-    <packagedElement xmi:type="uml:Component" xmi:id="_UOXywKAWEeWICP6m2t7aBg" name="Bank"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_UOXywKAWEeWICP6m2t7aBg" name="Bank">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Iv2GcKM2EeW07Jf1xnmHCg" client="_UOXywKAWEeWICP6m2t7aBg" supplier="_l7UXkKM1EeW07Jf1xnmHCg" contract="_l7UXkKM1EeW07Jf1xnmHCg"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UOcEMKAWEeWICP6m2t7aBg" name="Presentation Tier">
       <packagedElement xmi:type="uml:Interface" xmi:id="_UOcEMaAWEeWICP6m2t7aBg" name="Receptionist User Interface"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_UOcEOaAWEeWICP6m2t7aBg" name="Receptionist User Interface">
@@ -492,8 +494,8 @@
         <packagedElement xmi:type="uml:Component" xmi:id="_UOcEUaAWEeWICP6m2t7aBg" name="Billing Controller">
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UOcEUqAWEeWICP6m2t7aBg" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_UOcEWaAWEeWICP6m2t7aBg" contract="_UOcEWaAWEeWICP6m2t7aBg"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_6zhSIKCbEeWaI6KzS8ImYA" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_zFcMIKCbEeWaI6KzS8ImYA" contract="_zFcMIKCbEeWaI6KzS8ImYA"/>
-          <packagedElement xmi:type="uml:Usage" xmi:id="_lBkfgKGdEeWMT-K7AbhLcA" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_UOXywKAWEeWICP6m2t7aBg"/>
           <packagedElement xmi:type="uml:Usage" xmi:id="_z5BXcKMHEeWoN7pNx_xfXA" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_UOcrQ6AWEeWICP6m2t7aBg"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_BFbYcKM2EeW07Jf1xnmHCg" client="_UOcEUaAWEeWICP6m2t7aBg" supplier="_l7UXkKM1EeW07Jf1xnmHCg"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_UOcEVKAWEeWICP6m2t7aBg" name="Admin Controller">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_UOcEVaAWEeWICP6m2t7aBg" name="account"/>
@@ -547,6 +549,9 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_UOcESaAWEeWICP6m2t7aBg" name="displayRooms"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_l7jQ8KGcEeWMT-K7AbhLcA" name="staffLogin"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_m-q60KGcEeWMT-K7AbhLcA" name="staffLogout"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_l7UXkKM1EeW07Jf1xnmHCg" name="BillingToBank">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GsoNUKM9EeW07Jf1xnmHCg" name="isAuthorised"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_rxJ7oKMLEeWoN7pNx_xfXA" name="User Testing">
