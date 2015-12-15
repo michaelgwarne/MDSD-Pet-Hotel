@@ -2001,9 +2001,9 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l8_LhKM1EeW07Jf1xnmHCg"/>
               </children>
               <children xmi:type="notation:BasicCompartment" xmi:id="_l8_LhaM1EeW07Jf1xnmHCg" type="7011">
-                <children xmi:type="notation:Shape" xmi:id="_GtizUKM9EeW07Jf1xnmHCg" type="5">
-                  <element xmi:type="uml:Operation" href="hotelClassDiagram.uml#_GsoNUKM9EeW07Jf1xnmHCg"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_GtizUaM9EeW07Jf1xnmHCg"/>
+                <children xmi:type="notation:Shape" xmi:id="_FYy8AKM_EeW07Jf1xnmHCg" type="5">
+                  <element xmi:type="uml:Operation" href="hotelClassDiagram.uml#_FYCHAKM_EeW07Jf1xnmHCg"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_FYy8AaM_EeW07Jf1xnmHCg"/>
                 </children>
                 <styles xmi:type="notation:TitleStyle" xmi:id="_l8_LhqM1EeW07Jf1xnmHCg"/>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_l8_Lh6M1EeW07Jf1xnmHCg"/>
