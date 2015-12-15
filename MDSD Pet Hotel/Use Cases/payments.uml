@@ -3,7 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_kXjuUI93EeWR6_H1O30qIA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_lkQK8I93EeWR6_H1O30qIA" name="Bill and Payments">
+  <packagedElement xmi:type="uml:Package" xmi:id="_lkQK8I93EeWR6_H1O30qIA" name="Billing">
     <packagedElement xmi:type="uml:UseCase" xmi:id="_v6vdoI93EeWR6_H1O30qIA" name="UC7:Pay with cash"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_xyoMUI93EeWR6_H1O30qIA" name="UC8:Pay with credit card"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Ub8KAJ8sEeWF0tZtmItrUw" name="UC9:Get refund"/>
