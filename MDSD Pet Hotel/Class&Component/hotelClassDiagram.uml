@@ -420,7 +420,7 @@
         <packagedElement xmi:type="uml:Usage" xmi:id="_bRK7IKCaEeWaI6KzS8ImYA" client="_Zk11QKAjEeWHMJcENrG5zw" supplier="_tWGykKAeEeWHMJcENrG5zw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_fyuI0KCcEeWaI6KzS8ImYA" name="Admin User Interface"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_UOcEZKAWEeWICP6m2t7aBg" name="User Testing">
+      <packagedElement xmi:type="uml:Component" xmi:id="_UOcEZKAWEeWICP6m2t7aBg" name="Staff Testing">
         <packagedElement xmi:type="uml:Usage" xmi:id="_rnpT8KMDEeWoN7pNx_xfXA" client="_UOcEZKAWEeWICP6m2t7aBg" supplier="_UOcEMaAWEeWICP6m2t7aBg"/>
       </packagedElement>
     </packagedElement>
