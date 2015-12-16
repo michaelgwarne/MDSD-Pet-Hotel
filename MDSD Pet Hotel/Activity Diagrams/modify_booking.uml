@@ -1,70 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PZG1wJNZEeWg89nQNTV6Zg" name="ModifyBooking">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_PZJ5EJNZEeWg89nQNTV6Zg" name="modify a booking" node="_ZFnXUJNZEeWg89nQNTV6Zg _aaopgJNZEeWg89nQNTV6Zg _dvYXwJNZEeWg89nQNTV6Zg _k66xYJNZEeWg89nQNTV6Zg _mUqykJNZEeWg89nQNTV6Zg _tFJn4JNZEeWg89nQNTV6Zg _vdh0gJNZEeWg89nQNTV6Zg _xkaogJNZEeWg89nQNTV6Zg _yGdTsJNbEeWg89nQNTV6Zg _FEaLcJNcEeWg89nQNTV6Zg _XVvNwJNcEeWg89nQNTV6Zg _hw16sJNcEeWg89nQNTV6Zg _mSlAgJNcEeWg89nQNTV6Zg _5nzv0JNcEeWg89nQNTV6Zg _-rd28JNcEeWg89nQNTV6Zg _T1wqcJNdEeWg89nQNTV6Zg _XJnn4JNdEeWg89nQNTV6Zg _ZuFIsJNdEeWg89nQNTV6Zg _dTMOMJNdEeWg89nQNTV6Zg _h7E_UJNdEeWg89nQNTV6Zg _7CvnUJNdEeWg89nQNTV6Zg _ywdLkJNeEeWg89nQNTV6Zg _6ob0cJNeEeWg89nQNTV6Zg _TbKqEJNmEeWg89nQNTV6Zg _alaqQJNmEeWg89nQNTV6Zg _hPn4cJNmEeWg89nQNTV6Zg">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_qnWnYJNnEeWg89nQNTV6Zg">
-      <body>use case&#xD;
+  <packagedElement xmi:type="uml:Activity" xmi:id="_PZJ5EJNZEeWg89nQNTV6Zg" name="-" node="_ZFnXUJNZEeWg89nQNTV6Zg _aaopgJNZEeWg89nQNTV6Zg _hw16sJNcEeWg89nQNTV6Zg _mSlAgJNcEeWg89nQNTV6Zg _5nzv0JNcEeWg89nQNTV6Zg _-rd28JNcEeWg89nQNTV6Zg _T1wqcJNdEeWg89nQNTV6Zg _XJnn4JNdEeWg89nQNTV6Zg _ZuFIsJNdEeWg89nQNTV6Zg _dTMOMJNdEeWg89nQNTV6Zg _h7E_UJNdEeWg89nQNTV6Zg _ywdLkJNeEeWg89nQNTV6Zg _NFLA8KODEeWVwKZPnysJ_w _jNdtwKODEeWVwKZPnysJ_w _qrgMoKODEeWVwKZPnysJ_w _7gDH4KODEeWVwKZPnysJ_w _FIu5YKOEEeWVwKZPnysJ_w _QZy98KOEEeWVwKZPnysJ_w _l7C44KOEEeWVwKZPnysJ_w _pPbawKOEEeWVwKZPnysJ_w _DAb6sKOFEeWVwKZPnysJ_w _jEiJUKOFEeWVwKZPnysJ_w _pdTpQKOFEeWVwKZPnysJ_w _1jO5QKOFEeWVwKZPnysJ_w _Ap4dkKOGEeWVwKZPnysJ_w _dp-vsKOGEeWVwKZPnysJ_w">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_AgCLwKOLEeWVwKZPnysJ_w">
+      <body>Includes pay with cash, pay with credit card, and get refund. These are seperate use cases&#xD;
 </body>
     </ownedComment>
-    <ownedComment xmi:type="uml:Comment" xmi:id="_x9-54JNrEeWg89nQNTV6Zg">
-      <body>see pet_info_diagram</body>
-    </ownedComment>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_CCt8EJNcEeWg89nQNTV6Zg" target="_yGdTsJNbEeWg89nQNTV6Zg" source="_aaopgJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Crw5EJNcEeWg89nQNTV6Zg" target="_dvYXwJNZEeWg89nQNTV6Zg" source="_yGdTsJNbEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_DR6TEJNcEeWg89nQNTV6Zg" target="_k66xYJNZEeWg89nQNTV6Zg" source="_dvYXwJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_EY3UEJNcEeWg89nQNTV6Zg" target="_tFJn4JNZEeWg89nQNTV6Zg" source="_mUqykJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_GW3R0JNcEeWg89nQNTV6Zg" target="_xkaogJNZEeWg89nQNTV6Zg" source="_FEaLcJNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_G2emAJNcEeWg89nQNTV6Zg" target="_vdh0gJNZEeWg89nQNTV6Zg" source="_FEaLcJNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_Jbx0UJNcEeWg89nQNTV6Zg" target="_FEaLcJNcEeWg89nQNTV6Zg" source="_tFJn4JNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_acKMIJNcEeWg89nQNTV6Zg" name="[no account exists]" target="_XVvNwJNcEeWg89nQNTV6Zg" source="_yGdTsJNbEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_a2v2YJNcEeWg89nQNTV6Zg" target="_aaopgJNZEeWg89nQNTV6Zg" source="_XVvNwJNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_JU1pYJNdEeWg89nQNTV6Zg" target="_-rd28JNcEeWg89nQNTV6Zg" source="_5nzv0JNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_KLmSQJNdEeWg89nQNTV6Zg" name="[reject booking]" target="_tFJn4JNZEeWg89nQNTV6Zg" source="_-rd28JNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="__3vnYJNdEeWg89nQNTV6Zg" target="_7CvnUJNdEeWg89nQNTV6Zg" source="_dTMOMJNdEeWg89nQNTV6Zg"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_B44_wJNeEeWg89nQNTV6Zg" target="_T1wqcJNdEeWg89nQNTV6Zg" source="_ZuFIsJNdEeWg89nQNTV6Zg"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_CbQF8JNeEeWg89nQNTV6Zg" target="_XJnn4JNdEeWg89nQNTV6Zg" source="_ZuFIsJNdEeWg89nQNTV6Zg"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_Dn9wsJNeEeWg89nQNTV6Zg" target="_dTMOMJNdEeWg89nQNTV6Zg" source="_XJnn4JNdEeWg89nQNTV6Zg"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_EHRi4JNeEeWg89nQNTV6Zg" target="_dTMOMJNdEeWg89nQNTV6Zg" source="_T1wqcJNdEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_FuiboJNeEeWg89nQNTV6Zg" name="[else]" target="_h7E_UJNdEeWg89nQNTV6Zg" source="_7CvnUJNdEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_LThHIJNeEeWg89nQNTV6Zg" name="[will pay on check out]" target="_mSlAgJNcEeWg89nQNTV6Zg" source="_7CvnUJNdEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_MGHowJNeEeWg89nQNTV6Zg" target="_mSlAgJNcEeWg89nQNTV6Zg" source="_h7E_UJNdEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_QdR2QJNeEeWg89nQNTV6Zg" target="_mSlAgJNcEeWg89nQNTV6Zg" source="_hw16sJNcEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_VTNDYJNeEeWg89nQNTV6Zg" name="[accept booking]" target="_ZuFIsJNdEeWg89nQNTV6Zg" source="_-rd28JNcEeWg89nQNTV6Zg"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_1yjDkJNeEeWg89nQNTV6Zg" target="_mSlAgJNcEeWg89nQNTV6Zg" source="_ywdLkJNeEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_HwyKwJNfEeWg89nQNTV6Zg" target="_6ob0cJNeEeWg89nQNTV6Zg" source="_k66xYJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_IT_lgJNfEeWg89nQNTV6Zg" name="[booking not found]" target="_hw16sJNcEeWg89nQNTV6Zg" source="_6ob0cJNeEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_I1nr4JNfEeWg89nQNTV6Zg" target="_mUqykJNZEeWg89nQNTV6Zg" source="_6ob0cJNeEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_snuA0JNgEeWg89nQNTV6Zg" target="_aaopgJNZEeWg89nQNTV6Zg" source="_ZFnXUJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_jBsTAJNmEeWg89nQNTV6Zg" target="_hPn4cJNmEeWg89nQNTV6Zg" source="_alaqQJNmEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_jkk9oJNmEeWg89nQNTV6Zg" name="[accept]" target="_5nzv0JNcEeWg89nQNTV6Zg" source="_hPn4cJNmEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_kisLsJNmEeWg89nQNTV6Zg" name="[reject]" target="_TbKqEJNmEeWg89nQNTV6Zg" source="_hPn4cJNmEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_n14awJNmEeWg89nQNTV6Zg" target="_TbKqEJNmEeWg89nQNTV6Zg" source="_vdh0gJNZEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_oemAkJNmEeWg89nQNTV6Zg" target="_alaqQJNmEeWg89nQNTV6Zg" source="_TbKqEJNmEeWg89nQNTV6Zg"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_9wc0oJNmEeWg89nQNTV6Zg" target="_5nzv0JNcEeWg89nQNTV6Zg" source="_xkaogJNZEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_snuA0JNgEeWg89nQNTV6Zg" target="_qrgMoKODEeWVwKZPnysJ_w" source="_ZFnXUJNZEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1RPm0KOEEeWVwKZPnysJ_w" target="_-rd28JNcEeWg89nQNTV6Zg" source="_7gDH4KODEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4RvjYKOEEeWVwKZPnysJ_w" target="_pPbawKOEEeWVwKZPnysJ_w" source="_-rd28JNcEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6NEnoKOEEeWVwKZPnysJ_w" target="_l7C44KOEEeWVwKZPnysJ_w" source="_-rd28JNcEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Gc1wIKOFEeWVwKZPnysJ_w" target="_DAb6sKOFEeWVwKZPnysJ_w" source="_5nzv0JNcEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_HNP5YKOFEeWVwKZPnysJ_w" target="_DAb6sKOFEeWVwKZPnysJ_w" source="_pPbawKOEEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_LQSbkKOGEeWVwKZPnysJ_w" target="_1jO5QKOFEeWVwKZPnysJ_w" source="_Ap4dkKOGEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NXpwsKOGEeWVwKZPnysJ_w" target="_Ap4dkKOGEeWVwKZPnysJ_w" source="_pdTpQKOFEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Pj4-wKOGEeWVwKZPnysJ_w" name="[rejected changes]" target="_pdTpQKOFEeWVwKZPnysJ_w" source="_Ap4dkKOGEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NnUH4KOHEeWVwKZPnysJ_w" target="_mSlAgJNcEeWg89nQNTV6Zg" source="_hw16sJNcEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Osr0gKOHEeWVwKZPnysJ_w" target="_hw16sJNcEeWg89nQNTV6Zg" source="_h7E_UJNdEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Qy7vUKOHEeWVwKZPnysJ_w" target="_h7E_UJNdEeWg89nQNTV6Zg" source="_dTMOMJNdEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aa69QKOHEeWVwKZPnysJ_w" target="_ZuFIsJNdEeWg89nQNTV6Zg" source="_dp-vsKOGEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bWJ2cKOHEeWVwKZPnysJ_w" target="_dp-vsKOGEeWVwKZPnysJ_w" source="_1jO5QKOFEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fhAGQKOHEeWVwKZPnysJ_w" target="_pdTpQKOFEeWVwKZPnysJ_w" source="_jEiJUKOFEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gqalYKOHEeWVwKZPnysJ_w" target="_jEiJUKOFEeWVwKZPnysJ_w" source="_l7C44KOEEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WkN8AKOIEeWVwKZPnysJ_w" target="_5nzv0JNcEeWg89nQNTV6Zg" source="_-rd28JNcEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_wBHNIKOIEeWVwKZPnysJ_w" name="{valid name and valid bookig ID" target="_aaopgJNZEeWg89nQNTV6Zg" source="_qrgMoKODEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xFQxwKOIEeWVwKZPnysJ_w" name="[enter valid email address and password" target="_jNdtwKODEeWVwKZPnysJ_w" source="_qrgMoKODEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-taCcKOIEeWVwKZPnysJ_w" target="_NFLA8KODEeWVwKZPnysJ_w" source="_aaopgJNZEeWg89nQNTV6Zg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BU-hoKOJEeWVwKZPnysJ_w" target="_FIu5YKOEEeWVwKZPnysJ_w" source="_NFLA8KODEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_HmoF4KOJEeWVwKZPnysJ_w" target="_FIu5YKOEEeWVwKZPnysJ_w" source="_QZy98KOEEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_JUR6gKOJEeWVwKZPnysJ_w" target="_7gDH4KODEeWVwKZPnysJ_w" source="_FIu5YKOEEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NnUAgKOKEeWVwKZPnysJ_w" target="_dp-vsKOGEeWVwKZPnysJ_w" source="_DAb6sKOFEeWVwKZPnysJ_w"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bvjtkKOKEeWVwKZPnysJ_w" target="_QZy98KOEEeWVwKZPnysJ_w" source="_jNdtwKODEeWVwKZPnysJ_w"/>
     <node xmi:type="uml:InitialNode" xmi:id="_ZFnXUJNZEeWg89nQNTV6Zg" name="InitialNode" outgoing="_snuA0JNgEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_aaopgJNZEeWg89nQNTV6Zg" name="system requests owner email" incoming="_a2v2YJNcEeWg89nQNTV6Zg _snuA0JNgEeWg89nQNTV6Zg" outgoing="_CCt8EJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_dvYXwJNZEeWg89nQNTV6Zg" name="display account details" incoming="_Crw5EJNcEeWg89nQNTV6Zg" outgoing="_DR6TEJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_k66xYJNZEeWg89nQNTV6Zg" name="select booking" incoming="_DR6TEJNcEeWg89nQNTV6Zg" outgoing="_HwyKwJNfEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_mUqykJNZEeWg89nQNTV6Zg" name="select 'modify booking'" incoming="_I1nr4JNfEeWg89nQNTV6Zg" outgoing="_EY3UEJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_tFJn4JNZEeWg89nQNTV6Zg" name="display modify options" incoming="_EY3UEJNcEeWg89nQNTV6Zg _KLmSQJNdEeWg89nQNTV6Zg" outgoing="_Jbx0UJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_vdh0gJNZEeWg89nQNTV6Zg" name="change dates" incoming="_G2emAJNcEeWg89nQNTV6Zg" outgoing="_n14awJNmEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_xkaogJNZEeWg89nQNTV6Zg" name="change pet info" incoming="_GW3R0JNcEeWg89nQNTV6Zg" outgoing="_9wc0oJNmEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_yGdTsJNbEeWg89nQNTV6Zg" incoming="_CCt8EJNcEeWg89nQNTV6Zg" outgoing="_Crw5EJNcEeWg89nQNTV6Zg _acKMIJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_FEaLcJNcEeWg89nQNTV6Zg" incoming="_Jbx0UJNcEeWg89nQNTV6Zg" outgoing="_GW3R0JNcEeWg89nQNTV6Zg _G2emAJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_XVvNwJNcEeWg89nQNTV6Zg" name="create account" incoming="_acKMIJNcEeWg89nQNTV6Zg" outgoing="_a2v2YJNcEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_hw16sJNcEeWg89nQNTV6Zg" name="Create booking" incoming="_IT_lgJNfEeWg89nQNTV6Zg" outgoing="_QdR2QJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_mSlAgJNcEeWg89nQNTV6Zg" name="ActivityFinalNode" incoming="_LThHIJNeEeWg89nQNTV6Zg _MGHowJNeEeWg89nQNTV6Zg _QdR2QJNeEeWg89nQNTV6Zg _1yjDkJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_5nzv0JNcEeWg89nQNTV6Zg" name="display new booking" incoming="_jkk9oJNmEeWg89nQNTV6Zg _9wc0oJNmEeWg89nQNTV6Zg" outgoing="_JU1pYJNdEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_-rd28JNcEeWg89nQNTV6Zg" incoming="_JU1pYJNdEeWg89nQNTV6Zg" outgoing="_KLmSQJNdEeWg89nQNTV6Zg _VTNDYJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_T1wqcJNdEeWg89nQNTV6Zg" name="save booking" incoming="_B44_wJNeEeWg89nQNTV6Zg" outgoing="_EHRi4JNeEeWg89nQNTV6Zg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_aaopgJNZEeWg89nQNTV6Zg" name="user enters customer name and booking ID" incoming="_wBHNIKOIEeWVwKZPnysJ_w" outgoing="_-taCcKOIEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_hw16sJNcEeWg89nQNTV6Zg" name="Create booking" incoming="_Osr0gKOHEeWVwKZPnysJ_w" outgoing="_NnUH4KOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_mSlAgJNcEeWg89nQNTV6Zg" name="ActivityFinalNode" incoming="_1yjDkJNeEeWg89nQNTV6Zg _NnUH4KOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_5nzv0JNcEeWg89nQNTV6Zg" name="user selects &quot;Cancel booking&quot;" incoming="_WkN8AKOIEeWVwKZPnysJ_w" outgoing="_Gc1wIKOFEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_-rd28JNcEeWg89nQNTV6Zg" incoming="_1RPm0KOEEeWVwKZPnysJ_w" outgoing="_4RvjYKOEEeWVwKZPnysJ_w _6NEnoKOEEeWVwKZPnysJ_w _WkN8AKOIEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_T1wqcJNdEeWg89nQNTV6Zg" name="logs booking" incoming="_B44_wJNeEeWg89nQNTV6Zg" outgoing="_EHRi4JNeEeWg89nQNTV6Zg"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_XJnn4JNdEeWg89nQNTV6Zg" name="recalulate bill" incoming="_CbQF8JNeEeWg89nQNTV6Zg" outgoing="_Dn9wsJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:ForkNode" xmi:id="_ZuFIsJNdEeWg89nQNTV6Zg" incoming="_VTNDYJNeEeWg89nQNTV6Zg" outgoing="_B44_wJNeEeWg89nQNTV6Zg _CbQF8JNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:JoinNode" xmi:id="_dTMOMJNdEeWg89nQNTV6Zg" incoming="_Dn9wsJNeEeWg89nQNTV6Zg _EHRi4JNeEeWg89nQNTV6Zg" outgoing="__3vnYJNdEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_h7E_UJNdEeWg89nQNTV6Zg" name="process payment" incoming="_FuiboJNeEeWg89nQNTV6Zg" outgoing="_MGHowJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_7CvnUJNdEeWg89nQNTV6Zg" incoming="__3vnYJNdEeWg89nQNTV6Zg" outgoing="_FuiboJNeEeWg89nQNTV6Zg _LThHIJNeEeWg89nQNTV6Zg"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_ZuFIsJNdEeWg89nQNTV6Zg" incoming="_aa69QKOHEeWVwKZPnysJ_w" outgoing="_B44_wJNeEeWg89nQNTV6Zg _CbQF8JNeEeWg89nQNTV6Zg"/>
+    <node xmi:type="uml:JoinNode" xmi:id="_dTMOMJNdEeWg89nQNTV6Zg" incoming="_Dn9wsJNeEeWg89nQNTV6Zg _EHRi4JNeEeWg89nQNTV6Zg" outgoing="_Qy7vUKOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_h7E_UJNdEeWg89nQNTV6Zg" name="process payment" incoming="_Qy7vUKOHEeWVwKZPnysJ_w" outgoing="_Osr0gKOHEeWVwKZPnysJ_w"/>
     <node xmi:type="uml:AcceptEventAction" xmi:id="_ywdLkJNeEeWg89nQNTV6Zg" name="cancel modify process" outgoing="_1yjDkJNeEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_6ob0cJNeEeWg89nQNTV6Zg" incoming="_HwyKwJNfEeWg89nQNTV6Zg" outgoing="_IT_lgJNfEeWg89nQNTV6Zg _I1nr4JNfEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_TbKqEJNmEeWg89nQNTV6Zg" name="enter new dates" incoming="_kisLsJNmEeWg89nQNTV6Zg _n14awJNmEeWg89nQNTV6Zg" outgoing="_oemAkJNmEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_alaqQJNmEeWg89nQNTV6Zg" name="display available dates" incoming="_oemAkJNmEeWg89nQNTV6Zg" outgoing="_jBsTAJNmEeWg89nQNTV6Zg"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_hPn4cJNmEeWg89nQNTV6Zg" name="" incoming="_jBsTAJNmEeWg89nQNTV6Zg" outgoing="_jkk9oJNmEeWg89nQNTV6Zg _kisLsJNmEeWg89nQNTV6Zg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_NFLA8KODEeWVwKZPnysJ_w" name="select &quot;modify booking&quot;" incoming="_-taCcKOIEeWVwKZPnysJ_w" outgoing="_BU-hoKOJEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jNdtwKODEeWVwKZPnysJ_w" name="customer enters email and password" incoming="_xFQxwKOIEeWVwKZPnysJ_w" outgoing="_bvjtkKOKEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_qrgMoKODEeWVwKZPnysJ_w" incoming="_snuA0JNgEeWg89nQNTV6Zg" outgoing="_wBHNIKOIEeWVwKZPnysJ_w _xFQxwKOIEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_7gDH4KODEeWVwKZPnysJ_w" name="system displays modify options" incoming="_JUR6gKOJEeWVwKZPnysJ_w" outgoing="_1RPm0KOEEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_FIu5YKOEEeWVwKZPnysJ_w" incoming="_BU-hoKOJEeWVwKZPnysJ_w _HmoF4KOJEeWVwKZPnysJ_w" outgoing="_JUR6gKOJEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QZy98KOEEeWVwKZPnysJ_w" name="selects bookingID" incoming="_bvjtkKOKEeWVwKZPnysJ_w" outgoing="_HmoF4KOJEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_l7C44KOEEeWVwKZPnysJ_w" name="user selects &quot;Change date/s&quot;" incoming="_6NEnoKOEEeWVwKZPnysJ_w" outgoing="_gqalYKOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_pPbawKOEEeWVwKZPnysJ_w" name="user selects &quot;Change pet details&quot;" incoming="_4RvjYKOEEeWVwKZPnysJ_w" outgoing="_HNP5YKOFEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_DAb6sKOFEeWVwKZPnysJ_w" incoming="_Gc1wIKOFEeWVwKZPnysJ_w _HNP5YKOFEeWVwKZPnysJ_w" outgoing="_NnUAgKOKEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jEiJUKOFEeWVwKZPnysJ_w" name="system prompts for new data" incoming="_gqalYKOHEeWVwKZPnysJ_w" outgoing="_fhAGQKOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_pdTpQKOFEeWVwKZPnysJ_w" name="user enters new data" incoming="_Pj4-wKOGEeWVwKZPnysJ_w _fhAGQKOHEeWVwKZPnysJ_w" outgoing="_NXpwsKOGEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_1jO5QKOFEeWVwKZPnysJ_w" name="system displays updated booking" incoming="_LQSbkKOGEeWVwKZPnysJ_w" outgoing="_bWJ2cKOHEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_Ap4dkKOGEeWVwKZPnysJ_w" name="[accepted changes]" incoming="_NXpwsKOGEeWVwKZPnysJ_w" outgoing="_LQSbkKOGEeWVwKZPnysJ_w _Pj4-wKOGEeWVwKZPnysJ_w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dp-vsKOGEeWVwKZPnysJ_w" name="user confirms changes" incoming="_bWJ2cKOHEeWVwKZPnysJ_w _NnUAgKOKEeWVwKZPnysJ_w" outgoing="_aa69QKOHEeWVwKZPnysJ_w"/>
   </packagedElement>
 </uml:Model>
