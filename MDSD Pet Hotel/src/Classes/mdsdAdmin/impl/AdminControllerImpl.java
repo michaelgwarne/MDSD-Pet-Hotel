@@ -5,6 +5,7 @@ package Classes.mdsdAdmin.impl;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.BookingToAdmin;
 import Classes.mdsdAdmin.HotelStaff;
+import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdAdmin.MdsdAdminPackage;
 import Classes.mdsdAdmin.Room;
 import Classes.mdsdAdmin.Staff;
@@ -49,7 +50,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<Room> rooms;
-
+	
 	/**
 	 * The cached value of the '{@link #getStaff() <em>Staff</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -106,12 +107,17 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addRoom(String type, String status, int room) {
+		Room name = MdsdAdminFactory.eINSTANCE.createRoom();
+		name.setType(type);
+		name.setStatus(status);
+		name.setNumber(room);
+		getRooms().add(name);
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	//	throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -227,12 +233,15 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void displayRooms() {
+		for (Room r: rooms){
+		System.out.println(r.getStatus() + " " + r.getType() + " " + r.getNumber());
+		}
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	//	throw new UnsupportedOperationException();
 	}
 
 	/**

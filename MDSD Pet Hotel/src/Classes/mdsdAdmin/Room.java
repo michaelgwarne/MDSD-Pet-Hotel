@@ -84,12 +84,12 @@ public interface Room extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number</em>' attribute.
-	 * @see #setNumber(String)
+	 * @see #setNumber(int)
 	 * @see Classes.mdsdAdmin.MdsdAdminPackage#getRoom_Number()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getNumber();
+	int getNumber();
 
 	/**
 	 * Sets the value of the '{@link Classes.mdsdAdmin.Room#getNumber <em>Number</em>}' attribute.
@@ -99,6 +99,6 @@ public interface Room extends EObject {
 	 * @see #getNumber()
 	 * @generated
 	 */
-	void setNumber(String value);
+	void setNumber(int value);
 
 } // Room

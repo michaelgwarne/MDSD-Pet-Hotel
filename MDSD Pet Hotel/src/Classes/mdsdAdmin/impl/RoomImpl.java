@@ -76,7 +76,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NUMBER_EDEFAULT = null;
+	protected static final int NUMBER_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getNumber() <em>Number</em>}' attribute.
@@ -86,7 +86,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @generated
 	 * @ordered
 	 */
-	protected String number = NUMBER_EDEFAULT;
+	protected int number = NUMBER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,7 +154,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNumber() {
+	public int getNumber() {
 		return number;
 	}
 
@@ -163,8 +163,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumber(String newNumber) {
-		String oldNumber = number;
+	public void setNumber(int newNumber) {
+		int oldNumber = number;
 		number = newNumber;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAdminPackage.ROOM__NUMBER, oldNumber, number));
@@ -203,7 +203,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				setStatus((String)newValue);
 				return;
 			case MdsdAdminPackage.ROOM__NUMBER:
-				setNumber((String)newValue);
+				setNumber((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -243,7 +243,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case MdsdAdminPackage.ROOM__STATUS:
 				return STATUS_EDEFAULT == null ? status != null : !STATUS_EDEFAULT.equals(status);
 			case MdsdAdminPackage.ROOM__NUMBER:
-				return NUMBER_EDEFAULT == null ? number != null : !NUMBER_EDEFAULT.equals(number);
+				return number != NUMBER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

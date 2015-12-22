@@ -213,7 +213,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="mdsdAccount" nsURI="http:///Classes/mdsdAccount.ecore" nsPrefix="Classes.mdsdAccount">
