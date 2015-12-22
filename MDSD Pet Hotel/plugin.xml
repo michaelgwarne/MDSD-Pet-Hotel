@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http:///Classes.ecore"
+            class="Classes.ClassesPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http:///Classes/mdsdBilling.ecore"
+            class="Classes.mdsdBilling.MdsdBillingPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http:///Classes/mdsdBooking.ecore"
+            class="Classes.mdsdBooking.MdsdBookingPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http:///Classes/mdsdAdmin.ecore"
+            class="Classes.mdsdAdmin.MdsdAdminPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http:///Classes/mdsdAccount.ecore"
+            class="Classes.mdsdAccount.MdsdAccountPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Classes -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"/>
+   </extension>
+
+</plugin>

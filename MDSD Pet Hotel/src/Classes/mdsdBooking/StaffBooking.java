@@ -1,0 +1,44 @@
+/**
+ */
+package Classes.mdsdBooking;
+
+import Classes.mdsdAdmin.Room;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Staff Booking</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see Classes.mdsdBooking.MdsdBookingPackage#getStaffBooking()
+ * @model interface="true" abstract="true"
+ * @generated
+ */
+public interface StaffBooking extends EObject {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model nameRequired="true" nameOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @generated
+	 */
+	void checkIn(String name, String bookingID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model nameRequired="true" nameOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @generated
+	 */
+	void checkOut(String name, String bookingID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model statusRequired="true" statusOrdered="false" roomRequired="true" roomOrdered="false"
+	 * @generated
+	 */
+	void changeRoomStatus(String status, Room room);
+
+} // StaffBooking
