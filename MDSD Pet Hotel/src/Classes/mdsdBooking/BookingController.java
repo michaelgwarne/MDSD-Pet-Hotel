@@ -2,8 +2,6 @@
  */
 package Classes.mdsdBooking;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -38,30 +36,6 @@ public interface BookingController extends UserBooking, StaffBooking {
 	 * @generated
 	 */
 	EList<Booking> getBookings();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false"
-	 * @generated
-	 */
-	void enterCustomerInfo(String customerName, String customerEmail);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model stayFromRequired="true" stayFromOrdered="false" stayToRequired="true" stayToOrdered="false"
-	 * @generated
-	 */
-	void enterDatesOfStay(Date stayFrom, Date stayTo);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	String generateId();
 
 	/**
 	 * <!-- begin-user-doc -->

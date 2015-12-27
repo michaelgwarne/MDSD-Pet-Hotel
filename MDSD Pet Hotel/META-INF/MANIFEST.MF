@@ -25,5 +25,6 @@ Export-Package: Classes,
  org.eclipse.uml2.types,
  org.eclipse.uml2.types.impl
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.uml2.types;visibility:=reexport
 Bundle-ActivationPolicy: lazy

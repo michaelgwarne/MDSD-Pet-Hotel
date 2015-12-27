@@ -6,6 +6,7 @@ import Classes.mdsdAdmin.Room;
 
 import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.BookingController;
+import Classes.mdsdBooking.MdsdBookingFactory;
 import Classes.mdsdBooking.MdsdBookingPackage;
 import Classes.mdsdBooking.StaffBooking;
 
@@ -15,7 +16,7 @@ import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -79,17 +80,6 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 			bookings = new EObjectContainmentEList<Booking>(Booking.class, this, MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS);
 		}
 		return bookings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean createBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -172,45 +162,47 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void enterCustomerInfo(String customerName, String customerEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Booking enterCustomerInfo(String customerName, String customerEmail) {
+		Booking booking = MdsdBookingFactory.eINSTANCE.createBooking();
+		booking.setCustomerName(customerName);
+		booking.setCustomerEmail(customerEmail);
+		EList <Booking> pastBooking = getBookingList(customerEmail);
+		
+		booking.setBookingId(customerEmail + pastBooking.size());
+		
+		getBookings().add(booking);
+		
+		return booking;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void enterDatesOfStay(Date stayFrom, Date stayTo) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void enterDatesOfStay(Date stayFrom, Date stayTo, Booking booking) {
+		booking.setDateFrom(stayFrom);
+		booking.setDateTo(stayTo);
+		// TODO: test against other bookings
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * returns the list of Bookings created using the email address
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String generateId() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Booking> getBookingList(String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList <Booking> temp = getBookings();
+		EList <Booking> history = new BasicEList<Booking>();
+		for (Booking booking : temp) {
+			if(booking.getCustomerEmail().equalsIgnoreCase(email)){
+				history.add(booking);
+			}
+		}
+		return history;
 	}
 
 	/**
@@ -313,8 +305,6 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MdsdBookingPackage.BOOKING_CONTROLLER___CREATE_BOOKING:
-				return createBooking();
 			case MdsdBookingPackage.BOOKING_CONTROLLER___MODIFY_BOOKING__STRING_STRING:
 				modifyBooking((String)arguments.get(0), (String)arguments.get(1));
 				return null;
@@ -326,6 +316,11 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 			case MdsdBookingPackage.BOOKING_CONTROLLER___CONFIRM_BOOKING__STRING:
 				confirmBooking((String)arguments.get(0));
 				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING:
+				return enterCustomerInfo((String)arguments.get(0), (String)arguments.get(1));
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE_BOOKING:
+				enterDatesOfStay((Date)arguments.get(0), (Date)arguments.get(1), (Booking)arguments.get(2));
+				return null;
 			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_STRING:
 				checkIn((String)arguments.get(0), (String)arguments.get(1));
 				return null;
@@ -335,14 +330,6 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 			case MdsdBookingPackage.BOOKING_CONTROLLER___CHANGE_ROOM_STATUS__STRING_ROOM:
 				changeRoomStatus((String)arguments.get(0), (Room)arguments.get(1));
 				return null;
-			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING:
-				enterCustomerInfo((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE:
-				enterDatesOfStay((Date)arguments.get(0), (Date)arguments.get(1));
-				return null;
-			case MdsdBookingPackage.BOOKING_CONTROLLER___GENERATE_ID:
-				return generateId();
 			case MdsdBookingPackage.BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING:
 				return getBookingList((String)arguments.get(0));
 		}

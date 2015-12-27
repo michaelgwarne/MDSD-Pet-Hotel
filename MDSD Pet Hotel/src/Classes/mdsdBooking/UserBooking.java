@@ -2,6 +2,7 @@
  */
 package Classes.mdsdBooking;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,14 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface UserBooking extends EObject {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	boolean createBooking();
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -54,5 +47,21 @@ public interface UserBooking extends EObject {
 	 * @generated
 	 */
 	void confirmBooking(String bookingId);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false"
+	 * @generated
+	 */
+	Booking enterCustomerInfo(String customerName, String customerEmail);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model stayFromRequired="true" stayFromOrdered="false" stayToRequired="true" stayToOrdered="false" bookingRequired="true" bookingOrdered="false"
+	 * @generated
+	 */
+	void enterDatesOfStay(Date stayFrom, Date stayTo, Booking booking);
 
 } // UserBooking
