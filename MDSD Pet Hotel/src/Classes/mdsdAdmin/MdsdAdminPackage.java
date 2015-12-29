@@ -68,6 +68,66 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN = 2;
 
 	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.AdminControllerImpl <em>Admin Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.impl.AdminControllerImpl
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getAdminController()
+	 * @generated
+	 */
+	int ADMIN_CONTROLLER = 0;
+
+	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.impl.HotelStaffImpl
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getHotelStaff()
+	 * @generated
+	 */
+	int HOTEL_STAFF = 1;
+
+	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.BookingToAdmin <em>Booking To Admin</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.BookingToAdmin
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getBookingToAdmin()
+	 * @generated
+	 */
+	int BOOKING_TO_ADMIN = 3;
+
+	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.Staff <em>Staff</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.Staff
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getStaff()
+	 * @generated
+	 */
+	int STAFF = 4;
+
+	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.ServiceImpl <em>Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.impl.ServiceImpl
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getService()
+	 * @generated
+	 */
+	int SERVICE = 5;
+
+	/**
+	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.RoomImpl <em>Room</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Classes.mdsdAdmin.impl.RoomImpl
+	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getRoom()
+	 * @generated
+	 */
+	int ROOM = 6;
+
+	/**
 	 * The number of structural features of the '<em>Admin</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,16 +198,6 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @ordered
 	 */
 	int ADMIN_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.AdminControllerImpl <em>Admin Controller</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.impl.AdminControllerImpl
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getAdminController()
-	 * @generated
-	 */
-	int ADMIN_CONTROLLER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Rooms</b></em>' containment reference list.
@@ -285,23 +335,22 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN_CONTROLLER___DISPLAY_ROOMS = ADMIN_OPERATION_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Change Room Status</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 6;
+
+	/**
 	 * The number of operations of the '<em>Admin Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 6;
-
-	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.impl.HotelStaffImpl
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getHotelStaff()
-	 * @generated
-	 */
-	int HOTEL_STAFF = 1;
+	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -349,16 +398,6 @@ public interface MdsdAdminPackage extends EPackage {
 	int HOTEL_STAFF_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.BookingToAdmin <em>Booking To Admin</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.BookingToAdmin
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getBookingToAdmin()
-	 * @generated
-	 */
-	int BOOKING_TO_ADMIN = 3;
-
-	/**
 	 * The number of structural features of the '<em>Booking To Admin</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -404,16 +443,6 @@ public interface MdsdAdminPackage extends EPackage {
 	int BOOKING_TO_ADMIN_OPERATION_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.Staff <em>Staff</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.Staff
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getStaff()
-	 * @generated
-	 */
-	int STAFF = 4;
-
-	/**
 	 * The number of structural features of the '<em>Staff</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -450,23 +479,22 @@ public interface MdsdAdminPackage extends EPackage {
 	int STAFF___DISPLAY_ROOMS = 2;
 
 	/**
+	 * The operation id for the '<em>Change Room Status</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF___CHANGE_ROOM_STATUS__STRING_INT = 3;
+
+	/**
 	 * The number of operations of the '<em>Staff</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_OPERATION_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.ServiceImpl <em>Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.impl.ServiceImpl
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getService()
-	 * @generated
-	 */
-	int SERVICE = 5;
+	int STAFF_OPERATION_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -503,16 +531,6 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.RoomImpl <em>Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAdmin.impl.RoomImpl
-	 * @see Classes.mdsdAdmin.impl.MdsdAdminPackageImpl#getRoom()
-	 * @generated
-	 */
-	int ROOM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -784,6 +802,16 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStaff__DisplayRooms();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#changeRoomStatus(java.lang.String, int) <em>Change Room Status</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Change Room Status</em>' operation.
+	 * @see Classes.mdsdAdmin.Staff#changeRoomStatus(java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getStaff__ChangeRoomStatus__String_int();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.Service <em>Service</em>}'.
@@ -1068,6 +1096,14 @@ public interface MdsdAdminPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation STAFF___DISPLAY_ROOMS = eINSTANCE.getStaff__DisplayRooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Change Room Status</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STAFF___CHANGE_ROOM_STATUS__STRING_INT = eINSTANCE.getStaff__ChangeRoomStatus__String_int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.impl.ServiceImpl <em>Service</em>}' class.

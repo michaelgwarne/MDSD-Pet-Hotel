@@ -15,7 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -115,9 +115,8 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 		name.setStatus(status);
 		name.setNumber(room);
 		getRooms().add(name);
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-	//	throw new UnsupportedOperationException();
+		// TODO: needs to test for duplicate room numbers
+	
 	}
 
 	/**
@@ -189,12 +188,16 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getAvailableRooms() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Room> getAvailableRooms() {
+		EList<Room> available = new BasicEList<Room>();
+		for (Room room : rooms) {
+			if(room.getStatus().equalsIgnoreCase("available")){
+				available.add(room);
+			}
+		}
+		return available;
 	}
 
 	/**
@@ -239,9 +242,21 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 		for (Room r: rooms){
 		System.out.println(r.getStatus() + " " + r.getType() + " " + r.getNumber());
 		}
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-	//	throw new UnsupportedOperationException();
+	
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void changeRoomStatus(String status, int roomNumber) {
+		for (Room room : rooms) {
+			if(room.getNumber() == roomNumber){
+				room.setStatus(status);
+				break;
+			}
+		}
 	}
 
 	/**
@@ -351,6 +366,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 				case MdsdAdminPackage.STAFF___STAFF_LOGIN: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN;
 				case MdsdAdminPackage.STAFF___STAFF_LOGOUT: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT;
 				case MdsdAdminPackage.STAFF___DISPLAY_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS;
+				case MdsdAdminPackage.STAFF___CHANGE_ROOM_STATUS__STRING_INT: return MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT;
 				default: return -1;
 			}
 		}
@@ -386,8 +402,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES:
 				return getPetTypes();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS:
-				getAvailableRooms();
-				return null;
+				return getAvailableRooms();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_SERVICE_LIST:
 				getServiceList();
 				return null;
@@ -399,6 +414,9 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS:
 				displayRooms();
+				return null;
+			case MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT:
+				changeRoomStatus((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

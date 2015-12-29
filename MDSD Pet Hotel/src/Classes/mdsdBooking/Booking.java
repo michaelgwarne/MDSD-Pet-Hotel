@@ -2,7 +2,6 @@
  */
 package Classes.mdsdBooking;
 
-import Classes.mdsdAdmin.Room;
 import Classes.mdsdAdmin.Service;
 
 import java.util.Date;
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.mdsdBooking.Booking#isCheckedOut <em>Is Checked Out</em>}</li>
  *   <li>{@link Classes.mdsdBooking.Booking#getBookedServices <em>Booked Services</em>}</li>
  *   <li>{@link Classes.mdsdBooking.Booking#getMealInfo <em>Meal Info</em>}</li>
- *   <li>{@link Classes.mdsdBooking.Booking#getRoom <em>Room</em>}</li>
+ *   <li>{@link Classes.mdsdBooking.Booking#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link Classes.mdsdBooking.Booking#getDateFrom <em>Date From</em>}</li>
  *   <li>{@link Classes.mdsdBooking.Booking#getDateTo <em>Date To</em>}</li>
  *   <li>{@link Classes.mdsdBooking.Booking#getBill_Id <em>Bill Id</em>}</li>
@@ -212,30 +211,30 @@ public interface Booking extends EObject {
 	void setMealInfo(Meal value);
 
 	/**
-	 * Returns the value of the '<em><b>Room</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room</em>' reference isn't clear,
+	 * If the meaning of the '<em>Room Number</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room</em>' reference.
-	 * @see #setRoom(Room)
-	 * @see Classes.mdsdBooking.MdsdBookingPackage#getBooking_Room()
+	 * @return the value of the '<em>Room Number</em>' attribute.
+	 * @see #setRoomNumber(int)
+	 * @see Classes.mdsdBooking.MdsdBookingPackage#getBooking_RoomNumber()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Room getRoom();
+	int getRoomNumber();
 
 	/**
-	 * Sets the value of the '{@link Classes.mdsdBooking.Booking#getRoom <em>Room</em>}' reference.
+	 * Sets the value of the '{@link Classes.mdsdBooking.Booking#getRoomNumber <em>Room Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Room</em>' reference.
-	 * @see #getRoom()
+	 * @param value the new value of the '<em>Room Number</em>' attribute.
+	 * @see #getRoomNumber()
 	 * @generated
 	 */
-	void setRoom(Room value);
+	void setRoomNumber(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Date From</b></em>' attribute.

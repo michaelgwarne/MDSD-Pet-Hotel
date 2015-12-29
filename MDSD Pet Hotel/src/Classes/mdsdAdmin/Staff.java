@@ -39,4 +39,12 @@ public interface Staff extends EObject {
 	 */
 	void displayRooms();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model statusRequired="true" statusOrdered="false" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated
+	 */
+	void changeRoomStatus(String status, int roomNumber);
+
 } // Staff

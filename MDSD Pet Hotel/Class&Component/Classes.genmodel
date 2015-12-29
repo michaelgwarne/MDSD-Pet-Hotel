@@ -4,8 +4,7 @@
     modelDirectory="/MDSD Pet Hotel/src" modelPluginID="MDSD_Pet_Hotel"
     modelName="Classes" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="5.0" copyrightFields="false"
-    usedGenPackages="../../org.eclipse.uml2.types/model/Types.genmodel#//types" operationReflection="true"
-    importOrganizing="true">
+    operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
@@ -110,20 +109,18 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking/bookingId"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/displayBookings">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/displayBookings/email"/>
-        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/confirmBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/confirmBooking/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerName"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerEmail"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/booking"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayFrom"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayTo"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/booking"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/rooms"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdBooking/StaffBooking">
@@ -134,10 +131,6 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/checkOut">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/bookingID"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/changeRoomStatus">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/changeRoomStatus/status"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/changeRoomStatus/room"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdBooking/Meal">
@@ -156,8 +149,7 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdBooking/Booking/bookedServices"/>
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdBooking/Booking/mealInfo"/>
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdBooking/Booking/room"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Booking/roomNumber"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Booking/dateFrom"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Booking/dateTo"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Booking/bill_Id"/>
@@ -208,6 +200,10 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogin"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogout"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/displayRooms"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus/status"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus/roomNumber"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAdmin/Service">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/Service/description"/>
@@ -237,5 +233,13 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom"/>
       </genClasses>
     </nestedGenPackages>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
   </genPackages>
 </genmodel:GenModel>

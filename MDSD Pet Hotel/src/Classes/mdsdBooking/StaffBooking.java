@@ -2,8 +2,6 @@
  */
 package Classes.mdsdBooking;
 
-import Classes.mdsdAdmin.Room;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,13 +30,5 @@ public interface StaffBooking extends EObject {
 	 * @generated
 	 */
 	void checkOut(String name, String bookingID);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model statusRequired="true" statusOrdered="false" roomRequired="true" roomOrdered="false"
-	 * @generated
-	 */
-	void changeRoomStatus(String status, Room room);
 
 } // StaffBooking

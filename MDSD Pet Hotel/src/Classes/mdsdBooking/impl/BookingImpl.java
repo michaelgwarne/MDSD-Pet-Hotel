@@ -2,7 +2,6 @@
  */
 package Classes.mdsdBooking.impl;
 
-import Classes.mdsdAdmin.Room;
 import Classes.mdsdAdmin.Service;
 
 import Classes.mdsdBooking.Booking;
@@ -40,7 +39,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#isCheckedOut <em>Is Checked Out</em>}</li>
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getBookedServices <em>Booked Services</em>}</li>
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getMealInfo <em>Meal Info</em>}</li>
- *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getRoom <em>Room</em>}</li>
+ *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getDateFrom <em>Date From</em>}</li>
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getDateTo <em>Date To</em>}</li>
  *   <li>{@link Classes.mdsdBooking.impl.BookingImpl#getBill_Id <em>Bill Id</em>}</li>
@@ -171,24 +170,34 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected Meal mealInfo;
 
 	/**
-	 * The cached value of the '{@link #getRoom() <em>Room</em>}' reference.
+	 * The default value of the '{@link #getRoomNumber() <em>Room Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoom()
+	 * @see #getRoomNumber()
 	 * @generated
 	 * @ordered
 	 */
-	protected Room room;
+	protected static final int ROOM_NUMBER_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getRoomNumber() <em>Room Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected int roomNumber = ROOM_NUMBER_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDateFrom() <em>Date From</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDateFrom()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final Date DATE_FROM_EDEFAULT = null;
+	protected static final Date DATE_FROM_EDEFAULT = new Date(0);
 
 	/**
 	 * The cached value of the '{@link #getDateFrom() <em>Date From</em>}' attribute.
@@ -205,10 +214,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDateTo()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected static final Date DATE_TO_EDEFAULT = null;
+	protected static final Date DATE_TO_EDEFAULT = new Date(0);
 
 	/**
 	 * The cached value of the '{@link #getDateTo() <em>Date To</em>}' attribute.
@@ -444,16 +453,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room getRoom() {
-		if (room != null && room.eIsProxy()) {
-			InternalEObject oldRoom = (InternalEObject)room;
-			room = (Room)eResolveProxy(oldRoom);
-			if (room != oldRoom) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdsdBookingPackage.BOOKING__ROOM, oldRoom, room));
-			}
-		}
-		return room;
+	public int getRoomNumber() {
+		return roomNumber;
 	}
 
 	/**
@@ -461,20 +462,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room basicGetRoom() {
-		return room;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoom(Room newRoom) {
-		Room oldRoom = room;
-		room = newRoom;
+	public void setRoomNumber(int newRoomNumber) {
+		int oldRoomNumber = roomNumber;
+		roomNumber = newRoomNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MdsdBookingPackage.BOOKING__ROOM, oldRoom, room));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdBookingPackage.BOOKING__ROOM_NUMBER, oldRoomNumber, roomNumber));
 	}
 
 	/**
@@ -597,9 +589,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getBookedServices();
 			case MdsdBookingPackage.BOOKING__MEAL_INFO:
 				return getMealInfo();
-			case MdsdBookingPackage.BOOKING__ROOM:
-				if (resolve) return getRoom();
-				return basicGetRoom();
+			case MdsdBookingPackage.BOOKING__ROOM_NUMBER:
+				return getRoomNumber();
 			case MdsdBookingPackage.BOOKING__DATE_FROM:
 				return getDateFrom();
 			case MdsdBookingPackage.BOOKING__DATE_TO:
@@ -643,8 +634,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case MdsdBookingPackage.BOOKING__MEAL_INFO:
 				setMealInfo((Meal)newValue);
 				return;
-			case MdsdBookingPackage.BOOKING__ROOM:
-				setRoom((Room)newValue);
+			case MdsdBookingPackage.BOOKING__ROOM_NUMBER:
+				setRoomNumber((Integer)newValue);
 				return;
 			case MdsdBookingPackage.BOOKING__DATE_FROM:
 				setDateFrom((Date)newValue);
@@ -691,8 +682,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case MdsdBookingPackage.BOOKING__MEAL_INFO:
 				setMealInfo((Meal)null);
 				return;
-			case MdsdBookingPackage.BOOKING__ROOM:
-				setRoom((Room)null);
+			case MdsdBookingPackage.BOOKING__ROOM_NUMBER:
+				setRoomNumber(ROOM_NUMBER_EDEFAULT);
 				return;
 			case MdsdBookingPackage.BOOKING__DATE_FROM:
 				setDateFrom(DATE_FROM_EDEFAULT);
@@ -732,8 +723,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return bookedServices != null && !bookedServices.isEmpty();
 			case MdsdBookingPackage.BOOKING__MEAL_INFO:
 				return mealInfo != null;
-			case MdsdBookingPackage.BOOKING__ROOM:
-				return room != null;
+			case MdsdBookingPackage.BOOKING__ROOM_NUMBER:
+				return roomNumber != ROOM_NUMBER_EDEFAULT;
 			case MdsdBookingPackage.BOOKING__DATE_FROM:
 				return DATE_FROM_EDEFAULT == null ? dateFrom != null : !DATE_FROM_EDEFAULT.equals(dateFrom);
 			case MdsdBookingPackage.BOOKING__DATE_TO:
@@ -766,6 +757,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(isCheckedIn);
 		result.append(", isCheckedOut: ");
 		result.append(isCheckedOut);
+		result.append(", roomNumber: ");
+		result.append(roomNumber);
 		result.append(", dateFrom: ");
 		result.append(dateFrom);
 		result.append(", dateTo: ");

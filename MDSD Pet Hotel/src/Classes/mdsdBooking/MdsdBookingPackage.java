@@ -95,22 +95,13 @@ public interface MdsdBookingPackage extends EPackage {
 	int USER_BOOKING___CANCEL_BOOKING__STRING_STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Display Bookings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_BOOKING___DISPLAY_BOOKINGS__STRING = 2;
-
-	/**
 	 * The operation id for the '<em>Confirm Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___CONFIRM_BOOKING__STRING = 3;
+	int USER_BOOKING___CONFIRM_BOOKING__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Enter Customer Info</em>' operation.
@@ -119,7 +110,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING = 4;
+	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING = 3;
 
 	/**
 	 * The operation id for the '<em>Enter Dates Of Stay</em>' operation.
@@ -128,7 +119,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_BOOKING = 5;
+	int USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST = 4;
 
 	/**
 	 * The number of operations of the '<em>User Booking</em>' class.
@@ -137,7 +128,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING_OPERATION_COUNT = 6;
+	int USER_BOOKING_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBooking.impl.BookingControllerImpl <em>Booking Controller</em>}' class.
@@ -186,15 +177,6 @@ public interface MdsdBookingPackage extends EPackage {
 	int BOOKING_CONTROLLER___CANCEL_BOOKING__STRING_STRING = USER_BOOKING___CANCEL_BOOKING__STRING_STRING;
 
 	/**
-	 * The operation id for the '<em>Display Bookings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_CONTROLLER___DISPLAY_BOOKINGS__STRING = USER_BOOKING___DISPLAY_BOOKINGS__STRING;
-
-	/**
 	 * The operation id for the '<em>Confirm Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,7 +192,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING = USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING;
+	int BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING = USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING;
 
 	/**
 	 * The operation id for the '<em>Enter Dates Of Stay</em>' operation.
@@ -219,7 +201,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE_BOOKING = USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_BOOKING;
+	int BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE_ELIST = USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST;
 
 	/**
 	 * The operation id for the '<em>Check In</em>' operation.
@@ -240,22 +222,13 @@ public interface MdsdBookingPackage extends EPackage {
 	int BOOKING_CONTROLLER___CHECK_OUT__STRING_STRING = USER_BOOKING_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Change Room Status</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_CONTROLLER___CHANGE_ROOM_STATUS__STRING_ROOM = USER_BOOKING_OPERATION_COUNT + 2;
-
-	/**
 	 * The operation id for the '<em>Get Booking List</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING = USER_BOOKING_OPERATION_COUNT + 3;
+	int BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING = USER_BOOKING_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Booking Controller</em>' class.
@@ -264,7 +237,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER_OPERATION_COUNT = USER_BOOKING_OPERATION_COUNT + 4;
+	int BOOKING_CONTROLLER_OPERATION_COUNT = USER_BOOKING_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBooking.StaffBooking <em>Staff Booking</em>}' class.
@@ -304,22 +277,13 @@ public interface MdsdBookingPackage extends EPackage {
 	int STAFF_BOOKING___CHECK_OUT__STRING_STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Change Room Status</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BOOKING___CHANGE_ROOM_STATUS__STRING_ROOM = 2;
-
-	/**
 	 * The number of operations of the '<em>Staff Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BOOKING_OPERATION_COUNT = 3;
+	int STAFF_BOOKING_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBooking.impl.MealImpl <em>Meal</em>}' class.
@@ -459,13 +423,13 @@ public interface MdsdBookingPackage extends EPackage {
 	int BOOKING__MEAL_INFO = 6;
 
 	/**
-	 * The feature id for the '<em><b>Room</b></em>' reference.
+	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__ROOM = 7;
+	int BOOKING__ROOM_NUMBER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Date From</b></em>' attribute.
@@ -584,16 +548,6 @@ public interface MdsdBookingPackage extends EPackage {
 	EOperation getUserBooking__CancelBooking__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#displayBookings(java.lang.String) <em>Display Bookings</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Bookings</em>' operation.
-	 * @see Classes.mdsdBooking.UserBooking#displayBookings(java.lang.String)
-	 * @generated
-	 */
-	EOperation getUserBooking__DisplayBookings__String();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#confirmBooking(java.lang.String) <em>Confirm Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -604,24 +558,24 @@ public interface MdsdBookingPackage extends EPackage {
 	EOperation getUserBooking__ConfirmBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String) <em>Enter Customer Info</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking) <em>Enter Customer Info</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Enter Customer Info</em>' operation.
-	 * @see Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String)
+	 * @see Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking)
 	 * @generated
 	 */
-	EOperation getUserBooking__EnterCustomerInfo__String_String();
+	EOperation getUserBooking__EnterCustomerInfo__String_String_Booking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterDatesOfStay(java.util.Date, java.util.Date, Classes.mdsdBooking.Booking) <em>Enter Dates Of Stay</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterDatesOfStay(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList) <em>Enter Dates Of Stay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Enter Dates Of Stay</em>' operation.
-	 * @see Classes.mdsdBooking.UserBooking#enterDatesOfStay(java.util.Date, java.util.Date, Classes.mdsdBooking.Booking)
+	 * @see Classes.mdsdBooking.UserBooking#enterDatesOfStay(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getUserBooking__EnterDatesOfStay__Date_Date_Booking();
+	EOperation getUserBooking__EnterDatesOfStay__Date_Date_EList();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdBooking.StaffBooking <em>Staff Booking</em>}'.
@@ -652,16 +606,6 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStaffBooking__CheckOut__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#changeRoomStatus(java.lang.String, Classes.mdsdAdmin.Room) <em>Change Room Status</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Change Room Status</em>' operation.
-	 * @see Classes.mdsdBooking.StaffBooking#changeRoomStatus(java.lang.String, Classes.mdsdAdmin.Room)
-	 * @generated
-	 */
-	EOperation getStaffBooking__ChangeRoomStatus__String_Room();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdBooking.Meal <em>Meal</em>}'.
@@ -805,15 +749,15 @@ public interface MdsdBookingPackage extends EPackage {
 	EReference getBooking_MealInfo();
 
 	/**
-	 * Returns the meta object for the reference '{@link Classes.mdsdBooking.Booking#getRoom <em>Room</em>}'.
+	 * Returns the meta object for the attribute '{@link Classes.mdsdBooking.Booking#getRoomNumber <em>Room Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Room</em>'.
-	 * @see Classes.mdsdBooking.Booking#getRoom()
+	 * @return the meta object for the attribute '<em>Room Number</em>'.
+	 * @see Classes.mdsdBooking.Booking#getRoomNumber()
 	 * @see #getBooking()
 	 * @generated
 	 */
-	EReference getBooking_Room();
+	EAttribute getBooking_RoomNumber();
 
 	/**
 	 * Returns the meta object for the attribute '{@link Classes.mdsdBooking.Booking#getDateFrom <em>Date From</em>}'.
@@ -935,14 +879,6 @@ public interface MdsdBookingPackage extends EPackage {
 		EOperation USER_BOOKING___CANCEL_BOOKING__STRING_STRING = eINSTANCE.getUserBooking__CancelBooking__String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Bookings</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation USER_BOOKING___DISPLAY_BOOKINGS__STRING = eINSTANCE.getUserBooking__DisplayBookings__String();
-
-		/**
 		 * The meta object literal for the '<em><b>Confirm Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -956,7 +892,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING = eINSTANCE.getUserBooking__EnterCustomerInfo__String_String();
+		EOperation USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING = eINSTANCE.getUserBooking__EnterCustomerInfo__String_String_Booking();
 
 		/**
 		 * The meta object literal for the '<em><b>Enter Dates Of Stay</b></em>' operation.
@@ -964,7 +900,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_BOOKING = eINSTANCE.getUserBooking__EnterDatesOfStay__Date_Date_Booking();
+		EOperation USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST = eINSTANCE.getUserBooking__EnterDatesOfStay__Date_Date_EList();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdBooking.StaffBooking <em>Staff Booking</em>}' class.
@@ -991,14 +927,6 @@ public interface MdsdBookingPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation STAFF_BOOKING___CHECK_OUT__STRING_STRING = eINSTANCE.getStaffBooking__CheckOut__String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Room Status</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF_BOOKING___CHANGE_ROOM_STATUS__STRING_ROOM = eINSTANCE.getStaffBooking__ChangeRoomStatus__String_Room();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdBooking.impl.MealImpl <em>Meal</em>}' class.
@@ -1109,12 +1037,12 @@ public interface MdsdBookingPackage extends EPackage {
 		EReference BOOKING__MEAL_INFO = eINSTANCE.getBooking_MealInfo();
 
 		/**
-		 * The meta object literal for the '<em><b>Room</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Room Number</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOKING__ROOM = eINSTANCE.getBooking_Room();
+		EAttribute BOOKING__ROOM_NUMBER = eINSTANCE.getBooking_RoomNumber();
 
 		/**
 		 * The meta object literal for the '<em><b>Date From</b></em>' attribute feature.
