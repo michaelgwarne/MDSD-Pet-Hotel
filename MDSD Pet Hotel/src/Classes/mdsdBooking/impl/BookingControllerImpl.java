@@ -157,7 +157,7 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public Booking enterDatesOfStay(Date stayFrom, Date stayTo, EList<Room> rooms) {
 		Booking booking = MdsdBookingFactory.eINSTANCE.createBooking();
-		// TODO: remove test prints
+		// TODO: remove test prints. Add room type testing
 		// if rooms are available the first in the list is given to the booking
 		if(rooms.size() > 0){
 			booking.setRoomNumber(rooms.get(0).getNumber());

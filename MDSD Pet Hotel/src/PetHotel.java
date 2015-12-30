@@ -12,12 +12,15 @@ public class PetHotel {
 		long week = 604800000;
 		AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
 		BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
+	
+		
 		Date d1 = new Date(System.currentTimeMillis() + week);
 		Date d2 = new Date(System.currentTimeMillis() + (2*week));
-		for(int i = 1; i < 4; i++){
+		for(int i = 1; i < 5; i++){
 		admin.addRoom("dog", "available", i);
 		}
 		admin.displayRooms();
+		admin.removeRoom(4);
 		
 		
 		
