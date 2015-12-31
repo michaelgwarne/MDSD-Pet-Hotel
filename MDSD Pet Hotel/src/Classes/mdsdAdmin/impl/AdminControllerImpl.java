@@ -179,12 +179,16 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public String getPetTypes() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<String> getPetTypes() {
+EList<String> petTypes = new BasicEList<String>();
+		for (Room room : getRooms()) {
+			if(!petTypes.contains(room.getType()))
+			petTypes.add(room.getType());
+		}
+		
+		return petTypes;
 	}
 
 	/**
@@ -346,7 +350,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 		if (baseClass == BookingToAdmin.class) {
 			switch (baseOperationID) {
 				case MdsdAdminPackage.BOOKING_TO_ADMIN___GET_PET_TYPES: return MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES;
-				case MdsdAdminPackage.BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS;
 				default: return -1;
 			}
 		}
@@ -390,8 +393,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES:
 				return getPetTypes();
-			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS:
-				return getAvailableRooms();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN:
 				staffLogin();
 				return null;

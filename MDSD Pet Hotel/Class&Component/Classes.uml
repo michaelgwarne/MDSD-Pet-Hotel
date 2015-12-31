@@ -130,17 +130,11 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_hxDaAJjWEeWGV8DpM4-Nfw" name="UserBooking">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_llNBEJjWEeWGV8DpM4-Nfw" name="modifyBooking">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LhlR4Jj8EeW-3PPNesfa8A" name="email" effect="update">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_PZ5AMJj8EeW-3PPNesfa8A" name="bookingId" effect="update">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_oTH_4JjWEeWGV8DpM4-Nfw" name="cancelBooking" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xXUH8Jj8EeW-3PPNesfa8A" name="name" effect="update">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_0QCokJj8EeW-3PPNesfa8A" name="bookingId" effect="update">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
@@ -174,6 +168,9 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nhIpwK1EEeW_8at85GzYcA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nhKe8K1EEeW_8at85GzYcA" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_o30bwK-oEeWZPtMc2d2KQQ" name="petType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Zz58MK-eEeWZPtMc2d2KQQ" name="enterMealInfo">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_e1fmwK-eEeWZPtMc2d2KQQ" name="foodType">
@@ -188,9 +185,15 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_pNDQcK-eEeWZPtMc2d2KQQ" name="price">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Nz5l0K_REeWZPtMc2d2KQQ" name="bookingId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_u5--EK-eEeWZPtMc2d2KQQ" name="enterService">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_16LqYK-eEeWZPtMc2d2KQQ" name="service" type="_MXAv8Jj6EeW-3PPNesfa8A"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QMkGUK_REeWZPtMc2d2KQQ" name="bookingId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_MvgAwJpgEeWkoqFeX50x0w" name="Meal">
@@ -415,13 +418,7 @@
     <packagedElement xmi:type="uml:Interface" xmi:id="_u2HKsKD4EeWC-ufIrQerYg" name="BookingToAdmin">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_wvd5AKD4EeWC-ufIrQerYg" name="getPetTypes">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vDpK0KMxEeWIRLH1N9vj0g" name="types" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_2unYAKD4EeWC-ufIrQerYg" name="getAvailableRooms">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OT2CQK1BEeW_8at85GzYcA" name="rooms" type="_ULFosJjYEeWGV8DpM4-Nfw" direction="return">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YBYzsK1DEeW_8at85GzYcA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YBceEK1DEeW_8at85GzYcA" value="*"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>

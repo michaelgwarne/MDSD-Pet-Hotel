@@ -85,11 +85,9 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdBooking/UserBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/modifyBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/modifyBooking/email"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/modifyBooking/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/confirmBooking">
@@ -105,15 +103,18 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayFrom"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayTo"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/rooms"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/petType"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/foodType"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/schedule"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/amountOfFood"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/price"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/bookingId"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterService">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterService/service"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterService/bookingId"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdBooking/StaffBooking">
@@ -188,7 +189,6 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/BookingToAdmin">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getPetTypes"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getAvailableRooms"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/Staff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogin"/>

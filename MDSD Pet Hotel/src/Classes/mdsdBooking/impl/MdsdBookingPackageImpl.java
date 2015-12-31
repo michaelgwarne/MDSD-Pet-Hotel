@@ -236,7 +236,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__ModifyBooking__String_String() {
+	public EOperation getUserBooking__ModifyBooking__String() {
 		return userBookingEClass.getEOperations().get(0);
 	}
 
@@ -245,7 +245,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__CancelBooking__String_String() {
+	public EOperation getUserBooking__CancelBooking__String() {
 		return userBookingEClass.getEOperations().get(1);
 	}
 
@@ -272,7 +272,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__EnterDatesOfStay__Date_Date_EList() {
+	public EOperation getUserBooking__EnterDatesOfStay__Date_Date_EList_String() {
 		return userBookingEClass.getEOperations().get(4);
 	}
 
@@ -281,7 +281,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__EnterMealInfo__String_String_float_float() {
+	public EOperation getUserBooking__EnterMealInfo__String_String_float_float_String() {
 		return userBookingEClass.getEOperations().get(5);
 	}
 
@@ -290,7 +290,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__EnterService__Service() {
+	public EOperation getUserBooking__EnterService__Service_String() {
 		return userBookingEClass.getEOperations().get(6);
 	}
 
@@ -530,13 +530,13 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		createEAttribute(serviceEClass, SERVICE__PRICE);
 
 		userBookingEClass = createEClass(USER_BOOKING);
-		createEOperation(userBookingEClass, USER_BOOKING___MODIFY_BOOKING__STRING_STRING);
-		createEOperation(userBookingEClass, USER_BOOKING___CANCEL_BOOKING__STRING_STRING);
+		createEOperation(userBookingEClass, USER_BOOKING___MODIFY_BOOKING__STRING);
+		createEOperation(userBookingEClass, USER_BOOKING___CANCEL_BOOKING__STRING);
 		createEOperation(userBookingEClass, USER_BOOKING___CONFIRM_BOOKING__STRING);
 		createEOperation(userBookingEClass, USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING);
-		createEOperation(userBookingEClass, USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST);
-		createEOperation(userBookingEClass, USER_BOOKING___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT);
-		createEOperation(userBookingEClass, USER_BOOKING___ENTER_SERVICE__SERVICE);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST_STRING);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT_STRING);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_SERVICE__SERVICE_STRING);
 
 		staffBookingEClass = createEClass(STAFF_BOOKING);
 		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_IN__STRING);
@@ -612,12 +612,10 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 
 		initEClass(userBookingEClass, UserBooking.class, "UserBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getUserBooking__ModifyBooking__String_String(), null, "modifyBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__ModifyBooking__String(), null, "modifyBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserBooking__CancelBooking__String_String(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__CancelBooking__String(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getUserBooking__ConfirmBooking__String(), null, "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -629,19 +627,22 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "petName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserBooking__EnterDatesOfStay__Date_Date_EList(), this.getBooking(), "enterDatesOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__EnterDatesOfStay__Date_Date_EList_String(), this.getBooking(), "enterDatesOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "stayFrom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "stayTo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theMdsdAdminPackage.getRoom(), "rooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "petType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserBooking__EnterMealInfo__String_String_float_float(), null, "enterMealInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__EnterMealInfo__String_String_float_float_String(), null, "enterMealInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "foodType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "schedule", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEFloat(), "amountOfFood", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEFloat(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserBooking__EnterService__Service(), null, "enterService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__EnterService__Service_String(), null, "enterService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getService(), "service", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffBookingEClass, StaffBooking.class, "StaffBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -240,22 +240,13 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN_CONTROLLER___GET_PET_TYPES = ADMIN_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Get Available Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS = ADMIN_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Staff Login</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___STAFF_LOGIN = ADMIN_OPERATION_COUNT + 2;
+	int ADMIN_CONTROLLER___STAFF_LOGIN = ADMIN_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Staff Logout</em>' operation.
@@ -264,7 +255,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___STAFF_LOGOUT = ADMIN_OPERATION_COUNT + 3;
+	int ADMIN_CONTROLLER___STAFF_LOGOUT = ADMIN_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Display Rooms</em>' operation.
@@ -273,7 +264,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___DISPLAY_ROOMS = ADMIN_OPERATION_COUNT + 4;
+	int ADMIN_CONTROLLER___DISPLAY_ROOMS = ADMIN_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Change Room Status</em>' operation.
@@ -282,7 +273,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 5;
+	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Admin Controller</em>' class.
@@ -291,7 +282,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 6;
+	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
@@ -377,22 +368,13 @@ public interface MdsdAdminPackage extends EPackage {
 	int BOOKING_TO_ADMIN___GET_PET_TYPES = 0;
 
 	/**
-	 * The operation id for the '<em>Get Available Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS = 1;
-
-	/**
 	 * The number of operations of the '<em>Booking To Admin</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_TO_ADMIN_OPERATION_COUNT = 2;
+	int BOOKING_TO_ADMIN_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.Staff <em>Staff</em>}' class.
@@ -680,16 +662,6 @@ public interface MdsdAdminPackage extends EPackage {
 	EOperation getBookingToAdmin__GetPetTypes();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.BookingToAdmin#getAvailableRooms() <em>Get Available Rooms</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Available Rooms</em>' operation.
-	 * @see Classes.mdsdAdmin.BookingToAdmin#getAvailableRooms()
-	 * @generated
-	 */
-	EOperation getBookingToAdmin__GetAvailableRooms();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.Staff <em>Staff</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,14 +912,6 @@ public interface MdsdAdminPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_TO_ADMIN___GET_PET_TYPES = eINSTANCE.getBookingToAdmin__GetPetTypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Available Rooms</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS = eINSTANCE.getBookingToAdmin__GetAvailableRooms();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.Staff <em>Staff</em>}' class.

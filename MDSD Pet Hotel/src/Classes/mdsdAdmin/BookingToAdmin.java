@@ -3,7 +3,6 @@
 package Classes.mdsdAdmin;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -20,17 +19,9 @@ public interface BookingToAdmin extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
+	 * @model kind="operation" required="true" many="false" ordered="false"
 	 * @generated
 	 */
-	String getPetTypes();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" ordered="false"
-	 * @generated
-	 */
-	EList<Room> getAvailableRooms();
+	EList getPetTypes();
 
 } // BookingToAdmin

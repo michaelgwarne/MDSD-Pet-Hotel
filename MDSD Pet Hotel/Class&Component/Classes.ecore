@@ -58,11 +58,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserBooking" abstract="true" interface="true">
       <eOperations name="modifyBooking" ordered="false" lowerBound="1">
-        <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="cancelBooking" ordered="false" lowerBound="1">
-        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="confirmBooking" ordered="false" lowerBound="1">
@@ -78,15 +76,18 @@
         <eParameters name="stayFrom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="stayTo" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
+        <eParameters name="petType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="enterMealInfo" ordered="false" lowerBound="1">
         <eParameters name="foodType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="schedule" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="amountOfFood" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
         <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+        <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="enterService" ordered="false" lowerBound="1">
         <eParameters name="service" ordered="false" lowerBound="1" eType="#//mdsdBooking/Service"/>
+        <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaffBooking" abstract="true" interface="true">
@@ -176,8 +177,7 @@
       <eOperations name="displayStaff" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingToAdmin" abstract="true" interface="true">
-      <eOperations name="getPetTypes" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eOperations name="getAvailableRooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
+      <eOperations name="getPetTypes" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Staff" abstract="true" interface="true">
       <eOperations name="staffLogin" ordered="false" lowerBound="1"/>

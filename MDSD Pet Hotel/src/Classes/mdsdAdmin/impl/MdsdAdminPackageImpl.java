@@ -308,15 +308,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingToAdmin__GetAvailableRooms() {
-		return bookingToAdminEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStaff() {
 		return staffEClass;
 	}
@@ -440,7 +431,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		bookingToAdminEClass = createEClass(BOOKING_TO_ADMIN);
 		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_PET_TYPES);
-		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS);
 
 		staffEClass = createEClass(STAFF);
 		createEOperation(staffEClass, STAFF___STAFF_LOGIN);
@@ -521,9 +511,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		initEClass(bookingToAdminEClass, BookingToAdmin.class, "BookingToAdmin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getBookingToAdmin__GetPetTypes(), ecorePackage.getEString(), "getPetTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getBookingToAdmin__GetAvailableRooms(), this.getRoom(), "getAvailableRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingToAdmin__GetPetTypes(), ecorePackage.getEEList(), "getPetTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffEClass, Staff.class, "Staff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
