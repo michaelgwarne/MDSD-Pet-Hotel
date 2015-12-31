@@ -7,8 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: Classes,
- Classes.impl,
+Export-Package: 
  Classes.mdsdAccount,
  Classes.mdsdAccount.impl,
  Classes.mdsdAccount.util,
@@ -21,7 +20,6 @@ Export-Package: Classes,
  Classes.mdsdBooking,
  Classes.mdsdBooking.impl,
  Classes.mdsdBooking.util,
- Classes.util,
  org.eclipse.uml2.types,
  org.eclipse.uml2.types.impl
 Require-Bundle: org.eclipse.core.runtime,

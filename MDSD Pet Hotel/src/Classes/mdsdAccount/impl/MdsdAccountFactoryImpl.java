@@ -56,9 +56,53 @@ public class MdsdAccountFactoryImpl extends EFactoryImpl implements MdsdAccountF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case MdsdAccountPackage.ACCOUNT: return createAccount();
+			case MdsdAccountPackage.PET: return createPet();
+			case MdsdAccountPackage.CUSTOMER: return createCustomer();
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER: return createAccountController();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Account createAccount() {
+		AccountImpl account = new AccountImpl();
+		return account;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pet createPet() {
+		PetImpl pet = new PetImpl();
+		return pet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer createCustomer() {
+		CustomerImpl customer = new CustomerImpl();
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccountController createAccountController() {
+		AccountControllerImpl accountController = new AccountControllerImpl();
+		return accountController;
 	}
 
 	/**

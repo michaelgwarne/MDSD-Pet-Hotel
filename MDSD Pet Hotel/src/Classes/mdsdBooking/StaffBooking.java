@@ -18,17 +18,25 @@ public interface StaffBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void checkIn(String name, String bookingID);
+	void checkIn(String bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @model bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	void checkOut(String name, String bookingID);
+	void checkOut(String bookingID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model descriptionRequired="true" descriptionOrdered="false" priceRequired="true" priceOrdered="false"
+	 * @generated
+	 */
+	void addNewService(String description, float price);
 
 } // StaffBooking

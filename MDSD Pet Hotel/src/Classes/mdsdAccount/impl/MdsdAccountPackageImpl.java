@@ -2,14 +2,14 @@
  */
 package Classes.mdsdAccount.impl;
 
-import Classes.ClassesPackage;
-
-import Classes.impl.ClassesPackageImpl;
-
+import Classes.mdsdAccount.Account;
+import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.BookingToAccount;
+import Classes.mdsdAccount.Customer;
 import Classes.mdsdAccount.CustomerAccount;
 import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAccount.MdsdAccountPackage;
+import Classes.mdsdAccount.Pet;
 
 import Classes.mdsdAdmin.MdsdAdminPackage;
 
@@ -23,13 +23,16 @@ import Classes.mdsdBooking.MdsdBookingPackage;
 
 import Classes.mdsdBooking.impl.MdsdBookingPackageImpl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -51,7 +54,35 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass accountEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass petEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass customerAccountEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass customerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass accountControllerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -100,7 +131,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ClassesPackageImpl theClassesPackage = (ClassesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) instanceof ClassesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) : ClassesPackage.eINSTANCE);
 		MdsdBillingPackageImpl theMdsdBillingPackage = (MdsdBillingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) instanceof MdsdBillingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) : MdsdBillingPackage.eINSTANCE);
 		MdsdBookingPackageImpl theMdsdBookingPackage = (MdsdBookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) instanceof MdsdBookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) : MdsdBookingPackage.eINSTANCE);
 		MdsdAdminPackageImpl theMdsdAdminPackage = (MdsdAdminPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) instanceof MdsdAdminPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) : MdsdAdminPackage.eINSTANCE);
@@ -108,7 +138,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		// Create package meta-data objects
 		theMdsdAccountPackage.createPackageContents();
-		theClassesPackage.createPackageContents();
 		theMdsdBillingPackage.createPackageContents();
 		theMdsdBookingPackage.createPackageContents();
 		theMdsdAdminPackage.createPackageContents();
@@ -116,7 +145,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		// Initialize created meta-data
 		theMdsdAccountPackage.initializePackageContents();
-		theClassesPackage.initializePackageContents();
 		theMdsdBillingPackage.initializePackageContents();
 		theMdsdBookingPackage.initializePackageContents();
 		theMdsdAdminPackage.initializePackageContents();
@@ -147,6 +175,69 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 */
 	public EOperation getBookingToAccount__GetAccount__String() {
 		return bookingToAccountEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAccount() {
+		return accountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_AccountID() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAccount_Pets() {
+		return (EReference)accountEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_Password() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPet() {
+		return petEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPet_Name() {
+		return (EAttribute)petEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPet_Type() {
+		return (EAttribute)petEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -208,6 +299,87 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCustomer() {
+		return customerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Name() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomer_Email() {
+		return (EAttribute)customerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCustomer_Account() {
+		return (EReference)customerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAccountController() {
+		return accountControllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAccountController_Customers() {
+		return (EReference)accountControllerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAccountController__AddCustomer() {
+		return accountControllerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAccountController__AddPet() {
+		return accountControllerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAccountController__RemovePet() {
+		return accountControllerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MdsdAccountFactory getMdsdAccountFactory() {
 		return (MdsdAccountFactory)getEFactoryInstance();
 	}
@@ -234,12 +406,32 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		bookingToAccountEClass = createEClass(BOOKING_TO_ACCOUNT);
 		createEOperation(bookingToAccountEClass, BOOKING_TO_ACCOUNT___GET_ACCOUNT__STRING);
 
+		accountEClass = createEClass(ACCOUNT);
+		createEAttribute(accountEClass, ACCOUNT__ACCOUNT_ID);
+		createEReference(accountEClass, ACCOUNT__PETS);
+		createEAttribute(accountEClass, ACCOUNT__PASSWORD);
+
+		petEClass = createEClass(PET);
+		createEAttribute(petEClass, PET__NAME);
+		createEAttribute(petEClass, PET__TYPE);
+
 		customerAccountEClass = createEClass(CUSTOMER_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___CREATE_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___MODIFY_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGIN__STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___VIEW_ROOM);
+
+		customerEClass = createEClass(CUSTOMER);
+		createEAttribute(customerEClass, CUSTOMER__NAME);
+		createEAttribute(customerEClass, CUSTOMER__EMAIL);
+		createEReference(customerEClass, CUSTOMER__ACCOUNT);
+
+		accountControllerEClass = createEClass(ACCOUNT_CONTROLLER);
+		createEReference(accountControllerEClass, ACCOUNT_CONTROLLER__CUSTOMERS);
+		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___ADD_CUSTOMER);
+		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___ADD_PET);
+		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___REMOVE_PET);
 	}
 
 	/**
@@ -266,19 +458,30 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ClassesPackage theClassesPackage = (ClassesPackage)EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		accountControllerEClass.getESuperTypes().add(this.getBookingToAccount());
+		accountControllerEClass.getESuperTypes().add(this.getCustomerAccount());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bookingToAccountEClass, BookingToAccount.class, "BookingToAccount", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getBookingToAccount__GetAccount__String(), theClassesPackage.getAccount(), "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getBookingToAccount__GetAccount__String(), this.getAccount(), "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAccount_AccountID(), ecorePackage.getEString(), "accountID", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAccount_Pets(), this.getPet(), null, "pets", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAccount_Password(), ecorePackage.getEString(), "password", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(petEClass, Pet.class, "Pet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPet_Name(), ecorePackage.getEString(), "name", null, 1, 1, Pet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPet_Type(), ecorePackage.getEString(), "type", null, 1, 1, Pet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(customerAccountEClass, CustomerAccount.class, "CustomerAccount", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -293,6 +496,23 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		initEOperation(getCustomerAccount__Logout(), null, "logout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCustomerAccount__ViewRoom(), null, "viewRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCustomer_Name(), theTypesPackage.getString(), "name", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomer_Email(), ecorePackage.getEString(), "email", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCustomer_Account(), this.getAccount(), null, "account", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(accountControllerEClass, AccountController.class, "AccountController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAccountController_Customers(), this.getCustomer(), null, "customers", null, 0, -1, AccountController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getAccountController__AddCustomer(), null, "addCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getAccountController__AddPet(), null, "addPet", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getAccountController__RemovePet(), null, "removePet", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //MdsdAccountPackageImpl

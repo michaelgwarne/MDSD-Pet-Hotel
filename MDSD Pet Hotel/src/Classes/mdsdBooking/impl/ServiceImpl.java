@@ -1,9 +1,9 @@
 /**
  */
-package Classes.mdsdAdmin.impl;
+package Classes.mdsdBooking.impl;
 
-import Classes.mdsdAdmin.MdsdAdminPackage;
-import Classes.mdsdAdmin.Service;
+import Classes.mdsdBooking.MdsdBookingPackage;
+import Classes.mdsdBooking.Service;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.mdsdAdmin.impl.ServiceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link Classes.mdsdAdmin.impl.ServiceImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link Classes.mdsdBooking.impl.ServiceImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link Classes.mdsdBooking.impl.ServiceImpl#getPrice <em>Price</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,7 +83,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MdsdAdminPackage.Literals.SERVICE;
+		return MdsdBookingPackage.Literals.SERVICE;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAdminPackage.SERVICE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdBookingPackage.SERVICE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 		float oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAdminPackage.SERVICE__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdBookingPackage.SERVICE__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MdsdAdminPackage.SERVICE__DESCRIPTION:
+			case MdsdBookingPackage.SERVICE__DESCRIPTION:
 				return getDescription();
-			case MdsdAdminPackage.SERVICE__PRICE:
+			case MdsdBookingPackage.SERVICE__PRICE:
 				return getPrice();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MdsdAdminPackage.SERVICE__DESCRIPTION:
+			case MdsdBookingPackage.SERVICE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case MdsdAdminPackage.SERVICE__PRICE:
+			case MdsdBookingPackage.SERVICE__PRICE:
 				setPrice((Float)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MdsdAdminPackage.SERVICE__DESCRIPTION:
+			case MdsdBookingPackage.SERVICE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case MdsdAdminPackage.SERVICE__PRICE:
+			case MdsdBookingPackage.SERVICE__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MdsdAdminPackage.SERVICE__DESCRIPTION:
+			case MdsdBookingPackage.SERVICE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case MdsdAdminPackage.SERVICE__PRICE:
+			case MdsdBookingPackage.SERVICE__PRICE:
 				return price != PRICE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

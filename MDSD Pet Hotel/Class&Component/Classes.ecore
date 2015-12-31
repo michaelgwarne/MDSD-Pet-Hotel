@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Classes" nsURI="http:///Classes.ecore" nsPrefix="Classes">
-  <eClassifiers xsi:type="ecore:EClass" name="Account">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accountID" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pets" ordered="false" upperBound="-1"
-        eType="#//Pet"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Pet">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Customer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="account" ordered="false"
-        lowerBound="1" eType="#//Account"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountController" eSuperTypes="#//mdsdAccount/BookingToAccount #//mdsdAccount/CustomerAccount">
-    <eOperations name="addCustomer" ordered="false" lowerBound="1"/>
-    <eOperations name="addPet" ordered="false" lowerBound="1"/>
-    <eOperations name="removePet" ordered="false" lowerBound="1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customers" ordered="false"
-        upperBound="-1" eType="#//Customer" containment="true"/>
-  </eClassifiers>
   <eSubpackages name="mdsdBilling" nsURI="http:///Classes/mdsdBilling.ecore" nsPrefix="Classes.mdsdBilling">
     <eClassifiers xsi:type="ecore:EClass" name="BillingController" eSuperTypes="#//mdsdBilling/StaffBilling #//mdsdBilling/BookingToBill #//mdsdBilling/CustomerBilling">
       <eOperations name="createBill" ordered="false" lowerBound="1"/>
@@ -76,6 +47,14 @@
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookings" ordered="false"
           upperBound="-1" eType="#//mdsdBooking/Booking" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="services" ordered="false"
+          upperBound="-1" eType="#//mdsdBooking/Service" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Service">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserBooking" abstract="true" interface="true">
       <eOperations name="modifyBooking" ordered="false" lowerBound="1">
@@ -93,21 +72,33 @@
         <eParameters name="customerName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking"/>
+        <eParameters name="petName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="enterDatesOfStay" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking">
         <eParameters name="stayFrom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="stayTo" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
         <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
       </eOperations>
+      <eOperations name="enterMealInfo" ordered="false" lowerBound="1">
+        <eParameters name="foodType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="schedule" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="amountOfFood" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eOperations>
+      <eOperations name="enterService" ordered="false" lowerBound="1">
+        <eParameters name="service" ordered="false" lowerBound="1" eType="#//mdsdBooking/Service"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StaffBooking" abstract="true" interface="true">
       <eOperations name="checkIn" ordered="false" lowerBound="1">
-        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="checkOut" ordered="false" lowerBound="1">
-        <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="addNewService" ordered="false" lowerBound="1">
+        <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Meal">
@@ -132,7 +123,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCheckedOut" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bookedServices" ordered="false"
-          upperBound="-1" eType="#//mdsdAdmin/Service"/>
+          upperBound="-1" eType="#//mdsdBooking/Service"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="mealInfo" ordered="false"
           lowerBound="1" eType="#//mdsdBooking/Meal" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"
@@ -187,7 +178,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="BookingToAdmin" abstract="true" interface="true">
       <eOperations name="getPetTypes" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eOperations name="getAvailableRooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
-      <eOperations name="getServiceList" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Staff" abstract="true" interface="true">
       <eOperations name="staffLogin" ordered="false" lowerBound="1"/>
@@ -197,12 +187,6 @@
         <eParameters name="status" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Service">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Room">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
@@ -216,9 +200,23 @@
   <eSubpackages name="mdsdAccount" nsURI="http:///Classes/mdsdAccount.ecore" nsPrefix="Classes.mdsdAccount">
     <eClassifiers xsi:type="ecore:EClass" name="BookingToAccount" abstract="true"
         interface="true">
-      <eOperations name="getAccount" ordered="false" lowerBound="1" eType="#//Account">
+      <eOperations name="getAccount" ordered="false" lowerBound="1" eType="#//mdsdAccount/Account">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Account">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="accountID" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pets" ordered="false"
+          upperBound="-1" eType="#//mdsdAccount/Pet"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pet">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CustomerAccount" abstract="true" interface="true">
       <eOperations name="createAccount" ordered="false" lowerBound="1"/>
@@ -229,6 +227,21 @@
       </eOperations>
       <eOperations name="logout" ordered="false" lowerBound="1"/>
       <eOperations name="viewRoom" ordered="false" lowerBound="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Customer">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="account" ordered="false"
+          lowerBound="1" eType="#//mdsdAccount/Account"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AccountController" eSuperTypes="#//mdsdAccount/BookingToAccount #//mdsdAccount/CustomerAccount">
+      <eOperations name="addCustomer" ordered="false" lowerBound="1"/>
+      <eOperations name="addPet" ordered="false" lowerBound="1"/>
+      <eOperations name="removePet" ordered="false" lowerBound="1"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="customers" ordered="false"
+          upperBound="-1" eType="#//mdsdAccount/Customer" containment="true"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -2,10 +2,6 @@
  */
 package Classes.mdsdAdmin.impl;
 
-import Classes.ClassesPackage;
-
-import Classes.impl.ClassesPackageImpl;
-
 import Classes.mdsdAccount.MdsdAccountPackage;
 
 import Classes.mdsdAccount.impl.MdsdAccountPackageImpl;
@@ -17,7 +13,6 @@ import Classes.mdsdAdmin.HotelStaff;
 import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdAdmin.MdsdAdminPackage;
 import Classes.mdsdAdmin.Room;
-import Classes.mdsdAdmin.Service;
 import Classes.mdsdAdmin.Staff;
 
 import Classes.mdsdBilling.MdsdBillingPackage;
@@ -37,6 +32,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -80,13 +76,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * @generated
 	 */
 	private EClass staffEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass serviceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,7 +131,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ClassesPackageImpl theClassesPackage = (ClassesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) instanceof ClassesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) : ClassesPackage.eINSTANCE);
 		MdsdBillingPackageImpl theMdsdBillingPackage = (MdsdBillingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) instanceof MdsdBillingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) : MdsdBillingPackage.eINSTANCE);
 		MdsdBookingPackageImpl theMdsdBookingPackage = (MdsdBookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) instanceof MdsdBookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) : MdsdBookingPackage.eINSTANCE);
 		MdsdAccountPackageImpl theMdsdAccountPackage = (MdsdAccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) instanceof MdsdAccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) : MdsdAccountPackage.eINSTANCE);
@@ -150,7 +138,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		// Create package meta-data objects
 		theMdsdAdminPackage.createPackageContents();
-		theClassesPackage.createPackageContents();
 		theMdsdBillingPackage.createPackageContents();
 		theMdsdBookingPackage.createPackageContents();
 		theMdsdAccountPackage.createPackageContents();
@@ -158,7 +145,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		// Initialize created meta-data
 		theMdsdAdminPackage.initializePackageContents();
-		theClassesPackage.initializePackageContents();
 		theMdsdBillingPackage.initializePackageContents();
 		theMdsdBookingPackage.initializePackageContents();
 		theMdsdAccountPackage.initializePackageContents();
@@ -331,15 +317,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingToAdmin__GetServiceList() {
-		return bookingToAdminEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStaff() {
 		return staffEClass;
 	}
@@ -378,33 +355,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 */
 	public EOperation getStaff__ChangeRoomStatus__String_int() {
 		return staffEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getService() {
-		return serviceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getService_Description() {
-		return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getService_Price() {
-		return (EAttribute)serviceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -491,17 +441,12 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		bookingToAdminEClass = createEClass(BOOKING_TO_ADMIN);
 		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_PET_TYPES);
 		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS);
-		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_SERVICE_LIST);
 
 		staffEClass = createEClass(STAFF);
 		createEOperation(staffEClass, STAFF___STAFF_LOGIN);
 		createEOperation(staffEClass, STAFF___STAFF_LOGOUT);
 		createEOperation(staffEClass, STAFF___DISPLAY_ROOMS);
 		createEOperation(staffEClass, STAFF___CHANGE_ROOM_STATUS__STRING_INT);
-
-		serviceEClass = createEClass(SERVICE);
-		createEAttribute(serviceEClass, SERVICE__DESCRIPTION);
-		createEAttribute(serviceEClass, SERVICE__PRICE);
 
 		roomEClass = createEClass(ROOM);
 		createEAttribute(roomEClass, ROOM__TYPE);
@@ -580,8 +525,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		initEOperation(getBookingToAdmin__GetAvailableRooms(), this.getRoom(), "getAvailableRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingToAdmin__GetServiceList(), null, "getServiceList", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(staffEClass, Staff.class, "Staff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getStaff__StaffLogin(), null, "staffLogin", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -594,14 +537,13 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		addEParameter(op, ecorePackage.getEString(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getService_Description(), ecorePackage.getEString(), "description", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getService_Price(), ecorePackage.getEFloat(), "price", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoom_Type(), ecorePackage.getEString(), "type", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoom_Status(), ecorePackage.getEString(), "status", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoom_Number(), ecorePackage.getEInt(), "number", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //MdsdAdminPackageImpl

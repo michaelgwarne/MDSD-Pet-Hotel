@@ -1,12 +1,10 @@
 /**
  */
-package Classes.impl;
+package Classes.mdsdAccount.impl;
 
-import Classes.Account;
-import Classes.AccountController;
-import Classes.ClassesPackage;
-import Classes.Customer;
-
+import Classes.mdsdAccount.Account;
+import Classes.mdsdAccount.AccountController;
+import Classes.mdsdAccount.Customer;
 import Classes.mdsdAccount.CustomerAccount;
 import Classes.mdsdAccount.MdsdAccountPackage;
 
@@ -34,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.impl.AccountControllerImpl#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountControllerImpl#getCustomers <em>Customers</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +64,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassesPackage.Literals.ACCOUNT_CONTROLLER;
+		return MdsdAccountPackage.Literals.ACCOUNT_CONTROLLER;
 	}
 
 	/**
@@ -76,7 +74,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<Customer> getCustomers() {
 		if (customers == null) {
-			customers = new EObjectContainmentEList<Customer>(Customer.class, this, ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS);
+			customers = new EObjectContainmentEList<Customer>(Customer.class, this, MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS);
 		}
 		return customers;
 	}
@@ -188,7 +186,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
 				return ((InternalEList<?>)getCustomers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -202,7 +200,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
 				return getCustomers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -217,7 +215,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
 				getCustomers().clear();
 				getCustomers().addAll((Collection<? extends Customer>)newValue);
 				return;
@@ -233,7 +231,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
 				getCustomers().clear();
 				return;
 		}
@@ -248,7 +246,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
 				return customers != null && !customers.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -263,11 +261,11 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == CustomerAccount.class) {
 			switch (baseOperationID) {
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___CREATE_ACCOUNT: return ClassesPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___MODIFY_ACCOUNT: return ClassesPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGIN__STRING_STRING: return ClassesPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT: return ClassesPackage.ACCOUNT_CONTROLLER___LOGOUT;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___VIEW_ROOM: return ClassesPackage.ACCOUNT_CONTROLLER___VIEW_ROOM;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___CREATE_ACCOUNT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___MODIFY_ACCOUNT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGIN__STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___VIEW_ROOM: return MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM;
 				default: return -1;
 			}
 		}
@@ -282,30 +280,30 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ClassesPackage.ACCOUNT_CONTROLLER___GET_ACCOUNT__STRING:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___GET_ACCOUNT__STRING:
 				return getAccount((String)arguments.get(0));
-			case ClassesPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT:
 				createAccount();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT:
 				modifyAccount();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING:
 				login((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___LOGOUT:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT:
 				logout();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___VIEW_ROOM:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM:
 				viewRoom();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___ADD_CUSTOMER:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_CUSTOMER:
 				addCustomer();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___ADD_PET:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_PET:
 				addPet();
 				return null;
-			case ClassesPackage.ACCOUNT_CONTROLLER___REMOVE_PET:
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___REMOVE_PET:
 				removePet();
 				return null;
 		}

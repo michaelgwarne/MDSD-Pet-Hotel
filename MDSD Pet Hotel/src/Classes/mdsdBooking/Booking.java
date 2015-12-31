@@ -2,8 +2,6 @@
  */
 package Classes.mdsdBooking;
 
-import Classes.mdsdAdmin.Service;
-
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
@@ -170,7 +168,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Booked Services</b></em>' reference list.
-	 * The list contents are of type {@link Classes.mdsdAdmin.Service}.
+	 * The list contents are of type {@link Classes.mdsdBooking.Service}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Booked Services</em>' reference list isn't clear,

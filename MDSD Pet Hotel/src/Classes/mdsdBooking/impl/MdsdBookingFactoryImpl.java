@@ -57,6 +57,7 @@ public class MdsdBookingFactoryImpl extends EFactoryImpl implements MdsdBookingF
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case MdsdBookingPackage.BOOKING_CONTROLLER: return createBookingController();
+			case MdsdBookingPackage.SERVICE: return createService();
 			case MdsdBookingPackage.MEAL: return createMeal();
 			case MdsdBookingPackage.BOOKING: return createBooking();
 			default:
@@ -72,6 +73,16 @@ public class MdsdBookingFactoryImpl extends EFactoryImpl implements MdsdBookingF
 	public BookingController createBookingController() {
 		BookingControllerImpl bookingController = new BookingControllerImpl();
 		return bookingController;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Service createService() {
+		ServiceImpl service = new ServiceImpl();
+		return service;
 	}
 
 	/**

@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link Classes.mdsdBooking.BookingController#getBookings <em>Bookings</em>}</li>
+ *   <li>{@link Classes.mdsdBooking.BookingController#getServices <em>Services</em>}</li>
  * </ul>
  *
  * @see Classes.mdsdBooking.MdsdBookingPackage#getBookingController()
@@ -36,6 +37,22 @@ public interface BookingController extends UserBooking, StaffBooking {
 	 * @generated
 	 */
 	EList<Booking> getBookings();
+
+	/**
+	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
+	 * The list contents are of type {@link Classes.mdsdBooking.Service}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Services</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Services</em>' containment reference list.
+	 * @see Classes.mdsdBooking.MdsdBookingPackage#getBookingController_Services()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<Service> getServices();
 
 	/**
 	 * <!-- begin-user-doc -->

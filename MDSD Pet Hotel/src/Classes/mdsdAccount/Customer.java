@@ -1,6 +1,6 @@
 /**
  */
-package Classes;
+package Classes.mdsdAccount;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Classes.Customer#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Customer#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.Customer#getAccount <em>Account</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Customer#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Customer#getEmail <em>Email</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Customer#getAccount <em>Account</em>}</li>
  * </ul>
  *
- * @see Classes.ClassesPackage#getCustomer()
+ * @see Classes.mdsdAccount.MdsdAccountPackage#getCustomer()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface Customer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see Classes.ClassesPackage#getCustomer_Name()
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getCustomer_Name()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link Classes.Customer#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link Classes.mdsdAccount.Customer#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -59,14 +59,14 @@ public interface Customer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Email</em>' attribute.
 	 * @see #setEmail(String)
-	 * @see Classes.ClassesPackage#getCustomer_Email()
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getCustomer_Email()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getEmail();
 
 	/**
-	 * Sets the value of the '{@link Classes.Customer#getEmail <em>Email</em>}' attribute.
+	 * Sets the value of the '{@link Classes.mdsdAccount.Customer#getEmail <em>Email</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Email</em>' attribute.
@@ -85,14 +85,14 @@ public interface Customer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Account</em>' reference.
 	 * @see #setAccount(Account)
-	 * @see Classes.ClassesPackage#getCustomer_Account()
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getCustomer_Account()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Account getAccount();
 
 	/**
-	 * Sets the value of the '{@link Classes.Customer#getAccount <em>Account</em>}' reference.
+	 * Sets the value of the '{@link Classes.mdsdAccount.Customer#getAccount <em>Account</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Account</em>' reference.

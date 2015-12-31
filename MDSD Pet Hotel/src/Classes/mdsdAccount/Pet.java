@@ -1,6 +1,6 @@
 /**
  */
-package Classes;
+package Classes.mdsdAccount;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Classes.Pet#getName <em>Name</em>}</li>
- *   <li>{@link Classes.Pet#getType <em>Type</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Pet#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Pet#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see Classes.ClassesPackage#getPet()
+ * @see Classes.mdsdAccount.MdsdAccountPackage#getPet()
  * @model
  * @generated
  */
@@ -32,14 +32,14 @@ public interface Pet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see Classes.ClassesPackage#getPet_Name()
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getPet_Name()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link Classes.Pet#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link Classes.mdsdAccount.Pet#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -58,14 +58,14 @@ public interface Pet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see Classes.ClassesPackage#getPet_Type()
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getPet_Type()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link Classes.Pet#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link Classes.mdsdAccount.Pet#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.

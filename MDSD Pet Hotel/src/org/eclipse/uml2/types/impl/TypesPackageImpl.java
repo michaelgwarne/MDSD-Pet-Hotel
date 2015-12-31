@@ -2,10 +2,6 @@
  */
 package org.eclipse.uml2.types.impl;
 
-import Classes.ClassesPackage;
-
-import Classes.impl.ClassesPackageImpl;
-
 import Classes.mdsdAccount.MdsdAccountPackage;
 
 import Classes.mdsdAccount.impl.MdsdAccountPackageImpl;
@@ -119,7 +115,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ClassesPackageImpl theClassesPackage = (ClassesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) instanceof ClassesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) : ClassesPackage.eINSTANCE);
 		MdsdBillingPackageImpl theMdsdBillingPackage = (MdsdBillingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) instanceof MdsdBillingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) : MdsdBillingPackage.eINSTANCE);
 		MdsdBookingPackageImpl theMdsdBookingPackage = (MdsdBookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) instanceof MdsdBookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) : MdsdBookingPackage.eINSTANCE);
 		MdsdAdminPackageImpl theMdsdAdminPackage = (MdsdAdminPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) instanceof MdsdAdminPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) : MdsdAdminPackage.eINSTANCE);
@@ -127,7 +122,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
-		theClassesPackage.createPackageContents();
 		theMdsdBillingPackage.createPackageContents();
 		theMdsdBookingPackage.createPackageContents();
 		theMdsdAdminPackage.createPackageContents();
@@ -135,7 +129,6 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 
 		// Initialize created meta-data
 		theTypesPackage.initializePackageContents();
-		theClassesPackage.initializePackageContents();
 		theMdsdBillingPackage.initializePackageContents();
 		theMdsdBookingPackage.initializePackageContents();
 		theMdsdAdminPackage.initializePackageContents();

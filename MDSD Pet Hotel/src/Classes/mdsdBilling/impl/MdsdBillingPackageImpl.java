@@ -2,10 +2,6 @@
  */
 package Classes.mdsdBilling.impl;
 
-import Classes.ClassesPackage;
-
-import Classes.impl.ClassesPackageImpl;
-
 import Classes.mdsdAccount.MdsdAccountPackage;
 
 import Classes.mdsdAccount.impl.MdsdAccountPackageImpl;
@@ -36,6 +32,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -134,7 +131,6 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ClassesPackageImpl theClassesPackage = (ClassesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) instanceof ClassesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) : ClassesPackage.eINSTANCE);
 		MdsdBookingPackageImpl theMdsdBookingPackage = (MdsdBookingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) instanceof MdsdBookingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBookingPackage.eNS_URI) : MdsdBookingPackage.eINSTANCE);
 		MdsdAdminPackageImpl theMdsdAdminPackage = (MdsdAdminPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) instanceof MdsdAdminPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) : MdsdAdminPackage.eINSTANCE);
 		MdsdAccountPackageImpl theMdsdAccountPackage = (MdsdAccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) instanceof MdsdAccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) : MdsdAccountPackage.eINSTANCE);
@@ -142,7 +138,6 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 
 		// Create package meta-data objects
 		theMdsdBillingPackage.createPackageContents();
-		theClassesPackage.createPackageContents();
 		theMdsdBookingPackage.createPackageContents();
 		theMdsdAdminPackage.createPackageContents();
 		theMdsdAccountPackage.createPackageContents();
@@ -150,7 +145,6 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 
 		// Initialize created meta-data
 		theMdsdBillingPackage.initializePackageContents();
-		theClassesPackage.initializePackageContents();
 		theMdsdBookingPackage.initializePackageContents();
 		theMdsdAdminPackage.initializePackageContents();
 		theMdsdAccountPackage.initializePackageContents();
@@ -484,6 +478,9 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		initEClass(customerBillingEClass, CustomerBilling.class, "CustomerBilling", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getCustomerBilling__ConfirmPayment(), null, "confirmPayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //MdsdBillingPackageImpl

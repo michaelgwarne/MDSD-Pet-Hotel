@@ -1,10 +1,10 @@
 /**
  */
-package Classes.impl;
+package Classes.mdsdAccount.impl;
 
-import Classes.Account;
-import Classes.ClassesPackage;
-import Classes.Pet;
+import Classes.mdsdAccount.Account;
+import Classes.mdsdAccount.MdsdAccountPackage;
+import Classes.mdsdAccount.Pet;
 
 import java.util.Collection;
 
@@ -27,9 +27,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.impl.AccountImpl#getAccountID <em>Account ID</em>}</li>
- *   <li>{@link Classes.impl.AccountImpl#getPets <em>Pets</em>}</li>
- *   <li>{@link Classes.impl.AccountImpl#getPassword <em>Password</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getAccountID <em>Account ID</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getPets <em>Pets</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,7 +101,7 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassesPackage.Literals.ACCOUNT;
+		return MdsdAccountPackage.Literals.ACCOUNT;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 		String oldAccountID = accountID;
 		accountID = newAccountID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.ACCOUNT__ACCOUNT_ID, oldAccountID, accountID));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.ACCOUNT__ACCOUNT_ID, oldAccountID, accountID));
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 */
 	public EList<Pet> getPets() {
 		if (pets == null) {
-			pets = new EObjectResolvingEList<Pet>(Pet.class, this, ClassesPackage.ACCOUNT__PETS);
+			pets = new EObjectResolvingEList<Pet>(Pet.class, this, MdsdAccountPackage.ACCOUNT__PETS);
 		}
 		return pets;
 	}
@@ -155,7 +155,7 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 		String oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.ACCOUNT__PASSWORD, oldPassword, password));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.ACCOUNT__PASSWORD, oldPassword, password));
 	}
 
 	/**
@@ -166,11 +166,11 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT__ACCOUNT_ID:
+			case MdsdAccountPackage.ACCOUNT__ACCOUNT_ID:
 				return getAccountID();
-			case ClassesPackage.ACCOUNT__PETS:
+			case MdsdAccountPackage.ACCOUNT__PETS:
 				return getPets();
-			case ClassesPackage.ACCOUNT__PASSWORD:
+			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -185,14 +185,14 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT__ACCOUNT_ID:
+			case MdsdAccountPackage.ACCOUNT__ACCOUNT_ID:
 				setAccountID((String)newValue);
 				return;
-			case ClassesPackage.ACCOUNT__PETS:
+			case MdsdAccountPackage.ACCOUNT__PETS:
 				getPets().clear();
 				getPets().addAll((Collection<? extends Pet>)newValue);
 				return;
-			case ClassesPackage.ACCOUNT__PASSWORD:
+			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				setPassword((String)newValue);
 				return;
 		}
@@ -207,13 +207,13 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT__ACCOUNT_ID:
+			case MdsdAccountPackage.ACCOUNT__ACCOUNT_ID:
 				setAccountID(ACCOUNT_ID_EDEFAULT);
 				return;
-			case ClassesPackage.ACCOUNT__PETS:
+			case MdsdAccountPackage.ACCOUNT__PETS:
 				getPets().clear();
 				return;
-			case ClassesPackage.ACCOUNT__PASSWORD:
+			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				setPassword(PASSWORD_EDEFAULT);
 				return;
 		}
@@ -228,11 +228,11 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.ACCOUNT__ACCOUNT_ID:
+			case MdsdAccountPackage.ACCOUNT__ACCOUNT_ID:
 				return ACCOUNT_ID_EDEFAULT == null ? accountID != null : !ACCOUNT_ID_EDEFAULT.equals(accountID);
-			case ClassesPackage.ACCOUNT__PETS:
+			case MdsdAccountPackage.ACCOUNT__PETS:
 				return pets != null && !pets.isEmpty();
-			case ClassesPackage.ACCOUNT__PASSWORD:
+			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);

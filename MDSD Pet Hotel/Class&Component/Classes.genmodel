@@ -32,29 +32,6 @@
   <foreignModel>Classes.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Classes" disposableProviderFactory="true"
       ecorePackage="Classes.ecore#/">
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Account">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Account/accountID"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Account/pets"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Account/password"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Pet">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Pet/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Pet/type"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//Customer">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Customer/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//Customer/email"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//Customer/account"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//AccountController">
-      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-          createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//AccountController/customers"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//AccountController/addCustomer"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//AccountController/addPet"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//AccountController/removePet"/>
-    </genClasses>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="MdsdBilling" disposableProviderFactory="true"
         ecorePackage="Classes.ecore#//mdsdBilling">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdBilling/BillingController">
@@ -96,9 +73,15 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdBooking/BookingController">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdBooking/BookingController/bookings"/>
+        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+            createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdBooking/BookingController/services"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/BookingController/getBookingList">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/BookingController/getBookingList/email"/>
         </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdBooking/Service">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Service/description"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdBooking/Service/price"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdBooking/UserBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/modifyBooking">
@@ -116,21 +99,33 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerName"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerEmail"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/booking"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/petName"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayFrom"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/stayTo"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterDatesOfStay/rooms"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/foodType"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/schedule"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/amountOfFood"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterMealInfo/price"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterService/service"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdBooking/StaffBooking">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/checkIn">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkIn/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkIn/bookingID"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/checkOut">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/bookingID"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/addNewService">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/addNewService/description"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/addNewService/price"/>
         </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdBooking/Meal">
@@ -194,7 +189,6 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/BookingToAdmin">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getPetTypes"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getAvailableRooms"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getServiceList"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/Staff">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogin"/>
@@ -204,10 +198,6 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus/status"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus/roomNumber"/>
         </genOperations>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAdmin/Service">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/Service/description"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/Service/price"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAdmin/Room">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/Room/type"/>
@@ -222,6 +212,16 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/BookingToAccount/getAccount/email"/>
         </genOperations>
       </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Account">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/accountID"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/Account/pets"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/password"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Pet">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Pet/name"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Pet/type"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAccount/CustomerAccount">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/createAccount"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/modifyAccount"/>
@@ -231,6 +231,19 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/logout"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Customer">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Customer/name"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Customer/email"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/Customer/account"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/AccountController">
+        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+            createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/AccountController/customers"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/addCustomer"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/addPet"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/removePet"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

@@ -72,9 +72,35 @@ public class MdsdAccountSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MdsdAccountPackage.ACCOUNT: {
+				Account account = (Account)theEObject;
+				T result = caseAccount(account);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MdsdAccountPackage.PET: {
+				Pet pet = (Pet)theEObject;
+				T result = casePet(pet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MdsdAccountPackage.CUSTOMER_ACCOUNT: {
 				CustomerAccount customerAccount = (CustomerAccount)theEObject;
 				T result = caseCustomerAccount(customerAccount);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MdsdAccountPackage.CUSTOMER: {
+				Customer customer = (Customer)theEObject;
+				T result = caseCustomer(customer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER: {
+				AccountController accountController = (AccountController)theEObject;
+				T result = caseAccountController(accountController);
+				if (result == null) result = caseBookingToAccount(accountController);
+				if (result == null) result = caseCustomerAccount(accountController);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,6 +124,36 @@ public class MdsdAccountSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Account</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccount(Account object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePet(Pet object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Customer Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -109,6 +165,36 @@ public class MdsdAccountSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCustomerAccount(CustomerAccount object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomer(Customer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Account Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Account Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccountController(AccountController object) {
 		return null;
 	}
 

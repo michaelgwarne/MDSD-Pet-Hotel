@@ -2,11 +2,10 @@
  */
 package Classes.mdsdBooking.impl;
 
-import Classes.mdsdAdmin.Service;
-
 import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.MdsdBookingPackage;
 import Classes.mdsdBooking.Meal;
+import Classes.mdsdBooking.Service;
 
 import java.util.Collection;
 import java.util.Date;
@@ -194,10 +193,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDateFrom()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected static final Date DATE_FROM_EDEFAULT = new Date(0);
+	protected static final Date DATE_FROM_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDateFrom() <em>Date From</em>}' attribute.
@@ -214,10 +213,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDateTo()
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
-	protected static final Date DATE_TO_EDEFAULT = new Date(0);
+	protected static final Date DATE_TO_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDateTo() <em>Date To</em>}' attribute.

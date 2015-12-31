@@ -1,10 +1,10 @@
 /**
  */
-package Classes.impl;
+package Classes.mdsdAccount.impl;
 
-import Classes.Account;
-import Classes.ClassesPackage;
-import Classes.Customer;
+import Classes.mdsdAccount.Account;
+import Classes.mdsdAccount.Customer;
+import Classes.mdsdAccount.MdsdAccountPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,9 +22,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.impl.CustomerImpl#getName <em>Name</em>}</li>
- *   <li>{@link Classes.impl.CustomerImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link Classes.impl.CustomerImpl#getAccount <em>Account</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.CustomerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.CustomerImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.CustomerImpl#getAccount <em>Account</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,7 +96,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassesPackage.Literals.CUSTOMER;
+		return MdsdAccountPackage.Literals.CUSTOMER;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.CUSTOMER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.CUSTOMER__NAME, oldName, name));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		String oldEmail = email;
 		email = newEmail;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.CUSTOMER__EMAIL, oldEmail, email));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.CUSTOMER__EMAIL, oldEmail, email));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 			account = (Account)eResolveProxy(oldAccount);
 			if (account != oldAccount) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClassesPackage.CUSTOMER__ACCOUNT, oldAccount, account));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdsdAccountPackage.CUSTOMER__ACCOUNT, oldAccount, account));
 			}
 		}
 		return account;
@@ -176,7 +176,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		Account oldAccount = account;
 		account = newAccount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.CUSTOMER__ACCOUNT, oldAccount, account));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.CUSTOMER__ACCOUNT, oldAccount, account));
 	}
 
 	/**
@@ -187,11 +187,11 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassesPackage.CUSTOMER__NAME:
+			case MdsdAccountPackage.CUSTOMER__NAME:
 				return getName();
-			case ClassesPackage.CUSTOMER__EMAIL:
+			case MdsdAccountPackage.CUSTOMER__EMAIL:
 				return getEmail();
-			case ClassesPackage.CUSTOMER__ACCOUNT:
+			case MdsdAccountPackage.CUSTOMER__ACCOUNT:
 				if (resolve) return getAccount();
 				return basicGetAccount();
 		}
@@ -206,13 +206,13 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassesPackage.CUSTOMER__NAME:
+			case MdsdAccountPackage.CUSTOMER__NAME:
 				setName((String)newValue);
 				return;
-			case ClassesPackage.CUSTOMER__EMAIL:
+			case MdsdAccountPackage.CUSTOMER__EMAIL:
 				setEmail((String)newValue);
 				return;
-			case ClassesPackage.CUSTOMER__ACCOUNT:
+			case MdsdAccountPackage.CUSTOMER__ACCOUNT:
 				setAccount((Account)newValue);
 				return;
 		}
@@ -227,13 +227,13 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.CUSTOMER__NAME:
+			case MdsdAccountPackage.CUSTOMER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ClassesPackage.CUSTOMER__EMAIL:
+			case MdsdAccountPackage.CUSTOMER__EMAIL:
 				setEmail(EMAIL_EDEFAULT);
 				return;
-			case ClassesPackage.CUSTOMER__ACCOUNT:
+			case MdsdAccountPackage.CUSTOMER__ACCOUNT:
 				setAccount((Account)null);
 				return;
 		}
@@ -248,11 +248,11 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.CUSTOMER__NAME:
+			case MdsdAccountPackage.CUSTOMER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ClassesPackage.CUSTOMER__EMAIL:
+			case MdsdAccountPackage.CUSTOMER__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-			case ClassesPackage.CUSTOMER__ACCOUNT:
+			case MdsdAccountPackage.CUSTOMER__ACCOUNT:
 				return account != null;
 		}
 		return super.eIsSet(featureID);

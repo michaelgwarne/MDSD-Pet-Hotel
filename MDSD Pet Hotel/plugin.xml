@@ -9,13 +9,6 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated Classes -->
       <package
-            uri="http:///Classes.ecore"
-            class="Classes.ClassesPackage"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Classes -->
-      <package
             uri="http:///Classes/mdsdBilling.ecore"
             class="Classes.mdsdBilling.MdsdBillingPackage"/>
    </extension>

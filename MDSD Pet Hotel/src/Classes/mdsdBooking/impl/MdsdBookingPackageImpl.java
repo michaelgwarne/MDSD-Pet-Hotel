@@ -2,10 +2,6 @@
  */
 package Classes.mdsdBooking.impl;
 
-import Classes.ClassesPackage;
-
-import Classes.impl.ClassesPackageImpl;
-
 import Classes.mdsdAccount.MdsdAccountPackage;
 
 import Classes.mdsdAccount.impl.MdsdAccountPackageImpl;
@@ -23,6 +19,7 @@ import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
 import Classes.mdsdBooking.MdsdBookingPackage;
 import Classes.mdsdBooking.Meal;
+import Classes.mdsdBooking.Service;
 import Classes.mdsdBooking.StaffBooking;
 import Classes.mdsdBooking.UserBooking;
 
@@ -35,6 +32,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -50,6 +48,13 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * @generated
 	 */
 	private EClass bookingControllerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +131,6 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ClassesPackageImpl theClassesPackage = (ClassesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) instanceof ClassesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassesPackage.eNS_URI) : ClassesPackage.eINSTANCE);
 		MdsdBillingPackageImpl theMdsdBillingPackage = (MdsdBillingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) instanceof MdsdBillingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI) : MdsdBillingPackage.eINSTANCE);
 		MdsdAdminPackageImpl theMdsdAdminPackage = (MdsdAdminPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) instanceof MdsdAdminPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI) : MdsdAdminPackage.eINSTANCE);
 		MdsdAccountPackageImpl theMdsdAccountPackage = (MdsdAccountPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) instanceof MdsdAccountPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MdsdAccountPackage.eNS_URI) : MdsdAccountPackage.eINSTANCE);
@@ -134,7 +138,6 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 
 		// Create package meta-data objects
 		theMdsdBookingPackage.createPackageContents();
-		theClassesPackage.createPackageContents();
 		theMdsdBillingPackage.createPackageContents();
 		theMdsdAdminPackage.createPackageContents();
 		theMdsdAccountPackage.createPackageContents();
@@ -142,7 +145,6 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 
 		// Initialize created meta-data
 		theMdsdBookingPackage.initializePackageContents();
-		theClassesPackage.initializePackageContents();
 		theMdsdBillingPackage.initializePackageContents();
 		theMdsdAdminPackage.initializePackageContents();
 		theMdsdAccountPackage.initializePackageContents();
@@ -180,8 +182,44 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBookingController_Services() {
+		return (EReference)bookingControllerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingController__GetBookingList__String() {
 		return bookingControllerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getService() {
+		return serviceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getService_Description() {
+		return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getService_Price() {
+		return (EAttribute)serviceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -225,7 +263,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getUserBooking__EnterCustomerInfo__String_String_Booking() {
+	public EOperation getUserBooking__EnterCustomerInfo__String_String_Booking_String() {
 		return userBookingEClass.getEOperations().get(3);
 	}
 
@@ -243,6 +281,24 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getUserBooking__EnterMealInfo__String_String_float_float() {
+		return userBookingEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getUserBooking__EnterService__Service() {
+		return userBookingEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStaffBooking() {
 		return staffBookingEClass;
 	}
@@ -252,7 +308,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBooking__CheckIn__String_String() {
+	public EOperation getStaffBooking__CheckIn__String() {
 		return staffBookingEClass.getEOperations().get(0);
 	}
 
@@ -261,8 +317,17 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBooking__CheckOut__String_String() {
+	public EOperation getStaffBooking__CheckOut__String() {
 		return staffBookingEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getStaffBooking__AddNewService__String_float() {
+		return staffBookingEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -457,18 +522,26 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		// Create classes and their features
 		bookingControllerEClass = createEClass(BOOKING_CONTROLLER);
 		createEReference(bookingControllerEClass, BOOKING_CONTROLLER__BOOKINGS);
+		createEReference(bookingControllerEClass, BOOKING_CONTROLLER__SERVICES);
 		createEOperation(bookingControllerEClass, BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING);
+
+		serviceEClass = createEClass(SERVICE);
+		createEAttribute(serviceEClass, SERVICE__DESCRIPTION);
+		createEAttribute(serviceEClass, SERVICE__PRICE);
 
 		userBookingEClass = createEClass(USER_BOOKING);
 		createEOperation(userBookingEClass, USER_BOOKING___MODIFY_BOOKING__STRING_STRING);
 		createEOperation(userBookingEClass, USER_BOOKING___CANCEL_BOOKING__STRING_STRING);
 		createEOperation(userBookingEClass, USER_BOOKING___CONFIRM_BOOKING__STRING);
-		createEOperation(userBookingEClass, USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING);
 		createEOperation(userBookingEClass, USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT);
+		createEOperation(userBookingEClass, USER_BOOKING___ENTER_SERVICE__SERVICE);
 
 		staffBookingEClass = createEClass(STAFF_BOOKING);
-		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_IN__STRING_STRING);
-		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_OUT__STRING_STRING);
+		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_IN__STRING);
+		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_OUT__STRING);
+		createEOperation(staffBookingEClass, STAFF_BOOKING___ADD_NEW_SERVICE__STRING_FLOAT);
 
 		mealEClass = createEClass(MEAL);
 		createEAttribute(mealEClass, MEAL__FOOD_TYPE);
@@ -528,9 +601,14 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bookingControllerEClass, BookingController.class, "BookingController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingController_Bookings(), this.getBooking(), null, "bookings", null, 0, -1, BookingController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingController_Services(), this.getService(), null, "services", null, 0, -1, BookingController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		EOperation op = initEOperation(getBookingController__GetBookingList__String(), this.getBooking(), "getBookingList", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getService_Description(), ecorePackage.getEString(), "description", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getService_Price(), ecorePackage.getEFloat(), "price", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(userBookingEClass, UserBooking.class, "UserBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -545,25 +623,37 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		op = initEOperation(getUserBooking__ConfirmBooking__String(), null, "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getUserBooking__EnterCustomerInfo__String_String_Booking(), null, "enterCustomerInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getUserBooking__EnterCustomerInfo__String_String_Booking_String(), null, "enterCustomerInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "customerName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "petName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getUserBooking__EnterDatesOfStay__Date_Date_EList(), this.getBooking(), "enterDatesOfStay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "stayFrom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "stayTo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theMdsdAdminPackage.getRoom(), "rooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getUserBooking__EnterMealInfo__String_String_float_float(), null, "enterMealInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "foodType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "schedule", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEFloat(), "amountOfFood", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEFloat(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getUserBooking__EnterService__Service(), null, "enterService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getService(), "service", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(staffBookingEClass, StaffBooking.class, "StaffBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getStaffBooking__CheckIn__String_String(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBooking__CheckIn__String(), null, "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffBooking__CheckOut__String_String(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBooking__CheckOut__String(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffBooking__AddNewService__String_float(), null, "addNewService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEFloat(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(mealEClass, Meal.class, "Meal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMeal_FoodType(), ecorePackage.getEString(), "foodType", null, 1, 1, Meal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -577,13 +667,16 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		initEAttribute(getBooking_BookingId(), ecorePackage.getEString(), "bookingId", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_IsCheckedIn(), ecorePackage.getEBoolean(), "isCheckedIn", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_IsCheckedOut(), ecorePackage.getEBoolean(), "isCheckedOut", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBooking_BookedServices(), theMdsdAdminPackage.getService(), null, "bookedServices", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBooking_BookedServices(), this.getService(), null, "bookedServices", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBooking_MealInfo(), this.getMeal(), null, "mealInfo", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_RoomNumber(), ecorePackage.getEInt(), "roomNumber", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_DateFrom(), ecorePackage.getEDate(), "dateFrom", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_DateTo(), ecorePackage.getEDate(), "dateTo", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_Bill_Id(), ecorePackage.getEString(), "bill_Id", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_PetName(), ecorePackage.getEString(), "petName", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //MdsdBookingPackageImpl

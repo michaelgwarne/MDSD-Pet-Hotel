@@ -99,12 +99,6 @@ public class MdsdAdminSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MdsdAdminPackage.SERVICE: {
-				Service service = (Service)theEObject;
-				T result = caseService(service);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MdsdAdminPackage.ROOM: {
 				Room room = (Room)theEObject;
 				T result = caseRoom(room);
@@ -187,21 +181,6 @@ public class MdsdAdminSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStaff(Staff object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Service</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseService(Service object) {
 		return null;
 	}
 

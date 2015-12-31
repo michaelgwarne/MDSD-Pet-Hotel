@@ -88,10 +88,6 @@ public class MdsdAdminAdapterFactory extends AdapterFactoryImpl {
 				return createStaffAdapter();
 			}
 			@Override
-			public Adapter caseService(Service object) {
-				return createServiceAdapter();
-			}
-			@Override
 			public Adapter caseRoom(Room object) {
 				return createRoomAdapter();
 			}
@@ -182,20 +178,6 @@ public class MdsdAdminAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStaffAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Classes.mdsdAdmin.Service <em>Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Classes.mdsdAdmin.Service
-	 * @generated
-	 */
-	public Adapter createServiceAdapter() {
 		return null;
 	}
 

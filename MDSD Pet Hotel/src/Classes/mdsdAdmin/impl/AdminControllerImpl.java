@@ -50,7 +50,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<Room> rooms;
-	
+
 	/**
 	 * The cached value of the '{@link #getStaff() <em>Staff</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -116,7 +116,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 		name.setNumber(room);
 		getRooms().add(name);
 		// TODO: needs to test for duplicate room numbers
-	
 	}
 
 	/**
@@ -208,17 +207,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getServiceList() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void staffLogin() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -243,9 +231,8 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public void displayRooms() {
 		for (Room r: rooms){
-		System.out.println(r.getStatus() + " " + r.getType() + " " + r.getNumber());
-		}
-	
+			System.out.println(r.getStatus() + " " + r.getType() + " " + r.getNumber());
+			}
 	}
 
 	/**
@@ -360,7 +347,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 			switch (baseOperationID) {
 				case MdsdAdminPackage.BOOKING_TO_ADMIN___GET_PET_TYPES: return MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES;
 				case MdsdAdminPackage.BOOKING_TO_ADMIN___GET_AVAILABLE_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS;
-				case MdsdAdminPackage.BOOKING_TO_ADMIN___GET_SERVICE_LIST: return MdsdAdminPackage.ADMIN_CONTROLLER___GET_SERVICE_LIST;
 				default: return -1;
 			}
 		}
@@ -406,9 +392,6 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 				return getPetTypes();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_AVAILABLE_ROOMS:
 				return getAvailableRooms();
-			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_SERVICE_LIST:
-				getServiceList();
-				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN:
 				staffLogin();
 				return null;

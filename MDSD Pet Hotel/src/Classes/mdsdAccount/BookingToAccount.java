@@ -2,8 +2,6 @@
  */
 package Classes.mdsdAccount;
 
-import Classes.Account;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**

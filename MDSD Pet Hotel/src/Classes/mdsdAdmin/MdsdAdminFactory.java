@@ -40,15 +40,6 @@ public interface MdsdAdminFactory extends EFactory {
 	HotelStaff createHotelStaff();
 
 	/**
-	 * Returns a new object of class '<em>Service</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service</em>'.
-	 * @generated
-	 */
-	Service createService();
-
-	/**
 	 * Returns a new object of class '<em>Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

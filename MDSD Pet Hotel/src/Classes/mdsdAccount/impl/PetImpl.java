@@ -1,9 +1,9 @@
 /**
  */
-package Classes.impl;
+package Classes.mdsdAccount.impl;
 
-import Classes.ClassesPackage;
-import Classes.Pet;
+import Classes.mdsdAccount.MdsdAccountPackage;
+import Classes.mdsdAccount.Pet;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.impl.PetImpl#getName <em>Name</em>}</li>
- *   <li>{@link Classes.impl.PetImpl#getType <em>Type</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.PetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.PetImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,7 +83,7 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ClassesPackage.Literals.PET;
+		return MdsdAccountPackage.Literals.PET;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.PET__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.PET__NAME, oldName, name));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ClassesPackage.PET__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.PET__TYPE, oldType, type));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ClassesPackage.PET__NAME:
+			case MdsdAccountPackage.PET__NAME:
 				return getName();
-			case ClassesPackage.PET__TYPE:
+			case MdsdAccountPackage.PET__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ClassesPackage.PET__NAME:
+			case MdsdAccountPackage.PET__NAME:
 				setName((String)newValue);
 				return;
-			case ClassesPackage.PET__TYPE:
+			case MdsdAccountPackage.PET__TYPE:
 				setType((String)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.PET__NAME:
+			case MdsdAccountPackage.PET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ClassesPackage.PET__TYPE:
+			case MdsdAccountPackage.PET__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class PetImpl extends MinimalEObjectImpl.Container implements Pet {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ClassesPackage.PET__NAME:
+			case MdsdAccountPackage.PET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ClassesPackage.PET__TYPE:
+			case MdsdAccountPackage.PET__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);

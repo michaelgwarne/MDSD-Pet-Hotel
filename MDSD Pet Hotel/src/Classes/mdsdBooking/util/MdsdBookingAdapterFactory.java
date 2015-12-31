@@ -72,6 +72,10 @@ public class MdsdBookingAdapterFactory extends AdapterFactoryImpl {
 				return createBookingControllerAdapter();
 			}
 			@Override
+			public Adapter caseService(Service object) {
+				return createServiceAdapter();
+			}
+			@Override
 			public Adapter caseUserBooking(UserBooking object) {
 				return createUserBookingAdapter();
 			}
@@ -118,6 +122,20 @@ public class MdsdBookingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBookingControllerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Classes.mdsdBooking.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Classes.mdsdBooking.Service
+	 * @generated
+	 */
+	public Adapter createServiceAdapter() {
 		return null;
 	}
 

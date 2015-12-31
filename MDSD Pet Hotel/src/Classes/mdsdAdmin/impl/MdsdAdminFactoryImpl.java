@@ -58,7 +58,6 @@ public class MdsdAdminFactoryImpl extends EFactoryImpl implements MdsdAdminFacto
 		switch (eClass.getClassifierID()) {
 			case MdsdAdminPackage.ADMIN_CONTROLLER: return createAdminController();
 			case MdsdAdminPackage.HOTEL_STAFF: return createHotelStaff();
-			case MdsdAdminPackage.SERVICE: return createService();
 			case MdsdAdminPackage.ROOM: return createRoom();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -83,16 +82,6 @@ public class MdsdAdminFactoryImpl extends EFactoryImpl implements MdsdAdminFacto
 	public HotelStaff createHotelStaff() {
 		HotelStaffImpl hotelStaff = new HotelStaffImpl();
 		return hotelStaff;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Service createService() {
-		ServiceImpl service = new ServiceImpl();
-		return service;
 	}
 
 	/**

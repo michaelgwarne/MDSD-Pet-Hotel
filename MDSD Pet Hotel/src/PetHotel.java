@@ -1,5 +1,7 @@
 import java.util.Date;
 
+import Classes.mdsdAccount.AccountController;
+import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdBooking.Booking;
@@ -12,7 +14,7 @@ public class PetHotel {
 		long week = 604800000;
 		AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
 		BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
-	
+		AccountController accounter = MdsdAccountFactory.eINSTANCE.createAccountController();
 		
 		Date d1 = new Date(System.currentTimeMillis() + week);
 		Date d2 = new Date(System.currentTimeMillis() + (2*week));
@@ -26,19 +28,19 @@ public class PetHotel {
 		
 		
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getAvailableRooms());
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking);
+		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Regine");
 		admin.changeRoomStatus("booked", booking.getRoomNumber());
 	
 		Booking booking2 = booker.enterDatesOfStay(new Date(System.currentTimeMillis() + (3 * week)), new Date(System.currentTimeMillis() + (5 * week)), admin.getAvailableRooms());
-		booker.enterCustomerInfo("Peter Pig", "peter_pig@gmail.com", booking2);
+		booker.enterCustomerInfo("Peter Pig", "peter_pig@gmail.com", booking2, "Pimmie");
 		admin.changeRoomStatus("booked", booking2.getRoomNumber());
 		
 		Booking booking3 = booker.enterDatesOfStay(d1, d2, admin.getAvailableRooms());
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking3);
+		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking3, "Regine");
 		admin.changeRoomStatus("booked", booking3.getRoomNumber());
 		
 		Booking booking4 = booker.enterDatesOfStay(new Date(System.currentTimeMillis() + (10000 + week)), new Date(System.currentTimeMillis() + (2 + 10000 * week)), admin.getAvailableRooms());
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking4);
+		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking4, "Regine");
 		admin.changeRoomStatus("booked", booking4.getRoomNumber());
 	
 		for (Booking book : booker.getBookings()) {
@@ -48,3 +50,4 @@ public class PetHotel {
 	}
 
 }
+
