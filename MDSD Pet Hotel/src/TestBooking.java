@@ -43,13 +43,13 @@ public class TestBooking {
 	@Test
 	public void testBookingDateOverlap() {
 		//add room & create full booking
-		for(int i = 1; i < 2; i++){
-			admin.addRoom("dog", "available", i);
-			booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-			}
+		//for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", 1);
+			Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+			admin.changeRoomStatus("booked", booking.getRoomNumber());
+		//	}
 		//create booking
-		
-		Booking booking = booker.enterDatesOfStay(d3, d4, admin.getRooms(), "dog");
-		assertNull(booking);	
+		Booking booking2 = booker.enterDatesOfStay(d3, d4, admin.getRooms(), "dog");
+		assertNull(booking2);	
 	}
 }
