@@ -195,8 +195,10 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 		int i = 0;
 		for (Booking booking2 : getBookings()) {
 		// test if dates wanted overlap with dates on the booking
-			if((stayFrom.after(booking2.getDateFrom()) && stayFrom.before(booking2.getDateTo()))
-					||(stayTo.after(booking2.getDateFrom()) && stayTo.before(booking2.getDateTo()))){
+			if(((stayFrom.after(booking2.getDateFrom()) || stayFrom.equals(booking2.getDateFrom())) 
+					&&(stayFrom.before(booking2.getDateTo()) || stayFrom.equals(booking2.getDateTo())))
+					||((stayTo.after(booking2.getDateFrom()) || stayTo.equals(booking2.getDateFrom()))
+					&& (stayTo.before(booking2.getDateTo()) || stayTo.equals(booking2.getDateTo())))){
 		// remove all bookings with that room number from the temporary list
 				i = booking2.getRoomNumber();
 				for (Booking booking3 : temp) {

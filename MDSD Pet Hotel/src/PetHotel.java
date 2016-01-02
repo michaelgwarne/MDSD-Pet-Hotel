@@ -1,19 +1,19 @@
-import java.util.Date;
-
-import org.junit.internal.runners.statements.Fail;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-
-import Classes.mdsdAdmin.AdminController;
-import Classes.mdsdAdmin.MdsdAdminFactory;
-import Classes.mdsdBooking.Booking;
-import Classes.mdsdBooking.BookingController;
-import Classes.mdsdBooking.MdsdBookingFactory;
-
-public class PetHotel {
-
-	public static void main(String[] args) {
+//import java.util.Date;
+//
+//import org.junit.internal.runners.statements.Fail;
+//import org.junit.runner.JUnitCore;
+//import org.junit.runner.Result;
+//import org.junit.runner.notification.Failure;
+//
+//import Classes.mdsdAdmin.AdminController;
+//import Classes.mdsdAdmin.MdsdAdminFactory;
+//import Classes.mdsdBooking.Booking;
+//import Classes.mdsdBooking.BookingController;
+//import Classes.mdsdBooking.MdsdBookingFactory;
+//
+//public class PetHotel {
+//
+//	public static void main(String[] args) {
 //		long week = 604800000;
 //		AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
 //		BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
@@ -61,7 +61,7 @@ public class PetHotel {
 //	         System.out.println(failure.toString());
 //	      }
 //	     System.out.println(resultBooking.wasSuccessful());
-	}
-
-}
+//	}
+//
+//}
 

@@ -1,10 +1,6 @@
 import static org.junit.Assert.*;
-
 import java.util.Date;
-
-import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
-
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAdmin.AdminController;
@@ -70,12 +66,10 @@ public class TestBooking {
 	@Test
 	public void bookingDateOverlap() {
 		//add room & create full booking
-		//for(int i = 1; i < 2; i++){
 			admin.addRoom("dog", "available", 1);
 			Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
 			booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob");
 			admin.changeRoomStatus("booked", booking.getRoomNumber());
-		//	}
 		//create booking with overlap date
 		Booking booking2 = booker.enterDatesOfStay(d3, d4, admin.getRooms(), "dog");
 		assertNull(booking2);	
@@ -91,6 +85,7 @@ public class TestBooking {
 		
 		//Create new booking with the same period of stay
 		Booking booking2 = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		System.out.println(booker.getBookings());
 		assertNull(booking2);
 		
 	}
