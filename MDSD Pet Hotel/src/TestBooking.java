@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 import java.util.Date;
+
+import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
@@ -10,20 +12,28 @@ import Classes.mdsdBilling.MdsdBillingFactory;
 import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
+import Classes.mdsdBooking.Meal;
+import Classes.mdsdBooking.Service;
+import Classes.mdsdAdmin.Room;
 
 public class TestBooking {
 	
+
+
 	long week = 604800000;
 	
 	AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
 	BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
 	AccountController account = MdsdAccountFactory.eINSTANCE.createAccountController();
 	BillingController bill = MdsdBillingFactory.eINSTANCE.createBillingController();
+	//Room room = MdsdAdminFactory.eINSTANCE.createAdminController();
 	
 	Date d1 = new Date(System.currentTimeMillis() + week);
 	Date d2 = new Date(System.currentTimeMillis() + (3*week));
 	Date d3 = new Date(System.currentTimeMillis() + (2*week));
 	Date d4 = new Date(System.currentTimeMillis() + (4*week));
+
+	
 	
 
 	@Test
@@ -39,15 +49,6 @@ public class TestBooking {
 		admin.changeRoomStatus("booked", booking.getRoomNumber());
 		
 		assertNotNull(booking); // want to use assertEquals but don't know how the Elist<Booking> look like.
-		/*assertEquals(<Classes.mdsdBooking.impl.BookingImpl@7cdbc5d3
-				(customerName\: Andy Anteater\, 
-						customerEmail\: andy_anteater@gmail.com\, 
-						bookingId\: andy_anteater@gmail.com1\, 
-						isCheckedIn\: false\, 
-						isCheckedOut\: false\, 
-						roomNumber\: 1\, dateFrom\: Sat Jan 09 12\:07\:43 CET 2016\, 
-						dateTo\: Sat Jan 23 12\:07\:43 CET 2016\, 
-						bill_Id\: null\, petName\: Bob)> ,booking);*/
 	}
 	
 	
@@ -90,7 +91,100 @@ public class TestBooking {
 		
 	}
 	
+	@Test
+	public void bookingTestCustomerInfo(){
+		
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", i);
+		}
+		//book a room for a dog
+	
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+
+		
+		String customerName = booking.getCustomerName();
+		String customerEmail = booking.getCustomerEmail();
+		String petName = booking.getPetName();
+		
+		//checking if the hotel get correct customer info
+		assertEquals("Su San", customerName);
+		assertEquals("susan@gmail.com", customerEmail);
+		assertEquals("Bob", petName);
+	}
 	
 	
+	@Test
+	public void bookingTestRoomStatus() {
+		String status;
+		
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", i);
+		}
+		
+		//book a room for a dog
+	
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		
+		
+		//get room status and check if the room is booked.
+		EList<Room> rooms = admin.getRooms();
+		for (Room room : rooms) {
+			if(room.getNumber() == booking.getRoomNumber()) {
+				status = room.getStatus();
+				assertEquals("booked", status);
+				break;
+			}
+		}
+		
+	}
+	
+	@Test
+	public void bookingTestMealInfo() {
+		
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", i);
+		}
+		
+		//book a room for a dog
+	
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		
+		//enter meal for pet
+		booker.enterMealInfo("vegetarian", "10.00",400 , 30, booking.getBookingId());
+		
+		//booking should contain meal
+		Meal meal = booking.getMealInfo();
+		assertNotNull(meal); 
+		
+	}
+	
+	@Test
+	public void bookingTestEnterService() { //need to be fixed
+		
+		//Add room and service
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", i);
+		}
+		booker.addNewService("spa", 300);
+		Service spa;
+		
+		//book a room for a dog
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+		admin.changeRoomStatus("booked", booking.getRoomNumber());
+
+		
+		//Enter service
+		booker.enterService(spa, booking.getBookingId());
+
+		assertNotNull(booking.getBookedServices());
+	
+		
+	}
 	
 }
