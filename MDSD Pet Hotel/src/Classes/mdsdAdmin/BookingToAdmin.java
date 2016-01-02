@@ -19,9 +19,9 @@ public interface BookingToAdmin extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" many="false" ordered="false"
+	 * @model kind="operation" ordered="false"
 	 * @generated
 	 */
-	EList getPetTypes();
+	EList<String> getPetTypes();
 
 } // BookingToAdmin

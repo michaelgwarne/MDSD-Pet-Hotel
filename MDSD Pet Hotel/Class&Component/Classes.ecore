@@ -177,7 +177,7 @@
       <eOperations name="displayStaff" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingToAdmin" abstract="true" interface="true">
-      <eOperations name="getPetTypes" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+      <eOperations name="getPetTypes" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Staff" abstract="true" interface="true">
       <eOperations name="staffLogin" ordered="false" lowerBound="1"/>

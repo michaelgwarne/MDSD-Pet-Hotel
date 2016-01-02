@@ -511,7 +511,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		initEClass(bookingToAdminEClass, BookingToAdmin.class, "BookingToAdmin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getBookingToAdmin__GetPetTypes(), ecorePackage.getEEList(), "getPetTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingToAdmin__GetPetTypes(), ecorePackage.getEString(), "getPetTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffEClass, Staff.class, "Staff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

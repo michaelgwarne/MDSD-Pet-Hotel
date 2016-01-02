@@ -418,7 +418,9 @@
     <packagedElement xmi:type="uml:Interface" xmi:id="_u2HKsKD4EeWC-ufIrQerYg" name="BookingToAdmin">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_wvd5AKD4EeWC-ufIrQerYg" name="getPetTypes">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vDpK0KMxEeWIRLH1N9vj0g" name="types" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pwhdELFjEeWkm8OMuv9s0A"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pwkgYLFjEeWkm8OMuv9s0A" value="*"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
