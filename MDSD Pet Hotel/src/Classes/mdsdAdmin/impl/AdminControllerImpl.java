@@ -135,23 +135,30 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createStaff(String name, int rank, String SSN) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test and test for existing ssn
+		HotelStaff staff = MdsdAdminFactory.eINSTANCE.createHotelStaff();
+		staff.setName(name);
+		staff.setRank(rank);
+		staff.setSSN(SSN);
+		getStaff().add(staff);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeStaff(String SSN) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		for (HotelStaff staff : getStaff()) {
+			if(staff.getSSN().equals(SSN)){
+				getStaff().remove(staff);
+				break;
+			}
+		}
 	}
 
 	/**
