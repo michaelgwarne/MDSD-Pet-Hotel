@@ -118,6 +118,9 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X2FY-Z2oEeWtsfDCVXewgw"/>
           </children>
           <children xmi:type="notation:BasicCompartment" xmi:id="_X2GAAJ2oEeWtsfDCVXewgw" type="7028">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mTJiwLIdEeWkda7VoamEjQ" source="PapyrusCSSForceValue">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mTJiwbIdEeWkda7VoamEjQ" key="collapsed" value="true"/>
+            </eAnnotations>
             <children xmi:type="notation:Shape" xmi:id="_20tNQJ2oEeWtsfDCVXewgw" type="3007">
               <element xmi:type="uml:Operation" href="Classes.uml#_20YdIJ2oEeWtsfDCVXewgw"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_20tNQZ2oEeWtsfDCVXewgw"/>

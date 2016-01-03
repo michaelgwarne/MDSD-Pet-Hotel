@@ -34,7 +34,7 @@
       <eOperations name="giveRefund" ordered="false" lowerBound="1">
         <eParameters name="transaction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="isPaid" ordered="false" lowerBound="1">
+      <eOperations name="isPaid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="printReceipt" ordered="false" lowerBound="1">

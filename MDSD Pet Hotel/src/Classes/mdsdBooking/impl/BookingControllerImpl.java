@@ -379,10 +379,10 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
-			return ((InternalEList<?>)getBookings()).basicRemove(otherEnd, msgs);
-		case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
-			return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
+			case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
+				return ((InternalEList<?>)getBookings()).basicRemove(otherEnd, msgs);
+			case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
+				return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -395,10 +395,10 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
-			return getBookings();
-		case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
-			return getServices();
+			case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
+				return getBookings();
+			case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
+				return getServices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -412,14 +412,14 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
-			getBookings().clear();
-			getBookings().addAll((Collection<? extends Booking>)newValue);
-			return;
-		case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
-			getServices().clear();
-			getServices().addAll((Collection<? extends Service>)newValue);
-			return;
+			case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
+				getBookings().clear();
+				getBookings().addAll((Collection<? extends Booking>)newValue);
+				return;
+			case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
+				getServices().clear();
+				getServices().addAll((Collection<? extends Service>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -432,12 +432,12 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
-			getBookings().clear();
-			return;
-		case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
-			getServices().clear();
-			return;
+			case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
+				getBookings().clear();
+				return;
+			case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
+				getServices().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -450,10 +450,10 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
-			return bookings != null && !bookings.isEmpty();
-		case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
-			return services != null && !services.isEmpty();
+			case MdsdBookingPackage.BOOKING_CONTROLLER__BOOKINGS:
+				return bookings != null && !bookings.isEmpty();
+			case MdsdBookingPackage.BOOKING_CONTROLLER__SERVICES:
+				return services != null && !services.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -467,10 +467,10 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == StaffBooking.class) {
 			switch (baseOperationID) {
-			case MdsdBookingPackage.STAFF_BOOKING___CHECK_IN__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST;
-			case MdsdBookingPackage.STAFF_BOOKING___CHECK_OUT__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST;
-			case MdsdBookingPackage.STAFF_BOOKING___ADD_NEW_SERVICE__STRING_FLOAT: return MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT;
-			default: return -1;
+				case MdsdBookingPackage.STAFF_BOOKING___CHECK_IN__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST;
+				case MdsdBookingPackage.STAFF_BOOKING___CHECK_OUT__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST;
+				case MdsdBookingPackage.STAFF_BOOKING___ADD_NEW_SERVICE__STRING_FLOAT: return MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT;
+				default: return -1;
 			}
 		}
 		return super.eDerivedOperationID(baseOperationID, baseClass);
@@ -485,37 +485,37 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case MdsdBookingPackage.BOOKING_CONTROLLER___MODIFY_BOOKING__STRING:
-			modifyBooking((String)arguments.get(0));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___CANCEL_BOOKING__STRING:
-			cancelBooking((String)arguments.get(0));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___CONFIRM_BOOKING__STRING:
-			confirmBooking((String)arguments.get(0));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST:
-			enterCustomerInfo((String)arguments.get(0), (String)arguments.get(1), (Booking)arguments.get(2), (String)arguments.get(3), (EList<Room>)arguments.get(4));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE_ELIST_STRING:
-			return enterDatesOfStay((Date)arguments.get(0), (Date)arguments.get(1), (EList<Room>)arguments.get(2), (String)arguments.get(3));
-		case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT_STRING:
-			enterMealInfo((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2), (Float)arguments.get(3), (String)arguments.get(4));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_SERVICE__SERVICE_STRING:
-			enterService((Service)arguments.get(0), (String)arguments.get(1));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST:
-			checkIn((String)arguments.get(0), (EList<Room>)arguments.get(1));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST:
-			checkOut((String)arguments.get(0), (EList<Room>)arguments.get(1));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT:
-			addNewService((String)arguments.get(0), (Float)arguments.get(1));
-			return null;
-		case MdsdBookingPackage.BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING:
-			return getBookingList((String)arguments.get(0));
+			case MdsdBookingPackage.BOOKING_CONTROLLER___MODIFY_BOOKING__STRING:
+				modifyBooking((String)arguments.get(0));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___CANCEL_BOOKING__STRING:
+				cancelBooking((String)arguments.get(0));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___CONFIRM_BOOKING__STRING:
+				confirmBooking((String)arguments.get(0));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST:
+				enterCustomerInfo((String)arguments.get(0), (String)arguments.get(1), (Booking)arguments.get(2), (String)arguments.get(3), (EList<Room>)arguments.get(4));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_DATES_OF_STAY__DATE_DATE_ELIST_STRING:
+				return enterDatesOfStay((Date)arguments.get(0), (Date)arguments.get(1), (EList<Room>)arguments.get(2), (String)arguments.get(3));
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT_STRING:
+				enterMealInfo((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2), (Float)arguments.get(3), (String)arguments.get(4));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_SERVICE__SERVICE_STRING:
+				enterService((Service)arguments.get(0), (String)arguments.get(1));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST:
+				checkIn((String)arguments.get(0), (EList<Room>)arguments.get(1));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST:
+				checkOut((String)arguments.get(0), (EList<Room>)arguments.get(1));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT:
+				addNewService((String)arguments.get(0), (Float)arguments.get(1));
+				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___GET_BOOKING_LIST__STRING:
+				return getBookingList((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

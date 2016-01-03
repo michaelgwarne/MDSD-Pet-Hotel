@@ -469,7 +469,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		op = initEOperation(getStaffBilling__GiveRefund__String(), null, "giveRefund", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "transaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffBilling__IsPaid__String(), null, "isPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__IsPaid__String(), ecorePackage.getEBoolean(), "isPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaffBilling__PrintReceipt__String(), null, "printReceipt", 1, 1, IS_UNIQUE, !IS_ORDERED);

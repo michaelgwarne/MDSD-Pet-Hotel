@@ -62,6 +62,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_XCaE8LIPEeWkda7VoamEjQ" name="billID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q6WXYLIdEeWkda7VoamEjQ" name="isPaid" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qgpvgKMrEeWIRLH1N9vj0g" name="printReceipt">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_vgaE4LIPEeWkda7VoamEjQ" name="billID">

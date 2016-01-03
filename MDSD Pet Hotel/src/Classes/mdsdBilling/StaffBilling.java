@@ -42,10 +42,10 @@ public interface StaffBilling extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model billIDRequired="true" billIDOrdered="false"
+	 * @model required="true" ordered="false" billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	void isPaid(String billID);
+	boolean isPaid(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -119,7 +119,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void isPaid(String billID) {
+	public boolean isPaid(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -282,8 +282,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				giveRefund((String)arguments.get(0));
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID__STRING:
-				isPaid((String)arguments.get(0));
-				return null;
+				return isPaid((String)arguments.get(0));
 			case MdsdBillingPackage.BILLING_CONTROLLER___PRINT_RECEIPT__STRING:
 				printReceipt((String)arguments.get(0));
 				return null;
