@@ -38,7 +38,7 @@ public class TestBooking {
 	
 
 	@Test
-	public void bookingAvilableRoom(){
+	public void testAvilableRoom(){
 		
 		for(int i = 1; i < 5; i++){
 			admin.addRoom("cat", "available", i);
@@ -54,7 +54,7 @@ public class TestBooking {
 	
 	
 	@Test
-	public void bookingPetNotExist() {
+	public void testPetNotExist() {
 		//add room
 			for(int i = 1; i < 5; i++){
 			admin.addRoom("dog", "available", i);
@@ -66,7 +66,7 @@ public class TestBooking {
 	
 	
 	@Test
-	public void bookingDateOverlap() {
+	public void testDateOverlap() {
 		//add room & create full booking
 			admin.addRoom("dog", "available", 1);
 			Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
@@ -78,7 +78,7 @@ public class TestBooking {
 	}
 	
 	@Test
-	public void bookingFullBooked() {
+	public void testFullBooked() {
 		//add a room and a booking 
 		admin.addRoom("dog", "available", 1);
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
@@ -91,9 +91,23 @@ public class TestBooking {
 		assertNull(booking2);
 		
 	}
+	@Test
+	public void testBookingIDExist(){
+		//add a room to hotel
+		admin.addRoom("dog", "available", 1);
+		
+		//book a room.
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Nicole Musco", "nicole_musco@gmail.com", booking, "Elora");
+		
+		//test bookingIDExist
+		String bookingID = booking.getBookingId();
+		assertEquals("nicole_musco@gmail.com1", bookingID);
+	}
+	
 	
 	@Test
-	public void bookingTestCustomerInfo(){
+	public void testCustomerInfo(){
 		
 		for(int i = 1; i < 2; i++){
 			admin.addRoom("dog", "available", i);
@@ -116,7 +130,7 @@ public class TestBooking {
 	
 	
 	@Test
-	public void bookingTestRoomStatus() {
+	public void testBookingRoomStatus() {
 		String status;
 		
 		for(int i = 1; i < 2; i++){
@@ -143,7 +157,7 @@ public class TestBooking {
 	}
 	
 	@Test
-	public void bookingTestMealInfo() {
+	public void testMealInfo() {
 		
 		for(int i = 1; i < 2; i++){
 			admin.addRoom("dog", "available", i);
@@ -165,7 +179,7 @@ public class TestBooking {
 	}
 	
 	@Test
-	public void bookingTestEnterService() { //need to be fixed
+	public void testEnterService() { //need to be fixed
 		
 		//Add room and service
 		for(int i = 1; i < 2; i++){
@@ -252,6 +266,5 @@ public class TestBooking {
 		}
 	}
 	
-	//TO DO: test if booking id exist
 	
 }
