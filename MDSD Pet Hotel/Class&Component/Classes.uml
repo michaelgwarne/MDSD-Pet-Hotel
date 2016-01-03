@@ -36,11 +36,38 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_X1x28J2oEeWtsfDCVXewgw" name="StaffBilling">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_20YdIJ2oEeWtsfDCVXewgw" name="modifyBill"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_9ssSQKGZEeWMT-K7AbhLcA" name="giveRefund"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_2y5roKMoEeWIRLH1N9vj0g" name="isPaid"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_qgpvgKMrEeWIRLH1N9vj0g" name="printReceipt"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_20YdIJ2oEeWtsfDCVXewgw" name="modifyBill">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zmw2QLIPEeWkda7VoamEjQ" name="transaction">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2N3bYLIPEeWkda7VoamEjQ" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4Obk8LIPEeWkda7VoamEjQ" name="newPrice">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_26iIcJ2oEeWtsfDCVXewgw" name="displayBill">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4FRT0LINEeWkda7VoamEjQ" type="_DwB2kJj7EeW-3PPNesfa8A" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7xEQILINEeWkda7VoamEjQ" name="billId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9ssSQKGZEeWMT-K7AbhLcA" name="giveRefund">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W1EB8LIOEeWkda7VoamEjQ" name="transaction">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2y5roKMoEeWIRLH1N9vj0g" name="isPaid">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XCaE8LIPEeWkda7VoamEjQ" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qgpvgKMrEeWIRLH1N9vj0g" name="printReceipt">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_vgaE4LIPEeWkda7VoamEjQ" name="billID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="__QnpoJ2oEeWtsfDCVXewgw" name="BookingToBill">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_CBq08J2pEeWtsfDCVXewgw" name="addTransaction" visibility="public" concurrency="guarded">
