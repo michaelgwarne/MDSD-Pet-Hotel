@@ -43,7 +43,7 @@ public interface AccountController extends BookingToAccount, CustomerAccount {
 	 * @model
 	 * @generated
 	 */
-	void addCustomer();
+	void addCustomer(String customerName, String customerEmail);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public interface AccountController extends BookingToAccount, CustomerAccount {
 	 * @model
 	 * @generated
 	 */
-	void addPet();
+	void addPet(String petName, String petType);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,6 +59,6 @@ public interface AccountController extends BookingToAccount, CustomerAccount {
 	 * @model
 	 * @generated
 	 */
-	void removePet();
+	void removePet(String petName, String petType);
 
 } // AccountController

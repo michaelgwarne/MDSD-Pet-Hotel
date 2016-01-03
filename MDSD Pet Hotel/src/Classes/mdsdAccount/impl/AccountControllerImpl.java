@@ -5,6 +5,7 @@ package Classes.mdsdAccount.impl;
 import Classes.mdsdAccount.Account;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.Customer;
+import Classes.mdsdAccount.Pet;
 import Classes.mdsdAccount.CustomerAccount;
 import Classes.mdsdAccount.MdsdAccountPackage;
 
@@ -95,8 +96,14 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createAccount() {
+	public void createAccount(String customerName, String customerEmail, String petName, String petType) {
 		// TODO: implement this method
+		//nicoles poopy ideas
+		addCustomer(customerName, customerEmail);
+		addPet(petName, petType);
+		//somehow save account to elist "customers"
+		//customers.add(poop);
+		
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
@@ -150,7 +157,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addCustomer() {
+	public void addCustomer(String customerName, String customerEmail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -161,7 +168,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addPet() {
+	public void addPet(String petName, String petType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
