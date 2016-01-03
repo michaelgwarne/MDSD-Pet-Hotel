@@ -18,41 +18,41 @@ public interface StaffBilling extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model transactionRequired="true" transactionOrdered="false" billIDRequired="true" billIDOrdered="false" newPriceRequired="true" newPriceOrdered="false"
 	 * @generated
 	 */
-	void modifyBill();
+	void modifyBill(String transaction, String billID, float newPrice);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false" billIdRequired="true" billIdOrdered="false"
 	 * @generated
 	 */
-	void displayBill();
+	Bill displayBill(String billId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model transactionRequired="true" transactionOrdered="false"
 	 * @generated
 	 */
-	void giveRefund();
+	void giveRefund(String transaction);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	void isPaid();
+	void isPaid(String billID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model billIDRequired="true" billIDOrdered="false"
 	 * @generated
 	 */
-	void printReceipt();
+	void printReceipt(String billID);
 
 } // StaffBilling

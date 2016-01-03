@@ -272,7 +272,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__ModifyBill() {
+	public EOperation getStaffBilling__ModifyBill__String_String_float() {
 		return staffBillingEClass.getEOperations().get(0);
 	}
 
@@ -281,7 +281,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__DisplayBill() {
+	public EOperation getStaffBilling__DisplayBill__String() {
 		return staffBillingEClass.getEOperations().get(1);
 	}
 
@@ -290,7 +290,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__GiveRefund() {
+	public EOperation getStaffBilling__GiveRefund__String() {
 		return staffBillingEClass.getEOperations().get(2);
 	}
 
@@ -299,7 +299,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__IsPaid() {
+	public EOperation getStaffBilling__IsPaid__String() {
 		return staffBillingEClass.getEOperations().get(3);
 	}
 
@@ -308,7 +308,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__PrintReceipt() {
+	public EOperation getStaffBilling__PrintReceipt__String() {
 		return staffBillingEClass.getEOperations().get(4);
 	}
 
@@ -391,11 +391,11 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		createEAttribute(transactionEClass, TRANSACTION__PRICE);
 
 		staffBillingEClass = createEClass(STAFF_BILLING);
-		createEOperation(staffBillingEClass, STAFF_BILLING___MODIFY_BILL);
-		createEOperation(staffBillingEClass, STAFF_BILLING___DISPLAY_BILL);
-		createEOperation(staffBillingEClass, STAFF_BILLING___GIVE_REFUND);
-		createEOperation(staffBillingEClass, STAFF_BILLING___IS_PAID);
-		createEOperation(staffBillingEClass, STAFF_BILLING___PRINT_RECEIPT);
+		createEOperation(staffBillingEClass, STAFF_BILLING___MODIFY_BILL__STRING_STRING_FLOAT);
+		createEOperation(staffBillingEClass, STAFF_BILLING___DISPLAY_BILL__STRING);
+		createEOperation(staffBillingEClass, STAFF_BILLING___GIVE_REFUND__STRING);
+		createEOperation(staffBillingEClass, STAFF_BILLING___IS_PAID__STRING);
+		createEOperation(staffBillingEClass, STAFF_BILLING___PRINT_RECEIPT__STRING);
 
 		bookingToBillEClass = createEClass(BOOKING_TO_BILL);
 		createEOperation(bookingToBillEClass, BOOKING_TO_BILL___ADD_TRANSACTION__STRING_FLOAT_BOOKING);
@@ -458,19 +458,26 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 
 		initEClass(staffBillingEClass, StaffBilling.class, "StaffBilling", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getStaffBilling__ModifyBill(), null, "modifyBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getStaffBilling__ModifyBill__String_String_float(), null, "modifyBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "transaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEFloat(), "newPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaffBilling__DisplayBill(), null, "displayBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__DisplayBill__String(), this.getBill(), "displayBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "billId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaffBilling__GiveRefund(), null, "giveRefund", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__GiveRefund__String(), null, "giveRefund", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "transaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaffBilling__IsPaid(), null, "isPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__IsPaid__String(), null, "isPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaffBilling__PrintReceipt(), null, "printReceipt", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__PrintReceipt__String(), null, "printReceipt", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingToBillEClass, BookingToBill.class, "BookingToBill", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getBookingToBill__AddTransaction__String_float_Booking(), null, "addTransaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingToBill__AddTransaction__String_float_Booking(), null, "addTransaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEFloat(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theMdsdBookingPackage.getBooking(), "Booking", 1, 1, IS_UNIQUE, !IS_ORDERED);

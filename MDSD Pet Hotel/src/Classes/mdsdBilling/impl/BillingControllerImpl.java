@@ -86,7 +86,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void modifyBill() {
+	public void modifyBill(String transaction, String billID, float newPrice) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -97,7 +97,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void displayBill() {
+	public Bill displayBill(String billId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -108,7 +108,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void giveRefund() {
+	public void giveRefund(String transaction) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -119,7 +119,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void isPaid() {
+	public void isPaid(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -130,7 +130,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void printReceipt() {
+	public void printReceipt(String billID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -273,20 +273,19 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MdsdBillingPackage.BILLING_CONTROLLER___MODIFY_BILL:
-				modifyBill();
+			case MdsdBillingPackage.BILLING_CONTROLLER___MODIFY_BILL__STRING_STRING_FLOAT:
+				modifyBill((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2));
 				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL:
-				displayBill();
+			case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL__STRING:
+				return displayBill((String)arguments.get(0));
+			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING:
+				giveRefund((String)arguments.get(0));
 				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND:
-				giveRefund();
+			case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID__STRING:
+				isPaid((String)arguments.get(0));
 				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID:
-				isPaid();
-				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___PRINT_RECEIPT:
-				printReceipt();
+			case MdsdBillingPackage.BILLING_CONTROLLER___PRINT_RECEIPT__STRING:
+				printReceipt((String)arguments.get(0));
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING:
 				addTransaction((String)arguments.get(0), (Float)arguments.get(1), (Booking)arguments.get(2));
