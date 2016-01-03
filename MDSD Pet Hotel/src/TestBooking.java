@@ -14,6 +14,7 @@ import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
 import Classes.mdsdBooking.Meal;
 import Classes.mdsdBooking.Service;
+import Classes.mdsdBooking.impl.BookingImpl;
 import Classes.mdsdAdmin.Room;
 
 public class TestBooking {
@@ -177,14 +178,32 @@ public class TestBooking {
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
 		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
 		admin.changeRoomStatus("booked", booking.getRoomNumber());
-
-		
+	
 		//Enter service
 		booker.enterService(spa, booking.getBookingId());
 
 		assertNotNull(booking.getBookedServices());
-	
 		
+	}
+	
+	@Test
+	public void testCheckIn() { 
+		//room status is changed, isCheckIn = true
+		
+		//add rooms
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("dog", "available", i);
+		}
+		
+		//book a room for a dog
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		
+		//check Bob in to the hotel
+		booker.checkIn(booking.getBookingId());
+		
+		assertEquals(true , booking.isCheckedIn());
 	}
 	
 }
