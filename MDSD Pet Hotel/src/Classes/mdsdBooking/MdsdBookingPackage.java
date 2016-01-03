@@ -110,7 +110,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING = 3;
+	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST = 3;
 
 	/**
 	 * The operation id for the '<em>Enter Dates Of Stay</em>' operation.
@@ -219,7 +219,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING = USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING;
+	int BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST = USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST;
 
 	/**
 	 * The operation id for the '<em>Enter Dates Of Stay</em>' operation.
@@ -255,7 +255,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___CHECK_IN__STRING = USER_BOOKING_OPERATION_COUNT + 0;
+	int BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST = USER_BOOKING_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Check Out</em>' operation.
@@ -264,7 +264,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___CHECK_OUT__STRING = USER_BOOKING_OPERATION_COUNT + 1;
+	int BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST = USER_BOOKING_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add New Service</em>' operation.
@@ -365,7 +365,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BOOKING___CHECK_IN__STRING = 0;
+	int STAFF_BOOKING___CHECK_IN__STRING_ELIST = 0;
 
 	/**
 	 * The operation id for the '<em>Check Out</em>' operation.
@@ -374,7 +374,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BOOKING___CHECK_OUT__STRING = 1;
+	int STAFF_BOOKING___CHECK_OUT__STRING_ELIST = 1;
 
 	/**
 	 * The operation id for the '<em>Add New Service</em>' operation.
@@ -710,14 +710,14 @@ public interface MdsdBookingPackage extends EPackage {
 	EOperation getUserBooking__ConfirmBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking, java.lang.String) <em>Enter Customer Info</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking, java.lang.String, org.eclipse.emf.common.util.EList) <em>Enter Customer Info</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Enter Customer Info</em>' operation.
-	 * @see Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking, java.lang.String)
+	 * @see Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking, java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getUserBooking__EnterCustomerInfo__String_String_Booking_String();
+	EOperation getUserBooking__EnterCustomerInfo__String_String_Booking_String_EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterDatesOfStay(java.util.Date, java.util.Date, org.eclipse.emf.common.util.EList, java.lang.String) <em>Enter Dates Of Stay</em>}' operation.
@@ -760,24 +760,24 @@ public interface MdsdBookingPackage extends EPackage {
 	EClass getStaffBooking();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkIn(java.lang.String) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkIn(java.lang.String, org.eclipse.emf.common.util.EList) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see Classes.mdsdBooking.StaffBooking#checkIn(java.lang.String)
+	 * @see Classes.mdsdBooking.StaffBooking#checkIn(java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getStaffBooking__CheckIn__String();
+	EOperation getStaffBooking__CheckIn__String_EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String)
+	 * @see Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getStaffBooking__CheckOut__String();
+	EOperation getStaffBooking__CheckOut__String_EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#addNewService(java.lang.String, float) <em>Add New Service</em>}' operation.
@@ -1108,7 +1108,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING = eINSTANCE.getUserBooking__EnterCustomerInfo__String_String_Booking_String();
+		EOperation USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST = eINSTANCE.getUserBooking__EnterCustomerInfo__String_String_Booking_String_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Enter Dates Of Stay</b></em>' operation.
@@ -1150,7 +1150,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF_BOOKING___CHECK_IN__STRING = eINSTANCE.getStaffBooking__CheckIn__String();
+		EOperation STAFF_BOOKING___CHECK_IN__STRING_ELIST = eINSTANCE.getStaffBooking__CheckIn__String_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
@@ -1158,7 +1158,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF_BOOKING___CHECK_OUT__STRING = eINSTANCE.getStaffBooking__CheckOut__String();
+		EOperation STAFF_BOOKING___CHECK_OUT__STRING_ELIST = eINSTANCE.getStaffBooking__CheckOut__String_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Add New Service</b></em>' operation.

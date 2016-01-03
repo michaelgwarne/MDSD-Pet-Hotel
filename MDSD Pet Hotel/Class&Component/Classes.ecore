@@ -83,6 +83,7 @@
         <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking"/>
         <eParameters name="petName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
       </eOperations>
       <eOperations name="enterDatesOfStay" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking">
         <eParameters name="stayFrom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -105,9 +106,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="StaffBooking" abstract="true" interface="true">
       <eOperations name="checkIn" ordered="false" lowerBound="1">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
       </eOperations>
       <eOperations name="checkOut" ordered="false" lowerBound="1">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
       </eOperations>
       <eOperations name="addNewService" ordered="false" lowerBound="1">
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

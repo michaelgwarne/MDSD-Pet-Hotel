@@ -182,6 +182,10 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_JqWesK-eEeWZPtMc2d2KQQ" name="petName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SJUK4LIWEeWkda7VoamEjQ" name="rooms" type="_ULFosJjYEeWGV8DpM4-Nfw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aNtpsLIXEeWkda7VoamEjQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aNx7ILIXEeWkda7VoamEjQ" value="*"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_b7l2IKyYEeWxH9NuyI6dSw" name="enterDatesOfStay">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_gyO08KyYEeWxH9NuyI6dSw" name="stayFrom">
@@ -242,10 +246,18 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aLXf8KMnEeWIRLH1N9vj0g" name="bookingID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BtNk0LIWEeWkda7VoamEjQ" name="rooms" type="_ULFosJjYEeWGV8DpM4-Nfw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cIAMILIXEeWkda7VoamEjQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cIBaQLIXEeWkda7VoamEjQ" value="*"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_eg6rgJ2jEeWtsfDCVXewgw" name="checkOut" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ul5DYKMnEeWIRLH1N9vj0g" name="bookingID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EsgAcLIWEeWkda7VoamEjQ" name="rooms" type="_ULFosJjYEeWGV8DpM4-Nfw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dfxQULIXEeWkda7VoamEjQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dfzFgLIXEeWkda7VoamEjQ" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TvSR4K-fEeWZPtMc2d2KQQ" name="addNewService">

@@ -48,10 +48,10 @@ public interface UserBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false" bookingRequired="true" bookingOrdered="false" petNameRequired="true" petNameOrdered="false"
+	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false" bookingRequired="true" bookingOrdered="false" petNameRequired="true" petNameOrdered="false" roomsMany="true" roomsOrdered="false"
 	 * @generated
 	 */
-	void enterCustomerInfo(String customerName, String customerEmail, Booking booking, String petName);
+	void enterCustomerInfo(String customerName, String customerEmail, Booking booking, String petName, EList<Room> rooms);
 
 	/**
 	 * <!-- begin-user-doc -->

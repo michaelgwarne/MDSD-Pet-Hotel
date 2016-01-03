@@ -1,6 +1,5 @@
 import static org.junit.Assert.*;
 import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
@@ -14,7 +13,6 @@ import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
 import Classes.mdsdBooking.Meal;
 import Classes.mdsdBooking.Service;
-import Classes.mdsdBooking.impl.BookingImpl;
 import Classes.mdsdAdmin.Room;
 
 public class TestBooking {
@@ -46,10 +44,10 @@ public class TestBooking {
 		//book a room for a cat
 	
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob");
+		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
 		admin.changeRoomStatus("booked", booking.getRoomNumber());
 		
-		assertNotNull(booking); // want to use assertEquals but don't know how the Elist<Booking> look like.
+		assertNotNull(booking); 
 	}
 	
 	
@@ -70,7 +68,7 @@ public class TestBooking {
 		//add room & create full booking
 			admin.addRoom("dog", "available", 1);
 			Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-			booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob");
+			booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
 			admin.changeRoomStatus("booked", booking.getRoomNumber());
 		//create booking with overlap date
 		Booking booking2 = booker.enterDatesOfStay(d3, d4, admin.getRooms(), "dog");
@@ -82,7 +80,7 @@ public class TestBooking {
 		//add a room and a booking 
 		admin.addRoom("dog", "available", 1);
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob");
+		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
 		admin.changeRoomStatus("booked", booking.getRoomNumber());
 		
 		//Create new booking with the same period of stay
@@ -98,7 +96,7 @@ public class TestBooking {
 		
 		//book a room.
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_musco@gmail.com", booking, "Elora");
+		booker.enterCustomerInfo("Nicole Musco", "nicole_musco@gmail.com", booking, "Elora", admin.getRooms());
 		
 		//test bookingIDExist
 		String bookingID = booking.getBookingId();
@@ -115,7 +113,7 @@ public class TestBooking {
 		//book a room for a dog
 	
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
 
 		
 		String customerName = booking.getCustomerName();
@@ -140,9 +138,7 @@ public class TestBooking {
 		//book a room for a dog
 	
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
-		
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
 		
 		//get room status and check if the room is booked.
 		EList<Room> rooms = admin.getRooms();
@@ -166,8 +162,7 @@ public class TestBooking {
 		//book a room for a dog
 	
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
 		
 		//enter meal for pet
 		booker.enterMealInfo("vegetarian", "10.00",400 , 30, booking.getBookingId());
@@ -186,12 +181,16 @@ public class TestBooking {
 			admin.addRoom("dog", "available", i);
 		}
 		booker.addNewService("spa", 300);
-		Service spa;
-		
+		Service spa = MdsdBookingFactory.eINSTANCE.createService();
+		for(Service service : booker.getServices()){
+			if(service.getDescription().endsWith("spa")){
+				spa = service;
+				break;
+			}
+		}
 		//book a room for a dog
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
 	
 		//Enter service
 		booker.enterService(spa, booking.getBookingId());
@@ -211,11 +210,10 @@ public class TestBooking {
 		
 		//book a room for a dog
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob");
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
 		
 		//check Bob in to the hotel
-		booker.checkIn(booking.getBookingId());
+		booker.checkIn(booking.getBookingId(), admin.getRooms());
 		
 		//test isCheckIn is true and isCheckOut is false
 		assertEquals(true , booking.isCheckedIn());
@@ -242,20 +240,19 @@ public class TestBooking {
 				
 		//book a room for a dog
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora");
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
 				
 		//check Elora in to the hotel
-		booker.checkIn(booking.getBookingId());
+		booker.checkIn(booking.getBookingId(), admin.getRooms());
 		
 		//check Elora out from the hotel.
-		booker.checkOut(booking.getBookingId());
+		booker.checkOut(booking.getBookingId(), admin.getRooms());
 		
 		//test isCheckIn is false and isCheckOut is true
 		assertEquals(false , booking.isCheckedIn());
 		assertEquals(true, booking.isCheckedOut());
 				
-		//test the room status is chenged to dirty
+		//test the room status is changed to dirty
 		EList<Room> rooms = admin.getRooms();
 		for (Room room : rooms) {
 			if(room.getNumber() == booking.getRoomNumber()) {
