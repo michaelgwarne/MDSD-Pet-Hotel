@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
@@ -25,9 +26,40 @@ public class TestBooking {
 	Date d2 = new Date(System.currentTimeMillis() + (3*week));
 	Date d3 = new Date(System.currentTimeMillis() + (2*week));
 	Date d4 = new Date(System.currentTimeMillis() + (4*week));
+	Date pastDate = new Date(System.currentTimeMillis() - week);
 
+	
+
+	
+	
 	@Test
-	public void testAvilableRoom(){
+	//test: a room is added successfully
+	public void testAddRoom() {
+		
+		//add a room to the hotel
+		admin.addRoom("horse","available", 1);
+		
+		//check the room is added
+		EList<Room> room = admin.getRooms();
+		assertNotNull(room);
+		
+	}
+	@Test
+	//test: add rooms with duplicate number
+	public void testAddDuplicateRooms(){
+		//TODO: say to Michael
+		// assume addRoom return Room.
+		admin.addRoom("horse","available", 1);
+		admin.addRoom("horse","available", 2);
+	//	Room temp = admin.addRoom("horse","available", 1);
+		
+		//	assertNull(temp);
+	}
+	
+	
+	@Test
+	//test: book a room when there is at least an availble room
+	public void testBookRoom(){
 
 		for(int i = 1; i < 5; i++){
 			admin.addRoom("cat", "available", i);
@@ -42,6 +74,7 @@ public class TestBooking {
 	}
 
 	@Test
+	//Test: enter pet type which does not exist
 	public void testPetNotExist() {
 		//add room
 		for(int i = 1; i < 5; i++){
@@ -51,8 +84,20 @@ public class TestBooking {
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
 		assertNull(booking);
 	}
+	
+	
+	@Test 
+	//test: a room is booked with past date
+	public void testBookPastDate(){
+		admin.addRoom("dog", "available", 1);
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		
+		assertNull(booking);
+		
+	}
 
 	@Test
+	//test: a room is booked with overlap date.
 	public void testDateOverlap() {
 		//add room & create full booking
 		admin.addRoom("dog", "available", 1);
@@ -65,6 +110,7 @@ public class TestBooking {
 	}
 
 	@Test
+	//Test: it is impossible to book a room when the hotel is full booked
 	public void testFullBooked() {
 		//add a room and a booking 
 		admin.addRoom("dog", "available", 1);
@@ -79,6 +125,7 @@ public class TestBooking {
 
 	}
 	@Test
+	//Test: booking contains correct booking ID
 	public void testBookingIDExist(){
 		//add a room to hotel
 		admin.addRoom("dog", "available", 1);
@@ -94,6 +141,7 @@ public class TestBooking {
 
 
 	@Test
+	//test: customer info exists after it's entered
 	public void testCustomerInfo(){
 
 		for(int i = 1; i < 2; i++){
@@ -117,6 +165,7 @@ public class TestBooking {
 
 
 	@Test
+	//Test: room status is changed after it is booked
 	public void testBookingRoomStatus() {
 		String status;
 
@@ -142,6 +191,7 @@ public class TestBooking {
 	}
 
 	@Test
+	//Test: meal info is add successfully
 	public void testMealInfo() {
 
 		for(int i = 1; i < 2; i++){
@@ -163,8 +213,9 @@ public class TestBooking {
 	}
 
 	@Test
+	// Test: service is added
 	public void testEnterService() { 
-
+		// assume that it's drop down list of service in GUI
 		//Add room and service
 		for(int i = 1; i < 2; i++){
 			admin.addRoom("dog", "available", i);
@@ -188,6 +239,7 @@ public class TestBooking {
 	}
 
 	@Test
+	//Test: pet is checked in to the hotel
 	public void testCheckIn() { 
 		//room status is changed, isCheckIn = true
 		String status;
@@ -219,6 +271,7 @@ public class TestBooking {
 	}
 
 	@Test
+	//Test: Pet is checked out from the hotel
 	public void testCheckOut() {
 		String status;
 		//add rooms
@@ -250,4 +303,15 @@ public class TestBooking {
 			}
 		}
 	}
+	
+	
+	/*TODO:
+	 *  
+	 * 
+	 * test when information is not filled in when create a booking - this can set required info in GUI so not need.
+	 * Test when info are not typed in when checked in and out - should be able to do in GUI
+	 * checkin when booking not exists - will not happen according to use cases
+	 */
+	
 }
+
