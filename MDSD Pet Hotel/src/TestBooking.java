@@ -189,7 +189,7 @@ public class TestBooking {
 	@Test
 	public void testCheckIn() { 
 		//room status is changed, isCheckIn = true
-		
+		String status;
 		//add rooms
 		for(int i = 1; i < 2; i++){
 			admin.addRoom("dog", "available", i);
@@ -203,7 +203,55 @@ public class TestBooking {
 		//check Bob in to the hotel
 		booker.checkIn(booking.getBookingId());
 		
+		//test isCheckIn is true and isCheckOut is false
 		assertEquals(true , booking.isCheckedIn());
+		assertEquals(false, booking.isCheckedOut());
+		
+		//test the room status is changed to occupied
+		EList<Room> rooms = admin.getRooms();
+		for (Room room : rooms) {
+			if(room.getNumber() == booking.getRoomNumber()) {
+				status = room.getStatus();
+				assertEquals("occupied", status);
+				break;
+			}
+		}
 	}
+	
+	@Test
+	public void testCheckOut() {
+		String status;
+		//add rooms
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("cat", "available", i);
+		}
+				
+		//book a room for a dog
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
+		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora");
+		admin.changeRoomStatus("booked", booking.getRoomNumber());
+				
+		//check Elora in to the hotel
+		booker.checkIn(booking.getBookingId());
+		
+		//check Elora out from the hotel.
+		booker.checkOut(booking.getBookingId());
+		
+		//test isCheckIn is false and isCheckOut is true
+		assertEquals(false , booking.isCheckedIn());
+		assertEquals(true, booking.isCheckedOut());
+				
+		//test the room status is chenged to dirty
+		EList<Room> rooms = admin.getRooms();
+		for (Room room : rooms) {
+			if(room.getNumber() == booking.getRoomNumber()) {
+				status = room.getStatus();
+				assertEquals("dirty", status);
+				break;
+				}
+		}
+	}
+	
+	//TO DO: test if booking id exist
 	
 }
