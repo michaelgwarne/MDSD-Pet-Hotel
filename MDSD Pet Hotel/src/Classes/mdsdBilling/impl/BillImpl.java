@@ -166,12 +166,14 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getTotalAmount() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public float getTotalAmount() {
+		float total = 0;
+		for(Transaction transaction : getTransactions()){
+			total += transaction.getPrice();
+		}
+		return total;
 	}
 
 	/**
@@ -277,8 +279,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case MdsdBillingPackage.BILL___GET_TOTAL_AMOUNT:
-				getTotalAmount();
-				return null;
+				return getTotalAmount();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

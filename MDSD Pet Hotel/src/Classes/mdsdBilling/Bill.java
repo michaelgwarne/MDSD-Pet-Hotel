@@ -96,9 +96,9 @@ public interface Bill extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" required="true" ordered="false"
 	 * @generated
 	 */
-	void getTotalAmount();
+	float getTotalAmount();
 
 } // Bill

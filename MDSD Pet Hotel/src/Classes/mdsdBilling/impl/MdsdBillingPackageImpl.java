@@ -182,15 +182,6 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBillingController__CreateBill() {
-		return billingControllerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBill() {
 		return billEClass;
 	}
@@ -290,7 +281,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBilling__GiveRefund__String() {
+	public EOperation getStaffBilling__GiveRefund__String_String() {
 		return staffBillingEClass.getEOperations().get(2);
 	}
 
@@ -378,7 +369,6 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		// Create classes and their features
 		billingControllerEClass = createEClass(BILLING_CONTROLLER);
 		createEReference(billingControllerEClass, BILLING_CONTROLLER__BILLS);
-		createEOperation(billingControllerEClass, BILLING_CONTROLLER___CREATE_BILL);
 
 		billEClass = createEClass(BILL);
 		createEAttribute(billEClass, BILL__IS_PAID);
@@ -393,7 +383,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		staffBillingEClass = createEClass(STAFF_BILLING);
 		createEOperation(staffBillingEClass, STAFF_BILLING___MODIFY_BILL__STRING_STRING_FLOAT);
 		createEOperation(staffBillingEClass, STAFF_BILLING___DISPLAY_BILL__STRING);
-		createEOperation(staffBillingEClass, STAFF_BILLING___GIVE_REFUND__STRING);
+		createEOperation(staffBillingEClass, STAFF_BILLING___GIVE_REFUND__STRING_STRING);
 		createEOperation(staffBillingEClass, STAFF_BILLING___IS_PAID__STRING);
 		createEOperation(staffBillingEClass, STAFF_BILLING___PRINT_RECEIPT__STRING);
 
@@ -443,14 +433,12 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		initEClass(billingControllerEClass, BillingController.class, "BillingController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBillingController_Bills(), this.getBill(), null, "bills", null, 0, -1, BillingController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBillingController__CreateBill(), null, "createBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(billEClass, Bill.class, "Bill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBill_IsPaid(), ecorePackage.getEBoolean(), "isPaid", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBill_Transactions(), this.getTransaction(), null, "transactions", null, 0, -1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_ID(), ecorePackage.getEString(), "ID", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBill__GetTotalAmount(), null, "getTotalAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBill__GetTotalAmount(), ecorePackage.getEFloat(), "getTotalAmount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(transactionEClass, Transaction.class, "Transaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransaction_Description(), ecorePackage.getEString(), "description", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -466,8 +454,9 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		op = initEOperation(getStaffBilling__DisplayBill__String(), this.getBill(), "displayBill", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "billId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffBilling__GiveRefund__String(), null, "giveRefund", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBilling__GiveRefund__String_String(), null, "giveRefund", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "transaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "billId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaffBilling__IsPaid__String(), ecorePackage.getEBoolean(), "isPaid", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "billID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -480,7 +469,7 @@ public class MdsdBillingPackageImpl extends EPackageImpl implements MdsdBillingP
 		op = initEOperation(getBookingToBill__AddTransaction__String_float_Booking(), null, "addTransaction", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEFloat(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theMdsdBookingPackage.getBooking(), "Booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theMdsdBookingPackage.getBooking(), "booking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(customerBillingEClass, CustomerBilling.class, "CustomerBilling", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -20,9 +20,9 @@ public interface BookingToBill extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model descriptionRequired="true" descriptionOrdered="false" amountRequired="true" amountOrdered="false" BookingRequired="true" BookingOrdered="false"
+	 * @model descriptionRequired="true" descriptionOrdered="false" amountRequired="true" amountOrdered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated
 	 */
-	void addTransaction(String description, float amount, Booking Booking);
+	void addTransaction(String description, float amount, Booking booking);
 
 } // BookingToBill

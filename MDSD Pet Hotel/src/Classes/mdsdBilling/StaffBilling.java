@@ -34,10 +34,10 @@ public interface StaffBilling extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model transactionRequired="true" transactionOrdered="false"
+	 * @model transactionRequired="true" transactionOrdered="false" billIdRequired="true" billIdOrdered="false"
 	 * @generated
 	 */
-	void giveRefund(String transaction);
+	void giveRefund(String transaction, String billId);
 
 	/**
 	 * <!-- begin-user-doc -->

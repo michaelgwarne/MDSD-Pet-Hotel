@@ -3,12 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Classes" nsURI="http:///Classes.ecore" nsPrefix="Classes">
   <eSubpackages name="mdsdBilling" nsURI="http:///Classes/mdsdBilling.ecore" nsPrefix="Classes.mdsdBilling">
     <eClassifiers xsi:type="ecore:EClass" name="BillingController" eSuperTypes="#//mdsdBilling/StaffBilling #//mdsdBilling/BookingToBill #//mdsdBilling/CustomerBilling">
-      <eOperations name="createBill" ordered="false" lowerBound="1"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="bills" ordered="false"
           upperBound="-1" eType="#//mdsdBilling/Bill" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Bill">
-      <eOperations name="getTotalAmount" ordered="false" lowerBound="1"/>
+      <eOperations name="getTotalAmount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPaid" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" ordered="false"
@@ -33,6 +32,7 @@
       </eOperations>
       <eOperations name="giveRefund" ordered="false" lowerBound="1">
         <eParameters name="transaction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="billId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="isPaid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -45,7 +45,7 @@
       <eOperations name="addTransaction" ordered="false" lowerBound="1">
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-        <eParameters name="Booking" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking"/>
+        <eParameters name="booking" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking"/>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CustomerBilling" abstract="true" interface="true">

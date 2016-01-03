@@ -37,12 +37,4 @@ public interface BillingController extends StaffBilling, BookingToBill, Customer
 	 */
 	EList<Bill> getBills();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void createBill();
-
 } // BillingController

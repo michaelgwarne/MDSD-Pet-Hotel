@@ -6,8 +6,9 @@ import Classes.mdsdBilling.Bill;
 import Classes.mdsdBilling.BillingController;
 import Classes.mdsdBilling.BookingToBill;
 import Classes.mdsdBilling.CustomerBilling;
+import Classes.mdsdBilling.MdsdBillingFactory;
 import Classes.mdsdBilling.MdsdBillingPackage;
-
+import Classes.mdsdBilling.Transaction;
 import Classes.mdsdBooking.Booking;
 
 import java.lang.reflect.InvocationTargetException;
@@ -95,34 +96,54 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Bill displayBill(String billId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		Bill bill = MdsdBillingFactory.eINSTANCE.createBill();
+		for(Bill tempBill : getBills()){
+			if(tempBill.getID().equalsIgnoreCase(billId)){
+				bill = tempBill;
+				break;
+			}
+		}
+		return bill;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void giveRefund(String transaction) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void giveRefund(String transaction, String billId) {
+		// TODO: test
+		for(Bill bill : getBills()){
+			if(bill.getID().equalsIgnoreCase(billId)){
+				for(Transaction transaction2 : bill.getTransactions()){
+					if(transaction2.getDescription().equalsIgnoreCase(transaction)){
+						transaction2.setPrice(0);
+						transaction2.setDescription(transaction + " - REFUNDED");
+						break;
+					}
+				}
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isPaid(String billID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		boolean isPaid = false;
+		for(Bill bill : getBills()){
+			if(bill.getID().equalsIgnoreCase(billID)){
+				isPaid = bill.isPaid();
+				break;
+			}
+		}
+		return isPaid;
 	}
 
 	/**
@@ -139,12 +160,27 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addTransaction(String description, float amount, Booking Booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addTransaction(String description, float amount, Booking booking) {
+		// TODO: test
+				Bill bill;
+				Transaction transaction = MdsdBillingFactory.eINSTANCE.createTransaction();
+				transaction.setDescription(description);
+				transaction.setPrice(amount);
+				if(booking.getBill_Id() == null){
+					bill = MdsdBillingFactory.eINSTANCE.createBill();
+					bill.getTransactions().add(transaction);
+					bill.setID(booking.getBookingId());
+				}
+				else{
+					for(Bill existingBill : getBills()){
+						if(existingBill.getID().equalsIgnoreCase(booking.getBill_Id())){
+							existingBill.getTransactions().add(transaction);
+							break;
+						}
+					}
+				}
 	}
 
 	/**
@@ -153,17 +189,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void confirmPayment() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void createBill() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -278,8 +303,8 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL__STRING:
 				return displayBill((String)arguments.get(0));
-			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING:
-				giveRefund((String)arguments.get(0));
+			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING_STRING:
+				giveRefund((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID__STRING:
 				return isPaid((String)arguments.get(0));
@@ -291,9 +316,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT:
 				confirmPayment();
-				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___CREATE_BILL:
-				createBill();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

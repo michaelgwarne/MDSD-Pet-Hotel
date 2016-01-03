@@ -101,7 +101,7 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BILLING___GIVE_REFUND__STRING = 2;
+	int STAFF_BILLING___GIVE_REFUND__STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Is Paid</em>' operation.
@@ -183,7 +183,7 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BILLING_CONTROLLER___GIVE_REFUND__STRING = STAFF_BILLING___GIVE_REFUND__STRING;
+	int BILLING_CONTROLLER___GIVE_REFUND__STRING_STRING = STAFF_BILLING___GIVE_REFUND__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Is Paid</em>' operation.
@@ -222,22 +222,13 @@ public interface MdsdBillingPackage extends EPackage {
 	int BILLING_CONTROLLER___CONFIRM_PAYMENT = STAFF_BILLING_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Create Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILLING_CONTROLLER___CREATE_BILL = STAFF_BILLING_OPERATION_COUNT + 2;
-
-	/**
 	 * The number of operations of the '<em>Billing Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILLING_CONTROLLER_OPERATION_COUNT = STAFF_BILLING_OPERATION_COUNT + 3;
+	int BILLING_CONTROLLER_OPERATION_COUNT = STAFF_BILLING_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBilling.impl.BillImpl <em>Bill</em>}' class.
@@ -446,16 +437,6 @@ public interface MdsdBillingPackage extends EPackage {
 	EReference getBillingController_Bills();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBilling.BillingController#createBill() <em>Create Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Bill</em>' operation.
-	 * @see Classes.mdsdBilling.BillingController#createBill()
-	 * @generated
-	 */
-	EOperation getBillingController__CreateBill();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.mdsdBilling.Bill <em>Bill</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -571,14 +552,14 @@ public interface MdsdBillingPackage extends EPackage {
 	EOperation getStaffBilling__DisplayBill__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBilling.StaffBilling#giveRefund(java.lang.String) <em>Give Refund</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBilling.StaffBilling#giveRefund(java.lang.String, java.lang.String) <em>Give Refund</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Give Refund</em>' operation.
-	 * @see Classes.mdsdBilling.StaffBilling#giveRefund(java.lang.String)
+	 * @see Classes.mdsdBilling.StaffBilling#giveRefund(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getStaffBilling__GiveRefund__String();
+	EOperation getStaffBilling__GiveRefund__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBilling.StaffBilling#isPaid(java.lang.String) <em>Is Paid</em>}' operation.
@@ -682,14 +663,6 @@ public interface MdsdBillingPackage extends EPackage {
 		EReference BILLING_CONTROLLER__BILLS = eINSTANCE.getBillingController_Bills();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BILLING_CONTROLLER___CREATE_BILL = eINSTANCE.getBillingController__CreateBill();
-
-		/**
 		 * The meta object literal for the '{@link Classes.mdsdBilling.impl.BillImpl <em>Bill</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -789,7 +762,7 @@ public interface MdsdBillingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF_BILLING___GIVE_REFUND__STRING = eINSTANCE.getStaffBilling__GiveRefund__String();
+		EOperation STAFF_BILLING___GIVE_REFUND__STRING_STRING = eINSTANCE.getStaffBilling__GiveRefund__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Paid</b></em>' operation.
