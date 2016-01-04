@@ -172,7 +172,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 					bill = MdsdBillingFactory.eINSTANCE.createBill();
 					bill.getTransactions().add(transaction);
 					bill.setID(booking.getBookingId());
-					booking.setBill_Id(booking.getBill_Id());
+					booking.setBill_Id(bill.getID());
 				}
 				else{
 					for(Bill existingBill : getBills()){
