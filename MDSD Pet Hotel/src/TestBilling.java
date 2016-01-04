@@ -35,7 +35,7 @@ public class TestBilling {
 			admin.addRoom("cat", "available", i);
 		}
 
-		//book a room for a dog
+		//book a room for a cat
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
 		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
 
@@ -57,22 +57,8 @@ public class TestBilling {
 		
 	}
 	
-	public void TestAddTransactionWithFailBooking(){
-		
-		//add room
-		for(int i = 1; i < 5; i++){
-			admin.addRoom("dog", "available", i);
-		}
-		//create booking
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		
-		billCtrl.addTransaction("For Elora", 5000, booking);
-		
-		//Bill should not exists
-		assertTrue(booking.getBill_Id() == null);
-	}
 	
-	@SuppressWarnings("deprecation")
+	@Test
 	public void TestAddIntoExistedTransaction(){
 		
 		//add rooms
@@ -80,7 +66,7 @@ public class TestBilling {
 			admin.addRoom("cat", "available", i);
 		}
 
-		//book a room for a dog
+		//book a room for a cat
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
 		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
 
@@ -98,6 +84,53 @@ public class TestBilling {
 			}
 		}
 
+	}
+	
+	@Test
+	public void TestPaid(){
+		//add rooms
+		for(int i = 1; i < 2; i++){
+			admin.addRoom("cat", "available", i);
+		}
+
+		//book a room for a cat
+		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
+		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+	
+		billCtrl.addTransaction("For Elora room", 5000, booking);
+		
+		EList<Bill> bills = billCtrl.getBills();
+		for(Bill bill:bills){
+			if (bill.getID() == booking.getBill_Id()){
+				//bill is not paid yet
+				assertFalse(bill.isPaid());
+				bill.setIsPaid(true);
+				//bill is paid
+				assertTrue(bill.isPaid());
+			}
+		}
+		
+	}
+	
+	@Test
+	public void TestRefund(){
+		
+		//add rooms
+				for(int i = 1; i < 2; i++){
+					admin.addRoom("cat", "available", i);
+				}
+
+				//book a room for a cat
+				Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
+				booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+			
+				billCtrl.addTransaction("For Elora room", 5000, booking);
+				EList<Bill> bills = billCtrl.getBills();
+				for(Bill bill:bills){
+					billCtrl.giveRefund("Refund Elora", bill.getID());
+					assertEquals((double)0, (double)bill.getTotalAmount(),0.1);
+					
+				}
 	}
 	
 }
