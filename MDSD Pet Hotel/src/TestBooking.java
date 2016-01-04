@@ -118,7 +118,6 @@ public class TestBooking {
 
 		//Create new booking with the same period of stay
 		Booking booking2 = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		System.out.println(booker.getBookings());
 		assertNull(booking2);
 
 	}
@@ -303,22 +302,35 @@ public class TestBooking {
 		
 	}
 	
-	
 	@Test
-	//Test: bill is created after booking is done.
-	public void testBookingCreateBill() {
+	
+	public void testCancelBooking() {
 		//add a room and a booking 
-				admin.addRoom("dog", "available", 1);
-				Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-				booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
-				admin.changeRoomStatus("booked", booking.getRoomNumber());
-				
-		//check the bill is created is created
-				
-				String billId = booking.getBill_Id();
-				assertNotNull(billId);
-		
+		 admin.addRoom("dog", "available", 1);
+		 Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		 booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
+
+		String bookingId = booking.getBookingId();
+		//cancel booking
+		 booker.cancelBooking(bookingId);
+		 
+		 assertNull(booking);
+		 
 	}
 	
+	@Test
+	public void testBookingDifferDate() {
+		
+		//add a room and book the room
+		admin.addRoom("dog", "available", 1);
+		Booking booking = booker.enterDatesOfStay(d1, d3, admin.getRooms(), "dog");
+		booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
+		
+		//book the room with different date
+		Booking booking2 = booker.enterDatesOfStay(d2, d4, admin.getRooms(), "dog");
+		
+		assertNotNull(booking2);
+		
+	}
 }
 
