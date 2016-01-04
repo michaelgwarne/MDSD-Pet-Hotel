@@ -18,10 +18,10 @@ public interface Admin extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model typeRequired="true" typeOrdered="false" statusRequired="true" statusOrdered="false" roomRequired="true" roomOrdered="false"
+	 * @model required="true" ordered="false" typeRequired="true" typeOrdered="false" statusRequired="true" statusOrdered="false" roomRequired="true" roomOrdered="false"
 	 * @generated
 	 */
-	void addRoom(String type, String status, int room);
+	Room addRoom(String type, String status, int room);
 
 	/**
 	 * <!-- begin-user-doc -->

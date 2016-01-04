@@ -47,18 +47,16 @@ public class TestBooking {
 	@Test
 	//test: add rooms with duplicate number
 	public void testAddDuplicateRooms(){
-		//TODO: say to Michael
-		// assume addRoom return Room.
+		
 		admin.addRoom("horse","available", 1);
 		admin.addRoom("horse","available", 2);
-	//	Room temp = admin.addRoom("horse","available", 1);
-		
-		//	assertNull(temp);
+		Room temp = admin.addRoom("horse","available", 1);
+		assertNull(temp);
 	}
 	
 	
 	@Test
-	//test: book a room when there is at least an availble room
+	//test: book a room when there is at least an available room
 	public void testBookRoom(){
 
 		for(int i = 1; i < 5; i++){
@@ -90,7 +88,7 @@ public class TestBooking {
 	//test: a room is booked with past date
 	public void testBookPastDate(){
 		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		Booking booking = booker.enterDatesOfStay(pastDate, d2, admin.getRooms(), "dog");
 		
 		assertNull(booking);
 		

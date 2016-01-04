@@ -623,18 +623,6 @@
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8OXcsJ5wEeWeFMYy3D4EwQ" source="PapyrusCSSForceValue">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8OXcsZ5wEeWeFMYy3D4EwQ" key="collapsed" value="true"/>
             </eAnnotations>
-            <children xmi:type="notation:Shape" xmi:id="_Ng7YcJ2nEeWtsfDCVXewgw" type="3013">
-              <element xmi:type="uml:Operation" href="Classes.uml#_NgmBQJ2nEeWtsfDCVXewgw"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ng7YcZ2nEeWtsfDCVXewgw"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_4UkgoJ5wEeWeFMYy3D4EwQ" type="3013">
-              <element xmi:type="uml:Operation" href="Classes.uml#_4UN7UJ5wEeWeFMYy3D4EwQ"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_4UkgoZ5wEeWeFMYy3D4EwQ"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_5Vw34J5wEeWeFMYy3D4EwQ" type="3013">
-              <element xmi:type="uml:Operation" href="Classes.uml#_5Va5oJ5wEeWeFMYy3D4EwQ"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_5Vw34Z5wEeWeFMYy3D4EwQ"/>
-            </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_vN9eO5pOEeWLCKBfwJdwbg"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_vN9ePJpOEeWLCKBfwJdwbg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_vN9ePZpOEeWLCKBfwJdwbg"/>
@@ -713,6 +701,14 @@
             <children xmi:type="notation:Shape" xmi:id="_KDGOQKGaEeWMT-K7AbhLcA" type="3007">
               <element xmi:type="uml:Operation" href="Classes.uml#_KCDscKGaEeWMT-K7AbhLcA"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_KDG1UKGaEeWMT-K7AbhLcA"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_OkKwQLKyEeWB0KHKbP4Mzw" type="3007">
+              <element xmi:type="uml:Operation" href="Classes.uml#_Ojk6YLKyEeWB0KHKbP4Mzw"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_OkKwQbKyEeWB0KHKbP4Mzw"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Xb8pQLKyEeWB0KHKbP4Mzw" type="3007">
+              <element xmi:type="uml:Operation" href="Classes.uml#_XbdhELKyEeWB0KHKbP4Mzw"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Xb8pQbKyEeWB0KHKbP4Mzw"/>
             </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_qdT1655wEeWeFMYy3D4EwQ"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_qdT17J5wEeWeFMYy3D4EwQ"/>

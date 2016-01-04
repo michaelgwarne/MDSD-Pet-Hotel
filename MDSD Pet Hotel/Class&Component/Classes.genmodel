@@ -238,14 +238,27 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Pet/type"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAccount/CustomerAccount">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/createAccount"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/createAccount">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/createAccount/customerName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/createAccount/customerEmail"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/modifyAccount"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/login">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/login/email"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/login/password"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/logout"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom/roomNumber"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/addPet">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/addPet/name"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/addPet/type"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/removePet">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/removePet/name"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/removePet/type"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Customer">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Customer/name"/>
@@ -256,9 +269,6 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/AccountController">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/AccountController/customers"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/addCustomer"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/addPet"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/AccountController/removePet"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

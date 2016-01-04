@@ -107,15 +107,20 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void addRoom(String type, String status, int room) {
-		Room name = MdsdAdminFactory.eINSTANCE.createRoom();
-		name.setType(type);
-		name.setStatus(status);
-		name.setNumber(room);
-		getRooms().add(name);
-		// TODO: needs to test for duplicate room numbers
+	public Room addRoom(String type, String status, int room) {
+		for(Room testRoom : getRooms()){
+			if(testRoom.getNumber() == room){
+				return null;
+			}
+		}
+		Room newRoom = MdsdAdminFactory.eINSTANCE.createRoom();
+		newRoom.setType(type);
+		newRoom.setStatus(status);
+		newRoom.setNumber(room);
+		getRooms().add(newRoom);
+		return newRoom;
 	}
 
 	/**
@@ -381,8 +386,7 @@ EList<String> petTypes = new BasicEList<String>();
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case MdsdAdminPackage.ADMIN_CONTROLLER___ADD_ROOM__STRING_STRING_INT:
-				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
+				return addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case MdsdAdminPackage.ADMIN_CONTROLLER___REMOVE_ROOM__INT:
 				removeRoom((Integer)arguments.get(0));
 				return null;

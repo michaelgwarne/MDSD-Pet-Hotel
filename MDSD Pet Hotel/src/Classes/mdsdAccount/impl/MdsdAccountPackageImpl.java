@@ -254,7 +254,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__CreateAccount() {
+	public EOperation getCustomerAccount__CreateAccount__String_String() {
 		return customerAccountEClass.getEOperations().get(0);
 	}
 
@@ -290,8 +290,26 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__ViewRoom() {
+	public EOperation getCustomerAccount__ViewRoom__int() {
 		return customerAccountEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCustomerAccount__AddPet__String_String() {
+		return customerAccountEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCustomerAccount__RemovePet__String_String() {
+		return customerAccountEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -353,33 +371,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAccountController__AddCustomer() {
-		return accountControllerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAccountController__AddPet() {
-		return accountControllerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAccountController__RemovePet() {
-		return accountControllerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MdsdAccountFactory getMdsdAccountFactory() {
 		return (MdsdAccountFactory)getEFactoryInstance();
 	}
@@ -416,11 +407,13 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		createEAttribute(petEClass, PET__TYPE);
 
 		customerAccountEClass = createEClass(CUSTOMER_ACCOUNT);
-		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___CREATE_ACCOUNT);
+		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___MODIFY_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGIN__STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT);
-		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___VIEW_ROOM);
+		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___VIEW_ROOM__INT);
+		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING);
+		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING);
 
 		customerEClass = createEClass(CUSTOMER);
 		createEAttribute(customerEClass, CUSTOMER__NAME);
@@ -429,9 +422,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		accountControllerEClass = createEClass(ACCOUNT_CONTROLLER);
 		createEReference(accountControllerEClass, ACCOUNT_CONTROLLER__CUSTOMERS);
-		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___ADD_CUSTOMER);
-		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___ADD_PET);
-		createEOperation(accountControllerEClass, ACCOUNT_CONTROLLER___REMOVE_PET);
 	}
 
 	/**
@@ -485,7 +475,9 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		initEClass(customerAccountEClass, CustomerAccount.class, "CustomerAccount", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getCustomerAccount__CreateAccount(), null, "createAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCustomerAccount__CreateAccount__String_String(), null, "createAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "customerName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getCustomerAccount__ModifyAccount(), null, "modifyAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -495,7 +487,16 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		initEOperation(getCustomerAccount__Logout(), null, "logout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getCustomerAccount__ViewRoom(), null, "viewRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCustomerAccount__ViewRoom__int(), null, "viewRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getCustomerAccount__AddPet__String_String(), null, "addPet", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "type", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getCustomerAccount__RemovePet__String_String(), null, "removePet", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "type", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomer_Name(), theTypesPackage.getString(), "name", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -504,12 +505,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		initEClass(accountControllerEClass, AccountController.class, "AccountController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccountController_Customers(), this.getCustomer(), null, "customers", null, 0, -1, AccountController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getAccountController__AddCustomer(), null, "addCustomer", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAccountController__AddPet(), null, "addPet", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAccountController__RemovePet(), null, "removePet", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

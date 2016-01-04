@@ -18,10 +18,10 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false"
 	 * @generated
 	 */
-	void createAccount();
+	void createAccount(String customerName, String customerEmail);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,9 +50,25 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model roomNumberRequired="true" roomNumberOrdered="false"
 	 * @generated
 	 */
-	void viewRoom();
+	void viewRoom(int roomNumber);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false"
+	 * @generated
+	 */
+	void addPet(String name, String type);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false"
+	 * @generated
+	 */
+	void removePet(String name, String type);
 
 } // CustomerAccount

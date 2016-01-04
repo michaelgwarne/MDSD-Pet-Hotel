@@ -37,28 +37,4 @@ public interface AccountController extends BookingToAccount, CustomerAccount {
 	 */
 	EList<Customer> getCustomers();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void addCustomer(String customerName, String customerEmail);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void addPet(String petName, String petType);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removePet(String petName, String petType);
-
 } // AccountController

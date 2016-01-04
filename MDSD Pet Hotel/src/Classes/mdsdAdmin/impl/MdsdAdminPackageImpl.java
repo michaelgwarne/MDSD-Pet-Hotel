@@ -488,7 +488,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		initEClass(adminEClass, Admin.class, "Admin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getAdmin__AddRoom__String_String_int(), null, "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getAdmin__AddRoom__String_String_int(), this.getRoom(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "type", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);

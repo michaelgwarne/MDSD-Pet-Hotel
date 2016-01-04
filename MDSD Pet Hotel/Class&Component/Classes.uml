@@ -315,7 +315,14 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_qc93oJ5wEeWeFMYy3D4EwQ" name="CustomerAccount">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_uUsXIJ5wEeWeFMYy3D4EwQ" name="createAccount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uUsXIJ5wEeWeFMYy3D4EwQ" name="createAccount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2J0hQLKxEeWB0KHKbP4Mzw" name="customerName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5xytgLKxEeWB0KHKbP4Mzw" name="customerEmail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mUWsIKGUEeWMT-K7AbhLcA" name="login">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kQiU8KMuEeWIRLH1N9vj0g" name="email">
@@ -326,7 +333,27 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_oJrPAKGUEeWMT-K7AbhLcA" name="logout"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_KCDscKGaEeWMT-K7AbhLcA" name="viewRoom"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KCDscKGaEeWMT-K7AbhLcA" name="viewRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pZ0kELKyEeWB0KHKbP4Mzw" name="roomNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ojk6YLKyEeWB0KHKbP4Mzw" name="addPet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RLkQULKyEeWB0KHKbP4Mzw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_S5QhMLKyEeWB0KHKbP4Mzw" name="type">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XbdhELKyEeWB0KHKbP4Mzw" name="removePet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_admcYLKyEeWB0KHKbP4Mzw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cFPIkLKyEeWB0KHKbP4Mzw" name="type">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qVfTYJpOEeWLCKBfwJdwbg" name="Account" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_tEM5MJ8sEeWpe80voGitgg" name="accountID" visibility="private">
@@ -364,9 +391,6 @@
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_P_1LUJwcEeWi2qAbhE6tPg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_JINMMJwcEeWi2qAbhE6tPg" contract="_JINMMJwcEeWi2qAbhE6tPg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zHqW4J5wEeWeFMYy3D4EwQ" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_qc93oJ5wEeWeFMYy3D4EwQ" contract="_qc93oJ5wEeWeFMYy3D4EwQ"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_NgmBQJ2nEeWtsfDCVXewgw" name="addCustomer" visibility="private"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_4UN7UJ5wEeWeFMYy3D4EwQ" name="addPet" visibility="private"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_5Va5oJ5wEeWeFMYy3D4EwQ" name="removePet" visibility="private"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_yktiAKMqEeWIRLH1N9vj0g" memberEnd="_ykxMYKMqEeWIRLH1N9vj0g _ykxzcKMqEeWIRLH1N9vj0g">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ykvXMKMqEeWIRLH1N9vj0g" source="org.eclipse.papyrus">
@@ -423,6 +447,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ei2wsJ5dEeWHmKxA3KNpoQ" name="room">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ACaILKyEeWB0KHKbP4Mzw" name="room" type="_ULFosJjYEeWGV8DpM4-Nfw" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ZcJKEJ2jEeWtsfDCVXewgw" name="removeRoom" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_m_-G8J5dEeWHmKxA3KNpoQ" name="number">
