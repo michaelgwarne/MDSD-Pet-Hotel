@@ -18,10 +18,10 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false"
+	 * @model required="true" ordered="false" customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void createAccount(String customerName, String customerEmail);
+	Account createAccount(String customerName, String customerEmail, String password);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,17 +58,17 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false"
+	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false" accountIDRequired="true" accountIDOrdered="false"
 	 * @generated
 	 */
-	void addPet(String name, String type);
+	void addPet(String name, String type, String accountID);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false"
+	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false" accountIDRequired="true" accountIDOrdered="false"
 	 * @generated
 	 */
-	void removePet(String name, String type);
+	void removePet(String name, String type, String accountID);
 
 } // CustomerAccount

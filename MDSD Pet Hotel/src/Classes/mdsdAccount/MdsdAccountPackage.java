@@ -221,7 +221,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING = 0;
+	int CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Modify Account</em>' operation.
@@ -266,7 +266,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING = 5;
+	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -275,7 +275,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING = 6;
+	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = 6;
 
 	/**
 	 * The number of operations of the '<em>Customer Account</em>' class.
@@ -385,7 +385,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 0;
+	int ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Modify Account</em>' operation.
@@ -430,7 +430,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
+	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -439,7 +439,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 6;
+	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Account Controller</em>' class.
@@ -557,14 +557,14 @@ public interface MdsdAccountPackage extends EPackage {
 	EClass getCustomerAccount();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#createAccount(java.lang.String, java.lang.String) <em>Create Account</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#createAccount(java.lang.String, java.lang.String, java.lang.String) <em>Create Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Account</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#createAccount(java.lang.String, java.lang.String)
+	 * @see Classes.mdsdAccount.CustomerAccount#createAccount(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getCustomerAccount__CreateAccount__String_String();
+	EOperation getCustomerAccount__CreateAccount__String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#modifyAccount() <em>Modify Account</em>}' operation.
@@ -607,24 +607,24 @@ public interface MdsdAccountPackage extends EPackage {
 	EOperation getCustomerAccount__ViewRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#addPet(java.lang.String, java.lang.String) <em>Add Pet</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#addPet(java.lang.String, java.lang.String, java.lang.String) <em>Add Pet</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Pet</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#addPet(java.lang.String, java.lang.String)
+	 * @see Classes.mdsdAccount.CustomerAccount#addPet(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getCustomerAccount__AddPet__String_String();
+	EOperation getCustomerAccount__AddPet__String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#removePet(java.lang.String, java.lang.String) <em>Remove Pet</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#removePet(java.lang.String, java.lang.String, java.lang.String) <em>Remove Pet</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Pet</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#removePet(java.lang.String, java.lang.String)
+	 * @see Classes.mdsdAccount.CustomerAccount#removePet(java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getCustomerAccount__RemovePet__String_String();
+	EOperation getCustomerAccount__RemovePet__String_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAccount.Customer <em>Customer</em>}'.
@@ -807,7 +807,7 @@ public interface MdsdAccountPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING = eINSTANCE.getCustomerAccount__CreateAccount__String_String();
+		EOperation CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING = eINSTANCE.getCustomerAccount__CreateAccount__String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Modify Account</b></em>' operation.
@@ -847,7 +847,7 @@ public interface MdsdAccountPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING = eINSTANCE.getCustomerAccount__AddPet__String_String();
+		EOperation CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = eINSTANCE.getCustomerAccount__AddPet__String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Pet</b></em>' operation.
@@ -855,7 +855,7 @@ public interface MdsdAccountPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING = eINSTANCE.getCustomerAccount__RemovePet__String_String();
+		EOperation CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = eINSTANCE.getCustomerAccount__RemovePet__String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.CustomerImpl <em>Customer</em>}' class.

@@ -322,6 +322,10 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_5xytgLKxEeWB0KHKbP4Mzw" name="customerEmail">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IZPs0LK3EeWB0KHKbP4Mzw" name="account" type="_qVfTYJpOEeWLCKBfwJdwbg" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KqmEYLK3EeWB0KHKbP4Mzw" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_RtgbkJpPEeWLCKBfwJdwbg" name="modifyAccount"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mUWsIKGUEeWMT-K7AbhLcA" name="login">
@@ -345,12 +349,18 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_S5QhMLKyEeWB0KHKbP4Mzw" name="type">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Po4t4LK4EeWB0KHKbP4Mzw" name="accountID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_XbdhELKyEeWB0KHKbP4Mzw" name="removePet">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_admcYLKyEeWB0KHKbP4Mzw" name="name">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_cFPIkLKyEeWB0KHKbP4Mzw" name="type">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RcO60LK4EeWB0KHKbP4Mzw" name="accountID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>

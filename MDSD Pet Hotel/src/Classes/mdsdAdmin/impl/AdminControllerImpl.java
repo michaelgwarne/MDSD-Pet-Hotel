@@ -107,7 +107,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Room addRoom(String type, String status, int room) {
 		for(Room testRoom : getRooms()){
