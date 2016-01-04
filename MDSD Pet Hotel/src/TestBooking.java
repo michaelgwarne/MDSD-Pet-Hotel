@@ -277,7 +277,7 @@ public class TestBooking {
 			admin.addRoom("cat", "available", i);
 		}
 
-		//book a room for a dog
+		//book a room for a cat
 		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
 		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
 
@@ -300,16 +300,25 @@ public class TestBooking {
 				break;
 			}
 		}
+		
 	}
 	
 	
-	/*TODO:
-	 *  
-	 * 
-	 * test when information is not filled in when create a booking - this can set required info in GUI so not need.
-	 * Test when info are not typed in when checked in and out - should be able to do in GUI
-	 * checkin when booking not exists - will not happen according to use cases
-	 */
+	@Test
+	//Test: bill is created after booking is done.
+	public void testBookingCreateBill() {
+		//add a room and a booking 
+				admin.addRoom("dog", "available", 1);
+				Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+				booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
+				admin.changeRoomStatus("booked", booking.getRoomNumber());
+				
+		//check the bill is created is created
+				
+				String billId = booking.getBill_Id();
+				assertNotNull(billId);
+		
+	}
 	
 }
 
