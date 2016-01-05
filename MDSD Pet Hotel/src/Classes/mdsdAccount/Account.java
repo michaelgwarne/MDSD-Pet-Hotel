@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.mdsdAccount.Account#getPassword <em>Password</em>}</li>
  *   <li>{@link Classes.mdsdAccount.Account#getName <em>Name</em>}</li>
  *   <li>{@link Classes.mdsdAccount.Account#getEmail <em>Email</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Account#isLoggedIn <em>Is Logged In</em>}</li>
  * </ul>
  *
  * @see Classes.mdsdAccount.MdsdAccountPackage#getAccount()
@@ -146,6 +147,32 @@ public interface Account extends EObject {
 	 * @generated
 	 */
 	void setEmail(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Logged In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Logged In</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Logged In</em>' attribute.
+	 * @see #setIsLoggedIn(boolean)
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getAccount_IsLoggedIn()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLoggedIn();
+
+	/**
+	 * Sets the value of the '{@link Classes.mdsdAccount.Account#isLoggedIn <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Logged In</em>' attribute.
+	 * @see #isLoggedIn()
+	 * @generated
+	 */
+	void setIsLoggedIn(boolean value);
 
 
 

@@ -42,10 +42,10 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model accountIdRequired="true" accountIdOrdered="false"
 	 * @generated
 	 */
-	void logout();
+	void logout(String accountId);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -313,6 +313,14 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_hQZYIJ8lEeWpe80voGitgg" type="_qVfTYJpOEeWLCKBfwJdwbg" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CzEM8LOzEeWDPec7V3mWXQ" name="isUserLoggedIn">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UXGEYLOzEeWDPec7V3mWXQ" name="loggedIn" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YP3FsLOzEeWDPec7V3mWXQ" name="accountId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_qc93oJ5wEeWeFMYy3D4EwQ" name="CustomerAccount">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uUsXIJ5wEeWeFMYy3D4EwQ" name="createAccount">
@@ -336,7 +344,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oJrPAKGUEeWMT-K7AbhLcA" name="logout"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oJrPAKGUEeWMT-K7AbhLcA" name="logout">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_svFGcLO0EeWDPec7V3mWXQ" name="accountId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KCDscKGaEeWMT-K7AbhLcA" name="viewRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_pZ0kELKyEeWB0KHKbP4Mzw" name="roomNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -381,6 +393,9 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_uoUQ8J8kEeWpe80voGitgg" name="email" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Pu0uMLOyEeWDPec7V3mWXQ" name="isLoggedIn" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_s1ubgJpOEeWLCKBfwJdwbg" name="Pet" visibility="private">

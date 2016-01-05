@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getPassword <em>Password</em>}</li>
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getName <em>Name</em>}</li>
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#isLoggedIn <em>Is Logged In</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,6 +127,26 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 * @ordered
 	 */
 	protected String email = EMAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isLoggedIn() <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLoggedIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_LOGGED_IN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLoggedIn() <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLoggedIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isLoggedIn = IS_LOGGED_IN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,6 +268,27 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isLoggedIn() {
+		return isLoggedIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsLoggedIn(boolean newIsLoggedIn) {
+		boolean oldIsLoggedIn = isLoggedIn;
+		isLoggedIn = newIsLoggedIn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.ACCOUNT__IS_LOGGED_IN, oldIsLoggedIn, isLoggedIn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -260,6 +302,8 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 				return getName();
 			case MdsdAccountPackage.ACCOUNT__EMAIL:
 				return getEmail();
+			case MdsdAccountPackage.ACCOUNT__IS_LOGGED_IN:
+				return isLoggedIn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,6 +333,9 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 			case MdsdAccountPackage.ACCOUNT__EMAIL:
 				setEmail((String)newValue);
 				return;
+			case MdsdAccountPackage.ACCOUNT__IS_LOGGED_IN:
+				setIsLoggedIn((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -316,6 +363,9 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 			case MdsdAccountPackage.ACCOUNT__EMAIL:
 				setEmail(EMAIL_EDEFAULT);
 				return;
+			case MdsdAccountPackage.ACCOUNT__IS_LOGGED_IN:
+				setIsLoggedIn(IS_LOGGED_IN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -338,6 +388,8 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MdsdAccountPackage.ACCOUNT__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
+			case MdsdAccountPackage.ACCOUNT__IS_LOGGED_IN:
+				return isLoggedIn != IS_LOGGED_IN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -360,6 +412,8 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 		result.append(name);
 		result.append(", email: ");
 		result.append(email);
+		result.append(", isLoggedIn: ");
+		result.append(isLoggedIn);
 		result.append(')');
 		return result.toString();
 	}

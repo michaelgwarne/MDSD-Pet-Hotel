@@ -174,6 +174,15 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBookingToAccount__IsUserLoggedIn__String() {
+		return bookingToAccountEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAccount() {
 		return accountEClass;
 	}
@@ -221,6 +230,15 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 */
 	public EAttribute getAccount_Email() {
 		return (EAttribute)accountEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccount_IsLoggedIn() {
+		return (EAttribute)accountEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -291,7 +309,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__Logout() {
+	public EOperation getCustomerAccount__Logout__String() {
 		return customerAccountEClass.getEOperations().get(3);
 	}
 
@@ -370,6 +388,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		// Create classes and their features
 		bookingToAccountEClass = createEClass(BOOKING_TO_ACCOUNT);
 		createEOperation(bookingToAccountEClass, BOOKING_TO_ACCOUNT___GET_ACCOUNT__STRING);
+		createEOperation(bookingToAccountEClass, BOOKING_TO_ACCOUNT___IS_USER_LOGGED_IN__STRING);
 
 		accountEClass = createEClass(ACCOUNT);
 		createEAttribute(accountEClass, ACCOUNT__ACCOUNT_ID);
@@ -377,6 +396,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		createEAttribute(accountEClass, ACCOUNT__PASSWORD);
 		createEAttribute(accountEClass, ACCOUNT__NAME);
 		createEAttribute(accountEClass, ACCOUNT__EMAIL);
+		createEAttribute(accountEClass, ACCOUNT__IS_LOGGED_IN);
 
 		petEClass = createEClass(PET);
 		createEAttribute(petEClass, PET__NAME);
@@ -386,7 +406,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___MODIFY_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGIN__STRING_STRING);
-		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT);
+		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT__STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___VIEW_ROOM__INT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING);
@@ -435,12 +455,16 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		EOperation op = initEOperation(getBookingToAccount__GetAccount__String(), this.getAccount(), "getAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getBookingToAccount__IsUserLoggedIn__String(), ecorePackage.getEBoolean(), "isUserLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "accountId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccount_AccountID(), ecorePackage.getEString(), "accountID", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAccount_Pets(), this.getPet(), null, "pets", null, 0, -1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAccount_Password(), ecorePackage.getEString(), "password", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAccount_Name(), theTypesPackage.getString(), "name", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAccount_Email(), ecorePackage.getEString(), "email", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAccount_IsLoggedIn(), ecorePackage.getEBoolean(), "isLoggedIn", null, 1, 1, Account.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(petEClass, Pet.class, "Pet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPet_Name(), ecorePackage.getEString(), "name", null, 1, 1, Pet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -459,7 +483,8 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getCustomerAccount__Logout(), null, "logout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCustomerAccount__Logout__String(), null, "logout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "accountId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getCustomerAccount__ViewRoom__int(), null, "viewRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);

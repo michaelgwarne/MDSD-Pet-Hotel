@@ -86,13 +86,22 @@ public interface MdsdAccountPackage extends EPackage {
 	int BOOKING_TO_ACCOUNT___GET_ACCOUNT__STRING = 0;
 
 	/**
+	 * The operation id for the '<em>Is User Logged In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_TO_ACCOUNT___IS_USER_LOGGED_IN__STRING = 1;
+
+	/**
 	 * The number of operations of the '<em>Booking To Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_TO_ACCOUNT_OPERATION_COUNT = 1;
+	int BOOKING_TO_ACCOUNT_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAccount.impl.AccountImpl <em>Account</em>}' class.
@@ -150,13 +159,22 @@ public interface MdsdAccountPackage extends EPackage {
 	int ACCOUNT__EMAIL = 4;
 
 	/**
+	 * The feature id for the '<em><b>Is Logged In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__IS_LOGGED_IN = 5;
+
+	/**
 	 * The number of structural features of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_FEATURE_COUNT = 5;
+	int ACCOUNT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Account</em>' class.
@@ -266,7 +284,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___LOGOUT = 3;
+	int CUSTOMER_ACCOUNT___LOGOUT__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>View Room</em>' operation.
@@ -342,6 +360,15 @@ public interface MdsdAccountPackage extends EPackage {
 	int ACCOUNT_CONTROLLER___GET_ACCOUNT__STRING = BOOKING_TO_ACCOUNT___GET_ACCOUNT__STRING;
 
 	/**
+	 * The operation id for the '<em>Is User Logged In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_CONTROLLER___IS_USER_LOGGED_IN__STRING = BOOKING_TO_ACCOUNT___IS_USER_LOGGED_IN__STRING;
+
+	/**
 	 * The operation id for the '<em>Create Account</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,7 +402,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___LOGOUT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 3;
+	int ACCOUNT_CONTROLLER___LOGOUT__STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>View Room</em>' operation.
@@ -433,6 +460,16 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingToAccount__GetAccount__String();
+
+	/**
+	 * Returns the meta object for the '{@link Classes.mdsdAccount.BookingToAccount#isUserLoggedIn(java.lang.String) <em>Is User Logged In</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is User Logged In</em>' operation.
+	 * @see Classes.mdsdAccount.BookingToAccount#isUserLoggedIn(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingToAccount__IsUserLoggedIn__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAccount.Account <em>Account</em>}'.
@@ -498,6 +535,17 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAccount_Email();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Classes.mdsdAccount.Account#isLoggedIn <em>Is Logged In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Logged In</em>'.
+	 * @see Classes.mdsdAccount.Account#isLoggedIn()
+	 * @see #getAccount()
+	 * @generated
+	 */
+	EAttribute getAccount_IsLoggedIn();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAccount.Pet <em>Pet</em>}'.
@@ -572,14 +620,14 @@ public interface MdsdAccountPackage extends EPackage {
 	EOperation getCustomerAccount__Login__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#logout() <em>Logout</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#logout(java.lang.String) <em>Logout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Logout</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#logout()
+	 * @see Classes.mdsdAccount.CustomerAccount#logout(java.lang.String)
 	 * @generated
 	 */
-	EOperation getCustomerAccount__Logout();
+	EOperation getCustomerAccount__Logout__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#viewRoom(int) <em>View Room</em>}' operation.
@@ -674,6 +722,14 @@ public interface MdsdAccountPackage extends EPackage {
 		EOperation BOOKING_TO_ACCOUNT___GET_ACCOUNT__STRING = eINSTANCE.getBookingToAccount__GetAccount__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Is User Logged In</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_TO_ACCOUNT___IS_USER_LOGGED_IN__STRING = eINSTANCE.getBookingToAccount__IsUserLoggedIn__String();
+
+		/**
 		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.AccountImpl <em>Account</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -722,6 +778,14 @@ public interface MdsdAccountPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCOUNT__EMAIL = eINSTANCE.getAccount_Email();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Logged In</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCOUNT__IS_LOGGED_IN = eINSTANCE.getAccount_IsLoggedIn();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.PetImpl <em>Pet</em>}' class.
@@ -789,7 +853,7 @@ public interface MdsdAccountPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CUSTOMER_ACCOUNT___LOGOUT = eINSTANCE.getCustomerAccount__Logout();
+		EOperation CUSTOMER_ACCOUNT___LOGOUT__STRING = eINSTANCE.getCustomerAccount__Logout__String();
 
 		/**
 		 * The meta object literal for the '<em><b>View Room</b></em>' operation.

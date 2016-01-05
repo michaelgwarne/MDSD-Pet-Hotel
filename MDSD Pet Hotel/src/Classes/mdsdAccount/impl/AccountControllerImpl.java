@@ -5,7 +5,10 @@ package Classes.mdsdAccount.impl;
 import Classes.mdsdAccount.Account;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.CustomerAccount;
+import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAccount.MdsdAccountPackage;
+import Classes.mdsdAccount.Pet;
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -79,12 +82,16 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Account getAccount(String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		for(Account account : getAccounts()){
+			if(account.getEmail().equalsIgnoreCase(email)){
+				return account;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -92,10 +99,35 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isUserLoggedIn(String accountId) {
+		// TODO: test
+		for(Account account : getAccounts()){
+			if(account.getAccountID().equalsIgnoreCase(accountId)){
+				return account.isLoggedIn();
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public Account createAccount(String customerName, String customerEmail, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		for(Account account : getAccounts()){
+			if(account.getEmail().equalsIgnoreCase(customerEmail)){
+				return null;
+			}
+		}
+		Account account = MdsdAccountFactory.eINSTANCE.createAccount();
+		account.setAccountID(customerEmail);
+		account.setEmail(customerEmail);
+		account.setName(customerName);
+		account.setPassword(password);
+		getAccounts().add(account);
+		return account;
 	}
 
 	/**
@@ -112,12 +144,17 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void login(String email, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		for(Account account : getAccounts()){
+			if(account.getAccountID().equalsIgnoreCase(email) 
+					&& account.getPassword().equalsIgnoreCase(password)){
+				account.setIsLoggedIn(true);
+				break;
+			}
+		}
 	}
 
 	/**
@@ -125,10 +162,14 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void logout() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void logout(String accountId) {
+		// TODO: test
+		for(Account account : getAccounts()){
+			if(account.getAccountID().equalsIgnoreCase(accountId) ){
+				account.setIsLoggedIn(false);
+				break;
+			}
+		}
 	}
 
 	/**
@@ -145,23 +186,41 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addPet(String name, String type, String accountID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		Pet pet = MdsdAccountFactory.eINSTANCE.createPet();
+		pet.setName(name);
+		pet.setType(type);
+		for(Account account : getAccounts()){
+			if(account.getAccountID().equalsIgnoreCase(accountID)){
+				account.getPets().add(pet);
+				break;
+			}
+		}
+		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removePet(String name, String type, String accountID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		
+		for(Account account : getAccounts()){
+			if(account.getAccountID().equalsIgnoreCase(accountID)){
+				for(Pet pet : account.getPets()){
+					if(pet.getName().equalsIgnoreCase(name) && pet.getType().equalsIgnoreCase(type)){
+						account.getPets().remove(pet);
+						break;
+					}
+				}
+			}
+		}
+		
 	}
 
 	/**
@@ -250,7 +309,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___MODIFY_ACCOUNT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGIN__STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT;
+				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT__STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT__STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___VIEW_ROOM__INT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM__INT;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING;
@@ -270,6 +329,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		switch (operationID) {
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___GET_ACCOUNT__STRING:
 				return getAccount((String)arguments.get(0));
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___IS_USER_LOGGED_IN__STRING:
+				return isUserLoggedIn((String)arguments.get(0));
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING:
 				return createAccount((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT:
@@ -278,8 +339,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING:
 				login((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT:
-				logout();
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT__STRING:
+				logout((String)arguments.get(0));
 				return null;
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM__INT:
 				viewRoom((Integer)arguments.get(0));

@@ -218,6 +218,9 @@
       <eOperations name="getAccount" ordered="false" lowerBound="1" eType="#//mdsdAccount/Account">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
+      <eOperations name="isUserLoggedIn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="accountId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Account">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="accountID" ordered="false"
@@ -230,6 +233,8 @@
           lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLoggedIn" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Pet">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -248,7 +253,9 @@
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="logout" ordered="false" lowerBound="1"/>
+      <eOperations name="logout" ordered="false" lowerBound="1">
+        <eParameters name="accountId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
       <eOperations name="viewRoom" ordered="false" lowerBound="1">
         <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>

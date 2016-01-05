@@ -226,6 +226,9 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/BookingToAccount/getAccount">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/BookingToAccount/getAccount/email"/>
         </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/BookingToAccount/isUserLoggedIn">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/BookingToAccount/isUserLoggedIn/accountId"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Account">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/accountID"/>
@@ -234,6 +237,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/password"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/name"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/email"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/isLoggedIn"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Pet">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Pet/name"/>
@@ -250,7 +254,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/login/email"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/login/password"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/logout"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/logout">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/logout/accountId"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom/roomNumber"/>
         </genOperations>

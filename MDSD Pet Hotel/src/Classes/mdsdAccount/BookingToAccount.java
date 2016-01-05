@@ -23,4 +23,12 @@ public interface BookingToAccount extends EObject {
 	 */
 	Account getAccount(String email);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" accountIdRequired="true" accountIdOrdered="false"
+	 * @generated
+	 */
+	boolean isUserLoggedIn(String accountId);
+
 } // BookingToAccount
