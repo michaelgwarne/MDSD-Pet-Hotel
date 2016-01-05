@@ -13,6 +13,9 @@ import Classes.mdsdBooking.MdsdBookingFactory;
 import Classes.mdsdBooking.Meal;
 import Classes.mdsdBooking.Service;
 import Classes.mdsdAdmin.Room;
+import Classes.mdsdBilling.Bill;
+import Classes.mdsdBilling.BillingController;
+import Classes.mdsdBilling.MdsdBillingFactory;
 
 public class TestBooking {
 
@@ -21,6 +24,7 @@ public class TestBooking {
 	AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
 	BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
 	AccountController account = MdsdAccountFactory.eINSTANCE.createAccountController();
+	BillingController billCtrl = MdsdBillingFactory.eINSTANCE.createBillingController();
 
 	Date d1 = new Date(System.currentTimeMillis() + week);
 	Date d2 = new Date(System.currentTimeMillis() + (3*week));
@@ -287,22 +291,48 @@ public class TestBooking {
 		//check Elora in to the hotel
 		booker.checkIn(booking.getBookingId(), admin.getRooms());
 
-		//check Elora out from the hotel.
-		booker.checkOut(booking.getBookingId(), admin.getRooms());
+		
+		// TO DO:
+		//check for the bill is paid
+		EList<Bill> bills = billCtrl.getBills();
+		for(Bill bill:bills){
+			if (bill.getID() == booking.getBill_Id()){
+				if(bill.isPaid()){
+					//check Elora out from the hotel.
+					booker.checkOut(booking.getBookingId(), admin.getRooms());
+					
+					//test isCheckIn is false and isCheckOut is true
+					assertEquals(false , booking.isCheckedIn());
+					assertEquals(true, booking.isCheckedOut());
 
-		//test isCheckIn is false and isCheckOut is true
-		assertEquals(false , booking.isCheckedIn());
-		assertEquals(true, booking.isCheckedOut());
+					//test the room status is changed to dirty
+					EList<Room> rooms = admin.getRooms();
+					for (Room room : rooms) {
+						if(room.getNumber() == booking.getRoomNumber()) {
+							status = room.getStatus();
+							assertEquals("dirty", status);
+							break;
+						}
+					}
+				} else{
+					//test isCheckIn is false and isCheckOut is true
+					assertEquals(true , booking.isCheckedIn());
+					assertEquals(false, booking.isCheckedOut());
 
-		//test the room status is changed to dirty
-		EList<Room> rooms = admin.getRooms();
-		for (Room room : rooms) {
-			if(room.getNumber() == booking.getRoomNumber()) {
-				status = room.getStatus();
-				assertEquals("dirty", status);
-				break;
+					//test the room status is changed to dirty
+					EList<Room> rooms = admin.getRooms();
+					for (Room room : rooms) {
+						if(room.getNumber() == booking.getRoomNumber()) {
+							status = room.getStatus();
+							assertEquals("occupied", status);
+							break;
+						}
+					}
+				}
 			}
 		}
+
+		
 		
 	}
 	
