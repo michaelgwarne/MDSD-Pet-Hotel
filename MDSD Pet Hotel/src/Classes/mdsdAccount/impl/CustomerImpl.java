@@ -276,4 +276,12 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 		return result.toString();
 	}
 
+	@Override
+	public void isLogin(boolean value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
 } //CustomerImpl

@@ -101,4 +101,6 @@ public interface Customer extends EObject {
 	 */
 	void setAccount(Account value);
 
+	void isLogin(boolean login);
+
 } // Customer

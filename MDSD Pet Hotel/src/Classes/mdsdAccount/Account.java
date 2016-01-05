@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Classes.mdsdAccount.Account#getAccountID <em>Account ID</em>}</li>
  *   <li>{@link Classes.mdsdAccount.Account#getPets <em>Pets</em>}</li>
- *   <li>{@link Classes.mdsdAccount.Account#getPassword <em>Password</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.Account#getPassword <em></em>}</li>
  * </ul>
  *
  * @see Classes.mdsdAccount.MdsdAccountPackage#getAccount()
@@ -92,5 +92,7 @@ public interface Account extends EObject {
 	 * @generated
 	 */
 	void setPassword(String value);
+
+
 
 } // Account

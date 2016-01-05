@@ -34,6 +34,7 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @model emailRequired="true" emailOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */

@@ -36,5 +36,6 @@ public interface AccountController extends BookingToAccount, CustomerAccount {
 	 * @generated
 	 */
 	EList<Customer> getCustomers();
+	
 
 } // AccountController

@@ -10,6 +10,7 @@ import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAccount.MdsdAccountPackage;
 import Classes.mdsdAccount.Pet;
 
+
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -80,6 +81,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		}
 		return customers;
 	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,9 +89,19 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public Account getAccount(String email) {
+		for (Customer customer : customers) {	
+			if(customer.getEmail().equalsIgnoreCase(email)) {
+				return customer.getAccount();
+				
+			}
+			
+			}
+			
+			
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
 	/**
@@ -129,9 +141,20 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return 
 	 * @generated
 	 */
 	public void login(String email, String password) {
+		for (Customer customer : customers) {	
+			if(customer.getEmail() == password){
+				customer.isLogin(true);
+				customer.isLogin(false);
+				System.out.println(customer);
+		
+			}
+		
+		}
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -317,5 +340,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+
+	
 
 } //AccountControllerImpl
