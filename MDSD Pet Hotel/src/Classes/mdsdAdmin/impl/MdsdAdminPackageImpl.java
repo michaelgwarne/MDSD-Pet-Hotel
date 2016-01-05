@@ -191,7 +191,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdminController__IsLoggedin__String_boolean() {
+	public EOperation getAdminController__IsLoggedIn__String() {
 		return adminControllerEClass.getEOperations().get(0);
 	}
 
@@ -353,7 +353,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaff__StaffLogout__String_String() {
+	public EOperation getStaff__StaffLogout__String() {
 		return staffEClass.getEOperations().get(1);
 	}
 
@@ -442,7 +442,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		adminControllerEClass = createEClass(ADMIN_CONTROLLER);
 		createEReference(adminControllerEClass, ADMIN_CONTROLLER__ROOMS);
 		createEReference(adminControllerEClass, ADMIN_CONTROLLER__STAFF);
-		createEOperation(adminControllerEClass, ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN);
+		createEOperation(adminControllerEClass, ADMIN_CONTROLLER___IS_LOGGED_IN__STRING);
 
 		hotelStaffEClass = createEClass(HOTEL_STAFF);
 		createEAttribute(hotelStaffEClass, HOTEL_STAFF__NAME);
@@ -464,7 +464,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		staffEClass = createEClass(STAFF);
 		createEOperation(staffEClass, STAFF___STAFF_LOGIN__STRING_STRING);
-		createEOperation(staffEClass, STAFF___STAFF_LOGOUT__STRING_STRING);
+		createEOperation(staffEClass, STAFF___STAFF_LOGOUT__STRING);
 		createEOperation(staffEClass, STAFF___DISPLAY_ROOMS);
 		createEOperation(staffEClass, STAFF___CHANGE_ROOM_STATUS__STRING_INT);
 
@@ -511,9 +511,8 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		initEReference(getAdminController_Rooms(), this.getRoom(), null, "rooms", null, 0, -1, AdminController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAdminController_Staff(), this.getHotelStaff(), null, "staff", null, 0, -1, AdminController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getAdminController__IsLoggedin__String_boolean(), null, "isLoggedin", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getAdminController__IsLoggedIn__String(), ecorePackage.getEBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(hotelStaffEClass, HotelStaff.class, "HotelStaff", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHotelStaff_Name(), ecorePackage.getEString(), "Name", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -556,9 +555,8 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaff__StaffLogout__String_String(), null, "staffLogout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaff__StaffLogout__String(), null, "staffLogout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStaff__DisplayRooms(), null, "displayRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

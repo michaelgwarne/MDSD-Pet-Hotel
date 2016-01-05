@@ -212,23 +212,30 @@ EList<String> petTypes = new BasicEList<String>();
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void staffLogin(String ssn, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+		for(HotelStaff staff : getStaff()){
+			if(staff.getSSN().equalsIgnoreCase(ssn) && staff.getPassword().equalsIgnoreCase(password)){
+				staff.setIsLoggedIn(true);
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void staffLogout(String ssn, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void staffLogout(String ssn) {
+		// TODO: test
+		for(HotelStaff staff : getStaff()){
+			if(staff.getSSN().equalsIgnoreCase(ssn)){
+				staff.setIsLoggedIn(false);
+			}
+		}
+		
 	}
 
 	/**
@@ -274,12 +281,16 @@ EList<String> petTypes = new BasicEList<String>();
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void isLoggedin(String ssn, boolean isLoggedIn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public boolean isLoggedIn(String ssn) {
+		// TODO: test
+		for(HotelStaff staff : getStaff()){
+			if(staff.getSSN().equalsIgnoreCase(ssn)){
+				return staff.isLoggedIn();
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -385,7 +396,7 @@ EList<String> petTypes = new BasicEList<String>();
 		if (baseClass == Staff.class) {
 			switch (baseOperationID) {
 				case MdsdAdminPackage.STAFF___STAFF_LOGIN__STRING_STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING;
-				case MdsdAdminPackage.STAFF___STAFF_LOGOUT__STRING_STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING;
+				case MdsdAdminPackage.STAFF___STAFF_LOGOUT__STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING;
 				case MdsdAdminPackage.STAFF___DISPLAY_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS;
 				case MdsdAdminPackage.STAFF___CHANGE_ROOM_STATUS__STRING_INT: return MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT;
 				default: return -1;
@@ -423,8 +434,8 @@ EList<String> petTypes = new BasicEList<String>();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING:
 				staffLogin((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING:
-				staffLogout((String)arguments.get(0), (String)arguments.get(1));
+			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING:
+				staffLogout((String)arguments.get(0));
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS:
 				displayRooms();
@@ -432,9 +443,8 @@ EList<String> petTypes = new BasicEList<String>();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT:
 				changeRoomStatus((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN:
-				isLoggedin((String)arguments.get(0), (Boolean)arguments.get(1));
-				return null;
+			case MdsdAdminPackage.ADMIN_CONTROLLER___IS_LOGGED_IN__STRING:
+				return isLoggedIn((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

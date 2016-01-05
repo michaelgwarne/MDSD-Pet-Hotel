@@ -57,9 +57,9 @@ public interface AdminController extends Admin, BookingToAdmin, Staff {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ssnRequired="true" ssnOrdered="false" isLoggedInRequired="true" isLoggedInOrdered="false"
+	 * @model required="true" ordered="false" ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void isLoggedin(String ssn, boolean isLoggedIn);
+	boolean isLoggedIn(String ssn);
 
 } // AdminController

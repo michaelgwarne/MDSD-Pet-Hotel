@@ -255,7 +255,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING = ADMIN_OPERATION_COUNT + 2;
+	int ADMIN_CONTROLLER___STAFF_LOGOUT__STRING = ADMIN_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Display Rooms</em>' operation.
@@ -276,13 +276,13 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Is Loggedin</em>' operation.
+	 * The operation id for the '<em>Is Logged In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN = ADMIN_OPERATION_COUNT + 5;
+	int ADMIN_CONTROLLER___IS_LOGGED_IN__STRING = ADMIN_OPERATION_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Admin Controller</em>' class.
@@ -438,7 +438,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF___STAFF_LOGOUT__STRING_STRING = 1;
+	int STAFF___STAFF_LOGOUT__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Display Rooms</em>' operation.
@@ -556,14 +556,14 @@ public interface MdsdAdminPackage extends EPackage {
 	EReference getAdminController_Staff();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.AdminController#isLoggedin(java.lang.String, boolean) <em>Is Loggedin</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.AdminController#isLoggedIn(java.lang.String) <em>Is Logged In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Loggedin</em>' operation.
-	 * @see Classes.mdsdAdmin.AdminController#isLoggedin(java.lang.String, boolean)
+	 * @return the meta object for the '<em>Is Logged In</em>' operation.
+	 * @see Classes.mdsdAdmin.AdminController#isLoggedIn(java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdminController__IsLoggedin__String_boolean();
+	EOperation getAdminController__IsLoggedIn__String();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.HotelStaff <em>Hotel Staff</em>}'.
@@ -741,14 +741,14 @@ public interface MdsdAdminPackage extends EPackage {
 	EOperation getStaff__StaffLogin__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogout(java.lang.String, java.lang.String) <em>Staff Logout</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogout(java.lang.String) <em>Staff Logout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Staff Logout</em>' operation.
-	 * @see Classes.mdsdAdmin.Staff#staffLogout(java.lang.String, java.lang.String)
+	 * @see Classes.mdsdAdmin.Staff#staffLogout(java.lang.String)
 	 * @generated
 	 */
-	EOperation getStaff__StaffLogout__String_String();
+	EOperation getStaff__StaffLogout__String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#displayRooms() <em>Display Rooms</em>}' operation.
@@ -863,12 +863,12 @@ public interface MdsdAdminPackage extends EPackage {
 		EReference ADMIN_CONTROLLER__STAFF = eINSTANCE.getAdminController_Staff();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Loggedin</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Logged In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN = eINSTANCE.getAdminController__IsLoggedin__String_boolean();
+		EOperation ADMIN_CONTROLLER___IS_LOGGED_IN__STRING = eINSTANCE.getAdminController__IsLoggedIn__String();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
@@ -1020,7 +1020,7 @@ public interface MdsdAdminPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF___STAFF_LOGOUT__STRING_STRING = eINSTANCE.getStaff__StaffLogout__String_String();
+		EOperation STAFF___STAFF_LOGOUT__STRING = eINSTANCE.getStaff__StaffLogout__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Rooms</b></em>' operation.

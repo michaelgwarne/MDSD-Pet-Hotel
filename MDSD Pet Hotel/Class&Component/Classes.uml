@@ -446,11 +446,11 @@
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iQtwQJ5iEeWeFMYy3D4EwQ" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_e0gvIJ5iEeWeFMYy3D4EwQ" contract="_e0gvIJ5iEeWeFMYy3D4EwQ"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__S2C4KD4EeWC-ufIrQerYg" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_u2HKsKD4EeWC-ufIrQerYg" contract="_u2HKsKD4EeWC-ufIrQerYg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_saULgKGZEeWMT-K7AbhLcA" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_EsaaQKGWEeWMT-K7AbhLcA" contract="_EsaaQKGWEeWMT-K7AbhLcA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_RDfLULPDEeWDPec7V3mWXQ" name="isLoggedin">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RDfLULPDEeWDPec7V3mWXQ" name="isLoggedIn">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjcvgLPDEeWDPec7V3mWXQ" name="ssn">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YYQZcLPDEeWDPec7V3mWXQ" name="isLoggedIn">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YYQZcLPDEeWDPec7V3mWXQ" name="isLoggedIn" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
         </ownedParameter>
       </ownedOperation>
@@ -537,9 +537,6 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_sYPEsKGVEeWMT-K7AbhLcA" name="staffLogout">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_DrnLQLPDEeWDPec7V3mWXQ" name="ssn">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KEOTILPDEeWDPec7V3mWXQ" name="password">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>

@@ -26,10 +26,10 @@ public interface Staff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ssnRequired="true" ssnOrdered="false" passwordRequired="true" passwordOrdered="false"
+	 * @model ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void staffLogout(String ssn, String password);
+	void staffLogout(String ssn);
 
 	/**
 	 * <!-- begin-user-doc -->
