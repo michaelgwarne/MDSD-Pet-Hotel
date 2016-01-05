@@ -446,6 +446,14 @@
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iQtwQJ5iEeWeFMYy3D4EwQ" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_e0gvIJ5iEeWeFMYy3D4EwQ" contract="_e0gvIJ5iEeWeFMYy3D4EwQ"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__S2C4KD4EeWC-ufIrQerYg" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_u2HKsKD4EeWC-ufIrQerYg" contract="_u2HKsKD4EeWC-ufIrQerYg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_saULgKGZEeWMT-K7AbhLcA" client="_UmajcJ5iEeWeFMYy3D4EwQ" supplier="_EsaaQKGWEeWMT-K7AbhLcA" contract="_EsaaQKGWEeWMT-K7AbhLcA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RDfLULPDEeWDPec7V3mWXQ" name="isLoggedin">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjcvgLPDEeWDPec7V3mWXQ" name="ssn">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YYQZcLPDEeWDPec7V3mWXQ" name="isLoggedIn">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_e0gvIJ5iEeWeFMYy3D4EwQ" name="Admin">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_VM7XoJ2jEeWtsfDCVXewgw" name="addRoom" concurrency="concurrent">
@@ -475,6 +483,9 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LCC8EJ8kEeWpe80voGitgg" name="SSN">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CwHhcLPFEeWDPec7V3mWXQ" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_L0n2UJ5lEeWeFMYy3D4EwQ" name="removeStaff">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zYKj4J8nEeWpe80voGitgg" name="SSN">
@@ -498,6 +509,12 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_mo-4UJ8jEeWpe80voGitgg" name="SSN" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ltzTsLPCEeWDPec7V3mWXQ" name="isLoggedIn" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xDq_wLPCEeWDPec7V3mWXQ" name="password" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_u2HKsKD4EeWC-ufIrQerYg" name="BookingToAdmin">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_wvd5AKD4EeWC-ufIrQerYg" name="getPetTypes">
@@ -509,8 +526,22 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_EsaaQKGWEeWMT-K7AbhLcA" name="Staff">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_k0_8wKGVEeWMT-K7AbhLcA" name="staffLogin"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_sYPEsKGVEeWMT-K7AbhLcA" name="staffLogout"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_k0_8wKGVEeWMT-K7AbhLcA" name="staffLogin">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6uSq8LPCEeWDPec7V3mWXQ" name="ssn">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9Xh-ELPCEeWDPec7V3mWXQ" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sYPEsKGVEeWMT-K7AbhLcA" name="staffLogout">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DrnLQLPDEeWDPec7V3mWXQ" name="ssn">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KEOTILPDEeWDPec7V3mWXQ" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_aV1LIJ2jEeWtsfDCVXewgw" name="displayRooms"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8K7lcJ40EeWEqvoHglzVwA" name="changeRoomStatus">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CsZKoJ8iEeWpe80voGitgg" name="status">

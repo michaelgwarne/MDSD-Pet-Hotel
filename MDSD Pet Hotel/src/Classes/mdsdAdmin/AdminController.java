@@ -54,4 +54,12 @@ public interface AdminController extends Admin, BookingToAdmin, Staff {
 	 */
 	EList<HotelStaff> getStaff();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ssnRequired="true" ssnOrdered="false" isLoggedInRequired="true" isLoggedInOrdered="false"
+	 * @generated
+	 */
+	void isLoggedin(String ssn, boolean isLoggedIn);
+
 } // AdminController

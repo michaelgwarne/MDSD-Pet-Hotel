@@ -101,7 +101,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN___CREATE_STAFF__STRING_INT_STRING = 2;
+	int ADMIN___CREATE_STAFF__STRING_INT_STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Staff</em>' operation.
@@ -201,7 +201,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___CREATE_STAFF__STRING_INT_STRING = ADMIN___CREATE_STAFF__STRING_INT_STRING;
+	int ADMIN_CONTROLLER___CREATE_STAFF__STRING_INT_STRING_STRING = ADMIN___CREATE_STAFF__STRING_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Staff</em>' operation.
@@ -246,7 +246,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___STAFF_LOGIN = ADMIN_OPERATION_COUNT + 1;
+	int ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING = ADMIN_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Staff Logout</em>' operation.
@@ -255,7 +255,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___STAFF_LOGOUT = ADMIN_OPERATION_COUNT + 2;
+	int ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING = ADMIN_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Display Rooms</em>' operation.
@@ -276,13 +276,22 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Is Loggedin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN = ADMIN_OPERATION_COUNT + 5;
+
+	/**
 	 * The number of operations of the '<em>Admin Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 5;
+	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
@@ -322,13 +331,31 @@ public interface MdsdAdminPackage extends EPackage {
 	int HOTEL_STAFF__SSN = 2;
 
 	/**
+	 * The feature id for the '<em><b>Is Logged In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__IS_LOGGED_IN = 3;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_STAFF__PASSWORD = 4;
+
+	/**
 	 * The number of structural features of the '<em>Hotel Staff</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_STAFF_FEATURE_COUNT = 3;
+	int HOTEL_STAFF_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Hotel Staff</em>' class.
@@ -402,7 +429,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF___STAFF_LOGIN = 0;
+	int STAFF___STAFF_LOGIN__STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Staff Logout</em>' operation.
@@ -411,7 +438,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF___STAFF_LOGOUT = 1;
+	int STAFF___STAFF_LOGOUT__STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Display Rooms</em>' operation.
@@ -529,6 +556,16 @@ public interface MdsdAdminPackage extends EPackage {
 	EReference getAdminController_Staff();
 
 	/**
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.AdminController#isLoggedin(java.lang.String, boolean) <em>Is Loggedin</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Loggedin</em>' operation.
+	 * @see Classes.mdsdAdmin.AdminController#isLoggedin(java.lang.String, boolean)
+	 * @generated
+	 */
+	EOperation getAdminController__IsLoggedin__String_boolean();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.HotelStaff <em>Hotel Staff</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -572,6 +609,28 @@ public interface MdsdAdminPackage extends EPackage {
 	EAttribute getHotelStaff_SSN();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Classes.mdsdAdmin.HotelStaff#isLoggedIn <em>Is Logged In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Logged In</em>'.
+	 * @see Classes.mdsdAdmin.HotelStaff#isLoggedIn()
+	 * @see #getHotelStaff()
+	 * @generated
+	 */
+	EAttribute getHotelStaff_IsLoggedIn();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Classes.mdsdAdmin.HotelStaff#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see Classes.mdsdAdmin.HotelStaff#getPassword()
+	 * @see #getHotelStaff()
+	 * @generated
+	 */
+	EAttribute getHotelStaff_Password();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.Admin <em>Admin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,14 +661,14 @@ public interface MdsdAdminPackage extends EPackage {
 	EOperation getAdmin__RemoveRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#createStaff(java.lang.String, int, java.lang.String) <em>Create Staff</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#createStaff(java.lang.String, int, java.lang.String, java.lang.String) <em>Create Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Staff</em>' operation.
-	 * @see Classes.mdsdAdmin.Admin#createStaff(java.lang.String, int, java.lang.String)
+	 * @see Classes.mdsdAdmin.Admin#createStaff(java.lang.String, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdmin__CreateStaff__String_int_String();
+	EOperation getAdmin__CreateStaff__String_int_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#removeStaff(java.lang.String) <em>Remove Staff</em>}' operation.
@@ -672,24 +731,24 @@ public interface MdsdAdminPackage extends EPackage {
 	EClass getStaff();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogin() <em>Staff Login</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogin(java.lang.String, java.lang.String) <em>Staff Login</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Staff Login</em>' operation.
-	 * @see Classes.mdsdAdmin.Staff#staffLogin()
+	 * @see Classes.mdsdAdmin.Staff#staffLogin(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getStaff__StaffLogin();
+	EOperation getStaff__StaffLogin__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogout() <em>Staff Logout</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#staffLogout(java.lang.String, java.lang.String) <em>Staff Logout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Staff Logout</em>' operation.
-	 * @see Classes.mdsdAdmin.Staff#staffLogout()
+	 * @see Classes.mdsdAdmin.Staff#staffLogout(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getStaff__StaffLogout();
+	EOperation getStaff__StaffLogout__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#displayRooms() <em>Display Rooms</em>}' operation.
@@ -804,6 +863,14 @@ public interface MdsdAdminPackage extends EPackage {
 		EReference ADMIN_CONTROLLER__STAFF = eINSTANCE.getAdminController_Staff();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Loggedin</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN = eINSTANCE.getAdminController__IsLoggedin__String_boolean();
+
+		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -838,6 +905,22 @@ public interface MdsdAdminPackage extends EPackage {
 		EAttribute HOTEL_STAFF__SSN = eINSTANCE.getHotelStaff_SSN();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Logged In</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HOTEL_STAFF__IS_LOGGED_IN = eINSTANCE.getHotelStaff_IsLoggedIn();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HOTEL_STAFF__PASSWORD = eINSTANCE.getHotelStaff_Password();
+
+		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.Admin <em>Admin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -869,7 +952,7 @@ public interface MdsdAdminPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADMIN___CREATE_STAFF__STRING_INT_STRING = eINSTANCE.getAdmin__CreateStaff__String_int_String();
+		EOperation ADMIN___CREATE_STAFF__STRING_INT_STRING_STRING = eINSTANCE.getAdmin__CreateStaff__String_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Staff</b></em>' operation.
@@ -929,7 +1012,7 @@ public interface MdsdAdminPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF___STAFF_LOGIN = eINSTANCE.getStaff__StaffLogin();
+		EOperation STAFF___STAFF_LOGIN__STRING_STRING = eINSTANCE.getStaff__StaffLogin__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Staff Logout</b></em>' operation.
@@ -937,7 +1020,7 @@ public interface MdsdAdminPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF___STAFF_LOGOUT = eINSTANCE.getStaff__StaffLogout();
+		EOperation STAFF___STAFF_LOGOUT__STRING_STRING = eINSTANCE.getStaff__StaffLogout__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Display Rooms</b></em>' operation.

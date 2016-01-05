@@ -191,6 +191,15 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getAdminController__IsLoggedin__String_boolean() {
+		return adminControllerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHotelStaff() {
 		return hotelStaffEClass;
 	}
@@ -227,6 +236,24 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHotelStaff_IsLoggedIn() {
+		return (EAttribute)hotelStaffEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHotelStaff_Password() {
+		return (EAttribute)hotelStaffEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAdmin() {
 		return adminEClass;
 	}
@@ -254,7 +281,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdmin__CreateStaff__String_int_String() {
+	public EOperation getAdmin__CreateStaff__String_int_String_String() {
 		return adminEClass.getEOperations().get(2);
 	}
 
@@ -317,7 +344,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaff__StaffLogin() {
+	public EOperation getStaff__StaffLogin__String_String() {
 		return staffEClass.getEOperations().get(0);
 	}
 
@@ -326,7 +353,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaff__StaffLogout() {
+	public EOperation getStaff__StaffLogout__String_String() {
 		return staffEClass.getEOperations().get(1);
 	}
 
@@ -415,16 +442,19 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		adminControllerEClass = createEClass(ADMIN_CONTROLLER);
 		createEReference(adminControllerEClass, ADMIN_CONTROLLER__ROOMS);
 		createEReference(adminControllerEClass, ADMIN_CONTROLLER__STAFF);
+		createEOperation(adminControllerEClass, ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN);
 
 		hotelStaffEClass = createEClass(HOTEL_STAFF);
 		createEAttribute(hotelStaffEClass, HOTEL_STAFF__NAME);
 		createEAttribute(hotelStaffEClass, HOTEL_STAFF__RANK);
 		createEAttribute(hotelStaffEClass, HOTEL_STAFF__SSN);
+		createEAttribute(hotelStaffEClass, HOTEL_STAFF__IS_LOGGED_IN);
+		createEAttribute(hotelStaffEClass, HOTEL_STAFF__PASSWORD);
 
 		adminEClass = createEClass(ADMIN);
 		createEOperation(adminEClass, ADMIN___ADD_ROOM__STRING_STRING_INT);
 		createEOperation(adminEClass, ADMIN___REMOVE_ROOM__INT);
-		createEOperation(adminEClass, ADMIN___CREATE_STAFF__STRING_INT_STRING);
+		createEOperation(adminEClass, ADMIN___CREATE_STAFF__STRING_INT_STRING_STRING);
 		createEOperation(adminEClass, ADMIN___REMOVE_STAFF__STRING);
 		createEOperation(adminEClass, ADMIN___MODIFY_STAFF__STRING);
 		createEOperation(adminEClass, ADMIN___DISPLAY_STAFF);
@@ -433,8 +463,8 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_PET_TYPES);
 
 		staffEClass = createEClass(STAFF);
-		createEOperation(staffEClass, STAFF___STAFF_LOGIN);
-		createEOperation(staffEClass, STAFF___STAFF_LOGOUT);
+		createEOperation(staffEClass, STAFF___STAFF_LOGIN__STRING_STRING);
+		createEOperation(staffEClass, STAFF___STAFF_LOGOUT__STRING_STRING);
 		createEOperation(staffEClass, STAFF___DISPLAY_ROOMS);
 		createEOperation(staffEClass, STAFF___CHANGE_ROOM_STATUS__STRING_INT);
 
@@ -481,14 +511,20 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		initEReference(getAdminController_Rooms(), this.getRoom(), null, "rooms", null, 0, -1, AdminController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAdminController_Staff(), this.getHotelStaff(), null, "staff", null, 0, -1, AdminController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		EOperation op = initEOperation(getAdminController__IsLoggedin__String_boolean(), null, "isLoggedin", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(hotelStaffEClass, HotelStaff.class, "HotelStaff", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHotelStaff_Name(), ecorePackage.getEString(), "Name", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotelStaff_Rank(), ecorePackage.getEInt(), "rank", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getHotelStaff_SSN(), ecorePackage.getEString(), "SSN", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHotelStaff_IsLoggedIn(), ecorePackage.getEBoolean(), "isLoggedIn", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getHotelStaff_Password(), ecorePackage.getEString(), "password", null, 1, 1, HotelStaff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(adminEClass, Admin.class, "Admin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getAdmin__AddRoom__String_String_int(), this.getRoom(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdmin__AddRoom__String_String_int(), this.getRoom(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "type", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -496,10 +532,11 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		op = initEOperation(getAdmin__RemoveRoom__int(), null, "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "number", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdmin__CreateStaff__String_int_String(), null, "createStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdmin__CreateStaff__String_int_String_String(), null, "createStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "rank", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getAdmin__RemoveStaff__String(), null, "removeStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -515,9 +552,13 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		initEClass(staffEClass, Staff.class, "Staff", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getStaff__StaffLogin(), null, "staffLogin", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaff__StaffLogin__String_String(), null, "staffLogin", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaff__StaffLogout(), null, "staffLogout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaff__StaffLogout__String_String(), null, "staffLogout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getStaff__DisplayRooms(), null, "displayRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

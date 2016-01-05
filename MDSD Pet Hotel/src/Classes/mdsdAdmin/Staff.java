@@ -18,18 +18,18 @@ public interface Staff extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model ssnRequired="true" ssnOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void staffLogin();
+	void staffLogin(String ssn, String password);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model ssnRequired="true" ssnOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void staffLogout();
+	void staffLogout(String ssn, String password);
 
 	/**
 	 * <!-- begin-user-doc -->

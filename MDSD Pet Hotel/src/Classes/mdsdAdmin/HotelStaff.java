@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Classes.mdsdAdmin.HotelStaff#getName <em>Name</em>}</li>
  *   <li>{@link Classes.mdsdAdmin.HotelStaff#getRank <em>Rank</em>}</li>
  *   <li>{@link Classes.mdsdAdmin.HotelStaff#getSSN <em>SSN</em>}</li>
+ *   <li>{@link Classes.mdsdAdmin.HotelStaff#isLoggedIn <em>Is Logged In</em>}</li>
+ *   <li>{@link Classes.mdsdAdmin.HotelStaff#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @see Classes.mdsdAdmin.MdsdAdminPackage#getHotelStaff()
@@ -100,5 +102,57 @@ public interface HotelStaff extends EObject {
 	 * @generated
 	 */
 	void setSSN(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Logged In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Logged In</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Logged In</em>' attribute.
+	 * @see #setIsLoggedIn(boolean)
+	 * @see Classes.mdsdAdmin.MdsdAdminPackage#getHotelStaff_IsLoggedIn()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isLoggedIn();
+
+	/**
+	 * Sets the value of the '{@link Classes.mdsdAdmin.HotelStaff#isLoggedIn <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Logged In</em>' attribute.
+	 * @see #isLoggedIn()
+	 * @generated
+	 */
+	void setIsLoggedIn(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Password</em>' attribute.
+	 * @see #setPassword(String)
+	 * @see Classes.mdsdAdmin.MdsdAdminPackage#getHotelStaff_Password()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getPassword();
+
+	/**
+	 * Sets the value of the '{@link Classes.mdsdAdmin.HotelStaff#getPassword <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password</em>' attribute.
+	 * @see #getPassword()
+	 * @generated
+	 */
+	void setPassword(String value);
 
 } // HotelStaff

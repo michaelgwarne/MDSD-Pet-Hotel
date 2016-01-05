@@ -1,19 +1,12 @@
 import static org.junit.Assert.*;
-import java.util.Date;
-
-import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.MdsdAdminFactory;
-import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
-import Classes.mdsdBooking.Meal;
-import Classes.mdsdBooking.Service;
 import Classes.mdsdAdmin.Room;
-import Classes.mdsdBilling.Bill;
 import Classes.mdsdBilling.BillingController;
 import Classes.mdsdBilling.MdsdBillingFactory;
 

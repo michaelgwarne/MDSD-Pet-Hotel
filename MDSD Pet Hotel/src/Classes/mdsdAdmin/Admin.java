@@ -34,10 +34,10 @@ public interface Admin extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameRequired="true" nameOrdered="false" rankRequired="true" rankOrdered="false" SSNRequired="true" SSNOrdered="false"
+	 * @model nameRequired="true" nameOrdered="false" rankRequired="true" rankOrdered="false" SSNRequired="true" SSNOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */
-	void createStaff(String name, int rank, String SSN);
+	void createStaff(String name, int rank, String SSN, String password);
 
 	/**
 	 * <!-- begin-user-doc -->

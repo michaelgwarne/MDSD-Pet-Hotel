@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Classes.mdsdAdmin.impl.HotelStaffImpl#getName <em>Name</em>}</li>
  *   <li>{@link Classes.mdsdAdmin.impl.HotelStaffImpl#getRank <em>Rank</em>}</li>
  *   <li>{@link Classes.mdsdAdmin.impl.HotelStaffImpl#getSSN <em>SSN</em>}</li>
+ *   <li>{@link Classes.mdsdAdmin.impl.HotelStaffImpl#isLoggedIn <em>Is Logged In</em>}</li>
+ *   <li>{@link Classes.mdsdAdmin.impl.HotelStaffImpl#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,46 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 	 * @ordered
 	 */
 	protected String ssn = SSN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isLoggedIn() <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLoggedIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_LOGGED_IN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isLoggedIn() <em>Is Logged In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isLoggedIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isLoggedIn = IS_LOGGED_IN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PASSWORD_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected String password = PASSWORD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +217,48 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isLoggedIn() {
+		return isLoggedIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsLoggedIn(boolean newIsLoggedIn) {
+		boolean oldIsLoggedIn = isLoggedIn;
+		isLoggedIn = newIsLoggedIn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAdminPackage.HOTEL_STAFF__IS_LOGGED_IN, oldIsLoggedIn, isLoggedIn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
+		password = newPassword;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAdminPackage.HOTEL_STAFF__PASSWORD, oldPassword, password));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +268,10 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 				return getRank();
 			case MdsdAdminPackage.HOTEL_STAFF__SSN:
 				return getSSN();
+			case MdsdAdminPackage.HOTEL_STAFF__IS_LOGGED_IN:
+				return isLoggedIn();
+			case MdsdAdminPackage.HOTEL_STAFF__PASSWORD:
+				return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +292,12 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 				return;
 			case MdsdAdminPackage.HOTEL_STAFF__SSN:
 				setSSN((String)newValue);
+				return;
+			case MdsdAdminPackage.HOTEL_STAFF__IS_LOGGED_IN:
+				setIsLoggedIn((Boolean)newValue);
+				return;
+			case MdsdAdminPackage.HOTEL_STAFF__PASSWORD:
+				setPassword((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +320,12 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 			case MdsdAdminPackage.HOTEL_STAFF__SSN:
 				setSSN(SSN_EDEFAULT);
 				return;
+			case MdsdAdminPackage.HOTEL_STAFF__IS_LOGGED_IN:
+				setIsLoggedIn(IS_LOGGED_IN_EDEFAULT);
+				return;
+			case MdsdAdminPackage.HOTEL_STAFF__PASSWORD:
+				setPassword(PASSWORD_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +344,10 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 				return rank != RANK_EDEFAULT;
 			case MdsdAdminPackage.HOTEL_STAFF__SSN:
 				return SSN_EDEFAULT == null ? ssn != null : !SSN_EDEFAULT.equals(ssn);
+			case MdsdAdminPackage.HOTEL_STAFF__IS_LOGGED_IN:
+				return isLoggedIn != IS_LOGGED_IN_EDEFAULT;
+			case MdsdAdminPackage.HOTEL_STAFF__PASSWORD:
+				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,6 +368,10 @@ public class HotelStaffImpl extends MinimalEObjectImpl.Container implements Hote
 		result.append(rank);
 		result.append(", SSN: ");
 		result.append(ssn);
+		result.append(", isLoggedIn: ");
+		result.append(isLoggedIn);
+		result.append(", password: ");
+		result.append(password);
 		result.append(')');
 		return result.toString();
 	}

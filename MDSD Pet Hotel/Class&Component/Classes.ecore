@@ -156,6 +156,10 @@
   </eSubpackages>
   <eSubpackages name="mdsdAdmin" nsURI="http:///Classes/mdsdAdmin.ecore" nsPrefix="Classes.mdsdAdmin">
     <eClassifiers xsi:type="ecore:EClass" name="AdminController" eSuperTypes="#//mdsdAdmin/Admin #//mdsdAdmin/BookingToAdmin #//mdsdAdmin/Staff">
+      <eOperations name="isLoggedin" ordered="false" lowerBound="1">
+        <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="isLoggedIn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" ordered="false"
           upperBound="-1" eType="#//mdsdAdmin/Room" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="staff" ordered="false"
@@ -167,6 +171,10 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="rank" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="SSN" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLoggedIn" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Admin" abstract="true" interface="true">
@@ -182,6 +190,7 @@
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="rank" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         <eParameters name="SSN" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
       <eOperations name="removeStaff" ordered="false" lowerBound="1">
         <eParameters name="SSN" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -195,8 +204,14 @@
       <eOperations name="getPetTypes" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Staff" abstract="true" interface="true">
-      <eOperations name="staffLogin" ordered="false" lowerBound="1"/>
-      <eOperations name="staffLogout" ordered="false" lowerBound="1"/>
+      <eOperations name="staffLogin" ordered="false" lowerBound="1">
+        <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="staffLogout" ordered="false" lowerBound="1">
+        <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
       <eOperations name="displayRooms" ordered="false" lowerBound="1"/>
       <eOperations name="changeRoomStatus" ordered="false" lowerBound="1">
         <eParameters name="status" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

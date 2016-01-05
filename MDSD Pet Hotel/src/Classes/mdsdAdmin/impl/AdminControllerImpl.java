@@ -142,13 +142,13 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createStaff(String name, int rank, String SSN) {
+	public void createStaff(String name, int rank, String SSN, String password) {
 		// TODO: test and test for existing ssn
-		HotelStaff staff = MdsdAdminFactory.eINSTANCE.createHotelStaff();
-		staff.setName(name);
-		staff.setRank(rank);
-		staff.setSSN(SSN);
-		getStaff().add(staff);
+				HotelStaff staff = MdsdAdminFactory.eINSTANCE.createHotelStaff();
+				staff.setName(name);
+				staff.setRank(rank);
+				staff.setSSN(SSN);
+				getStaff().add(staff);
 	}
 
 	/**
@@ -206,6 +206,28 @@ EList<String> petTypes = new BasicEList<String>();
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void staffLogin(String ssn, String password) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void staffLogout(String ssn, String password) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EList<Room> getAvailableRooms() {
@@ -216,28 +238,6 @@ EList<String> petTypes = new BasicEList<String>();
 			}
 		}
 		return available;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void staffLogin() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void staffLogout() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -263,6 +263,17 @@ EList<String> petTypes = new BasicEList<String>();
 				break;
 			}
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void isLoggedin(String ssn, boolean isLoggedIn) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -367,8 +378,8 @@ EList<String> petTypes = new BasicEList<String>();
 		}
 		if (baseClass == Staff.class) {
 			switch (baseOperationID) {
-				case MdsdAdminPackage.STAFF___STAFF_LOGIN: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN;
-				case MdsdAdminPackage.STAFF___STAFF_LOGOUT: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT;
+				case MdsdAdminPackage.STAFF___STAFF_LOGIN__STRING_STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING;
+				case MdsdAdminPackage.STAFF___STAFF_LOGOUT__STRING_STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING;
 				case MdsdAdminPackage.STAFF___DISPLAY_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS;
 				case MdsdAdminPackage.STAFF___CHANGE_ROOM_STATUS__STRING_INT: return MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT;
 				default: return -1;
@@ -390,8 +401,8 @@ EList<String> petTypes = new BasicEList<String>();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___REMOVE_ROOM__INT:
 				removeRoom((Integer)arguments.get(0));
 				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___CREATE_STAFF__STRING_INT_STRING:
-				createStaff((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
+			case MdsdAdminPackage.ADMIN_CONTROLLER___CREATE_STAFF__STRING_INT_STRING_STRING:
+				createStaff((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___REMOVE_STAFF__STRING:
 				removeStaff((String)arguments.get(0));
@@ -404,17 +415,20 @@ EList<String> petTypes = new BasicEList<String>();
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES:
 				return getPetTypes();
-			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN:
-				staffLogin();
+			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING:
+				staffLogin((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT:
-				staffLogout();
+			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING_STRING:
+				staffLogout((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS:
 				displayRooms();
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT:
 				changeRoomStatus((String)arguments.get(0), (Integer)arguments.get(1));
+				return null;
+			case MdsdAdminPackage.ADMIN_CONTROLLER___IS_LOGGEDIN__STRING_BOOLEAN:
+				isLoggedin((String)arguments.get(0), (Boolean)arguments.get(1));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

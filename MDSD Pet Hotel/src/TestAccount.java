@@ -1,13 +1,11 @@
 import static org.junit.Assert.*;
 
-import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 
 import Classes.mdsdAccount.Account;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAccount.Pet;
-import Classes.mdsdAccount.impl.PetImpl;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdBooking.BookingController;

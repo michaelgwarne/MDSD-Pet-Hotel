@@ -174,11 +174,17 @@
             createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAdmin/AdminController/rooms"/>
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAdmin/AdminController/staff"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/AdminController/isLoggedin">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/AdminController/isLoggedin/ssn"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/AdminController/isLoggedin/isLoggedIn"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAdmin/HotelStaff">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/HotelStaff/Name"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/HotelStaff/rank"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/HotelStaff/SSN"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/HotelStaff/isLoggedIn"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAdmin/HotelStaff/password"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/Admin">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Admin/addRoom">
@@ -193,6 +199,7 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Admin/createStaff/name"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Admin/createStaff/rank"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Admin/createStaff/SSN"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Admin/createStaff/password"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Admin/removeStaff">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Admin/removeStaff/SSN"/>
@@ -206,8 +213,14 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/BookingToAdmin/getPetTypes"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Classes.ecore#//mdsdAdmin/Staff">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogin"/>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogout"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogin">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/staffLogin/ssn"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/staffLogin/password"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/staffLogout">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/staffLogout/ssn"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/staffLogout/password"/>
+        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/displayRooms"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAdmin/Staff/changeRoomStatus/status"/>
