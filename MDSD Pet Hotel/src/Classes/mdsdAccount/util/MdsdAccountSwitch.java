@@ -90,12 +90,6 @@ public class MdsdAccountSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MdsdAccountPackage.CUSTOMER: {
-				Customer customer = (Customer)theEObject;
-				T result = caseCustomer(customer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER: {
 				AccountController accountController = (AccountController)theEObject;
 				T result = caseAccountController(accountController);
@@ -165,21 +159,6 @@ public class MdsdAccountSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCustomerAccount(CustomerAccount object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Customer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Customer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCustomer(Customer object) {
 		return null;
 	}
 

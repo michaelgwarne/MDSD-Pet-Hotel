@@ -4,13 +4,8 @@ package Classes.mdsdAccount.impl;
 
 import Classes.mdsdAccount.Account;
 import Classes.mdsdAccount.AccountController;
-import Classes.mdsdAccount.Customer;
 import Classes.mdsdAccount.CustomerAccount;
-import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAccount.MdsdAccountPackage;
-import Classes.mdsdAccount.Pet;
-
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -35,22 +30,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Classes.mdsdAccount.impl.AccountControllerImpl#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountControllerImpl#getAccounts <em>Accounts</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AccountControllerImpl extends MinimalEObjectImpl.Container implements AccountController {
 	/**
-	 * The cached value of the '{@link #getCustomers() <em>Customers</em>}' containment reference list.
+	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCustomers()
+	 * @see #getAccounts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Customer> customers;
-
+	protected EList<Account> accounts;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,13 +69,12 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Customer> getCustomers() {
-		if (customers == null) {
-			customers = new EObjectContainmentEList<Customer>(Customer.class, this, MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS);
+	public EList<Account> getAccounts() {
+		if (accounts == null) {
+			accounts = new EObjectContainmentEList<Account>(Account.class, this, MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS);
 		}
-		return customers;
+		return accounts;
 	}
-	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,42 +82,20 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public Account getAccount(String email) {
-		for (Customer customer : customers) {	
-			if(customer.getEmail().equalsIgnoreCase(email)) {
-				return customer.getAccount();
-				
-			}
-			
-			}
-			
-			
-		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public Account createAccount(String customerName, String customerEmail, String password) {
-		// TODO: test
-		for(Customer customer : getCustomers()){
-			if(customer.getEmail().equalsIgnoreCase(customerEmail)){
-				return null;
-			}
-		}
-		Customer newCustomer = MdsdAccountFactory.eINSTANCE.createCustomer();
-		Account account = MdsdAccountFactory.eINSTANCE.createAccount();
-		account.setAccountID(customerEmail);
-		account.setPassword(password);
-		newCustomer.setEmail(customerEmail);
-		newCustomer.setName(customerName);
-		newCustomer.setAccount(account);
-		getCustomers().add(newCustomer);
-		return account;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -141,20 +112,9 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return 
 	 * @generated
 	 */
 	public void login(String email, String password) {
-		for (Customer customer : customers) {	
-			if(customer.getEmail() == password){
-				customer.isLogin(true);
-				customer.isLogin(false);
-				System.out.println(customer);
-		
-			}
-		
-		}
-		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -185,19 +145,12 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public void addPet(String name, String type, String accountID) {
-		// TODO: test
-		for(Customer customer : getCustomers()){
-			if(customer.getAccount().getAccountID().equalsIgnoreCase(accountID)){
-				Pet pet = MdsdAccountFactory.eINSTANCE.createPet();
-				pet.setName(name);
-				pet.setType(type);
-				customer.getAccount().getPets().add(pet);
-				break;
-			}
-		}	
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -219,8 +172,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
-				return ((InternalEList<?>)getCustomers()).basicRemove(otherEnd, msgs);
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS:
+				return ((InternalEList<?>)getAccounts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -233,8 +186,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
-				return getCustomers();
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS:
+				return getAccounts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,9 +201,9 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
-				getCustomers().clear();
-				getCustomers().addAll((Collection<? extends Customer>)newValue);
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS:
+				getAccounts().clear();
+				getAccounts().addAll((Collection<? extends Account>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -264,8 +217,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
-				getCustomers().clear();
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS:
+				getAccounts().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -279,8 +232,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER__CUSTOMERS:
-				return customers != null && !customers.isEmpty();
+			case MdsdAccountPackage.ACCOUNT_CONTROLLER__ACCOUNTS:
+				return accounts != null && !accounts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

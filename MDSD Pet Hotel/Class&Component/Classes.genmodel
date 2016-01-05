@@ -232,6 +232,8 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/Account/pets"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/password"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/name"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Account/email"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Pet">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Pet/name"/>
@@ -263,15 +265,9 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/removePet/accountID"/>
         </genOperations>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/Customer">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Customer/name"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Classes.ecore#//mdsdAccount/Customer/email"/>
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/Customer/account"/>
-      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="Classes.ecore#//mdsdAccount/AccountController">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-            createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/AccountController/customers"/>
+            createChild="true" ecoreFeature="ecore:EReference Classes.ecore#//mdsdAccount/AccountController/accounts"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

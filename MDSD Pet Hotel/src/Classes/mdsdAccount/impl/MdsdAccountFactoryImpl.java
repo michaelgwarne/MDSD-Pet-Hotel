@@ -58,7 +58,6 @@ public class MdsdAccountFactoryImpl extends EFactoryImpl implements MdsdAccountF
 		switch (eClass.getClassifierID()) {
 			case MdsdAccountPackage.ACCOUNT: return createAccount();
 			case MdsdAccountPackage.PET: return createPet();
-			case MdsdAccountPackage.CUSTOMER: return createCustomer();
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER: return createAccountController();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -83,16 +82,6 @@ public class MdsdAccountFactoryImpl extends EFactoryImpl implements MdsdAccountF
 	public Pet createPet() {
 		PetImpl pet = new PetImpl();
 		return pet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Customer createCustomer() {
-		CustomerImpl customer = new CustomerImpl();
-		return customer;
 	}
 
 	/**

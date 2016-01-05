@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getAccountID <em>Account ID</em>}</li>
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getPets <em>Pets</em>}</li>
  *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getPassword <em>Password</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.impl.AccountImpl#getEmail <em>Email</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,6 +86,46 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 * @ordered
 	 */
 	protected String password = PASSWORD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String email = EMAIL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,6 +205,48 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.ACCOUNT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmail(String newEmail) {
+		String oldEmail = email;
+		email = newEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdsdAccountPackage.ACCOUNT__EMAIL, oldEmail, email));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -172,6 +256,10 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 				return getPets();
 			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				return getPassword();
+			case MdsdAccountPackage.ACCOUNT__NAME:
+				return getName();
+			case MdsdAccountPackage.ACCOUNT__EMAIL:
+				return getEmail();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,6 +283,12 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				setPassword((String)newValue);
 				return;
+			case MdsdAccountPackage.ACCOUNT__NAME:
+				setName((String)newValue);
+				return;
+			case MdsdAccountPackage.ACCOUNT__EMAIL:
+				setEmail((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -216,6 +310,12 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				setPassword(PASSWORD_EDEFAULT);
 				return;
+			case MdsdAccountPackage.ACCOUNT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case MdsdAccountPackage.ACCOUNT__EMAIL:
+				setEmail(EMAIL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -234,6 +334,10 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 				return pets != null && !pets.isEmpty();
 			case MdsdAccountPackage.ACCOUNT__PASSWORD:
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
+			case MdsdAccountPackage.ACCOUNT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MdsdAccountPackage.ACCOUNT__EMAIL:
+				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -252,6 +356,10 @@ public class AccountImpl extends MinimalEObjectImpl.Container implements Account
 		result.append(accountID);
 		result.append(", password: ");
 		result.append(password);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", email: ");
+		result.append(email);
 		result.append(')');
 		return result.toString();
 	}

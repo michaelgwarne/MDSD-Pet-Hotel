@@ -40,15 +40,6 @@ public interface MdsdAccountFactory extends EFactory {
 	Pet createPet();
 
 	/**
-	 * Returns a new object of class '<em>Customer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Customer</em>'.
-	 * @generated
-	 */
-	Customer createCustomer();
-
-	/**
 	 * Returns a new object of class '<em>Account Controller</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

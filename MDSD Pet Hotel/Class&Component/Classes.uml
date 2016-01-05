@@ -376,15 +376,12 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="__lWJ8KMuEeWIRLH1N9vj0g" name="password" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_rm5Q4JpOEeWLCKBfwJdwbg" name="Customer" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XSPUoJ8fEeWpe80voGitgg" name="name" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_uoUQ8J8kEeWpe80voGitgg" name="email" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_itVDoJ86EeWL64ohW47Y2g" name="account" type="_qVfTYJpOEeWLCKBfwJdwbg" association="_itUckJ86EeWL64ohW47Y2g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_s1ubgJpOEeWLCKBfwJdwbg" name="Pet" visibility="private">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_fxr6QJ8sEeWpe80voGitgg" name="name" visibility="private">
@@ -395,9 +392,10 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_vNs_gJpOEeWLCKBfwJdwbg" name="AccountController">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_X4z7sZpZEeWLCKBfwJdwbg" name="customers" type="_rm5Q4JpOEeWLCKBfwJdwbg" aggregation="composite" association="_X4ytkJpZEeWLCKBfwJdwbg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ym7l8JpZEeWLCKBfwJdwbg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ym80EJpZEeWLCKBfwJdwbg" value="*"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nlKIoLObEeWx0_KkkojO6A" name="accounts" type="_qVfTYJpOEeWLCKBfwJdwbg" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uEp7oLObEeWx0_KkkojO6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uEwCQLObEeWx0_KkkojO6A" value="*"/>
+        <association xmi:type="uml:Association" href="hotelClassDiagram.uml#_nlCM0LObEeWx0_KkkojO6A"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_P_1LUJwcEeWi2qAbhE6tPg" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_JINMMJwcEeWi2qAbhE6tPg" contract="_JINMMJwcEeWi2qAbhE6tPg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zHqW4J5wEeWeFMYy3D4EwQ" client="_vNs_gJpOEeWLCKBfwJdwbg" supplier="_qc93oJ5wEeWeFMYy3D4EwQ" contract="_qc93oJ5wEeWeFMYy3D4EwQ"/>
@@ -407,18 +405,6 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ykv-QKMqEeWIRLH1N9vj0g" key="nature" value="UML_Nature"/>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_ykxzcKMqEeWIRLH1N9vj0g" name="account" type="_qVfTYJpOEeWLCKBfwJdwbg" association="_yktiAKMqEeWIRLH1N9vj0g"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_X4ytkJpZEeWLCKBfwJdwbg" memberEnd="_X4z7sZpZEeWLCKBfwJdwbg _X40iwJpZEeWLCKBfwJdwbg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X4zUoJpZEeWLCKBfwJdwbg" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_X4z7sJpZEeWLCKBfwJdwbg" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_X40iwJpZEeWLCKBfwJdwbg" type="_vNs_gJpOEeWLCKBfwJdwbg" association="_X4ytkJpZEeWLCKBfwJdwbg"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_itUckJ86EeWL64ohW47Y2g" memberEnd="_itVDoJ86EeWL64ohW47Y2g _itVDoZ86EeWL64ohW47Y2g">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_itUckZ86EeWL64ohW47Y2g" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_itUckp86EeWL64ohW47Y2g" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_itVDoZ86EeWL64ohW47Y2g" name="customer" type="_rm5Q4JpOEeWLCKBfwJdwbg" association="_itUckJ86EeWL64ohW47Y2g"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_ManmsJ5iEeWeFMYy3D4EwQ" name="mdsdAdmin">

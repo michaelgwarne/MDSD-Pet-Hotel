@@ -84,10 +84,6 @@ public class MdsdAccountAdapterFactory extends AdapterFactoryImpl {
 				return createCustomerAccountAdapter();
 			}
 			@Override
-			public Adapter caseCustomer(Customer object) {
-				return createCustomerAdapter();
-			}
-			@Override
 			public Adapter caseAccountController(AccountController object) {
 				return createAccountControllerAdapter();
 			}
@@ -164,20 +160,6 @@ public class MdsdAccountAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCustomerAccountAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Classes.mdsdAccount.Customer <em>Customer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Classes.mdsdAccount.Customer
-	 * @generated
-	 */
-	public Adapter createCustomerAdapter() {
 		return null;
 	}
 

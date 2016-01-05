@@ -226,6 +226,10 @@
           upperBound="-1" eType="#//mdsdAccount/Pet"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Pet">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -259,17 +263,9 @@
         <eParameters name="accountID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Customer">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="account" ordered="false"
-          lowerBound="1" eType="#//mdsdAccount/Account"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AccountController" eSuperTypes="#//mdsdAccount/BookingToAccount #//mdsdAccount/CustomerAccount">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="customers" ordered="false"
-          upperBound="-1" eType="#//mdsdAccount/Customer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="accounts" ordered="false"
+          upperBound="-1" eType="#//mdsdAccount/Account" containment="true"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -132,13 +132,31 @@ public interface MdsdAccountPackage extends EPackage {
 	int ACCOUNT__PASSWORD = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__EMAIL = 4;
+
+	/**
 	 * The number of structural features of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_FEATURE_COUNT = 3;
+	int ACCOUNT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Account</em>' class.
@@ -287,61 +305,6 @@ public interface MdsdAccountPackage extends EPackage {
 	int CUSTOMER_ACCOUNT_OPERATION_COUNT = 7;
 
 	/**
-	 * The meta object id for the '{@link Classes.mdsdAccount.impl.CustomerImpl <em>Customer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Classes.mdsdAccount.impl.CustomerImpl
-	 * @see Classes.mdsdAccount.impl.MdsdAccountPackageImpl#getCustomer()
-	 * @generated
-	 */
-	int CUSTOMER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER__EMAIL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Account</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER__ACCOUNT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Customer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Customer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link Classes.mdsdAccount.impl.AccountControllerImpl <em>Account Controller</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,16 +312,16 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @see Classes.mdsdAccount.impl.MdsdAccountPackageImpl#getAccountController()
 	 * @generated
 	 */
-	int ACCOUNT_CONTROLLER = 5;
+	int ACCOUNT_CONTROLLER = 4;
 
 	/**
-	 * The feature id for the '<em><b>Customers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Accounts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER__CUSTOMERS = BOOKING_TO_ACCOUNT_FEATURE_COUNT + 0;
+	int ACCOUNT_CONTROLLER__ACCOUNTS = BOOKING_TO_ACCOUNT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Account Controller</em>' class.
@@ -515,6 +478,28 @@ public interface MdsdAccountPackage extends EPackage {
 	EAttribute getAccount_Password();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Classes.mdsdAccount.Account#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see Classes.mdsdAccount.Account#getName()
+	 * @see #getAccount()
+	 * @generated
+	 */
+	EAttribute getAccount_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Classes.mdsdAccount.Account#getEmail <em>Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email</em>'.
+	 * @see Classes.mdsdAccount.Account#getEmail()
+	 * @see #getAccount()
+	 * @generated
+	 */
+	EAttribute getAccount_Email();
+
+	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAccount.Pet <em>Pet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -627,49 +612,6 @@ public interface MdsdAccountPackage extends EPackage {
 	EOperation getCustomerAccount__RemovePet__String_String_String();
 
 	/**
-	 * Returns the meta object for class '{@link Classes.mdsdAccount.Customer <em>Customer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Customer</em>'.
-	 * @see Classes.mdsdAccount.Customer
-	 * @generated
-	 */
-	EClass getCustomer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Classes.mdsdAccount.Customer#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see Classes.mdsdAccount.Customer#getName()
-	 * @see #getCustomer()
-	 * @generated
-	 */
-	EAttribute getCustomer_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Classes.mdsdAccount.Customer#getEmail <em>Email</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see Classes.mdsdAccount.Customer#getEmail()
-	 * @see #getCustomer()
-	 * @generated
-	 */
-	EAttribute getCustomer_Email();
-
-	/**
-	 * Returns the meta object for the reference '{@link Classes.mdsdAccount.Customer#getAccount <em>Account</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Account</em>'.
-	 * @see Classes.mdsdAccount.Customer#getAccount()
-	 * @see #getCustomer()
-	 * @generated
-	 */
-	EReference getCustomer_Account();
-
-	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAccount.AccountController <em>Account Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -680,15 +622,15 @@ public interface MdsdAccountPackage extends EPackage {
 	EClass getAccountController();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link Classes.mdsdAccount.AccountController#getCustomers <em>Customers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Classes.mdsdAccount.AccountController#getAccounts <em>Accounts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Customers</em>'.
-	 * @see Classes.mdsdAccount.AccountController#getCustomers()
+	 * @return the meta object for the containment reference list '<em>Accounts</em>'.
+	 * @see Classes.mdsdAccount.AccountController#getAccounts()
 	 * @see #getAccountController()
 	 * @generated
 	 */
-	EReference getAccountController_Customers();
+	EReference getAccountController_Accounts();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -764,6 +706,22 @@ public interface MdsdAccountPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCOUNT__PASSWORD = eINSTANCE.getAccount_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCOUNT__NAME = eINSTANCE.getAccount_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCOUNT__EMAIL = eINSTANCE.getAccount_Email();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.PetImpl <em>Pet</em>}' class.
@@ -858,40 +816,6 @@ public interface MdsdAccountPackage extends EPackage {
 		EOperation CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = eINSTANCE.getCustomerAccount__RemovePet__String_String_String();
 
 		/**
-		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.CustomerImpl <em>Customer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Classes.mdsdAccount.impl.CustomerImpl
-		 * @see Classes.mdsdAccount.impl.MdsdAccountPackageImpl#getCustomer()
-		 * @generated
-		 */
-		EClass CUSTOMER = eINSTANCE.getCustomer();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER__NAME = eINSTANCE.getCustomer_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOMER__EMAIL = eINSTANCE.getCustomer_Email();
-
-		/**
-		 * The meta object literal for the '<em><b>Account</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CUSTOMER__ACCOUNT = eINSTANCE.getCustomer_Account();
-
-		/**
 		 * The meta object literal for the '{@link Classes.mdsdAccount.impl.AccountControllerImpl <em>Account Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -902,12 +826,12 @@ public interface MdsdAccountPackage extends EPackage {
 		EClass ACCOUNT_CONTROLLER = eINSTANCE.getAccountController();
 
 		/**
-		 * The meta object literal for the '<em><b>Customers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Accounts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACCOUNT_CONTROLLER__CUSTOMERS = eINSTANCE.getAccountController_Customers();
+		EReference ACCOUNT_CONTROLLER__ACCOUNTS = eINSTANCE.getAccountController_Accounts();
 
 	}
 

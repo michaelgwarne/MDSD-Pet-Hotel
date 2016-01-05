@@ -151,6 +151,16 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_1oilkKCcEeWaI6KzS8ImYA" client="_HDG_cKAjEeWHMJcENrG5zw" supplier="_fyuI0KCcEeWaI6KzS8ImYA"/>
     </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_nlCM0LObEeWx0_KkkojO6A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nlGeQLObEeWx0_KkkojO6A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nlHFULObEeWx0_KkkojO6A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <memberEnd xmi:type="uml:Property" href="Classes.uml#_nlKIoLObEeWx0_KkkojO6A"/>
+    <memberEnd xmi:type="uml:Property" href="#_nlKvsLObEeWx0_KkkojO6A"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nlKvsLObEeWx0_KkkojO6A" name="accountcontroller" association="_nlCM0LObEeWx0_KkkojO6A">
+      <type xmi:type="uml:Class" href="Classes.uml#_vNs_gJpOEeWLCKBfwJdwbg"/>
+    </ownedEnd>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CfhOcJpPEeWLCKBfwJdwbg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CfickJpPEeWLCKBfwJdwbg" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Classes.mdsdAccount.AccountController#getCustomers <em>Customers</em>}</li>
+ *   <li>{@link Classes.mdsdAccount.AccountController#getAccounts <em>Accounts</em>}</li>
  * </ul>
  *
  * @see Classes.mdsdAccount.MdsdAccountPackage#getAccountController()
@@ -22,20 +22,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface AccountController extends BookingToAccount, CustomerAccount {
 	/**
-	 * Returns the value of the '<em><b>Customers</b></em>' containment reference list.
-	 * The list contents are of type {@link Classes.mdsdAccount.Customer}.
+	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference list.
+	 * The list contents are of type {@link Classes.mdsdAccount.Account}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Customers</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Accounts</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customers</em>' containment reference list.
-	 * @see Classes.mdsdAccount.MdsdAccountPackage#getAccountController_Customers()
+	 * @return the value of the '<em>Accounts</em>' containment reference list.
+	 * @see Classes.mdsdAccount.MdsdAccountPackage#getAccountController_Accounts()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<Customer> getCustomers();
+	EList<Account> getAccounts();
 	
 
 } // AccountController
