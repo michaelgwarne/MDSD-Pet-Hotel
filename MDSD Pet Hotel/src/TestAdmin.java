@@ -3,6 +3,7 @@ import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
 import Classes.mdsdAdmin.AdminController;
+import Classes.mdsdAdmin.HotelStaff;
 import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
@@ -39,6 +40,34 @@ public class TestAdmin {
 		
 		int room = admin.getRooms().size();
 		assertEquals(0, room);
+		
+	}
+	
+	@Test
+	public void testCreatStaff() {
+		//Add a staff
+		admin.createStaff("Regine Aquino", 0, "444555", "abc");
+		
+		//check the staff is added
+		HotelStaff staff = admin.getStaff().get(0);
+		assertNotNull(staff);
+		
+		//create duplicate staff
+		HotelStaff staff2 = admin.createStaff("Regine Aquino", 0, "444555", "abc");
+		assertNull(staff2);
+	}
+	
+	@Test
+	public void testRemoveStaff() {
+		//Add a staff
+		admin.createStaff("Regine Aquino", 0, "444555", "abc");
+		//Remove staff
+		admin.removeStaff("444555");
+		
+		//check staff is removed successfully
+		int staff = admin.getStaff().size();
+		assertEquals(0, staff);
+		
 		
 	}
 }
