@@ -186,7 +186,7 @@
       <eOperations name="removeRoom" ordered="false" lowerBound="1">
         <eParameters name="number" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="createStaff" ordered="false" lowerBound="1">
+      <eOperations name="createStaff" ordered="false" lowerBound="1" eType="#//mdsdAdmin/HotelStaff">
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="rank" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
         <eParameters name="SSN" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

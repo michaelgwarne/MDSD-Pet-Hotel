@@ -97,12 +97,16 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isUserLoggedIn(String accountId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+				for(Account account : getAccounts()){
+					if(account.getAccountID().equalsIgnoreCase(accountId)){
+						return account.isLoggedIn();
+					}
+				}
+				return false;
 	}
 
 	/**
@@ -156,12 +160,16 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void logout(String accountId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: test
+				for(Account account : getAccounts()){
+					if(account.getAccountID().equalsIgnoreCase(accountId) ){
+						account.setIsLoggedIn(false);
+						break;
+					}
+				}
 	}
 
 	/**

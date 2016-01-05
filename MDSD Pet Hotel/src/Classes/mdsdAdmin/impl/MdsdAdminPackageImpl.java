@@ -532,7 +532,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		op = initEOperation(getAdmin__RemoveRoom__int(), null, "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "number", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdmin__CreateStaff__String_int_String_String(), null, "createStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdmin__CreateStaff__String_int_String_String(), this.getHotelStaff(), "createStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "rank", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSN", 1, 1, IS_UNIQUE, !IS_ORDERED);

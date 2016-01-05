@@ -142,13 +142,19 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void createStaff(String name, int rank, String SSN, String password) {
-		// TODO: test and test for existing ssn
-				HotelStaff staff = MdsdAdminFactory.eINSTANCE.createHotelStaff();
-				staff.setName(name);
-				staff.setRank(rank);
-				staff.setSSN(SSN);
-				getStaff().add(staff);
+	public HotelStaff createStaff(String name, int rank, String SSN, String password) {
+		// TODO: test
+		for(HotelStaff testStaff : getStaff()){
+			if(testStaff.getSSN().equalsIgnoreCase(SSN)){
+				return null;
+			}
+		}
+		HotelStaff staff = MdsdAdminFactory.eINSTANCE.createHotelStaff();
+		staff.setName(name);
+		staff.setRank(rank);
+		staff.setSSN(SSN);
+		getStaff().add(staff);
+		return staff;
 	}
 
 	/**
@@ -402,8 +408,7 @@ EList<String> petTypes = new BasicEList<String>();
 				removeRoom((Integer)arguments.get(0));
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___CREATE_STAFF__STRING_INT_STRING_STRING:
-				createStaff((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return createStaff((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MdsdAdminPackage.ADMIN_CONTROLLER___REMOVE_STAFF__STRING:
 				removeStaff((String)arguments.get(0));
 				return null;

@@ -486,6 +486,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_CwHhcLPFEeWDPec7V3mWXQ" name="password">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BGs3ILPGEeWDPec7V3mWXQ" name="staff" type="_fzUO0J5kEeWeFMYy3D4EwQ" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_L0n2UJ5lEeWeFMYy3D4EwQ" name="removeStaff">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zYKj4J8nEeWpe80voGitgg" name="SSN">
