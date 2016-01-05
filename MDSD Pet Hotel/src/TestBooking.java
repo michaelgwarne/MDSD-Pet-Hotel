@@ -182,9 +182,13 @@ public class TestBooking {
 				status = room.getStatus();
 				assertEquals("booked", status);
 				break;
-			}
-		}
+			}else{
+				status = room.getStatus();
+				assertEquals("available", status);
+				} 
 
+		}
+		
 	}
 
 	@Test
@@ -301,6 +305,7 @@ public class TestBooking {
 		}
 		
 	}
+	
 	
 	@Test
 	
