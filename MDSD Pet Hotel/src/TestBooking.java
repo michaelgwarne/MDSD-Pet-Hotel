@@ -33,21 +33,6 @@ public class TestBooking {
 	Date pastDate = new Date(System.currentTimeMillis() - week);
 
 	
-
-	
-	
-	@Test
-	//test: a room is added successfully
-	public void testAddRoom() {
-		
-		//add a room to the hotel
-		admin.addRoom("horse","available", 1);
-		
-		//check the room is added
-		EList<Room> room = admin.getRooms();
-		assertNotNull(room);
-		
-	}
 	@Test
 	//test: add rooms with duplicate number
 	public void testAddDuplicateRooms(){
