@@ -291,8 +291,6 @@ public class TestBooking {
 		//check Elora in to the hotel
 		booker.checkIn(booking.getBookingId(), admin.getRooms());
 
-		
-		// TO DO:
 		//check for the bill is paid
 		EList<Bill> bills = billCtrl.getBills();
 		for(Bill bill:bills){
@@ -328,11 +326,9 @@ public class TestBooking {
 							break;
 						}
 					}
-				}
+				} break;
 			}
 		}
-
-		
 		
 	}
 	
@@ -341,15 +337,22 @@ public class TestBooking {
 	
 	public void testCancelBooking() {
 		//add a room and a booking 
+		boolean b = false;
 		 admin.addRoom("dog", "available", 1);
 		 Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
 		 booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
-
-		String bookingId = booking.getBookingId();
+		
+		 String bookingId = booking.getBookingId();
 		//cancel booking
 		 booker.cancelBooking(bookingId);
-		 
-		 assertNull(booking);
+		 for(Booking book : booker.getBookings()){
+			 if(book.getBookingId().equalsIgnoreCase(bookingId)){
+				 b = true; 
+				 break;
+			 }
+		 }
+		 assertFalse(b);
+		
 		 
 	}
 	
