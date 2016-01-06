@@ -1,6 +1,8 @@
 package PetHotelTest;
 import static org.junit.Assert.*;
 import java.util.Date;
+
+import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.MdsdAdminFactory;
@@ -20,6 +22,7 @@ public class TestBilling {
 
 	Date d1 = new Date(System.currentTimeMillis() + week);
 	Date d2 = new Date(System.currentTimeMillis() + (3*week));
+	
 
 	@Test
 	public void TestAddNewTransaction(){
@@ -107,7 +110,7 @@ public class TestBilling {
 	}
 
 	@Test
-	public void TestDisplayBooking(){
+	public void TestDisplayBilling(){
 
 		//add rooms
 		admin.addRoom("cat", "available", 1);

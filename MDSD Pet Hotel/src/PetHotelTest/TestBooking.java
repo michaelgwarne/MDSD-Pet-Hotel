@@ -203,9 +203,7 @@ public class TestBooking {
 		// Enter service
 		booker.enterService(spa, booking.getBookingId());
 
-		assertNotNull(booking.getBookedServices()); // This does not work, you
-													// can't get null back from
-													// this method
+		assertNotNull(booking.getBookedServices().get(0)); 
 	}
 
 	@Test
@@ -245,33 +243,34 @@ public class TestBooking {
 		// check Elora in to the hotel
 		booker.checkIn(booking.getBookingId(), admin.getRooms());
 
-		// check for the bill is paid
-		// Bill bill = billCtrl.getBills(); // There are no bills to check
-		Bill bill = MdsdBillingFactory.eINSTANCE.createBill();
+		// add bill check for the bill is paid
+		billCtrl.addTransaction("For Elora room", 5000, booking);
+		Bill bill = billCtrl.displayBill(booking.getBill_Id()); // There are no bills to check
+		
+		// check out with bill is not paid yet
+		bill.setIsPaid(false);
+			
+		// check Elora out from the hotel.
+		booker.checkOut(booking.getBookingId(), admin.getRooms());
 
-		if (bill.isPaid()) { // no bills to check means this will always be
-								// false
-			// check Elora out from the hotel.
-			booker.checkOut(booking.getBookingId(), admin.getRooms());
+		// test isCheckIn is true and isCheckOut is false
+		assertEquals(true, booking.isCheckedIn()); //This fail
+		assertEquals(false, booking.isCheckedOut());// This fail
 
-			// test isCheckIn is false and isCheckOut is true
-			assertEquals(false, booking.isCheckedIn());
-			assertEquals(true, booking.isCheckedOut());
+		//test the room status is changed to occupied
+		Room room = admin.getRooms().get(booking.getRoomNumber() - 1);
+		assertEquals("occupied", room.getStatus()); // This fail
+		
+		//Then pay bill and check out
+		bill.setIsPaid(true);;
+		// test isCheckIn is false and isCheckOut is true
+		assertEquals(false, booking.isCheckedIn());
+		assertEquals(true, booking.isCheckedOut());
+		// test the room status is changed to dirty
+		Room roomDirty = admin.getRooms().get(booking.getRoomNumber() - 1);
 
-			// test the room status is changed to dirty
-			Room room = admin.getRooms().get(booking.getRoomNumber() - 1);
-
-			assertEquals("dirty", room.getStatus());
-		} else {
-			// test isCheckIn is false and isCheckOut is true
-			assertEquals(true, booking.isCheckedIn());
-			assertEquals(false, booking.isCheckedOut());
-
-			// test the room status is changed to dirty
-			Room room = admin.getRooms().get(booking.getRoomNumber() - 1);
-
-			assertEquals("occupied", room.getStatus());
-		}
+		assertEquals("dirty", roomDirty.getStatus());
+		
 
 	}
 
