@@ -153,6 +153,7 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 		staff.setName(name);
 		staff.setRank(rank);
 		staff.setSSN(SSN);
+		staff.setPassword(password);
 		getStaff().add(staff);
 		return staff;
 	}
@@ -218,7 +219,9 @@ EList<String> petTypes = new BasicEList<String>();
 		// TODO: test
 		for(HotelStaff staff : getStaff()){
 			if(staff.getSSN().equalsIgnoreCase(ssn) && staff.getPassword().equalsIgnoreCase(password)){
+				
 				staff.setIsLoggedIn(true);
+				break;
 			}
 		}
 	}

@@ -1,3 +1,4 @@
+package PetHotelTest;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
@@ -68,6 +69,36 @@ public class TestAdmin {
 		int staff = admin.getStaff().size();
 		assertEquals(0, staff);
 		
+	}
+	
+	@Test
+	public void testStaffLogIn() {
+		//Add a staff
+		admin.createStaff("Regine Aquino", 0, "444555", "abc");
+		
+		//The staff log in to the system with incorrect password
+		admin.staffLogin("444555", "aaa");
+		assertFalse(admin.isLoggedIn("444555"));
+		//The staff log in to the system with incorrect username
+		admin.staffLogin("44455", "abc");
+		assertFalse(admin.isLoggedIn("444555"));
+		//The staff log in to the system with correct username and password
+		admin.staffLogin("444555", "abc");
+		assertTrue(admin.isLoggedIn("444555"));	
+		
+	}
+	
+	@Test
+	public void testStaffLogOut() {
+		//Add a staff
+		HotelStaff staff = admin.createStaff("Regine Aquino", 0, "444555", "abc");
+		
+		//The staff log in to the system with correct username and password
+		admin.staffLogin("444555", "abc");
+		
+		//The staff log out
+		admin.staffLogout("444555");
+		assertFalse(staff.isLoggedIn());
 		
 	}
 }
