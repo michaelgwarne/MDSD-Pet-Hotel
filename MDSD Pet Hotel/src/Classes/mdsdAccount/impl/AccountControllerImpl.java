@@ -175,17 +175,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void viewRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addPet(String name, String type, String accountID) {
@@ -310,7 +299,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___MODIFY_ACCOUNT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGIN__STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT__STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT__STRING;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___VIEW_ROOM__INT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM__INT;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING;
 				default: return -1;
@@ -341,9 +329,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 				return null;
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT__STRING:
 				logout((String)arguments.get(0));
-				return null;
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER___VIEW_ROOM__INT:
-				viewRoom((Integer)arguments.get(0));
 				return null;
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING:
 				addPet((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));

@@ -40,14 +40,6 @@ public interface UserBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingIdRequired="true" bookingIdOrdered="false"
-	 * @generated
-	 */
-	void confirmBooking(String bookingId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model customerNameRequired="true" customerNameOrdered="false" customerEmailRequired="true" customerEmailOrdered="false" bookingRequired="true" bookingOrdered="false" petNameRequired="true" petNameOrdered="false" roomsMany="true" roomsOrdered="false"
 	 * @generated
 	 */

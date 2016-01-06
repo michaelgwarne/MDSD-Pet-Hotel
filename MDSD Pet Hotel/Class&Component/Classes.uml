@@ -175,11 +175,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JYtikJ8rEeWpe80voGitgg" name="confirmBooking">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-JgiQKMnEeWIRLH1N9vj0g" name="bookingId">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_L_F9MKyYEeWxH9NuyI6dSw" name="enterCustomerInfo" concurrency="concurrent">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_VIa5MKyYEeWxH9NuyI6dSw" name="customerName" effect="update">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -347,11 +342,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_oJrPAKGUEeWMT-K7AbhLcA" name="logout">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_svFGcLO0EeWDPec7V3mWXQ" name="accountId">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_KCDscKGaEeWMT-K7AbhLcA" name="viewRoom">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pZ0kELKyEeWB0KHKbP4Mzw" name="roomNumber">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Ojk6YLKyEeWB0KHKbP4Mzw" name="addPet">

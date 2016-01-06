@@ -50,14 +50,6 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomNumberRequired="true" roomNumberOrdered="false"
-	 * @generated
-	 */
-	void viewRoom(int roomNumber);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model nameRequired="true" nameOrdered="false" typeRequired="true" typeOrdered="false" accountIDRequired="true" accountIDOrdered="false"
 	 * @generated
 	 */

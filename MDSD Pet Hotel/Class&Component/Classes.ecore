@@ -75,9 +75,6 @@
       <eOperations name="cancelBooking" ordered="false" lowerBound="1">
         <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="confirmBooking" ordered="false" lowerBound="1">
-        <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
       <eOperations name="enterCustomerInfo" ordered="false" lowerBound="1">
         <eParameters name="customerName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -268,9 +265,6 @@
       </eOperations>
       <eOperations name="logout" ordered="false" lowerBound="1">
         <eParameters name="accountId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
-      <eOperations name="viewRoom" ordered="false" lowerBound="1">
-        <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
       <eOperations name="addPet" ordered="false" lowerBound="1">
         <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

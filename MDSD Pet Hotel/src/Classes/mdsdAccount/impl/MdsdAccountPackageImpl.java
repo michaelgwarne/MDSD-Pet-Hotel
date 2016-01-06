@@ -318,7 +318,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__ViewRoom__int() {
+	public EOperation getCustomerAccount__AddPet__String_String_String() {
 		return customerAccountEClass.getEOperations().get(4);
 	}
 
@@ -327,17 +327,8 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__AddPet__String_String_String() {
-		return customerAccountEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCustomerAccount__RemovePet__String_String_String() {
-		return customerAccountEClass.getEOperations().get(6);
+		return customerAccountEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -407,7 +398,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___MODIFY_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGIN__STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT__STRING);
-		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___VIEW_ROOM__INT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING);
 
@@ -485,9 +475,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		op = initEOperation(getCustomerAccount__Logout__String(), null, "logout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "accountId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getCustomerAccount__ViewRoom__int(), null, "viewRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getCustomerAccount__AddPet__String_String_String(), null, "addPet", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);

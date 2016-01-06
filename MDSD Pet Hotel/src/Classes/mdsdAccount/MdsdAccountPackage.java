@@ -287,22 +287,13 @@ public interface MdsdAccountPackage extends EPackage {
 	int CUSTOMER_ACCOUNT___LOGOUT__STRING = 3;
 
 	/**
-	 * The operation id for the '<em>View Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_ACCOUNT___VIEW_ROOM__INT = 4;
-
-	/**
 	 * The operation id for the '<em>Add Pet</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = 5;
+	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -311,7 +302,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = 6;
+	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = 5;
 
 	/**
 	 * The number of operations of the '<em>Customer Account</em>' class.
@@ -320,7 +311,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT_OPERATION_COUNT = 7;
+	int CUSTOMER_ACCOUNT_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAccount.impl.AccountControllerImpl <em>Account Controller</em>}' class.
@@ -405,22 +396,13 @@ public interface MdsdAccountPackage extends EPackage {
 	int ACCOUNT_CONTROLLER___LOGOUT__STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>View Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT_CONTROLLER___VIEW_ROOM__INT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 4;
-
-	/**
 	 * The operation id for the '<em>Add Pet</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
+	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -429,7 +411,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 6;
+	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Account Controller</em>' class.
@@ -438,7 +420,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER_OPERATION_COUNT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 7;
+	int ACCOUNT_CONTROLLER_OPERATION_COUNT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 6;
 
 
 	/**
@@ -628,16 +610,6 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCustomerAccount__Logout__String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#viewRoom(int) <em>View Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>View Room</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#viewRoom(int)
-	 * @generated
-	 */
-	EOperation getCustomerAccount__ViewRoom__int();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#addPet(java.lang.String, java.lang.String, java.lang.String) <em>Add Pet</em>}' operation.
@@ -854,14 +826,6 @@ public interface MdsdAccountPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CUSTOMER_ACCOUNT___LOGOUT__STRING = eINSTANCE.getCustomerAccount__Logout__String();
-
-		/**
-		 * The meta object literal for the '<em><b>View Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER_ACCOUNT___VIEW_ROOM__INT = eINSTANCE.getCustomerAccount__ViewRoom__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Pet</b></em>' operation.

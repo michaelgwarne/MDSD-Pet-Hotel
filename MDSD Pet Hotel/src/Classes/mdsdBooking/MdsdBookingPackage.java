@@ -95,22 +95,13 @@ public interface MdsdBookingPackage extends EPackage {
 	int USER_BOOKING___CANCEL_BOOKING__STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Confirm Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_BOOKING___CONFIRM_BOOKING__STRING = 2;
-
-	/**
 	 * The operation id for the '<em>Enter Customer Info</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST = 3;
+	int USER_BOOKING___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST = 2;
 
 	/**
 	 * The operation id for the '<em>Enter Dates Of Stay</em>' operation.
@@ -119,7 +110,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST_STRING = 4;
+	int USER_BOOKING___ENTER_DATES_OF_STAY__DATE_DATE_ELIST_STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Enter Meal Info</em>' operation.
@@ -128,7 +119,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT_STRING = 5;
+	int USER_BOOKING___ENTER_MEAL_INFO__STRING_STRING_FLOAT_FLOAT_STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Enter Service</em>' operation.
@@ -137,7 +128,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING___ENTER_SERVICE__SERVICE_STRING = 6;
+	int USER_BOOKING___ENTER_SERVICE__SERVICE_STRING = 5;
 
 	/**
 	 * The number of operations of the '<em>User Booking</em>' class.
@@ -146,7 +137,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_BOOKING_OPERATION_COUNT = 7;
+	int USER_BOOKING_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBooking.impl.BookingControllerImpl <em>Booking Controller</em>}' class.
@@ -202,15 +193,6 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_CONTROLLER___CANCEL_BOOKING__STRING = USER_BOOKING___CANCEL_BOOKING__STRING;
-
-	/**
-	 * The operation id for the '<em>Confirm Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_CONTROLLER___CONFIRM_BOOKING__STRING = USER_BOOKING___CONFIRM_BOOKING__STRING;
 
 	/**
 	 * The operation id for the '<em>Enter Customer Info</em>' operation.
@@ -700,16 +682,6 @@ public interface MdsdBookingPackage extends EPackage {
 	EOperation getUserBooking__CancelBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#confirmBooking(java.lang.String) <em>Confirm Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Confirm Booking</em>' operation.
-	 * @see Classes.mdsdBooking.UserBooking#confirmBooking(java.lang.String)
-	 * @generated
-	 */
-	EOperation getUserBooking__ConfirmBooking__String();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBooking.UserBooking#enterCustomerInfo(java.lang.String, java.lang.String, Classes.mdsdBooking.Booking, java.lang.String, org.eclipse.emf.common.util.EList) <em>Enter Customer Info</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1093,14 +1065,6 @@ public interface MdsdBookingPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation USER_BOOKING___CANCEL_BOOKING__STRING = eINSTANCE.getUserBooking__CancelBooking__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Confirm Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation USER_BOOKING___CONFIRM_BOOKING__STRING = eINSTANCE.getUserBooking__ConfirmBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Enter Customer Info</b></em>' operation.

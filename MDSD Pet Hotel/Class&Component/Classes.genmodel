@@ -102,9 +102,6 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/cancelBooking/bookingId"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/confirmBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/confirmBooking/bookingId"/>
-        </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerName"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/UserBooking/enterCustomerInfo/customerEmail"/>
@@ -267,9 +264,6 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/logout">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/logout/accountId"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/viewRoom/roomNumber"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdAccount/CustomerAccount/addPet">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdAccount/CustomerAccount/addPet/name"/>

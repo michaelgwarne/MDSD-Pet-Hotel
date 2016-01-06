@@ -3,7 +3,6 @@
 package Classes.mdsdBooking.impl;
 
 import Classes.mdsdAdmin.Room;
-
 import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
@@ -11,21 +10,15 @@ import Classes.mdsdBooking.MdsdBookingPackage;
 import Classes.mdsdBooking.Meal;
 import Classes.mdsdBooking.Service;
 import Classes.mdsdBooking.StaffBooking;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -135,17 +128,6 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 				break;
 			}
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void confirmBooking(String bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -286,6 +268,9 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description sets checkedIn attribute of a booking to true
+	 * and sets the relevant room status to occupied.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -308,6 +293,9 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Sets the checkOut attribute of a booking to true
+	 * and set the relevant room status to dirty
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -328,43 +316,13 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void checkIn(String bookingID, Room rooms) {
-		// TODO: test
-		for (Booking booking : bookings) {
-			if(booking.getBookingId() == bookingID){
-				booking.setIsCheckedOut(false);
-				booking.setIsCheckedIn(true);
-				break;
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void checkOut(String bookingID, Room rooms) {
-		for (Booking booking : bookings) {
-			// TODO: test
-			if(booking.getBookingId() == bookingID){
-				booking.setIsCheckedOut(true);
-				booking.setIsCheckedIn(false);
-				break;
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Creates a new service and adds it to the master list
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addNewService(String description, float price) {
-		// TODO: test
+		
 		Service service = MdsdBookingFactory.eINSTANCE.createService();
 		service.setDescription(description);
 		service.setPrice(price);
@@ -373,6 +331,9 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description returns a list of the booking that belong to the 
+	 * email address
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -506,9 +467,6 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 				return null;
 			case MdsdBookingPackage.BOOKING_CONTROLLER___CANCEL_BOOKING__STRING:
 				cancelBooking((String)arguments.get(0));
-				return null;
-			case MdsdBookingPackage.BOOKING_CONTROLLER___CONFIRM_BOOKING__STRING:
-				confirmBooking((String)arguments.get(0));
 				return null;
 			case MdsdBookingPackage.BOOKING_CONTROLLER___ENTER_CUSTOMER_INFO__STRING_STRING_BOOKING_STRING_ELIST:
 				enterCustomerInfo((String)arguments.get(0), (String)arguments.get(1), (Booking)arguments.get(2), (String)arguments.get(3), (EList<Room>)arguments.get(4));
