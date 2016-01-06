@@ -262,13 +262,14 @@ public class TestBooking {
 		assertEquals("occupied", room.getStatus()); // This fail
 		
 		//Then pay bill and check out
-		bill.setIsPaid(true);;
+		bill.setIsPaid(true);
+		//check out again
+		booker.checkOut(booking.getBookingId(), admin.getRooms());
 		// test isCheckIn is false and isCheckOut is true
 		assertEquals(false, booking.isCheckedIn());
 		assertEquals(true, booking.isCheckedOut());
 		// test the room status is changed to dirty
 		Room roomDirty = admin.getRooms().get(booking.getRoomNumber() - 1);
-
 		assertEquals("dirty", roomDirty.getStatus());
 		
 
