@@ -2,8 +2,6 @@ package PetHotelTest;
 
 import static org.junit.Assert.*;
 import java.util.Date;
-
-import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAccount.AccountController;
 import Classes.mdsdAccount.MdsdAccountFactory;
@@ -23,9 +21,9 @@ public class TestBooking {
 
 	long week = 604800000;
 
-	AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
-	BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
-	AccountController account = MdsdAccountFactory.eINSTANCE.createAccountController();
+	AdminController adminCtrl = MdsdAdminFactory.eINSTANCE.createAdminController();
+	BookingController bookingCtrl = MdsdBookingFactory.eINSTANCE.createBookingController();
+	AccountController accountCtrl = MdsdAccountFactory.eINSTANCE.createAccountController();
 	BillingController billCtrl = MdsdBillingFactory.eINSTANCE.createBillingController();
 
 	Date d1 = new Date(System.currentTimeMillis() + week);
@@ -38,10 +36,10 @@ public class TestBooking {
 	// test: add rooms with duplicate number
 	public void testAddDuplicateRooms() {
 
-		admin.addRoom("horse", "available", 1);
-		admin.addRoom("horse", "available", 2);
-		Room temp = admin.addRoom("horse", "available", 1);
-		assertNull(temp);
+		adminCtrl.addRoom("horse", "available", 1);
+		adminCtrl.addRoom("horse", "available", 2);
+		Room room = adminCtrl.addRoom("horse", "available", 1);
+		assertNull(room);
 	}
 
 	@Test
@@ -49,13 +47,13 @@ public class TestBooking {
 	public void testBookRoom() {
 
 		for (int i = 1; i < 5; i++) {
-			admin.addRoom("cat", "available", i);
+			adminCtrl.addRoom("cat", "available", i);
 		}
 		// book a room for a cat
 
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookingCtrl.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", adminCtrl.getRooms());
+		adminCtrl.changeRoomStatus("booked", booking.getRoomNumber());
 
 		assertNotNull(booking);
 	}
@@ -65,18 +63,18 @@ public class TestBooking {
 	public void testPetNotExist() {
 		// add room
 		for (int i = 1; i < 5; i++) {
-			admin.addRoom("dog", "available", i);
+			adminCtrl.addRoom("dog", "available", i);
 		}
 		// create booking
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
 		assertNull(booking);
 	}
 
 	@Test
 	// test: a room is booked with past date
 	public void testBookPastDate() {
-		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(pastDate, d2, admin.getRooms(), "dog");
+		adminCtrl.addRoom("dog", "available", 1);
+		Booking booking = bookingCtrl.enterDatesOfStay(pastDate, d2, adminCtrl.getRooms(), "dog");
 
 		assertNull(booking);
 
@@ -86,12 +84,12 @@ public class TestBooking {
 	// test: a room is booked with overlap date.
 	public void testDateOverlap() {
 		// add room & create full booking
-		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		adminCtrl.addRoom("dog", "available", 1);
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", adminCtrl.getRooms());
+		adminCtrl.changeRoomStatus("booked", booking.getRoomNumber());
 		// create booking with overlap date
-		Booking booking2 = booker.enterDatesOfStay(d3, d4, admin.getRooms(), "dog");
+		Booking booking2 = bookingCtrl.enterDatesOfStay(d3, d4, adminCtrl.getRooms(), "dog");
 		assertNull(booking2);
 	}
 
@@ -99,13 +97,13 @@ public class TestBooking {
 	// Test: it is impossible to book a room when the hotel is full booked
 	public void testFullBooked() {
 		// add a room and a booking
-		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", admin.getRooms());
-		admin.changeRoomStatus("booked", booking.getRoomNumber());
+		adminCtrl.addRoom("dog", "available", 1);
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Andy Anteater", "andy_anteater@gmail.com", booking, "Bob", adminCtrl.getRooms());
+		adminCtrl.changeRoomStatus("booked", booking.getRoomNumber());
 
 		// Create new booking with the same period of stay
-		Booking booking2 = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
+		Booking booking2 = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
 		assertNull(booking2);
 
 	}
@@ -114,11 +112,11 @@ public class TestBooking {
 	// Test: booking contains correct booking ID
 	public void testBookingIDExist() {
 		// add a room to hotel
-		admin.addRoom("dog", "available", 1);
+		adminCtrl.addRoom("dog", "available", 1);
 
 		// book a room.
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Nicole Musco", "nicole_musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		// test bookingIDExist
 		String bookingID = booking.getBookingId();
@@ -130,12 +128,12 @@ public class TestBooking {
 	public void testCustomerInfo() {
 
 		for (int i = 1; i < 2; i++) {
-			admin.addRoom("dog", "available", i);
+			adminCtrl.addRoom("dog", "available", i);
 		}
 		// book a room for a dog
 
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", adminCtrl.getRooms());
 
 		String customerName = booking.getCustomerName();
 		String customerEmail = booking.getCustomerEmail();
@@ -151,14 +149,14 @@ public class TestBooking {
 	// Test: room status is changed after it is booked
 	public void testBookingRoomStatus() {
 
-		admin.addRoom("dog", "available", 1);
+		adminCtrl.addRoom("dog", "available", 1);
 
 		// book a room for a dog
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", adminCtrl.getRooms());
 
 		// get room status and check if the room is booked.
-		Room room = admin.getRooms().get(0);
+		Room room = adminCtrl.getRooms().get(0);
 		if (room.getNumber() == booking.getRoomNumber())
 			assertEquals("booked", room.getStatus());
 		else
@@ -170,15 +168,15 @@ public class TestBooking {
 	// Test: meal info is add successfully
 	public void testMealInfo() {
 
-		admin.addRoom("dog", "available", 1);
+		adminCtrl.addRoom("dog", "available", 1);
 
 		// book a room for a dog
 
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", adminCtrl.getRooms());
 
 		// enter meal for pet
-		booker.enterMealInfo("vegetarian", "10.00", 400, 30, booking.getBookingId());
+		bookingCtrl.enterMealInfo("vegetarian", "10.00", 400, 30, booking.getBookingId());
 
 		// booking should contain meal
 		Meal meal = booking.getMealInfo();
@@ -191,17 +189,17 @@ public class TestBooking {
 	public void testEnterService() {
 		// assume that it's drop down list of service in GUI
 		// Add room and service
-		admin.addRoom("dog", "available", 1);
+		adminCtrl.addRoom("dog", "available", 1);
 
-		booker.addNewService("spa", 300);
-		Service spa = booker.getServices().get(0);
+		bookingCtrl.addNewService("spa", 300);
+		Service spa = bookingCtrl.getServices().get(0);
 
 		// book a room for a dog
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", adminCtrl.getRooms());
 
 		// Enter service
-		booker.enterService(spa, booking.getBookingId());
+		bookingCtrl.enterService(spa, booking.getBookingId());
 
 		assertNotNull(booking.getBookedServices().get(0)); 
 	}
@@ -212,21 +210,21 @@ public class TestBooking {
 		// room status is changed, isCheckIn = true
 
 		// add rooms
-		admin.addRoom("dog", "available", 1);
+		adminCtrl.addRoom("dog", "available", 1);
 
 		// book a room for a dog
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Su San", "susan@gmail.com", booking, "Bob", adminCtrl.getRooms());
 
 		// check Bob in to the hotel
-		booker.checkIn(booking.getBookingId(), admin.getRooms());
+		bookingCtrl.checkIn(booking.getBookingId(), adminCtrl.getRooms());
 
 		// test isCheckIn is true and isCheckOut is false
 		assertEquals(true, booking.isCheckedIn());
 		assertEquals(false, booking.isCheckedOut());
 
 		// test the room status is changed to occupied
-		assertEquals("occupied", admin.getRooms().get(0).getStatus());
+		assertEquals("occupied", adminCtrl.getRooms().get(0).getStatus());
 	}
 
 	@Test
@@ -234,59 +232,55 @@ public class TestBooking {
 	public void testCheckOut() {
 
 		// add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		// book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookingCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		// check Elora in to the hotel
-		booker.checkIn(booking.getBookingId(), admin.getRooms());
+		bookingCtrl.checkIn(booking.getBookingId(), adminCtrl.getRooms());
 
 		// add bill check for the bill is paid
 		billCtrl.addTransaction("For Elora room", 5000, booking);
-		Bill bill = billCtrl.displayBill(booking.getBill_Id()); // There are no bills to check
-		
-		// check out with bill is not paid yet
-		bill.setIsPaid(false);
+		Bill bill = billCtrl.getBills().get(0); 
 			
-		// check Elora out from the hotel.
-		booker.checkOut(booking.getBookingId(), admin.getRooms());
+		// check Elora out from the hotel without paying.
+		bookingCtrl.checkOut(booking.getBookingId(), adminCtrl.getRooms(), billCtrl.getBills());
 
-		// test isCheckIn is true and isCheckOut is false
-		assertEquals(true, booking.isCheckedIn()); //This fail
-		assertEquals(false, booking.isCheckedOut());// This fail
-
-		//test the room status is changed to occupied
-		Room room = admin.getRooms().get(booking.getRoomNumber() - 1);
-		assertEquals("occupied", room.getStatus()); // This fail
+		// test that checkOut failed
+		assertEquals(true, booking.isCheckedIn()); 
 		
-		//Then pay bill and check out
+		assertEquals(false, booking.isCheckedOut());
+
+		//test the room status is still occupied
+		Room room = adminCtrl.getRooms().get(booking.getRoomNumber() - 1);
+		assertEquals("occupied", room.getStatus()); 
+		
+		//Then pay bill 
 		bill.setIsPaid(true);
 		//check out again
-		booker.checkOut(booking.getBookingId(), admin.getRooms());
-		// test isCheckIn is false and isCheckOut is true
+		bookingCtrl.checkOut(booking.getBookingId(), adminCtrl.getRooms(), billCtrl.getBills());
+		// test checkOut succeeded
 		assertEquals(false, booking.isCheckedIn());
 		assertEquals(true, booking.isCheckedOut());
 		// test the room status is changed to dirty
-		Room roomDirty = admin.getRooms().get(booking.getRoomNumber() - 1);
+		Room roomDirty = adminCtrl.getRooms().get(booking.getRoomNumber() - 1);
 		assertEquals("dirty", roomDirty.getStatus());
-		
-
 	}
 
 	@Test
 
 	public void testCancelBooking() {
 		// add a room and a booking
-		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
+		adminCtrl.addRoom("dog", "available", 1);
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", adminCtrl.getRooms());
 
 		// cancel booking
-		booker.cancelBooking(booking.getBookingId());
+		bookingCtrl.cancelBooking(booking.getBookingId());
 		
-		assertEquals(booker.getBookings().size(), 0);
+		assertEquals(bookingCtrl.getBookings().size(), 0);
 
 	}
 
@@ -294,12 +288,12 @@ public class TestBooking {
 	public void testBookingDifferDate() {
 
 		// add a room and book the room
-		admin.addRoom("dog", "available", 1);
-		Booking booking = booker.enterDatesOfStay(d1, d3, admin.getRooms(), "dog");
-		booker.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", admin.getRooms());
+		adminCtrl.addRoom("dog", "available", 1);
+		Booking booking = bookingCtrl.enterDatesOfStay(d1, d3, adminCtrl.getRooms(), "dog");
+		bookingCtrl.enterCustomerInfo("Mai Phuong", "mai_phuong@gmail.com", booking, "Abbe", adminCtrl.getRooms());
 
 		// book the room with different date
-		Booking booking2 = booker.enterDatesOfStay(d2, d4, admin.getRooms(), "dog");
+		Booking booking2 = bookingCtrl.enterDatesOfStay(d2, d4, adminCtrl.getRooms(), "dog");
 
 		assertNotNull(booking2);
 

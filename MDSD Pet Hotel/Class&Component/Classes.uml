@@ -263,6 +263,13 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dfxQULIXEeWkda7VoamEjQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dfzFgLIXEeWkda7VoamEjQ" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C-r08LShEeWAMsoNfPycMQ" name="hasPaid" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_H8a6QLShEeWAMsoNfPycMQ" name="bills" type="_DwB2kJj7EeW-3PPNesfa8A">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I0LBoLShEeWAMsoNfPycMQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I0OsALShEeWAMsoNfPycMQ" value="*"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TvSR4K-fEeWZPtMc2d2KQQ" name="addNewService">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_X-SB4K-fEeWZPtMc2d2KQQ" name="description">

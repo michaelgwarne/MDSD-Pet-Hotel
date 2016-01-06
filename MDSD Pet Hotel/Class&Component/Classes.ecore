@@ -105,9 +105,10 @@
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
       </eOperations>
-      <eOperations name="checkOut" ordered="false" lowerBound="1">
+      <eOperations name="checkOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="bookingID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="rooms" ordered="false" upperBound="-1" eType="#//mdsdAdmin/Room"/>
+        <eParameters name="bills" ordered="false" upperBound="-1" eType="#//mdsdBilling/Bill"/>
       </eOperations>
       <eOperations name="addNewService" ordered="false" lowerBound="1">
         <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

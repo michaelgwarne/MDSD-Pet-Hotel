@@ -3,6 +3,7 @@
 package Classes.mdsdBooking.impl;
 
 import Classes.mdsdAdmin.Room;
+import Classes.mdsdBilling.Bill;
 import Classes.mdsdBooking.Booking;
 import Classes.mdsdBooking.BookingController;
 import Classes.mdsdBooking.MdsdBookingFactory;
@@ -293,13 +294,17 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @author Michael Warne
-	 * @description Sets the checkOut attribute of a booking to true
-	 * and set the relevant room status to dirty
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void checkOut(String bookingID, EList<Room> rooms) {
+	public boolean checkOut(String bookingID, EList<Room> rooms, EList<Bill> bills) {
+		
+		for(Bill bill: bills){
+			if(bill.getID().equals(bookingID)){
+				if(!bill.isPaid()) return false;
+				else break;	
+			}
+		}
 		for (Booking booking : bookings) {
 			if(booking.getBookingId() == bookingID){
 				booking.setIsCheckedOut(true);
@@ -307,11 +312,12 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 				for(Room room : rooms){
 					if(room.getNumber() == booking.getRoomNumber()){
 						room.setStatus("dirty");
-						break;
+						return true;
 					}
 				}
 			}
 		}
+		return false;
 	}
 
 	/**
@@ -445,7 +451,7 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 		if (baseClass == StaffBooking.class) {
 			switch (baseOperationID) {
 				case MdsdBookingPackage.STAFF_BOOKING___CHECK_IN__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST;
-				case MdsdBookingPackage.STAFF_BOOKING___CHECK_OUT__STRING_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST;
+				case MdsdBookingPackage.STAFF_BOOKING___CHECK_OUT__STRING_ELIST_ELIST: return MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST_ELIST;
 				case MdsdBookingPackage.STAFF_BOOKING___ADD_NEW_SERVICE__STRING_FLOAT: return MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT;
 				default: return -1;
 			}
@@ -482,9 +488,8 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_IN__STRING_ELIST:
 				checkIn((String)arguments.get(0), (EList<Room>)arguments.get(1));
 				return null;
-			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST:
-				checkOut((String)arguments.get(0), (EList<Room>)arguments.get(1));
-				return null;
+			case MdsdBookingPackage.BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST_ELIST:
+				return checkOut((String)arguments.get(0), (EList<Room>)arguments.get(1), (EList<Bill>)arguments.get(2));
 			case MdsdBookingPackage.BOOKING_CONTROLLER___ADD_NEW_SERVICE__STRING_FLOAT:
 				addNewService((String)arguments.get(0), (Float)arguments.get(1));
 				return null;

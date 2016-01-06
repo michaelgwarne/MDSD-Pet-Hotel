@@ -1,8 +1,6 @@
 package PetHotelTest;
 import static org.junit.Assert.*;
 import java.util.Date;
-
-import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import Classes.mdsdAdmin.AdminController;
 import Classes.mdsdAdmin.MdsdAdminFactory;
@@ -16,8 +14,8 @@ public class TestBilling {
 
 	long week = 604800000;
 
-	AdminController admin = MdsdAdminFactory.eINSTANCE.createAdminController();
-	BookingController booker = MdsdBookingFactory.eINSTANCE.createBookingController();
+	AdminController adminCtrl = MdsdAdminFactory.eINSTANCE.createAdminController();
+	BookingController bookerCtrl = MdsdBookingFactory.eINSTANCE.createBookingController();
 	BillingController billCtrl = MdsdBillingFactory.eINSTANCE.createBillingController();
 
 	Date d1 = new Date(System.currentTimeMillis() + week);
@@ -28,11 +26,11 @@ public class TestBilling {
 	public void TestAddNewTransaction(){
 
 		//add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		//book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		//No bill exists, bill ID is null
 		assertNull(booking.getBill_Id());
@@ -52,11 +50,11 @@ public class TestBilling {
 	public void TestAddIntoExistingTransaction(){
 
 		//add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		//book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		//No bill exists, bill ID is null
 		assertNull(booking.getBill_Id());
@@ -73,11 +71,11 @@ public class TestBilling {
 	@Test
 	public void TestPaid(){
 		//add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		//book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		billCtrl.addTransaction("For Elora room", 5000, booking);
 
@@ -94,11 +92,11 @@ public class TestBilling {
 	public void TestRefund(){
 
 		//add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		//book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 
 		billCtrl.addTransaction("For Elora room", 5000, booking);
 		Bill bill = billCtrl.getBills().get(0);
@@ -113,11 +111,11 @@ public class TestBilling {
 	public void TestDisplayBilling(){
 
 		//add rooms
-		admin.addRoom("cat", "available", 1);
+		adminCtrl.addRoom("cat", "available", 1);
 
 		//book a room for a cat
-		Booking booking = booker.enterDatesOfStay(d1, d2, admin.getRooms(), "cat");
-		booker.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", admin.getRooms());
+		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
+		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
 		// create bill
 		billCtrl.addTransaction("For Elora", 5000, booking);
 		// test with a fake ID

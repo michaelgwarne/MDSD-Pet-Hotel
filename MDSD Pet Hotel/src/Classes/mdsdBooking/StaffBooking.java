@@ -3,6 +3,7 @@
 package Classes.mdsdBooking;
 
 import Classes.mdsdAdmin.Room;
+import Classes.mdsdBilling.Bill;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -28,10 +29,10 @@ public interface StaffBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingIDRequired="true" bookingIDOrdered="false" roomsMany="true" roomsOrdered="false"
+	 * @model required="true" ordered="false" bookingIDRequired="true" bookingIDOrdered="false" roomsMany="true" roomsOrdered="false" billsMany="true" billsOrdered="false"
 	 * @generated
 	 */
-	void checkOut(String bookingID, EList<Room> rooms);
+	boolean checkOut(String bookingID, EList<Room> rooms, EList<Bill> bills);
 
 	/**
 	 * <!-- begin-user-doc -->

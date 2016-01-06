@@ -135,6 +135,7 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/checkOut">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/bookingID"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/rooms"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/checkOut/bills"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Classes.ecore#//mdsdBooking/StaffBooking/addNewService">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Classes.ecore#//mdsdBooking/StaffBooking/addNewService/description"/>

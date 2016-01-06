@@ -246,7 +246,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST = USER_BOOKING_OPERATION_COUNT + 1;
+	int BOOKING_CONTROLLER___CHECK_OUT__STRING_ELIST_ELIST = USER_BOOKING_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add New Service</em>' operation.
@@ -356,7 +356,7 @@ public interface MdsdBookingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BOOKING___CHECK_OUT__STRING_ELIST = 1;
+	int STAFF_BOOKING___CHECK_OUT__STRING_ELIST_ELIST = 1;
 
 	/**
 	 * The operation id for the '<em>Add New Service</em>' operation.
@@ -742,14 +742,14 @@ public interface MdsdBookingPackage extends EPackage {
 	EOperation getStaffBooking__CheckIn__String_EList();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList)
+	 * @see Classes.mdsdBooking.StaffBooking#checkOut(java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getStaffBooking__CheckOut__String_EList();
+	EOperation getStaffBooking__CheckOut__String_EList_EList();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBooking.StaffBooking#addNewService(java.lang.String, float) <em>Add New Service</em>}' operation.
@@ -1122,7 +1122,7 @@ public interface MdsdBookingPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation STAFF_BOOKING___CHECK_OUT__STRING_ELIST = eINSTANCE.getStaffBooking__CheckOut__String_EList();
+		EOperation STAFF_BOOKING___CHECK_OUT__STRING_ELIST_ELIST = eINSTANCE.getStaffBooking__CheckOut__String_EList_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Add New Service</b></em>' operation.

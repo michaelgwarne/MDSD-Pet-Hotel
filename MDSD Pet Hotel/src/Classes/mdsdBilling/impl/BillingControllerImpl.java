@@ -203,8 +203,8 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
-			return ((InternalEList<?>)getBills()).basicRemove(otherEnd, msgs);
+			case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
+				return ((InternalEList<?>)getBills()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -217,8 +217,8 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
-			return getBills();
+			case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
+				return getBills();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -232,10 +232,10 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
-			getBills().clear();
-			getBills().addAll((Collection<? extends Bill>)newValue);
-			return;
+			case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
+				getBills().clear();
+				getBills().addAll((Collection<? extends Bill>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -248,9 +248,9 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
-			getBills().clear();
-			return;
+			case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
+				getBills().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -263,8 +263,8 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
-			return bills != null && !bills.isEmpty();
+			case MdsdBillingPackage.BILLING_CONTROLLER__BILLS:
+				return bills != null && !bills.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -278,14 +278,14 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingToBill.class) {
 			switch (baseOperationID) {
-			case MdsdBillingPackage.BOOKING_TO_BILL___ADD_TRANSACTION__STRING_FLOAT_BOOKING: return MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING;
-			default: return -1;
+				case MdsdBillingPackage.BOOKING_TO_BILL___ADD_TRANSACTION__STRING_FLOAT_BOOKING: return MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING;
+				default: return -1;
 			}
 		}
 		if (baseClass == CustomerBilling.class) {
 			switch (baseOperationID) {
-			case MdsdBillingPackage.CUSTOMER_BILLING___CONFIRM_PAYMENT: return MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT;
-			default: return -1;
+				case MdsdBillingPackage.CUSTOMER_BILLING___CONFIRM_PAYMENT: return MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT;
+				default: return -1;
 			}
 		}
 		return super.eDerivedOperationID(baseOperationID, baseClass);
@@ -299,25 +299,25 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case MdsdBillingPackage.BILLING_CONTROLLER___MODIFY_BILL__STRING_STRING_FLOAT:
-			modifyBill((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2));
-			return null;
-		case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL__STRING:
-			return displayBill((String)arguments.get(0));
-		case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING_STRING:
-			giveRefund((String)arguments.get(0), (String)arguments.get(1));
-			return null;
-		case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID__STRING:
-			return isPaid((String)arguments.get(0));
-		case MdsdBillingPackage.BILLING_CONTROLLER___PRINT_RECEIPT__STRING:
-			printReceipt((String)arguments.get(0));
-			return null;
-		case MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING:
-			addTransaction((String)arguments.get(0), (Float)arguments.get(1), (Booking)arguments.get(2));
-			return null;
-		case MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT:
-			confirmPayment();
-			return null;
+			case MdsdBillingPackage.BILLING_CONTROLLER___MODIFY_BILL__STRING_STRING_FLOAT:
+				modifyBill((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2));
+				return null;
+			case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL__STRING:
+				return displayBill((String)arguments.get(0));
+			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING_STRING:
+				giveRefund((String)arguments.get(0), (String)arguments.get(1));
+				return null;
+			case MdsdBillingPackage.BILLING_CONTROLLER___IS_PAID__STRING:
+				return isPaid((String)arguments.get(0));
+			case MdsdBillingPackage.BILLING_CONTROLLER___PRINT_RECEIPT__STRING:
+				printReceipt((String)arguments.get(0));
+				return null;
+			case MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING:
+				addTransaction((String)arguments.get(0), (Float)arguments.get(1), (Booking)arguments.get(2));
+				return null;
+			case MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT:
+				confirmPayment();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

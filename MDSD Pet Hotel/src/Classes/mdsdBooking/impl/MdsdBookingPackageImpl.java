@@ -308,7 +308,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaffBooking__CheckOut__String_EList() {
+	public EOperation getStaffBooking__CheckOut__String_EList_EList() {
 		return staffBookingEClass.getEOperations().get(1);
 	}
 
@@ -530,7 +530,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 
 		staffBookingEClass = createEClass(STAFF_BOOKING);
 		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_IN__STRING_ELIST);
-		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_OUT__STRING_ELIST);
+		createEOperation(staffBookingEClass, STAFF_BOOKING___CHECK_OUT__STRING_ELIST_ELIST);
 		createEOperation(staffBookingEClass, STAFF_BOOKING___ADD_NEW_SERVICE__STRING_FLOAT);
 
 		mealEClass = createEClass(MEAL);
@@ -579,6 +579,7 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 
 		// Obtain other dependent packages
 		MdsdAdminPackage theMdsdAdminPackage = (MdsdAdminPackage)EPackage.Registry.INSTANCE.getEPackage(MdsdAdminPackage.eNS_URI);
+		MdsdBillingPackage theMdsdBillingPackage = (MdsdBillingPackage)EPackage.Registry.INSTANCE.getEPackage(MdsdBillingPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -638,9 +639,10 @@ public class MdsdBookingPackageImpl extends EPackageImpl implements MdsdBookingP
 		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theMdsdAdminPackage.getRoom(), "rooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffBooking__CheckOut__String_EList(), null, "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffBooking__CheckOut__String_EList_EList(), ecorePackage.getEBoolean(), "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theMdsdAdminPackage.getRoom(), "rooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theMdsdBillingPackage.getBill(), "bills", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaffBooking__AddNewService__String_float(), null, "addNewService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
