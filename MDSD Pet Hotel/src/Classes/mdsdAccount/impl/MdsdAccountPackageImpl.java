@@ -291,7 +291,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__ModifyAccount() {
+	public EOperation getCustomerAccount__Login__String_String() {
 		return customerAccountEClass.getEOperations().get(1);
 	}
 
@@ -300,7 +300,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__Login__String_String() {
+	public EOperation getCustomerAccount__Logout__String() {
 		return customerAccountEClass.getEOperations().get(2);
 	}
 
@@ -309,7 +309,7 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__Logout__String() {
+	public EOperation getCustomerAccount__AddPet__String_String_String() {
 		return customerAccountEClass.getEOperations().get(3);
 	}
 
@@ -318,17 +318,8 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCustomerAccount__AddPet__String_String_String() {
-		return customerAccountEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCustomerAccount__RemovePet__String_String_String() {
-		return customerAccountEClass.getEOperations().get(5);
+		return customerAccountEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -395,7 +386,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 
 		customerAccountEClass = createEClass(CUSTOMER_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING);
-		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___MODIFY_ACCOUNT);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGIN__STRING_STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___LOGOUT__STRING);
 		createEOperation(customerAccountEClass, CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING);
@@ -466,8 +456,6 @@ public class MdsdAccountPackageImpl extends EPackageImpl implements MdsdAccountP
 		addEParameter(op, ecorePackage.getEString(), "customerName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getCustomerAccount__ModifyAccount(), null, "modifyAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getCustomerAccount__Login__String_String(), null, "login", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -26,14 +26,6 @@ public interface CustomerAccount extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void modifyAccount();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model emailRequired="true" emailOrdered="false" passwordRequired="true" passwordOrdered="false"
 	 * @generated
 	 */

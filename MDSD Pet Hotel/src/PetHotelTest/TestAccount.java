@@ -42,17 +42,19 @@ public class TestAccount {
 	@Test
 	public void testCreateAccount() {
 		
-		//create an account
+		//create an account and add a pet
 		Account account = accountCtrl.createAccount("Regine", "regine@gmail.com", "password");
 		String accountID = account.getAccountID();
 		accountCtrl.addPet("Bob", "Dog", accountID);
 		
-		
-		 Pet pet = account.getPets().get(0);
-		// int petInfo = pet.size();
+		Pet pet = account.getPets().get(0);
 		
 		assertEquals("regine@gmail.com", accountID);
+		// test pet was added
 		assertNotNull(pet);
+		// test pet was removed
+		accountCtrl.removePet("Bob", "Dog", accountID);
+		assertEquals(account.getPets().size(), 0);
 		
 	}
 }

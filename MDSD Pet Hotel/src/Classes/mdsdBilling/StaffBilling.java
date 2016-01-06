@@ -26,14 +26,6 @@ public interface StaffBilling extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" billIdRequired="true" billIdOrdered="false"
-	 * @generated
-	 */
-	Bill displayBill(String billId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model transactionRequired="true" transactionOrdered="false" billIdRequired="true" billIdOrdered="false"
 	 * @generated
 	 */

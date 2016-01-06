@@ -50,17 +50,9 @@ public interface Admin extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model SSNRequired="true" SSNOrdered="false"
+	 * @model SSNRequired="true" SSNOrdered="false" newNameRequired="true" newNameOrdered="false" newRankRequired="true" newRankOrdered="false"
 	 * @generated
 	 */
-	void modifyStaff(String SSN);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void displayStaff();
+	void modifyStaff(String SSN, String newName, int newRank);
 
 } // Admin

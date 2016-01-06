@@ -299,17 +299,8 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdmin__ModifyStaff__String() {
+	public EOperation getAdmin__ModifyStaff__String_String_int() {
 		return adminEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdmin__DisplayStaff() {
-		return adminEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -362,17 +353,8 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStaff__DisplayRooms() {
-		return staffEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getStaff__ChangeRoomStatus__String_int() {
-		return staffEClass.getEOperations().get(3);
+		return staffEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -456,8 +438,7 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		createEOperation(adminEClass, ADMIN___REMOVE_ROOM__INT);
 		createEOperation(adminEClass, ADMIN___CREATE_STAFF__STRING_INT_STRING_STRING);
 		createEOperation(adminEClass, ADMIN___REMOVE_STAFF__STRING);
-		createEOperation(adminEClass, ADMIN___MODIFY_STAFF__STRING);
-		createEOperation(adminEClass, ADMIN___DISPLAY_STAFF);
+		createEOperation(adminEClass, ADMIN___MODIFY_STAFF__STRING_STRING_INT);
 
 		bookingToAdminEClass = createEClass(BOOKING_TO_ADMIN);
 		createEOperation(bookingToAdminEClass, BOOKING_TO_ADMIN___GET_PET_TYPES);
@@ -465,7 +446,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		staffEClass = createEClass(STAFF);
 		createEOperation(staffEClass, STAFF___STAFF_LOGIN__STRING_STRING);
 		createEOperation(staffEClass, STAFF___STAFF_LOGOUT__STRING);
-		createEOperation(staffEClass, STAFF___DISPLAY_ROOMS);
 		createEOperation(staffEClass, STAFF___CHANGE_ROOM_STATUS__STRING_INT);
 
 		roomEClass = createEClass(ROOM);
@@ -540,10 +520,10 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 		op = initEOperation(getAdmin__RemoveStaff__String(), null, "removeStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdmin__ModifyStaff__String(), null, "modifyStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdmin__ModifyStaff__String_String_int(), null, "modifyStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "SSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getAdmin__DisplayStaff(), null, "displayStaff", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "newName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "newRank", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingToAdminEClass, BookingToAdmin.class, "BookingToAdmin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -557,8 +537,6 @@ public class MdsdAdminPackageImpl extends EPackageImpl implements MdsdAdminPacka
 
 		op = initEOperation(getStaff__StaffLogout__String(), null, "staffLogout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getStaff__DisplayRooms(), null, "displayRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaff__ChangeRoomStatus__String_int(), null, "changeRoomStatus", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);

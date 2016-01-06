@@ -119,16 +119,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN___MODIFY_STAFF__STRING = 4;
-
-	/**
-	 * The operation id for the '<em>Display Staff</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMIN___DISPLAY_STAFF = 5;
+	int ADMIN___MODIFY_STAFF__STRING_STRING_INT = 4;
 
 	/**
 	 * The number of operations of the '<em>Admin</em>' class.
@@ -137,7 +128,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_OPERATION_COUNT = 6;
+	int ADMIN_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.AdminControllerImpl <em>Admin Controller</em>}' class.
@@ -219,16 +210,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___MODIFY_STAFF__STRING = ADMIN___MODIFY_STAFF__STRING;
-
-	/**
-	 * The operation id for the '<em>Display Staff</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMIN_CONTROLLER___DISPLAY_STAFF = ADMIN___DISPLAY_STAFF;
+	int ADMIN_CONTROLLER___MODIFY_STAFF__STRING_STRING_INT = ADMIN___MODIFY_STAFF__STRING_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Get Pet Types</em>' operation.
@@ -258,22 +240,13 @@ public interface MdsdAdminPackage extends EPackage {
 	int ADMIN_CONTROLLER___STAFF_LOGOUT__STRING = ADMIN_OPERATION_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Display Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMIN_CONTROLLER___DISPLAY_ROOMS = ADMIN_OPERATION_COUNT + 3;
-
-	/**
 	 * The operation id for the '<em>Change Room Status</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 4;
+	int ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT = ADMIN_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Is Logged In</em>' operation.
@@ -282,7 +255,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER___IS_LOGGED_IN__STRING = ADMIN_OPERATION_COUNT + 5;
+	int ADMIN_CONTROLLER___IS_LOGGED_IN__STRING = ADMIN_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Admin Controller</em>' class.
@@ -291,7 +264,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 6;
+	int ADMIN_CONTROLLER_OPERATION_COUNT = ADMIN_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.HotelStaffImpl <em>Hotel Staff</em>}' class.
@@ -441,22 +414,13 @@ public interface MdsdAdminPackage extends EPackage {
 	int STAFF___STAFF_LOGOUT__STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Display Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF___DISPLAY_ROOMS = 2;
-
-	/**
 	 * The operation id for the '<em>Change Room Status</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF___CHANGE_ROOM_STATUS__STRING_INT = 3;
+	int STAFF___CHANGE_ROOM_STATUS__STRING_INT = 2;
 
 	/**
 	 * The number of operations of the '<em>Staff</em>' class.
@@ -465,7 +429,7 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_OPERATION_COUNT = 4;
+	int STAFF_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAdmin.impl.RoomImpl <em>Room</em>}' class.
@@ -681,24 +645,14 @@ public interface MdsdAdminPackage extends EPackage {
 	EOperation getAdmin__RemoveStaff__String();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#modifyStaff(java.lang.String) <em>Modify Staff</em>}' operation.
+	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#modifyStaff(java.lang.String, java.lang.String, int) <em>Modify Staff</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Modify Staff</em>' operation.
-	 * @see Classes.mdsdAdmin.Admin#modifyStaff(java.lang.String)
+	 * @see Classes.mdsdAdmin.Admin#modifyStaff(java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getAdmin__ModifyStaff__String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Admin#displayStaff() <em>Display Staff</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Staff</em>' operation.
-	 * @see Classes.mdsdAdmin.Admin#displayStaff()
-	 * @generated
-	 */
-	EOperation getAdmin__DisplayStaff();
+	EOperation getAdmin__ModifyStaff__String_String_int();
 
 	/**
 	 * Returns the meta object for class '{@link Classes.mdsdAdmin.BookingToAdmin <em>Booking To Admin</em>}'.
@@ -749,16 +703,6 @@ public interface MdsdAdminPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStaff__StaffLogout__String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#displayRooms() <em>Display Rooms</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Rooms</em>' operation.
-	 * @see Classes.mdsdAdmin.Staff#displayRooms()
-	 * @generated
-	 */
-	EOperation getStaff__DisplayRooms();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAdmin.Staff#changeRoomStatus(java.lang.String, int) <em>Change Room Status</em>}' operation.
@@ -968,15 +912,7 @@ public interface MdsdAdminPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADMIN___MODIFY_STAFF__STRING = eINSTANCE.getAdmin__ModifyStaff__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Staff</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADMIN___DISPLAY_STAFF = eINSTANCE.getAdmin__DisplayStaff();
+		EOperation ADMIN___MODIFY_STAFF__STRING_STRING_INT = eINSTANCE.getAdmin__ModifyStaff__String_String_int();
 
 		/**
 		 * The meta object literal for the '{@link Classes.mdsdAdmin.BookingToAdmin <em>Booking To Admin</em>}' class.
@@ -1021,14 +957,6 @@ public interface MdsdAdminPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation STAFF___STAFF_LOGOUT__STRING = eINSTANCE.getStaff__StaffLogout__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Display Rooms</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF___DISPLAY_ROOMS = eINSTANCE.getStaff__DisplayRooms();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Room Status</b></em>' operation.

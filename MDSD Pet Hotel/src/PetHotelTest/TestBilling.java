@@ -106,9 +106,10 @@ public class TestBilling {
 
 
 	}
-
+	
+	
 	@Test
-	public void TestDisplayBilling(){
+	public void TestModifyBill(){
 
 		//add rooms
 		adminCtrl.addRoom("cat", "available", 1);
@@ -116,13 +117,15 @@ public class TestBilling {
 		//book a room for a cat
 		Booking booking = bookerCtrl.enterDatesOfStay(d1, d2, adminCtrl.getRooms(), "cat");
 		bookerCtrl.enterCustomerInfo("Nicole Musco", "nicole_Musco@gmail.com", booking, "Elora", adminCtrl.getRooms());
-		// create bill
-		billCtrl.addTransaction("For Elora", 5000, booking);
-		// test with a fake ID
-		assertNull(billCtrl.displayBill("fail"));
-		// test with real ID
-		assertNotNull(billCtrl.displayBill(booking.getBill_Id()));
+
+		billCtrl.addTransaction("For Elora room", 5000, booking);
+	
+		billCtrl.modifyBill("For Elora room", booking.getBill_Id(), 2500);
+		Bill bill = billCtrl.getBills().get(0);
+		assertEquals((double)2500, (double)bill.getTransactions().get(0).getPrice(), 0);
+
 
 	}
+	
 
 }

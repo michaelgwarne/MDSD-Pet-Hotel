@@ -294,6 +294,9 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Tests if a bill has been paid, if
+	 * true allows the customer to check out
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */

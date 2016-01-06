@@ -260,22 +260,13 @@ public interface MdsdAccountPackage extends EPackage {
 	int CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING = 0;
 
 	/**
-	 * The operation id for the '<em>Modify Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_ACCOUNT___MODIFY_ACCOUNT = 1;
-
-	/**
 	 * The operation id for the '<em>Login</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___LOGIN__STRING_STRING = 2;
+	int CUSTOMER_ACCOUNT___LOGIN__STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Logout</em>' operation.
@@ -284,7 +275,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___LOGOUT__STRING = 3;
+	int CUSTOMER_ACCOUNT___LOGOUT__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Add Pet</em>' operation.
@@ -293,7 +284,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = 4;
+	int CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -302,7 +293,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = 5;
+	int CUSTOMER_ACCOUNT___REMOVE_PET__STRING_STRING_STRING = 4;
 
 	/**
 	 * The number of operations of the '<em>Customer Account</em>' class.
@@ -311,7 +302,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_ACCOUNT_OPERATION_COUNT = 6;
+	int CUSTOMER_ACCOUNT_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdAccount.impl.AccountControllerImpl <em>Account Controller</em>}' class.
@@ -369,22 +360,13 @@ public interface MdsdAccountPackage extends EPackage {
 	int ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Modify Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCOUNT_CONTROLLER___MODIFY_ACCOUNT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Login</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___LOGIN__STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 2;
+	int ACCOUNT_CONTROLLER___LOGIN__STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Logout</em>' operation.
@@ -393,7 +375,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___LOGOUT__STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 3;
+	int ACCOUNT_CONTROLLER___LOGOUT__STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Add Pet</em>' operation.
@@ -402,7 +384,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 4;
+	int ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Remove Pet</em>' operation.
@@ -411,7 +393,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
+	int ACCOUNT_CONTROLLER___REMOVE_PET__STRING_STRING_STRING = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Account Controller</em>' class.
@@ -420,7 +402,7 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCOUNT_CONTROLLER_OPERATION_COUNT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 6;
+	int ACCOUNT_CONTROLLER_OPERATION_COUNT = BOOKING_TO_ACCOUNT_OPERATION_COUNT + 5;
 
 
 	/**
@@ -580,16 +562,6 @@ public interface MdsdAccountPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCustomerAccount__CreateAccount__String_String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#modifyAccount() <em>Modify Account</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Modify Account</em>' operation.
-	 * @see Classes.mdsdAccount.CustomerAccount#modifyAccount()
-	 * @generated
-	 */
-	EOperation getCustomerAccount__ModifyAccount();
 
 	/**
 	 * Returns the meta object for the '{@link Classes.mdsdAccount.CustomerAccount#login(java.lang.String, java.lang.String) <em>Login</em>}' operation.
@@ -802,14 +774,6 @@ public interface MdsdAccountPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING = eINSTANCE.getCustomerAccount__CreateAccount__String_String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Modify Account</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER_ACCOUNT___MODIFY_ACCOUNT = eINSTANCE.getCustomerAccount__ModifyAccount();
 
 		/**
 		 * The meta object literal for the '<em><b>Login</b></em>' operation.

@@ -27,9 +27,6 @@
         <eParameters name="billID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="newPrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       </eOperations>
-      <eOperations name="displayBill" ordered="false" lowerBound="1" eType="#//mdsdBilling/Bill">
-        <eParameters name="billId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eOperations>
       <eOperations name="giveRefund" ordered="false" lowerBound="1">
         <eParameters name="transaction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="billId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -48,9 +45,7 @@
         <eParameters name="booking" ordered="false" lowerBound="1" eType="#//mdsdBooking/Booking"/>
       </eOperations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CustomerBilling" abstract="true" interface="true">
-      <eOperations name="confirmPayment" ordered="false" lowerBound="1"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CustomerBilling" abstract="true" interface="true"/>
   </eSubpackages>
   <eSubpackages name="mdsdBooking" nsURI="http:///Classes/mdsdBooking.ecore" nsPrefix="Classes.mdsdBooking">
     <eClassifiers xsi:type="ecore:EClass" name="BookingController" eSuperTypes="#//mdsdBooking/UserBooking #//mdsdBooking/StaffBooking">
@@ -194,8 +189,9 @@
       </eOperations>
       <eOperations name="modifyStaff" ordered="false" lowerBound="1">
         <eParameters name="SSN" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="newName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="newRank" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
-      <eOperations name="displayStaff" ordered="false" lowerBound="1"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BookingToAdmin" abstract="true" interface="true">
       <eOperations name="getPetTypes" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -208,7 +204,6 @@
       <eOperations name="staffLogout" ordered="false" lowerBound="1">
         <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="displayRooms" ordered="false" lowerBound="1"/>
       <eOperations name="changeRoomStatus" ordered="false" lowerBound="1">
         <eParameters name="status" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -259,7 +254,6 @@
         <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="modifyAccount" ordered="false" lowerBound="1"/>
       <eOperations name="login" ordered="false" lowerBound="1">
         <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

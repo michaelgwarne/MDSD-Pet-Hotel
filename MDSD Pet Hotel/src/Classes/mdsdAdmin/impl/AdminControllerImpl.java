@@ -9,20 +9,14 @@ import Classes.mdsdAdmin.MdsdAdminFactory;
 import Classes.mdsdAdmin.MdsdAdminPackage;
 import Classes.mdsdAdmin.Room;
 import Classes.mdsdAdmin.Staff;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -106,6 +100,9 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description tests if room number exists,
+	 * if not creates a new room and add it to the list
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -125,6 +122,8 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description removes a room from the list
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -139,11 +138,14 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description tests if the social security number
+	 * exists in the list, if not creates a new member of staff
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public HotelStaff createStaff(String name, int rank, String SSN, String password) {
-		// TODO: test
+		
 		for(HotelStaff testStaff : getStaff()){
 			if(testStaff.getSSN().equalsIgnoreCase(SSN)){
 				return null;
@@ -160,11 +162,14 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description removes a member of staff
+	 * when the Social Security Number matches
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void removeStaff(String SSN) {
-		// TODO: test
+		
 		for (HotelStaff staff : getStaff()) {
 			if(staff.getSSN().equals(SSN)){
 				getStaff().remove(staff);
@@ -175,28 +180,27 @@ public class AdminControllerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Modifies the name and rank of
+	 * a staff member
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void modifyStaff(String SSN) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void modifyStaff(String SSN, String newName, int newRank) {
+		for(HotelStaff staff: getStaff()){
+			if(staff.getSSN().equals(SSN)){
+				staff.setName(newName);
+				staff.setRank(newRank);
+				break;
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void displayStaff() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description returns a list of pet types
+	 * based on the existing room types
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -212,14 +216,15 @@ EList<String> petTypes = new BasicEList<String>();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description sets a staff member to logged In
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void staffLogin(String ssn, String password) {
-		// TODO: test
+		
 		for(HotelStaff staff : getStaff()){
 			if(staff.getSSN().equalsIgnoreCase(ssn) && staff.getPassword().equals(password)){
-				
 				staff.setIsLoggedIn(true);
 				break;
 			}
@@ -228,11 +233,13 @@ EList<String> petTypes = new BasicEList<String>();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description sets a staff member to logged Out
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void staffLogout(String ssn) {
-		// TODO: test
+		
 		for(HotelStaff staff : getStaff()){
 			if(staff.getSSN().equalsIgnoreCase(ssn)){
 				staff.setIsLoggedIn(false);
@@ -243,32 +250,9 @@ EList<String> petTypes = new BasicEList<String>();
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EList<Room> getAvailableRooms() {
-		EList<Room> available = new BasicEList<Room>();
-		for (Room room : rooms) {
-			if(room.getStatus().equalsIgnoreCase("available")){
-				available.add(room);
-			}
-		}
-		return available;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void displayRooms() {
-		for (Room r: rooms){
-			System.out.println(r.getStatus() + " " + r.getType() + " " + r.getNumber());
-			}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @author Michael Warne
+	 * @description changes the status of an existing room
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -283,11 +267,15 @@ EList<String> petTypes = new BasicEList<String>();
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @author Michael Warne
+	 * @description returns the state of the loggedIn attribute 
+	 * in HotelStaff
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean isLoggedIn(String ssn) {
-		// TODO: test
+
 		for(HotelStaff staff : getStaff()){
 			if(staff.getSSN().equalsIgnoreCase(ssn)){
 				return staff.isLoggedIn();
@@ -400,7 +388,6 @@ EList<String> petTypes = new BasicEList<String>();
 			switch (baseOperationID) {
 				case MdsdAdminPackage.STAFF___STAFF_LOGIN__STRING_STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGIN__STRING_STRING;
 				case MdsdAdminPackage.STAFF___STAFF_LOGOUT__STRING: return MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING;
-				case MdsdAdminPackage.STAFF___DISPLAY_ROOMS: return MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS;
 				case MdsdAdminPackage.STAFF___CHANGE_ROOM_STATUS__STRING_INT: return MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT;
 				default: return -1;
 			}
@@ -426,11 +413,8 @@ EList<String> petTypes = new BasicEList<String>();
 			case MdsdAdminPackage.ADMIN_CONTROLLER___REMOVE_STAFF__STRING:
 				removeStaff((String)arguments.get(0));
 				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___MODIFY_STAFF__STRING:
-				modifyStaff((String)arguments.get(0));
-				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_STAFF:
-				displayStaff();
+			case MdsdAdminPackage.ADMIN_CONTROLLER___MODIFY_STAFF__STRING_STRING_INT:
+				modifyStaff((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___GET_PET_TYPES:
 				return getPetTypes();
@@ -439,9 +423,6 @@ EList<String> petTypes = new BasicEList<String>();
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___STAFF_LOGOUT__STRING:
 				staffLogout((String)arguments.get(0));
-				return null;
-			case MdsdAdminPackage.ADMIN_CONTROLLER___DISPLAY_ROOMS:
-				displayRooms();
 				return null;
 			case MdsdAdminPackage.ADMIN_CONTROLLER___CHANGE_ROOM_STATUS__STRING_INT:
 				changeRoomStatus((String)arguments.get(0), (Integer)arguments.get(1));

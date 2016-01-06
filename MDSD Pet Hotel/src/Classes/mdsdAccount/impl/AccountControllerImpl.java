@@ -81,11 +81,13 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description returns the account associated with the email address
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Account getAccount(String email) {
-		// TODO: test
+		
 		for(Account account : getAccounts()){
 			if(account.getEmail().equals(email)){
 				return account;
@@ -96,11 +98,14 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description tests if a customer is logged in 
+	 * to their account
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean isUserLoggedIn(String accountId) {
-		// TODO: test
+		
 				for(Account account : getAccounts()){
 					if(account.getAccountID().equals(accountId)){
 						return account.isLoggedIn();
@@ -111,11 +116,14 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description tests if the email is already used for an account,
+	 * if not creates a new account
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Account createAccount(String customerName, String customerEmail, String password) {
-		// TODO: test
+		
 		for(Account account : getAccounts()){
 			if(account.getEmail().equals(customerEmail)){
 				return null;
@@ -132,22 +140,13 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void modifyAccount() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description If email and password match logs the customer in
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void login(String email, String password) {
-		// TODO: test
+		
 		for(Account account : getAccounts()){
 			if(account.getAccountID().equals(email) 
 					&& account.getPassword().equals(password)){
@@ -159,11 +158,13 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description logs the customer out
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void logout(String accountId) {
-		// TODO: test
+		
 				for(Account account : getAccounts()){
 					if(account.getAccountID().equals(accountId) ){
 						account.setIsLoggedIn(false);
@@ -174,11 +175,13 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Adds a new pet to an account
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addPet(String name, String type, String accountID) {
-		// TODO: test
+		
 		Pet pet = MdsdAccountFactory.eINSTANCE.createPet();
 		pet.setName(name);
 		pet.setType(type);
@@ -193,11 +196,12 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description removes a pet from the account
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void removePet(String name, String type, String accountID) {
-		// TODO: test
 		
 		for(Account account : getAccounts()){
 			if(account.getAccountID().equals(accountID)){
@@ -209,7 +213,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 				}
 			}
 		}
-		
 	}
 
 	/**
@@ -296,7 +299,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		if (baseClass == CustomerAccount.class) {
 			switch (baseOperationID) {
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___CREATE_ACCOUNT__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING;
-				case MdsdAccountPackage.CUSTOMER_ACCOUNT___MODIFY_ACCOUNT: return MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGIN__STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___LOGOUT__STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGOUT__STRING;
 				case MdsdAccountPackage.CUSTOMER_ACCOUNT___ADD_PET__STRING_STRING_STRING: return MdsdAccountPackage.ACCOUNT_CONTROLLER___ADD_PET__STRING_STRING_STRING;
@@ -321,9 +323,6 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 				return isUserLoggedIn((String)arguments.get(0));
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___CREATE_ACCOUNT__STRING_STRING_STRING:
 				return createAccount((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case MdsdAccountPackage.ACCOUNT_CONTROLLER___MODIFY_ACCOUNT:
-				modifyAccount();
-				return null;
 			case MdsdAccountPackage.ACCOUNT_CONTROLLER___LOGIN__STRING_STRING:
 				login((String)arguments.get(0), (String)arguments.get(1));
 				return null;

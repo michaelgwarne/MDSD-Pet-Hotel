@@ -86,22 +86,13 @@ public interface MdsdBillingPackage extends EPackage {
 	int STAFF_BILLING___MODIFY_BILL__STRING_STRING_FLOAT = 0;
 
 	/**
-	 * The operation id for the '<em>Display Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_BILLING___DISPLAY_BILL__STRING = 1;
-
-	/**
 	 * The operation id for the '<em>Give Refund</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BILLING___GIVE_REFUND__STRING_STRING = 2;
+	int STAFF_BILLING___GIVE_REFUND__STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Is Paid</em>' operation.
@@ -110,7 +101,7 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BILLING___IS_PAID__STRING = 3;
+	int STAFF_BILLING___IS_PAID__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Print Receipt</em>' operation.
@@ -119,7 +110,7 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BILLING___PRINT_RECEIPT__STRING = 4;
+	int STAFF_BILLING___PRINT_RECEIPT__STRING = 3;
 
 	/**
 	 * The number of operations of the '<em>Staff Billing</em>' class.
@@ -128,7 +119,7 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_BILLING_OPERATION_COUNT = 5;
+	int STAFF_BILLING_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBilling.impl.BillingControllerImpl <em>Billing Controller</em>}' class.
@@ -168,15 +159,6 @@ public interface MdsdBillingPackage extends EPackage {
 	int BILLING_CONTROLLER___MODIFY_BILL__STRING_STRING_FLOAT = STAFF_BILLING___MODIFY_BILL__STRING_STRING_FLOAT;
 
 	/**
-	 * The operation id for the '<em>Display Bill</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILLING_CONTROLLER___DISPLAY_BILL__STRING = STAFF_BILLING___DISPLAY_BILL__STRING;
-
-	/**
 	 * The operation id for the '<em>Give Refund</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,22 +195,13 @@ public interface MdsdBillingPackage extends EPackage {
 	int BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING = STAFF_BILLING_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Confirm Payment</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BILLING_CONTROLLER___CONFIRM_PAYMENT = STAFF_BILLING_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Billing Controller</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILLING_CONTROLLER_OPERATION_COUNT = STAFF_BILLING_OPERATION_COUNT + 2;
+	int BILLING_CONTROLLER_OPERATION_COUNT = STAFF_BILLING_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link Classes.mdsdBilling.impl.BillImpl <em>Bill</em>}' class.
@@ -397,22 +370,13 @@ public interface MdsdBillingPackage extends EPackage {
 	int CUSTOMER_BILLING_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Confirm Payment</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER_BILLING___CONFIRM_PAYMENT = 0;
-
-	/**
 	 * The number of operations of the '<em>Customer Billing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_BILLING_OPERATION_COUNT = 1;
+	int CUSTOMER_BILLING_OPERATION_COUNT = 0;
 
 
 	/**
@@ -542,16 +506,6 @@ public interface MdsdBillingPackage extends EPackage {
 	EOperation getStaffBilling__ModifyBill__String_String_float();
 
 	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBilling.StaffBilling#displayBill(java.lang.String) <em>Display Bill</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Display Bill</em>' operation.
-	 * @see Classes.mdsdBilling.StaffBilling#displayBill(java.lang.String)
-	 * @generated
-	 */
-	EOperation getStaffBilling__DisplayBill__String();
-
-	/**
 	 * Returns the meta object for the '{@link Classes.mdsdBilling.StaffBilling#giveRefund(java.lang.String, java.lang.String) <em>Give Refund</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -610,16 +564,6 @@ public interface MdsdBillingPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCustomerBilling();
-
-	/**
-	 * Returns the meta object for the '{@link Classes.mdsdBilling.CustomerBilling#confirmPayment() <em>Confirm Payment</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Confirm Payment</em>' operation.
-	 * @see Classes.mdsdBilling.CustomerBilling#confirmPayment()
-	 * @generated
-	 */
-	EOperation getCustomerBilling__ConfirmPayment();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -749,14 +693,6 @@ public interface MdsdBillingPackage extends EPackage {
 		EOperation STAFF_BILLING___MODIFY_BILL__STRING_STRING_FLOAT = eINSTANCE.getStaffBilling__ModifyBill__String_String_float();
 
 		/**
-		 * The meta object literal for the '<em><b>Display Bill</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STAFF_BILLING___DISPLAY_BILL__STRING = eINSTANCE.getStaffBilling__DisplayBill__String();
-
-		/**
 		 * The meta object literal for the '<em><b>Give Refund</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -807,14 +743,6 @@ public interface MdsdBillingPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CUSTOMER_BILLING = eINSTANCE.getCustomerBilling();
-
-		/**
-		 * The meta object literal for the '<em><b>Confirm Payment</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER_BILLING___CONFIRM_PAYMENT = eINSTANCE.getCustomerBilling__ConfirmPayment();
 
 	}
 

@@ -84,34 +84,29 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Changes the price of a transaction
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void modifyBill(String transaction, String billID, float newPrice) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Bill bill: getBills()){
+			if(bill.getID().equals(billID)){
+				for(Transaction trans: bill.getTransactions()){
+					if(trans.getDescription().equals(transaction)){
+						trans.setPrice(newPrice);
+						break;
+					}
+				}
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * @author Michael Warne
-	 * @description returns a Bill if one exists
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public Bill displayBill(String billId) {
-		
-		for(Bill tempBill : getBills()){
-			if(tempBill.getID().equals(billId)){
-				return tempBill;		
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * @description Sets the price on a specific transaction
+	 * to zero and modifies the description
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -132,6 +127,8 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Tests if a bill is paid or not
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -158,15 +155,20 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Adds a new transaction to a Bill if one exists.
+	 * Creates the Bill if none exists on the booking. 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addTransaction(String description, float amount, Booking booking) {
 
 		Bill bill;
+		// create a new transaction
 		Transaction transaction = MdsdBillingFactory.eINSTANCE.createTransaction();
 		transaction.setDescription(description);
 		transaction.setPrice(amount);
+		// test if booking has a bill ID
 		if(booking.getBill_Id() == null){
 			bill = MdsdBillingFactory.eINSTANCE.createBill();
 			bill.getTransactions().add(transaction);
@@ -182,17 +184,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				}
 			}
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void confirmPayment() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -284,7 +275,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 		}
 		if (baseClass == CustomerBilling.class) {
 			switch (baseOperationID) {
-				case MdsdBillingPackage.CUSTOMER_BILLING___CONFIRM_PAYMENT: return MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT;
 				default: return -1;
 			}
 		}
@@ -302,8 +292,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 			case MdsdBillingPackage.BILLING_CONTROLLER___MODIFY_BILL__STRING_STRING_FLOAT:
 				modifyBill((String)arguments.get(0), (String)arguments.get(1), (Float)arguments.get(2));
 				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___DISPLAY_BILL__STRING:
-				return displayBill((String)arguments.get(0));
 			case MdsdBillingPackage.BILLING_CONTROLLER___GIVE_REFUND__STRING_STRING:
 				giveRefund((String)arguments.get(0), (String)arguments.get(1));
 				return null;
@@ -314,9 +302,6 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				return null;
 			case MdsdBillingPackage.BILLING_CONTROLLER___ADD_TRANSACTION__STRING_FLOAT_BOOKING:
 				addTransaction((String)arguments.get(0), (Float)arguments.get(1), (Booking)arguments.get(2));
-				return null;
-			case MdsdBillingPackage.BILLING_CONTROLLER___CONFIRM_PAYMENT:
-				confirmPayment();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
