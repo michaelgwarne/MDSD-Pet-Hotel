@@ -218,7 +218,7 @@ EList<String> petTypes = new BasicEList<String>();
 	public void staffLogin(String ssn, String password) {
 		// TODO: test
 		for(HotelStaff staff : getStaff()){
-			if(staff.getSSN().equalsIgnoreCase(ssn) && staff.getPassword().equalsIgnoreCase(password)){
+			if(staff.getSSN().equalsIgnoreCase(ssn) && staff.getPassword().equals(password)){
 				
 				staff.setIsLoggedIn(true);
 				break;

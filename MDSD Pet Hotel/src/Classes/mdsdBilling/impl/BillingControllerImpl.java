@@ -102,7 +102,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 		// TODO: test
 		Bill bill = MdsdBillingFactory.eINSTANCE.createBill();
 		for(Bill tempBill : getBills()){
-			if(tempBill.getID().equalsIgnoreCase(billId)){
+			if(tempBill.getID().equals(billId)){
 				bill = tempBill;
 				break;
 			}
@@ -118,7 +118,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	public void giveRefund(String transaction, String billId) {
 		// TODO: test
 		for(Bill bill : getBills()){
-			if(bill.getID().equalsIgnoreCase(billId)){
+			if(bill.getID().equals(billId)){
 				for(Transaction transaction2 : bill.getTransactions()){
 					if(transaction2.getDescription().equalsIgnoreCase(transaction)){
 						transaction2.setPrice(0);
@@ -138,7 +138,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 	public boolean isPaid(String billID) {
 		boolean isPaid = false;
 		for(Bill bill : getBills()){
-			if(bill.getID().equalsIgnoreCase(billID)){
+			if(bill.getID().equals(billID)){
 				isPaid = bill.isPaid();
 				break;
 			}
@@ -176,7 +176,7 @@ public class BillingControllerImpl extends MinimalEObjectImpl.Container implemen
 				}
 				else{
 					for(Bill existingBill : getBills()){
-						if(existingBill.getID().equalsIgnoreCase(booking.getBill_Id())){
+						if(existingBill.getID().equals(booking.getBill_Id())){
 							existingBill.getTransactions().add(transaction);
 							break;
 						}

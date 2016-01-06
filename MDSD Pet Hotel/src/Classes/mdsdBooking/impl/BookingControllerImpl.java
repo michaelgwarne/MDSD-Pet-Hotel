@@ -120,13 +120,17 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * 
+	 * @Description Removes the booking that matches the 
+	 * booking ID from the booking list
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void cancelBooking(String bookingId) {
-		// TODO: test
+		
 		for (Booking booking : bookings) {
-			if(booking.getBookingId().equalsIgnoreCase(bookingId)){
+			if(booking.getBookingId().equals(bookingId)){
 				bookings.remove(booking);
 				break;
 			}
@@ -146,6 +150,9 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Sets attributes in a booking and generates a 
+	 * unique ID for the booking based on the number of past bookngs
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -153,10 +160,12 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 		booking.setCustomerName(customerName);
 		booking.setCustomerEmail(customerEmail);
 		booking.setPetName(petName);
+		// get a list of previous bookings made by the user
+		// and use the size of the list to create a unique ID
 		EList <Booking> pastBooking = getBookingList(customerEmail);
 		booking.setBookingId(customerEmail + pastBooking.size());
-		getBookings().remove(booking);
 		getBookings().add(booking);
+		
 		for(Room room : rooms){
 			if(room.getNumber() == booking.getRoomNumber()){
 				room.setStatus("booked");
@@ -167,66 +176,69 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Tests if a booking can be made
+	 * for the given dates of stay
+	 * @return Booking if successful, Null if dates do not fit
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Booking enterDatesOfStay(Date stayFrom, Date stayTo, EList<Room> rooms, String petType) {
+		// if hotel has no rooms return null
+		if(rooms.size() == 0) return null;
 		/* if stayTo is before StayFrom or either date
-		 * is before the time the booking is made
+		 *  is before the time the booking is made
 		 * the booking fails and returns null
 		 */
 		if(stayFrom.after(stayTo) || stayFrom.before(new Date(System.currentTimeMillis())) 
 				|| (stayTo.before(new Date(System.currentTimeMillis())))) return null;
 
-		Booking booking = MdsdBookingFactory.eINSTANCE.createBooking();
-		/* if rooms are available and match the pet type
-		 * the first in the list is given to the booking
+		Booking newBooking = MdsdBookingFactory.eINSTANCE.createBooking();
+		/* if a room status is "available" and matches the pet type
+		 * the first found in the list is given to the booking
 		 */
-		if(rooms.size() > 0){
 			for (Room room : rooms) {
 				if((room.getType().equalsIgnoreCase(petType)) 
 						&& (room.getStatus().equalsIgnoreCase("available"))){
-					booking.setRoomNumber(room.getNumber());
-					booking.setDateFrom(stayFrom);
-					booking.setDateTo(stayTo);
-					getBookings().add(booking);
-					return booking;
+					newBooking.setRoomNumber(room.getNumber());
+					newBooking.setDateFrom(stayFrom);
+					newBooking.setDateTo(stayTo);
+					getBookings().add(newBooking);
+					return newBooking;
 				}
 			}
-		}
-		// if no rooms available test existing bookings against the dates of stay
-		EList <Booking> temp = getBookings();
-		EList <Booking> temp2 = new BasicEList<Booking>();
-		temp2.addAll(temp);
-		int i = 0;
-		for (Booking booking2 : getBookings()) {
-			// test if dates wanted overlap with dates on the booking
-			if(((stayFrom.after(booking2.getDateFrom()) || stayFrom.equals(booking2.getDateFrom())) 
-					&&(stayFrom.before(booking2.getDateTo()) || stayFrom.equals(booking2.getDateTo())))
-					||((stayTo.after(booking2.getDateFrom()) || stayTo.equals(booking2.getDateFrom()))
-							&& (stayTo.before(booking2.getDateTo()) || stayTo.equals(booking2.getDateTo())))){
-				// remove all bookings with that room number from the temporary list
-				i = booking2.getRoomNumber();
-				for (Booking booking3 : temp) {
-					if(booking3.getRoomNumber() ==  i){
-
-						temp2.remove(booking3);
+		// if no rooms are available test existing bookings against the dates of stay
+		
+		EList <Booking> copyOfBookingList = new BasicEList<Booking>();
+		copyOfBookingList.addAll(getBookings());
+		int roomNumber;
+		for (Booking booking : getBookings()) {
+		// test if dates wanted overlap with dates on the booking
+			if(((stayFrom.after(booking.getDateFrom()) || stayFrom.equals(booking.getDateFrom())) 
+					&&(stayFrom.before(booking.getDateTo()) || stayFrom.equals(booking.getDateTo())))
+					||((stayTo.after(booking.getDateFrom()) || stayTo.equals(booking.getDateFrom()))
+							&& (stayTo.before(booking.getDateTo()) || stayTo.equals(booking.getDateTo())))){
+		// remove all bookings with that room number from copyOfBookingList
+				roomNumber = booking.getRoomNumber();
+				for (Booking booking2 : getBookings()) {
+					if(booking2.getRoomNumber() ==  roomNumber){
+						copyOfBookingList.remove(booking2);
 					}
 				}
 			}
 		}
-		/* if the temp2 list is not empty then use the room number from the first index
+		/* if copyOfBookingList is not empty then use the room number from the first index
 		 * that has the correct room type, else return null
 		 */
-		if(temp2.size() > 0){
+		if(copyOfBookingList.size() > 0){
 			for (Room room : rooms) {
 				if((room.getType().equalsIgnoreCase(petType)) 
 						&& !(room.getStatus().equalsIgnoreCase("available"))){
-					booking.setRoomNumber(room.getNumber());
-					booking.setDateFrom(stayFrom);
-					booking.setDateTo(stayTo);
-					getBookings().add(booking);
-					return booking;
+					newBooking.setRoomNumber(room.getNumber());
+					newBooking.setDateFrom(stayFrom);
+					newBooking.setDateTo(stayTo);
+					getBookings().add(newBooking);
+					return newBooking;
 				}
 			}
 		}
@@ -235,18 +247,20 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description Adds a new Meal to the booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void enterMealInfo(String foodType, String schedule, float amountOfFood, float price, String bookingId) {
-		// TODO: test
+		
 		Meal meal = MdsdBookingFactory.eINSTANCE.createMeal();
 		meal.setFoodType(foodType);
 		meal.setSchedule(schedule);
 		meal.setAmountOfFood(amountOfFood);
 		meal.setPrice(price);
 		for (Booking booking : bookings) {
-			if(booking.getBookingId().equalsIgnoreCase(bookingId)){
+			if(booking.getBookingId().equals(bookingId)){
 				booking.setMealInfo(meal);
 				break;
 			}
@@ -255,13 +269,15 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @author Michael Warne
+	 * @description adds a new service to a booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void enterService(Service service, String bookingId) {
-		// TODO: test
+		
 		for (Booking booking : bookings) {
-			if(booking.getBookingId().equalsIgnoreCase(bookingId)){
+			if(booking.getBookingId().equals(bookingId)){
 				booking.getBookedServices().add(service);
 				break;
 			}
@@ -274,7 +290,7 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated NOT
 	 */
 	public void checkIn(String bookingID, EList<Room> rooms) {
-		// TODO: test
+		
 		for (Booking booking : bookings) {
 			if(booking.getBookingId() == bookingID){
 				booking.setIsCheckedOut(false);
@@ -364,7 +380,7 @@ public class BookingControllerImpl extends MinimalEObjectImpl.Container implemen
 		EList <Booking> temp = getBookings();
 		EList <Booking> history = new BasicEList<Booking>();
 		for (Booking booking : temp) {
-			if(booking.getCustomerEmail().equalsIgnoreCase(email)){
+			if(booking.getCustomerEmail().equals(email)){
 				history.add(booking);
 			}
 		}

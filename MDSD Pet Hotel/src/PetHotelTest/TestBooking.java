@@ -214,7 +214,7 @@ public class TestBooking {
 		booker.addNewService("spa", 300);
 		Service spa = MdsdBookingFactory.eINSTANCE.createService();
 		for(Service service : booker.getServices()){
-			if(service.getDescription().endsWith("spa")){
+			if(service.getDescription().equals("spa")){
 				spa = service;
 				break;
 			}

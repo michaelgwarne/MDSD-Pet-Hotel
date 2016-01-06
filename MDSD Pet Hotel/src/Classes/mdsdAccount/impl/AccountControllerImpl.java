@@ -87,7 +87,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public Account getAccount(String email) {
 		// TODO: test
 		for(Account account : getAccounts()){
-			if(account.getEmail().equalsIgnoreCase(email)){
+			if(account.getEmail().equals(email)){
 				return account;
 			}
 		}
@@ -102,7 +102,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public boolean isUserLoggedIn(String accountId) {
 		// TODO: test
 				for(Account account : getAccounts()){
-					if(account.getAccountID().equalsIgnoreCase(accountId)){
+					if(account.getAccountID().equals(accountId)){
 						return account.isLoggedIn();
 					}
 				}
@@ -117,7 +117,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public Account createAccount(String customerName, String customerEmail, String password) {
 		// TODO: test
 		for(Account account : getAccounts()){
-			if(account.getEmail().equalsIgnoreCase(customerEmail)){
+			if(account.getEmail().equals(customerEmail)){
 				return null;
 			}
 		}
@@ -149,8 +149,8 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public void login(String email, String password) {
 		// TODO: test
 		for(Account account : getAccounts()){
-			if(account.getAccountID().equalsIgnoreCase(email) 
-					&& account.getPassword().equalsIgnoreCase(password)){
+			if(account.getAccountID().equals(email) 
+					&& account.getPassword().equals(password)){
 				account.setIsLoggedIn(true);
 				break;
 			}
@@ -165,7 +165,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 	public void logout(String accountId) {
 		// TODO: test
 				for(Account account : getAccounts()){
-					if(account.getAccountID().equalsIgnoreCase(accountId) ){
+					if(account.getAccountID().equals(accountId) ){
 						account.setIsLoggedIn(false);
 						break;
 					}
@@ -194,7 +194,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		pet.setName(name);
 		pet.setType(type);
 		for(Account account : getAccounts()){
-			if(account.getAccountID().equalsIgnoreCase(accountID)){
+			if(account.getAccountID().equals(accountID)){
 				account.getPets().add(pet);
 				break;
 			}
@@ -211,7 +211,7 @@ public class AccountControllerImpl extends MinimalEObjectImpl.Container implemen
 		// TODO: test
 		
 		for(Account account : getAccounts()){
-			if(account.getAccountID().equalsIgnoreCase(accountID)){
+			if(account.getAccountID().equals(accountID)){
 				for(Pet pet : account.getPets()){
 					if(pet.getName().equalsIgnoreCase(name) && pet.getType().equalsIgnoreCase(type)){
 						account.getPets().remove(pet);
